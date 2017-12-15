@@ -191,33 +191,350 @@
                         <div id="post-content">
                           
 
-<h2 id="introduction">Introduction</h2>
+<h1 id="linux-microplatform">Linux microPlatform</h1>
 
-<p>This is the first Zephyr microPlatform update which uses the new CMake build system, which has replaced the use of Kbuild.
-All users will need to update any out of tree application build systems.</p>
+<h2 id="highlights">Highlights</h2>
+
+<ul>
+<li>Added meta-intel layer to provide intel-corei7-64 machine type</li>
+<li>Switched Intel targets to use OSF kernel</li>
+<li>Enabled specific drivers for Minnowboard Turbot variants</li>
+<li>Migrated linux-osf to use the linux-yocto infrastructure</li>
+</ul>
+
+<h2 id="components">Components</h2>
+
+<h3 id="meta-osf-layer">Meta OSF Layer</h3>
+
+<h4 id="features">Features</h4>
+
+<p><strong>Layer Update:</strong></p>
+
+<pre><code>Added support for generic 64bit Intel targets using OSF
+kernel.
+Enabled Minnowboard Turbot specific platform drivers.
+Migrated linux-osf to use the linux-yocto infrastructure.
+</code></pre>
+
+<h4 id="bugs">Bugs</h4>
+
+<ul>
+<li>no new bugs addressed in this release</li>
+</ul>
+
+<h3 id="meta-intel">Meta Intel</h3>
+
+<h4 id="features-1">Features</h4>
+
+<p><strong>Layer Addition:</strong></p>
+
+<pre><code>Initial import of the meta-intel layer.
+</code></pre>
+
+<h4 id="bugs-1">Bugs</h4>
+
+<ul>
+<li><p>no new bugs addressed in this release</p>
+
+<h1 id="zephyr-microplatform">Zephyr microPlatform</h1></li>
+</ul>
+
+<h2 id="highlights-1">Highlights</h2>
+
+<ul>
+<li>Zephyr tree from 1.10 release candidate, with CMake</li>
+<li>MCUBoot and FOTA sample build systems ported to CMake</li>
+</ul>
+
+<h2 id="components-1">Components</h2>
+
+<h3 id="mcuboot">MCUBoot</h3>
+
+<h4 id="features-2">Features</h4>
+
+<p><strong>CMake-based build system:</strong></p>
+
+<pre><code>The Zephyr build system was rewritten to use cmake
+instead of Kbuild, following the equivalent upstream
+change.
+</code></pre>
+
+<h4 id="bugs-2">Bugs</h4>
+
+<p><strong>Fix jump to invalid target when not validating slot 0:</strong></p>
+
+<pre><code>A bug fix to the core bootloader was merged which
+affects configurations that do not validate slot 0
+before booting into it. In these configurations, the
+bootloader would jump to any flash, regardless of if the
+mcuboot header contained a valid magic number.
+</code></pre>
+
+<p><strong>Build fix for Zephyr with ECSDA:</strong></p>
+
+<pre><code>A bug fix to Zephyr targets was merged which restores
+the build when using ECDSA (rather than the default
+RSA).
+</code></pre>
 
 <h3 id="zephyr">Zephyr</h3>
 
-<ul>
-<li>Bug Fixes
+<h4 id="features-3">Features</h4>
 
-<ul>
-<li>Bluetooth fixes</li>
-<li>Notable fixes include over ten patches to Bluetooth Mesh, along with two fixes to the core BT controller code.</li>
-<li>CMake fixes</li>
-<li>The CMake build system received several fixes for various issues.</li>
-<li>IPv6 ND fix</li>
-<li>A fix to the core IPv6 networking code was merged which fixes how random timers are initialized during neighbor discovery, eliminating erroneous traffic on the network.</li>
-</ul></li>
-</ul>
+<p><strong>New build system:</strong></p>
 
-<p>hawkBit switches to new HTTP library
-The hawkBit demo has been updated to use the new HTTP library. This eliminates various deprecation-related warnings in the build.
-Bug Fixes
-Fixes for local.conf files
-The build has been fixed for users who have a local.conf in one of their application directories.</p>
+<pre><code>&quot;The most significant change facing application
+developers is a complete rewrite of the build system to
+use CMake instead of the Makefile-based Kbuild system
+borrowed from the Linux kernel. All applications will
+need to rewrite their build systems to adapt;
+instructions are available in the Zephyr Application
+Development Primer, available in the Zephyr
+documentation:
 
-<h3 id="linux">linux</h3>
+http://docs.zephyrproject.org/application/application.html&quot;
+</code></pre>
+
+<p><strong>Wide-ranging Bluetooth Mesh improvements:</strong></p>
+
+<pre><code>Over a hundred patches, fixes, documentation, release
+notes, and other improvements to Bluetooth Mesh were
+merged.
+</code></pre>
+
+<p><strong>NXP i.MX support:</strong></p>
+
+<pre><code>Support for the NXP i.MX SoC family was merged, along
+with board support for a new target, mimxrt1050_evk.
+</code></pre>
+
+<p><strong>Device tree comes to x86&hellip;:</strong></p>
+
+<pre><code>X86 devices based on QUARK_X1000 gained device tree
+support. The galileo board has a devicetree defined
+which can be used as an example when starting to use DT
+on x86.
+</code></pre>
+
+<p><strong>&hellip;and to ARC:</strong></p>
+
+<pre><code>Among Device tree support was added for ARC devices, as
+well as minnowboard, atom based devices,
+arduino_101_sss, quark_se_c1000_ss_devboard.
+</code></pre>
+
+<p><strong>Network loopback devices:</strong></p>
+
+<pre><code>Loopback device support was merged in the networking
+subsystem.
+</code></pre>
+
+<p><strong>Additional format specifiers for printk():</strong></p>
+
+<pre><code>The printk() function now supports string format
+specifiers.
+</code></pre>
+
+<p><strong>TinyCrypt update:</strong></p>
+
+<pre><code>TinyCrypt was updated to 0.2.8.
+</code></pre>
+
+<p><strong>New Atmel SAM drivers:</strong></p>
+
+<pre><code>New drivers were added for Atmel SAM I2S and DMA
+(XDMAC).
+</code></pre>
+
+<p><strong>Particulate matter sensor support:</strong></p>
+
+<pre><code>Sensor channels for particulate matter were added, and a
+driver for the plantower PMS7003 sensor was merged.
+</code></pre>
+
+<p><strong>User buffer validation support for ARM:</strong></p>
+
+<pre><code>Support for validating user buffers when
+CONFIG_USERSPACE=y was merged for the ARM architecture.
+</code></pre>
+
+<p><strong>Userspace protection tests:</strong></p>
+
+<pre><code>Tests for userspace protection were merged.
+</code></pre>
+
+<p><strong>STM32L476G Discovery:</strong></p>
+
+<pre><code>Board support was added for STM32L476G Discovery.
+</code></pre>
+
+<p><strong>OpenOCD improvements to STM32 targets:</strong></p>
+
+<pre><code>openocd support was added for nucleo_l476rg and
+stm32l496g_disco.
+</code></pre>
+
+<p><strong>PWM2 for stm32f4_disco:</strong></p>
+
+<pre><code>PWM2 support was added for stm32f4_disco.
+</code></pre>
+
+<p><strong>Additional em-starterkit configurations:</strong></p>
+
+<pre><code>EM11D and EM7D configurations were added for
+em-starterkit.
+</code></pre>
+
+<p><strong>Altera HAL support:</strong></p>
+
+<pre><code>External library support was added for the Altera
+Hardware Abstraction Library (HAL).
+</code></pre>
+
+<p><strong>Altera soft IP serial and timers:</strong></p>
+
+<pre><code>New drivers were merged for Altera soft IP serial ports
+and timers.
+</code></pre>
+
+<p><strong>Additional mcux targets:</strong></p>
+
+<pre><code>Driver support was added using the mcux driver for
+mimxrt1051 and mimxrt1052 devices.
+</code></pre>
+
+<p><strong>Entropy for nRF5:</strong></p>
+
+<pre><code>An entropy device driver was merged for nRF5 targets.
+</code></pre>
+
+<p><strong>Ethernet over USB documentation:</strong></p>
+
+<pre><code>Documentation was added for Ethernet over USB.
+</code></pre>
+
+<p><strong>More tests converted to ztest:</strong></p>
+
+<pre><code>The push to convert to the ztest framework continues.
+</code></pre>
+
+<h4 id="bugs-3">Bugs</h4>
+
+<p><strong>ARM fix for crashes setting up new threads:</strong></p>
+
+<pre><code>A bug fix for ARM which prevents crashes when setting up
+new threads was merged.
+</code></pre>
+
+<p><strong>Build fixes for x86_jailhouse and nucleo_f091rc:</strong></p>
+
+<pre><code>Build breaks for the x86_jailhouse and nucleo_f091rc
+boards were fixed.
+</code></pre>
+
+<p><strong>Kconfig cleanups:</strong></p>
+
+<pre><code>Some Kconfig dependencies and definitions were fixed and
+cleaned up.
+</code></pre>
+
+<p><strong>STM32 I2C and USB fixes:</strong></p>
+
+<pre><code>Bugs affecting STM32 I2C v2 and USB were fixed.
+</code></pre>
+
+<p><strong>Net fixes:</strong></p>
+
+<pre><code>A few bug fixes for struct net_pkt were merged,
+correcting the data length appended by net_pkt_append(),
+fixing accounting for IP header lengths, and avoiding a
+possible division by zero. The MTU is now honored when
+TLS and DTLS are used, among other MTU-related fixes.
+Network contexts are unlocked in case of error,
+resolving possible deadlock issues. Sockets now support
+IPv6 wildcard and loopback addresses. A net packet leak
+in the socket layer was fixed. Several LWM2M fixes were
+merged, both to the engine core and to the temperature
+IPSO object. Several fixes were merged to the new HTTP
+library, which is the subject of ongoing discussion on
+the mailing list.
+</code></pre>
+
+<p><strong>Fixes to 802.15.4 L2 core:</strong></p>
+
+<pre><code>A few fixes and improvements to the core 802.15.4
+implementation were merged.
+</code></pre>
+
+<p><strong>802.15.4 on kw41z fixes:</strong></p>
+
+<pre><code>Various fixes for 802.15.4 on kw41z were merged.
+</code></pre>
+
+<p><strong>PWM on nRF5 fixes:</strong></p>
+
+<pre><code>Fixes were merged for PWM on nRF5 targets
+</code></pre>
+
+<p><strong>GPIO on ESP32 fixes:</strong></p>
+
+<pre><code>Fixes were merged for GPIO on esp32.
+</code></pre>
+
+<p><strong>DesignWare USB fixes:</strong></p>
+
+<pre><code>Fixes were merged for the DesignWare USB IP block driver.
+</code></pre>
+
+<p><strong>Miscellaneous kernel fixes:</strong></p>
+
+<pre><code>Miscellaneous minor improvements and cleanups were made
+in the core kernel.
+</code></pre>
+
+<p><strong>Shell subsystem fixes:</strong></p>
+
+<pre><code>The shell subsystem received numerous updates, fixes,
+and cleanups.
+</code></pre>
+
+<h3 id="zephyr-fota-samples">Zephyr FOTA Samples</h3>
+
+<h4 id="features-4">Features</h4>
+
+<p><strong>Port to CMake:</strong></p>
+
+<pre><code>The application build systems were converted to CMake.
+</code></pre>
+
+<p><strong>dm-hawkbit-mqtt uses mgmt.foundries.io for hawkBit:</strong></p>
+
+<pre><code>The dm-hawkbit-mqtt sample now uses mgmt.foundries.io as
+its hawkBit host. This is not a public host managed by
+Open Source Foundries; instead, it is an unused host
+that needs to be configured in the local network for the
+sample to work properly. This can be done via hosts
+configuration on a gateway device.
+</code></pre>
+
+<h4 id="bugs-4">Bugs</h4>
+
+<p><strong>Fix Bluetooth MAC address for Linux 4.12 and later:</strong></p>
+
+<pre><code>Bluetooth communication from Zephyr with stacks on
+Linux kernels newer than 4.11 require the removal of
+CONFIG_NET_L2_BT_ZEP1656 due to several bugs being
+fixed in Linux.
+
+One of these changes stops toggling the U/L bit of the
+BT MAC address as a signifier for a public or random
+address. Due to this change, the FOTA samples adjust
+the fifth octet of the address to work correctly when
+CONFIG_NET_L2_BT_ZEP1656 is disabled.
+
+This fixes communication problems with several nodes
+connected via 6lowpan on recent Linux kernels.
+</code></pre>
 
                         </div>
                         
@@ -419,14 +736,14 @@ The build has been fixed for users who have a local.conf in one of their applica
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/highlights-of-update-0.1/">
+                        <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/highlights-of-update-0.2/">
                           
-                            <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/banner-2.jpg" class="img-responsive" alt="Update 0.1">
+                            <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/banner-2.jpg" class="img-responsive" alt="Update 0.2">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/highlights-of-update-0.1/">Update 0.1</a></h5>
+                        <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/highlights-of-update-0.2/">Update 0.2</a></h5>
                     </div>
                 </div>
                 
