@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Update 0.3</title>
+  <title>microPlatform update 0.3</title>
   <meta name="author" content="" />
 
   
@@ -54,7 +54,7 @@
   <link rel="alternate" href="https://opensourcefoundries.github.io/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="Update 0.3" />
+  <meta property="og:title" content="microPlatform update 0.3" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/osfoundries-rendered/blog/2017/12/07/highlights-of-update-0.3//" />
   <meta property="og:image" content="img/logo.png" />
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.github.io/osfoundries-rendered/">
-                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo.png" alt="Update 0.3 logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo-small.png" alt="Update 0.3 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Update 0.3 - go to homepage</span>
+                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo.png" alt="microPlatform update 0.3 logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo-small.png" alt="microPlatform update 0.3 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">microPlatform update 0.3 - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -170,7 +170,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Update 0.3</h1>
+                <h1>microPlatform update 0.3</h1>
             </div>
         </div>
     </div>
@@ -191,68 +191,20 @@
                         <div id="post-content">
                           
 
-<h1 id="linux-microplatform">Linux microPlatform</h1>
+<h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
 
 <h2 id="highlights">Highlights</h2>
-
-<ul>
-<li>Added meta-intel layer to provide intel-corei7-64 machine type</li>
-<li>Switched Intel targets to use OSF kernel</li>
-<li>Enabled specific drivers for Minnowboard Turbot variants</li>
-<li>Migrated linux-osf to use the linux-yocto infrastructure</li>
-</ul>
-
-<h2 id="components">Components</h2>
-
-<h3 id="meta-osf-layer">Meta OSF Layer</h3>
-
-<h4 id="features">Features</h4>
-
-<h5 id="layer-update">Layer Update:</h5>
-
-<pre><code>Added support for generic 64bit Intel targets using OSF
-kernel.
-Enabled Minnowboard Turbot specific platform drivers.
-Migrated linux-osf to use the linux-yocto infrastructure.
-
-</code></pre>
-
-<h4 id="bugs">Bugs</h4>
-
-<ul>
-<li>no new bugs addressed in this release</li>
-</ul>
-
-<h3 id="meta-intel">Meta Intel</h3>
-
-<h4 id="features-1">Features</h4>
-
-<h5 id="layer-addition">Layer Addition:</h5>
-
-<pre><code>Initial import of the meta-intel layer.
-
-</code></pre>
-
-<h4 id="bugs-1">Bugs</h4>
-
-<ul>
-<li><p>no new bugs addressed in this release</p>
-
-<h1 id="zephyr-microplatform">Zephyr microPlatform</h1></li>
-</ul>
-
-<h2 id="highlights-1">Highlights</h2>
 
 <ul>
 <li>Zephyr tree from 1.10 release candidate, with CMake</li>
 <li>MCUBoot and FOTA sample build systems ported to CMake</li>
 </ul>
 
-<h2 id="components-1">Components</h2>
+<h2 id="components">Components</h2>
 
 <h3 id="mcuboot">MCUBoot</h3>
 
-<h4 id="features-2">Features</h4>
+<h4 id="features">Features</h4>
 
 <h5 id="cmake-based-build-system">CMake-based build system:</h5>
 
@@ -262,7 +214,7 @@ change.
 
 </code></pre>
 
-<h4 id="bugs-2">Bugs</h4>
+<h4 id="bugs">Bugs</h4>
 
 <h5 id="fix-jump-to-invalid-target-when-not-validating-slot-0">Fix jump to invalid target when not validating slot 0:</h5>
 
@@ -284,7 +236,7 @@ RSA).
 
 <h3 id="zephyr">Zephyr</h3>
 
-<h4 id="features-3">Features</h4>
+<h4 id="features-1">Features</h4>
 
 <h5 id="new-build-system">New build system:</h5>
 
@@ -445,7 +397,7 @@ mimxrt1051 and mimxrt1052 devices.
 
 </code></pre>
 
-<h4 id="bugs-3">Bugs</h4>
+<h4 id="bugs-1">Bugs</h4>
 
 <h5 id="arm-fix-for-crashes-setting-up-new-threads">ARM fix for crashes setting up new threads:</h5>
 
@@ -539,7 +491,7 @@ and cleanups.
 
 <h3 id="zephyr-fota-samples">Zephyr FOTA Samples</h3>
 
-<h4 id="features-4">Features</h4>
+<h4 id="features-2">Features</h4>
 
 <h5 id="port-to-cmake">Port to CMake:</h5>
 
@@ -558,7 +510,7 @@ configuration on a gateway device.
 
 </code></pre>
 
-<h4 id="bugs-4">Bugs</h4>
+<h4 id="bugs-2">Bugs</h4>
 
 <h5 id="fix-bluetooth-mac-address-for-linux-4-12-and-later">Fix Bluetooth MAC address for Linux 4.12 and later:</h5>
 
@@ -577,6 +529,54 @@ This fixes communication problems with several nodes
 connected via 6lowpan on recent Linux kernels.
 
 </code></pre>
+
+<h1 id="linux-microplatform">Linux microPlatform</h1>
+
+<h2 id="highlights-1">Highlights</h2>
+
+<ul>
+<li>Added meta-intel layer to provide intel-corei7-64 machine type</li>
+<li>Switched Intel targets to use OSF kernel</li>
+<li>Enabled specific drivers for Minnowboard Turbot variants</li>
+<li>Migrated linux-osf to use the linux-yocto infrastructure</li>
+</ul>
+
+<h2 id="components-1">Components</h2>
+
+<h3 id="meta-osf-layer">Meta OSF Layer</h3>
+
+<h4 id="features-3">Features</h4>
+
+<h5 id="layer-update">Layer Update:</h5>
+
+<pre><code>Added support for generic 64bit Intel targets using OSF
+kernel.
+Enabled Minnowboard Turbot specific platform drivers.
+Migrated linux-osf to use the linux-yocto infrastructure.
+
+</code></pre>
+
+<h4 id="bugs-3">Bugs</h4>
+
+<ul>
+<li>no new bugs addressed in this release</li>
+</ul>
+
+<h3 id="meta-intel">Meta Intel</h3>
+
+<h4 id="features-4">Features</h4>
+
+<h5 id="layer-addition">Layer Addition:</h5>
+
+<pre><code>Initial import of the meta-intel layer.
+
+</code></pre>
+
+<h4 id="bugs-4">Bugs</h4>
+
+<ul>
+<li>no new bugs addressed in this release</li>
+</ul>
 
                         </div>
                         
@@ -754,12 +754,12 @@ connected via 6lowpan on recent Linux kernels.
                     <div class="image same-height-always">
                         <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/highlights-of-update-0.4/">
                           
-                            <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/banner-2.jpg" class="img-responsive" alt="Update 0.4">
+                            <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/update.jpg" class="img-responsive" alt="microPlatform update 0.4">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/highlights-of-update-0.4/">Update 0.4</a></h5>
+                        <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/highlights-of-update-0.4/">microPlatform update 0.4</a></h5>
                     </div>
                 </div>
                 
@@ -767,12 +767,12 @@ connected via 6lowpan on recent Linux kernels.
                     <div class="image same-height-always">
                         <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/07/highlights-of-update-0.3/">
                           
-                            <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/banner-2.jpg" class="img-responsive" alt="Update 0.3">
+                            <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/update.jpg" class="img-responsive" alt="microPlatform update 0.3">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/07/highlights-of-update-0.3/">Update 0.3</a></h5>
+                        <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/07/highlights-of-update-0.3/">microPlatform update 0.3</a></h5>
                     </div>
                 </div>
                 
@@ -780,12 +780,12 @@ connected via 6lowpan on recent Linux kernels.
                     <div class="image same-height-always">
                         <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/highlights-of-update-0.2/">
                           
-                            <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/banner-2.jpg" class="img-responsive" alt="Update 0.2">
+                            <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/update.jpg" class="img-responsive" alt="microPlatform update 0.2">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/highlights-of-update-0.2/">Update 0.2</a></h5>
+                        <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/highlights-of-update-0.2/">microPlatform update 0.2</a></h5>
                     </div>
                 </div>
                 
