@@ -210,11 +210,8 @@
 
 <ul>
 <li>The Zephyr build system was rewritten to use cmake
-
-<ul>
-<li>instead of Kbuild, following the equivalent upstream</li>
-<li>change.</li>
-</ul></li>
+instead of Kbuild, following the equivalent upstream
+change.</li>
 </ul>
 
 <h4 id="bugs">Bugs</h4>
@@ -223,24 +220,18 @@
 
 <ul>
 <li>A bug fix to the core bootloader was merged which
-
-<ul>
-<li>affects configurations that do not validate slot 0</li>
-<li>before booting into it. In these configurations, the</li>
-<li>bootloader would jump to any flash, regardless of if the</li>
-<li>mcuboot header contained a valid magic number.</li>
-</ul></li>
+affects configurations that do not validate slot 0
+before booting into it. In these configurations, the
+bootloader would jump to any flash, regardless of if the
+mcuboot header contained a valid magic number.</li>
 </ul>
 
 <h5 id="build-fix-for-zephyr-with-ecsda">Build fix for Zephyr with ECSDA:</h5>
 
 <ul>
 <li>A bug fix to Zephyr targets was merged which restores
-
-<ul>
-<li>the build when using ECDSA (rather than the default</li>
-<li>RSA).</li>
-</ul></li>
+the build when using ECDSA (rather than the default
+RSA).</li>
 </ul>
 
 <h3 id="zephyr">Zephyr</h3>
@@ -251,82 +242,61 @@
 
 <ul>
 <li>&ldquo;The most significant change facing application
-
-<ul>
-<li>developers is a complete rewrite of the build system to</li>
-<li>use CMake instead of the Makefile-based Kbuild system</li>
-<li>borrowed from the Linux kernel. All applications will</li>
-<li>need to rewrite their build systems to adapt;</li>
-<li>instructions are available in the Zephyr Application</li>
-<li>Development Primer, available in the Zephyr</li>
-<li>documentation:</li>
-<li></li>
-<li><a href="http://docs.zephyrproject.org/application/application.html&quot;">http://docs.zephyrproject.org/application/application.html&quot;</a></li>
-</ul></li>
+developers is a complete rewrite of the build system to
+use CMake instead of the Makefile-based Kbuild system
+borrowed from the Linux kernel. All applications will
+need to rewrite their build systems to adapt;
+instructions are available in the Zephyr Application
+Development Primer, available in the Zephyr
+documentation:</li>
 </ul>
+
+<p><a href="http://docs.zephyrproject.org/application/application.html&quot;">http://docs.zephyrproject.org/application/application.html&quot;</a></p>
 
 <h5 id="wide-ranging-bluetooth-mesh-improvements">Wide-ranging Bluetooth Mesh improvements:</h5>
 
 <ul>
 <li>Over a hundred patches, fixes, documentation, release
-
-<ul>
-<li>notes, and other improvements to Bluetooth Mesh were</li>
-<li>merged.</li>
-</ul></li>
+notes, and other improvements to Bluetooth Mesh were
+merged.</li>
 </ul>
 
 <h5 id="nxp-i-mx-support">NXP i.MX support:</h5>
 
 <ul>
 <li>Support for the NXP i.MX SoC family was merged, along
-
-<ul>
-<li>with board support for a new target, mimxrt1050_evk.</li>
-</ul></li>
+with board support for a new target, mimxrt1050_evk.</li>
 </ul>
 
 <h5 id="device-tree-comes-to-x86">Device tree comes to x86&hellip;:</h5>
 
 <ul>
 <li>X86 devices based on QUARK_X1000 gained device tree
-
-<ul>
-<li>support. The galileo board has a devicetree defined</li>
-<li>which can be used as an example when starting to use DT</li>
-<li>on x86.</li>
-</ul></li>
+support. The galileo board has a devicetree defined
+which can be used as an example when starting to use DT
+on x86.</li>
 </ul>
 
 <h5 id="and-to-arc">&hellip;and to ARC:</h5>
 
 <ul>
 <li>Among Device tree support was added for ARC devices, as
-
-<ul>
-<li>well as minnowboard, atom based devices,</li>
-<li>arduino_101_sss, quark_se_c1000_ss_devboard.</li>
-</ul></li>
+well as minnowboard, atom based devices,
+arduino_101_sss, quark_se_c1000_ss_devboard.</li>
 </ul>
 
 <h5 id="network-loopback-devices">Network loopback devices:</h5>
 
 <ul>
 <li>Loopback device support was merged in the networking
-
-<ul>
-<li>subsystem.</li>
-</ul></li>
+subsystem.</li>
 </ul>
 
 <h5 id="additional-format-specifiers-for-printk">Additional format specifiers for printk():</h5>
 
 <ul>
 <li>The printk() function now supports string format
-
-<ul>
-<li>specifiers.</li>
-</ul></li>
+specifiers.</li>
 </ul>
 
 <h5 id="tinycrypt-update">TinyCrypt update:</h5>
@@ -339,30 +309,21 @@
 
 <ul>
 <li>New drivers were added for Atmel SAM I2S and DMA
-
-<ul>
-<li>(XDMAC).</li>
-</ul></li>
+(XDMAC).</li>
 </ul>
 
 <h5 id="particulate-matter-sensor-support">Particulate matter sensor support:</h5>
 
 <ul>
 <li>Sensor channels for particulate matter were added, and a
-
-<ul>
-<li>driver for the plantower PMS7003 sensor was merged.</li>
-</ul></li>
+driver for the plantower PMS7003 sensor was merged.</li>
 </ul>
 
 <h5 id="user-buffer-validation-support-for-arm">User buffer validation support for ARM:</h5>
 
 <ul>
 <li>Support for validating user buffers when
-
-<ul>
-<li>CONFIG_USERSPACE=y was merged for the ARM architecture.</li>
-</ul></li>
+CONFIG_USERSPACE=y was merged for the ARM architecture.</li>
 </ul>
 
 <h5 id="userspace-protection-tests">Userspace protection tests:</h5>
@@ -381,10 +342,7 @@
 
 <ul>
 <li>openocd support was added for nucleo_l476rg and
-
-<ul>
-<li>stm32l496g_disco.</li>
-</ul></li>
+stm32l496g_disco.</li>
 </ul>
 
 <h5 id="pwm2-for-stm32f4-disco">PWM2 for stm32f4_disco:</h5>
@@ -397,40 +355,28 @@
 
 <ul>
 <li>EM11D and EM7D configurations were added for
-
-<ul>
-<li>em-starterkit.</li>
-</ul></li>
+em-starterkit.</li>
 </ul>
 
 <h5 id="altera-hal-support">Altera HAL support:</h5>
 
 <ul>
 <li>External library support was added for the Altera
-
-<ul>
-<li>Hardware Abstraction Library (HAL).</li>
-</ul></li>
+Hardware Abstraction Library (HAL).</li>
 </ul>
 
 <h5 id="altera-soft-ip-serial-and-timers">Altera soft IP serial and timers:</h5>
 
 <ul>
 <li>New drivers were merged for Altera soft IP serial ports
-
-<ul>
-<li>and timers.</li>
-</ul></li>
+and timers.</li>
 </ul>
 
 <h5 id="additional-mcux-targets">Additional mcux targets:</h5>
 
 <ul>
 <li>Driver support was added using the mcux driver for
-
-<ul>
-<li>mimxrt1051 and mimxrt1052 devices.</li>
-</ul></li>
+mimxrt1051 and mimxrt1052 devices.</li>
 </ul>
 
 <h5 id="entropy-for-nrf5">Entropy for nRF5:</h5>
@@ -457,30 +403,21 @@
 
 <ul>
 <li>A bug fix for ARM which prevents crashes when setting up
-
-<ul>
-<li>new threads was merged.</li>
-</ul></li>
+new threads was merged.</li>
 </ul>
 
 <h5 id="build-fixes-for-x86-jailhouse-and-nucleo-f091rc">Build fixes for x86_jailhouse and nucleo_f091rc:</h5>
 
 <ul>
 <li>Build breaks for the x86_jailhouse and nucleo_f091rc
-
-<ul>
-<li>boards were fixed.</li>
-</ul></li>
+boards were fixed.</li>
 </ul>
 
 <h5 id="kconfig-cleanups">Kconfig cleanups:</h5>
 
 <ul>
 <li>Some Kconfig dependencies and definitions were fixed and
-
-<ul>
-<li>cleaned up.</li>
-</ul></li>
+cleaned up.</li>
 </ul>
 
 <h5 id="stm32-i2c-and-usb-fixes">STM32 I2C and USB fixes:</h5>
@@ -493,31 +430,25 @@
 
 <ul>
 <li>A few bug fixes for struct net_pkt were merged,
-
-<ul>
-<li>correcting the data length appended by net_pkt_append(),</li>
-<li>fixing accounting for IP header lengths, and avoiding a</li>
-<li>possible division by zero. The MTU is now honored when</li>
-<li>TLS and DTLS are used, among other MTU-related fixes.</li>
-<li>Network contexts are unlocked in case of error,</li>
-<li>resolving possible deadlock issues. Sockets now support</li>
-<li>IPv6 wildcard and loopback addresses. A net packet leak</li>
-<li>in the socket layer was fixed. Several LWM2M fixes were</li>
-<li>merged, both to the engine core and to the temperature</li>
-<li>IPSO object. Several fixes were merged to the new HTTP</li>
-<li>library, which is the subject of ongoing discussion on</li>
-<li>the mailing list.</li>
-</ul></li>
+correcting the data length appended by net_pkt_append(),
+fixing accounting for IP header lengths, and avoiding a
+possible division by zero. The MTU is now honored when
+TLS and DTLS are used, among other MTU-related fixes.
+Network contexts are unlocked in case of error,
+resolving possible deadlock issues. Sockets now support
+IPv6 wildcard and loopback addresses. A net packet leak
+in the socket layer was fixed. Several LWM2M fixes were
+merged, both to the engine core and to the temperature
+IPSO object. Several fixes were merged to the new HTTP
+library, which is the subject of ongoing discussion on
+the mailing list.</li>
 </ul>
 
 <h5 id="fixes-to-802-15-4-l2-core">Fixes to 802.15.4 L2 core:</h5>
 
 <ul>
 <li>A few fixes and improvements to the core 802.15.4
-
-<ul>
-<li>implementation were merged.</li>
-</ul></li>
+implementation were merged.</li>
 </ul>
 
 <h5 id="802-15-4-on-kw41z-fixes">802.15.4 on kw41z fixes:</h5>
@@ -548,20 +479,14 @@
 
 <ul>
 <li>Miscellaneous minor improvements and cleanups were made
-
-<ul>
-<li>in the core kernel.</li>
-</ul></li>
+in the core kernel.</li>
 </ul>
 
 <h5 id="shell-subsystem-fixes">Shell subsystem fixes:</h5>
 
 <ul>
 <li>The shell subsystem received numerous updates, fixes,
-
-<ul>
-<li>and cleanups.</li>
-</ul></li>
+and cleanups.</li>
 </ul>
 
 <h3 id="zephyr-fota-samples">Zephyr FOTA Samples</h3>
@@ -578,14 +503,11 @@
 
 <ul>
 <li>The dm-hawkbit-mqtt sample now uses mgmt.foundries.io as
-
-<ul>
-<li>its hawkBit host. This is not a public host managed by</li>
-<li>Open Source Foundries; instead, it is an unused host</li>
-<li>that needs to be configured in the local network for the</li>
-<li>sample to work properly. This can be done via hosts</li>
-<li>configuration on a gateway device.</li>
-</ul></li>
+its hawkBit host. This is not a public host managed by
+Open Source Foundries; instead, it is an unused host
+that needs to be configured in the local network for the
+sample to work properly. This can be done via hosts
+configuration on a gateway device.</li>
 </ul>
 
 <h4 id="bugs-2">Bugs</h4>
@@ -594,22 +516,19 @@
 
 <ul>
 <li>Bluetooth communication from Zephyr with stacks on
-
-<ul>
-<li>Linux kernels newer than 4.11 require the removal of</li>
-<li>CONFIG_NET_L2_BT_ZEP1656 due to several bugs being</li>
-<li>fixed in Linux.</li>
-<li></li>
-<li>One of these changes stops toggling the U/L bit of the</li>
-<li>BT MAC address as a signifier for a public or random</li>
-<li>address. Due to this change, the FOTA samples adjust</li>
-<li>the fifth octet of the address to work correctly when</li>
-<li>CONFIG_NET_L2_BT_ZEP1656 is disabled.</li>
-<li></li>
-<li>This fixes communication problems with several nodes</li>
-<li>connected via 6lowpan on recent Linux kernels.</li>
-</ul></li>
+Linux kernels newer than 4.11 require the removal of
+CONFIG_NET_L2_BT_ZEP1656 due to several bugs being
+fixed in Linux.</li>
 </ul>
+
+<p>One of these changes stops toggling the U/L bit of the
+BT MAC address as a signifier for a public or random
+address. Due to this change, the FOTA samples adjust
+the fifth octet of the address to work correctly when
+CONFIG_NET_L2_BT_ZEP1656 is disabled.</p>
+
+<p>This fixes communication problems with several nodes
+connected via 6lowpan on recent Linux kernels.</p>
 
 <h1 id="linux-microplatform">Linux microPlatform</h1>
 
@@ -632,18 +551,15 @@
 
 <ul>
 <li>Added support for generic 64bit Intel targets using OSF
-
-<ul>
-<li>kernel.</li>
-<li>Enabled Minnowboard Turbot specific platform drivers.</li>
-<li>Migrated linux-osf to use the linux-yocto infrastructure.</li>
-</ul></li>
+kernel.
+Enabled Minnowboard Turbot specific platform drivers.
+Migrated linux-osf to use the linux-yocto infrastructure.</li>
 </ul>
 
 <h4 id="bugs-3">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h3 id="meta-intel">Meta Intel</h3>
@@ -659,7 +575,7 @@
 <h4 id="bugs-4">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
                         </div>

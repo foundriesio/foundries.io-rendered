@@ -208,13 +208,13 @@
 <h4 id="features">Features</h4>
 
 <ul>
-<li>no new features in this update</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h4 id="bugs">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h3 id="zephyr">Zephyr</h3>
@@ -225,11 +225,8 @@
 
 <ul>
 <li>The GPIO_PIN_ENABLE and GPIO_PIN_DISABLE configuration
-
-<ul>
-<li>constants, which overlap with functionality provided by the</li>
-<li>pinux driver, were deprecated.</li>
-</ul></li>
+constants, which overlap with functionality provided by the
+pinux driver, were deprecated.</li>
 </ul>
 
 <h5 id="new-coap-api">New CoAP API:</h5>
@@ -242,125 +239,98 @@
 
 <ul>
 <li>There is a new HTTP API based on the net-app framework;
-
-<ul>
-<li>the existing API has been deprecated.</li>
-<li></li>
-<li>Applications using the old API need to ensure</li>
-<li>CONFIG_HTTP is enabled, and CONFIG_HTTP_APP is disabled,</li>
-<li>to continue using the deprecated API. Such applications</li>
-<li>should be updated to use the new API. The HTTP sample</li>
-<li>applications were converted to use the new API, and can</li>
-<li>be used as a reference.</li>
-</ul></li>
+the existing API has been deprecated.</li>
 </ul>
+
+<p>Applications using the old API need to ensure
+CONFIG_HTTP is enabled, and CONFIG_HTTP_APP is disabled,
+to continue using the deprecated API. Such applications
+should be updated to use the new API. The HTTP sample
+applications were converted to use the new API, and can
+be used as a reference.</p>
 
 <h5 id="new-led-strip-api">New LED strip API:</h5>
 
 <ul>
 <li>A public API for strips, or strings, of individually
-
-<ul>
-<li>addressable LEDs was added, along with drivers for two</li>
-<li>common chipsets and sample applications. Both RGB and</li>
-<li>grayscale LED strip drivers can be implemented within</li>
-<li>these APIs.</li>
-</ul></li>
+addressable LEDs was added, along with drivers for two
+common chipsets and sample applications. Both RGB and
+grayscale LED strip drivers can be implemented within
+these APIs.</li>
 </ul>
 
 <h5 id="new-userspace-and-driver-api-checking">New &ldquo;userspace&rdquo; and driver API checking:</h5>
 
 <ul>
 <li>The Zephyr kernel now supports separate system and user
-
-<ul>
-<li>thread modes. User threads have limited access to kernel</li>
-<li>objects, such as device drivers, semaphores, etc.</li>
-<li></li>
-<li>Many drivers had userspace system call handlers added</li>
-<li>(I2C, ADC, PWM, RTC, etc), which enforce the separation</li>
-<li>between the core kernel and a userspace thread at the</li>
-<li>driver API call. However, existing APIs are unchanged.</li>
-</ul></li>
+thread modes. User threads have limited access to kernel
+objects, such as device drivers, semaphores, etc.</li>
 </ul>
+
+<p>Many drivers had userspace system call handlers added
+(I2C, ADC, PWM, RTC, etc), which enforce the separation
+between the core kernel and a userspace thread at the
+driver API call. However, existing APIs are unchanged.</p>
 
 <h5 id="new-random-subsystem">New random subsystem:</h5>
 
 <ul>
 <li>Random number generation in Zephyr is undergoing a significant
-
-<ul>
-<li>refactor.  A new random subsystem was added, which provides</li>
-<li>implementations for sys_rand32_get() based on hardware sources</li>
-<li>of entropy. These sources in the drivers/random directory were</li>
-<li>moved to &ldquo;drivers/entropy&rdquo;. A Xoroshiro128+ PRNG was added to</li>
-<li>the random subsystem; it is only recommended for</li>
-<li>non-cryptographic purposes.</li>
-</ul></li>
+refactor.  A new random subsystem was added, which provides
+implementations for sys_rand32_get() based on hardware sources
+of entropy. These sources in the drivers/random directory were
+moved to &ldquo;drivers/entropy&rdquo;. A Xoroshiro128+ PRNG was added to
+the random subsystem; it is only recommended for
+non-cryptographic purposes.</li>
 </ul>
 
 <h5 id="updated-crypto-library-usage">Updated crypto library usage:</h5>
 
 <ul>
 <li>Minor changes to the usage of the mbedtls and tinycrypt
-
-<ul>
-<li>libraries was merged.</li>
-</ul></li>
+libraries was merged.</li>
 </ul>
 
 <h5 id="new-net-buf-apis">New net_buf APIs:</h5>
 
 <ul>
-<li>Some new net_buf APIs were merged.
+<li><p>Some new net_buf APIs were merged.</p></li>
 
-<ul>
-<li></li>
-<li>- net_buf_id(), which allows converting a buffer into a</li>
-<li>zero-based index. The utility of this API will be</li>
-<li>limited until a future refactor converts all struct</li>
-<li>net_bufs to have a fixed user data size, however.</li>
-<li></li>
-<li>- net_buf_slist_put() and net_buf_slist_get(), which</li>
-<li>should be used instead of sys<em>slist</em>*() equivalents to</li>
-<li>ensure correct handling of buffer fragments when</li>
-<li>net_bufs are placed in singly linked lists.</li>
-</ul></li>
+<li><p>net_buf_id(), which allows converting a buffer into a
+zero-based index. The utility of this API will be
+limited until a future refactor converts all struct
+net_bufs to have a fixed user data size, however.</p></li>
+
+<li><p>net_buf_slist_put() and net_buf_slist_get(), which
+should be used instead of sys<em>slist</em>*() equivalents to
+ensure correct handling of buffer fragments when
+net_bufs are placed in singly linked lists.</p></li>
 </ul>
 
 <h5 id="power-management-for-nrf52">Power management for nRF52:</h5>
 
 <ul>
 <li>nRF52 series SoCs gained architecture-specific power
-
-<ul>
-<li>management support for transitioning the core into and</li>
-<li>out of low power sleep states. This includes a sample</li>
-<li>application, samples/boards/nrf52/power_mgr.</li>
-</ul></li>
+management support for transitioning the core into and
+out of low power sleep states. This includes a sample
+application, samples/boards/nrf52/power_mgr.</li>
 </ul>
 
 <h5 id="new-sensor-support-for-disco-l475-iot1">New sensor support for disco_l475_iot1:</h5>
 
 <ul>
 <li>Support for sensors on the STM32L4 board
-
-<ul>
-<li>disco_l475_iot1 was merged. This supports the LSM6DSL,</li>
-<li>LIS3MDL, LPS22HB, and HTS221 sensors. Support is</li>
-<li>disabled by default. Applications can enable sensor</li>
-<li>support for this board using their .conf files.</li>
-</ul></li>
+disco_l475_iot1 was merged. This supports the LSM6DSL,
+LIS3MDL, LPS22HB, and HTS221 sensors. Support is
+disabled by default. Applications can enable sensor
+support for this board using their .conf files.</li>
 </ul>
 
 <h5 id="usb-improvements">USB improvements:</h5>
 
 <ul>
 <li>Work was merged to the USB subsystem to support CDC ECM
-
-<ul>
-<li>and composite USB devices.</li>
-</ul></li>
+and composite USB devices.</li>
 </ul>
 
 <h5 id="atmel-sam3-serial-driver-deprecated">Atmel SAM3 serial driver deprecated.:</h5>
@@ -373,55 +343,40 @@
 
 <ul>
 <li>LwM2M protocol support migrated to the new CoAP API, and
-
-<ul>
-<li>now supports multiple network fragments.  This removes</li>
-<li>the requirement for the large buffer sizes and makes the</li>
-<li>overall protocol much more flexible.  It also received</li>
-<li>various memory usage optimizations.</li>
-</ul></li>
+now supports multiple network fragments.  This removes
+the requirement for the large buffer sizes and makes the
+overall protocol much more flexible.  It also received
+various memory usage optimizations.</li>
 </ul>
 
 <h5 id="flash-scripts-rewritten-in-python">Flash scripts rewritten in Python:</h5>
 
 <ul>
 <li>The Zephyr flash and debug scripts, originally ported from
-
-<ul>
-<li>the RIOT RTOS, have been rewritten in Python to</li>
-<li>eliminate a dependency on a Unix shell, replacing it with a</li>
-<li>cross-platform alternative.</li>
-</ul></li>
+the RIOT RTOS, have been rewritten in Python to
+eliminate a dependency on a Unix shell, replacing it with a
+cross-platform alternative.</li>
 </ul>
 
 <h5 id="miscellaneous-stm32-improvements">Miscellaneous STM32 improvements:</h5>
 
 <ul>
 <li>Other miscellaneous STM32-specific board code and
-
-<ul>
-<li>documentation fixups were merged.</li>
-</ul></li>
+documentation fixups were merged.</li>
 </ul>
 
 <h5 id="test-conversions-to-ztest">Test conversions to ztest:</h5>
 
 <ul>
 <li>Numerous test cleanups were merged, including continued
-
-<ul>
-<li>conversions to the ztest framework.</li>
-</ul></li>
+conversions to the ztest framework.</li>
 </ul>
 
 <h5 id="documentation-updates-for-new-website">Documentation updates for new website:</h5>
 
 <ul>
 <li>The Zephyr website was given a major re-work, and various
-
-<ul>
-<li>documentation links were updated accordingly.</li>
-</ul></li>
+documentation links were updated accordingly.</li>
 </ul>
 
 <h4 id="bugs-1">Bugs</h4>
@@ -435,43 +390,31 @@
 <h5 id="bluetooth-mesh">Bluetooth Mesh:</h5>
 
 <ul>
-<li>Many fixes were merged for Bluetooth Mesh support.
-
-<ul>
-<li></li>
-<li>Network Message Cache behavior was also improved.</li>
-</ul></li>
+<li>Many fixes were merged for Bluetooth Mesh support.</li>
 </ul>
+
+<p>Network Message Cache behavior was also improved.</p>
 
 <h5 id="other-bluetooth-fixes">Other Bluetooth fixes:</h5>
 
 <ul>
 <li>Some other fixes to the core BT controller and LE scan
-
-<ul>
-<li>handling code were also merged.</li>
-</ul></li>
+handling code were also merged.</li>
 </ul>
 
 <h5 id="pae-fix-for-x86">PAE fix for x86:</h5>
 
 <ul>
 <li>The x86 architecture MMU generation had a fix to PAE
-
-<ul>
-<li>page directory permissions.</li>
-</ul></li>
+page directory permissions.</li>
 </ul>
 
 <h5 id="infinite-loop-in-i2c-for-stm32f0-f3-f7">Infinite loop in I2C for STM32F0, F3, F7:</h5>
 
 <ul>
 <li>A fix for a bug in an STM32 I2C driver was merged which
-
-<ul>
-<li>prevents the driver from entering into an infinite loop;</li>
-<li>this affects F0, F3, and F7 based devices.</li>
-</ul></li>
+prevents the driver from entering into an infinite loop;
+this affects F0, F3, and F7 based devices.</li>
 </ul>
 
 <h3 id="zephyr-fota-samples">Zephyr FOTA Samples</h3>
@@ -482,60 +425,45 @@
 
 <ul>
 <li>Uses of sXprintf() were replaced with sXprintk()
-
-<ul>
-<li>alternatives, saving about 3.5 KB of flash.</li>
-</ul></li>
+alternatives, saving about 3.5 KB of flash.</li>
 </ul>
 
 <h5 id="dm-hawkbit-mqtt-http-configuration-update">dm-hawkbit-mqtt: HTTP configuration update:</h5>
 
 <ul>
 <li>The application was updated to disable the new HTTP
-
-<ul>
-<li>library, preserving use of the other, now-deprecated</li>
-<li>library. Applications can use this as a reference while</li>
-<li>transitioning to the new APIs.</li>
-</ul></li>
+library, preserving use of the other, now-deprecated
+library. Applications can use this as a reference while
+transitioning to the new APIs.</li>
 </ul>
 
 <h5 id="dm-hawkbit-mqtt-support-for-ble-nano-2-board">dm-hawkbit-mqtt: support for BLE Nano 2 board:</h5>
 
 <ul>
 <li>JSON buffer sizes were tweaked to support longer strings
-
-<ul>
-<li>generated at runtime on the BLE Nano 2.</li>
-</ul></li>
+generated at runtime on the BLE Nano 2.</li>
 </ul>
 
 <h5 id="dm-lwm2m-add-firmware-storage-buffer">dm-lwm2m: add firmware storage buffer:</h5>
 
 <ul>
 <li>The application was updated to explicitly allocate a
-
-<ul>
-<li>buffer for storing firmware during the download</li>
-<li>process. This is necessary since the upstream LWM2M</li>
-<li>subsystem no longer allocates its own.</li>
-</ul></li>
+buffer for storing firmware during the download
+process. This is necessary since the upstream LWM2M
+subsystem no longer allocates its own.</li>
 </ul>
 
 <h5 id="dm-lwm2m-configuration-sync-with-upstream">dm-lwm2m: configuration sync with upstream:</h5>
 
 <ul>
 <li>The large net buffer size setting was removed.  LwM2M no
-
-<ul>
-<li>longer needs the large contiguous buffer.</li>
-<li></li>
-<li>Extra buffer allocations were removed by default.  These</li>
-<li>will eventually be needed for keeping a copy of packets</li>
-<li>to be sent via 6lowpan.  But currently, these are not</li>
-<li>used.</li>
-</ul></li>
+longer needs the large contiguous buffer.</li>
 </ul>
+
+<p>Extra buffer allocations were removed by default.  These
+will eventually be needed for keeping a copy of packets
+to be sent via 6lowpan.  But currently, these are not
+used.</p>
 
 <h4 id="bugs-2">Bugs</h4>
 
@@ -543,15 +471,12 @@
 
 <ul>
 <li>BLE devices with minor antenna issues can have data
-
-<ul>
-<li>transmission delays.  More time is now allocated before</li>
-<li>starting the TCP retry process.</li>
-<li></li>
-<li>This fixes an issue where net buffers would be exhausted</li>
-<li>due to the previous 200ms TCP retry logic.</li>
-</ul></li>
+transmission delays.  More time is now allocated before
+starting the TCP retry process.</li>
 </ul>
+
+<p>This fixes an issue where net buffers would be exhausted
+due to the previous 200ms TCP retry logic.</p>
 
 <h5 id="dm-hawkbit-mqtt-logging-fixes">dm-hawkbit-mqtt: logging fixes:</h5>
 
@@ -563,18 +488,15 @@
 
 <ul>
 <li>When downloading firmware via the cf_proxy (translating
-
-<ul>
-<li>from HTTP -&gt; CoAP) a CoAP ETAG option is used to specify</li>
-<li>the version of the binary file.</li>
-<li></li>
-<li>The length of that ETAG can be quite large (including a</li>
-<li>UUID), which is greater than what the buffer can hold by</li>
-<li>default. This issue was resolved, fixing errors raised</li>
-<li>when using HTTP download in resource 5/0/1 with</li>
-<li>CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT=y.</li>
-</ul></li>
+from HTTP -&gt; CoAP) a CoAP ETAG option is used to specify
+the version of the binary file.</li>
 </ul>
+
+<p>The length of that ETAG can be quite large (including a
+UUID), which is greater than what the buffer can hold by
+default. This issue was resolved, fixing errors raised
+when using HTTP download in resource 5/0/1 with
+CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT=y.</p>
 
 <h1 id="linux-microplatform">Linux microPlatform</h1>
 
@@ -597,13 +519,13 @@
 <h4 id="features-3">Features</h4>
 
 <ul>
-<li>no new features in this update</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h4 id="bugs-3">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h3 id="meta-96boards-layer">Meta-96boards Layer</h3>
@@ -614,19 +536,16 @@
 
 <ul>
 <li>Grub is now compatible with GCC 7 (default version in Rocko).
-
-<ul>
-<li>Grub&rsquo;s default boot configuration now includes the distro name.</li>
-<li>HiKey serial console now can be configured externally.</li>
-<li>96boards-tools was updated to 0.11, including improvements to the</li>
-<li>rootfs resize script.</li>
-</ul></li>
+Grub&rsquo;s default boot configuration now includes the distro name.
+HiKey serial console now can be configured externally.
+96boards-tools was updated to 0.11, including improvements to the
+rootfs resize script.</li>
 </ul>
 
 <h4 id="bugs-4">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h3 id="openembedded-core-layer">OpenEmbedded-Core Layer</h3>
@@ -637,21 +556,18 @@
 
 <ul>
 <li>Ipk package creation can now be parallelised.
-
-<ul>
-<li>Busybox updated to 1.27.2.</li>
-<li>Cmake updated to 3.9.3.</li>
-<li>Glibc updated to 2.25.90.</li>
-<li>BlueZ updated to 5.47.</li>
-<li>systemd updated to 234.</li>
-<li>GCC updated to 7.2.0.</li>
-<li>Binutils updated to 2.29.</li>
-<li>CA-Certificates updated to 20170717.</li>
-<li>U-Boot updated to 2017.09.</li>
-<li>Go updated to 1.9, including major changes in the bbclass.</li>
-<li>Linux-firmware updated to the latest git revision.</li>
-<li>Improved support for WIC, with several minor bugfixes.</li>
-</ul></li>
+Busybox updated to 1.27.2.
+Cmake updated to 3.9.3.
+Glibc updated to 2.25.90.
+BlueZ updated to 5.47.
+systemd updated to 234.
+GCC updated to 7.2.0.
+Binutils updated to 2.29.
+CA-Certificates updated to 20170717.
+U-Boot updated to 2017.09.
+Go updated to 1.9, including major changes in the bbclass.
+Linux-firmware updated to the latest git revision.
+Improved support for WIC, with several minor bugfixes.</li>
 </ul>
 
 <h4 id="bugs-5">Bugs</h4>
@@ -662,13 +578,13 @@
 <li><p>Multiple issues.</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-0663">CVE-2017-0663</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-5969">CVE-2017-5969</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-8872">CVE-2017-8872</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-9047">CVE-2017-9047</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-9048">CVE-2017-9048</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-9049">CVE-2017-9049</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-9050">CVE-2017-9050</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0663">CVE-2017-0663</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5969">CVE-2017-5969</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8872">CVE-2017-8872</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9047">CVE-2017-9047</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9048">CVE-2017-9048</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9049">CVE-2017-9049</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9050">CVE-2017-9050</a></li>
 </ul></li>
 </ul>
 
@@ -678,7 +594,7 @@
 <li><p>CRLF injection vulnerability in the url_parse function.</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-6508">CVE-2017-6508</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6508">CVE-2017-6508</a></li>
 </ul></li>
 </ul>
 
@@ -688,10 +604,10 @@
 <li><p>Multiple issues.</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-1000099">CVE-2017-1000099</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-1000100">CVE-2017-1000100</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-1000101">CVE-2017-1000101</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-1000254">CVE-2017-1000254</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-1000099">CVE-2017-1000099</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-1000100">CVE-2017-1000100</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-1000101">CVE-2017-1000101</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-1000254">CVE-2017-1000254</a></li>
 </ul></li>
 </ul>
 
@@ -701,24 +617,23 @@
 <li><p>Multiple issues.</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13728">CVE-2017-13728</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13729">CVE-2017-13729</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13730">CVE-2017-13730</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13731">CVE-2017-13731</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13732">CVE-2017-13732</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13734">CVE-2017-13734</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13728">CVE-2017-13728</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13729">CVE-2017-13729</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13730">CVE-2017-13730</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13731">CVE-2017-13731</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13732">CVE-2017-13732</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13734">CVE-2017-13734</a></li>
 </ul></li>
 </ul>
 
 <h5 id="libgcrypt">libgcrypt:</h5>
 
 <ul>
-<li><p>Libgcrypt before 1.8.1 does not properly consider Curve25519</p>
+<li><p>Libgcrypt before 1.8.1 does not properly consider Curve25519
+side-channel attacks.</p>
 
 <ul>
-<li><p>side-channel attacks.</p></li>
-
-<li><p><a href="https://access.redhat.com/security/cve/cve-2017-0379">CVE-2017-0379</a></p></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0379">CVE-2017-0379</a></li>
 </ul></li>
 </ul>
 
@@ -728,43 +643,39 @@
 <li><p>Several issues related to the Key Reinstallation Attacks (KRACK).</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13077">CVE-2017-13077</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13078">CVE-2017-13078</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13079">CVE-2017-13079</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13080">CVE-2017-13080</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13081">CVE-2017-13081</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13082">CVE-2017-13082</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13086">CVE-2017-13086</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13087">CVE-2017-13087</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13088">CVE-2017-13088</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13077">CVE-2017-13077</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13078">CVE-2017-13078</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13079">CVE-2017-13079</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13080">CVE-2017-13080</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13081">CVE-2017-13081</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13082">CVE-2017-13082</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13086">CVE-2017-13086</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13087">CVE-2017-13087</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13088">CVE-2017-13088</a></li>
 </ul></li>
 </ul>
 
 <h5 id="shadow">shadow:</h5>
 
 <ul>
-<li><p>In shadow before 4.5, the newusers tool could be made to</p>
+<li><p>In shadow before 4.5, the newusers tool could be made to
+manipulate internal data structures in ways unintended by the
+authors.</p>
 
 <ul>
-<li>manipulate internal data structures in ways unintended by the</li>
-
-<li><p>authors.</p></li>
-
-<li><p><a href="https://access.redhat.com/security/cve/cve-2017-12424">CVE-2017-12424</a></p></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12424">CVE-2017-12424</a></li>
 </ul></li>
 </ul>
 
 <h5 id="sqlite3">sqlite3:</h5>
 
 <ul>
-<li><p>The dump_callback function in SQLite 3.20.0 allows remote</p>
+<li><p>The dump_callback function in SQLite 3.20.0 allows remote
+attackers to cause a denial of service (EXC_BAD_ACCESS
+and application crash) via a crafted file.</p>
 
 <ul>
-<li>attackers to cause a denial of service (EXC_BAD_ACCESS</li>
-
-<li><p>and application crash) via a crafted file.</p></li>
-
-<li><p><a href="https://access.redhat.com/security/cve/cve-2017-13685">CVE-2017-13685</a></p></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13685">CVE-2017-13685</a></li>
 </ul></li>
 </ul>
 
@@ -776,14 +687,11 @@
 
 <ul>
 <li>Gvfs updated to 1.32.1.
-
-<ul>
-<li>Parted updated to 0.28.1.</li>
-<li>VIM updated to 8.0.0983.</li>
-<li>Rsyslog updated to 8.29.</li>
-<li>Dnsmasq upadted to 2.78.</li>
-<li>Tcpdump updated to 4.9.2.</li>
-</ul></li>
+Parted updated to 0.28.1.
+VIM updated to 8.0.0983.
+Rsyslog updated to 8.29.
+Dnsmasq upadted to 2.78.
+Tcpdump updated to 4.9.2.</li>
 </ul>
 
 <h4 id="bugs-6">Bugs</h4>
@@ -794,98 +702,98 @@
 <li><p>Multiple issues.</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-11543">CVE-2017-11543</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13011">CVE-2017-13011</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12989">CVE-2017-12989</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12990">CVE-2017-12990</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12995">CVE-2017-12995</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12997">CVE-2017-12997</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-11541">CVE-2017-11541</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-11542">CVE-2017-11542</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12893">CVE-2017-12893</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12894">CVE-2017-12894</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12895">CVE-2017-12895</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12896">CVE-2017-12896</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12897">CVE-2017-12897</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12898">CVE-2017-12898</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12899">CVE-2017-12899</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12900">CVE-2017-12900</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12901">CVE-2017-12901</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12902">CVE-2017-12902</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12985">CVE-2017-12985</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12986">CVE-2017-12986</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12987">CVE-2017-12987</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12988">CVE-2017-12988</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12991">CVE-2017-12991</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12992">CVE-2017-12992</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12993">CVE-2017-12993</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-11542">CVE-2017-11542</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-11541">CVE-2017-11541</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12994">CVE-2017-12994</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12996">CVE-2017-12996</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12998">CVE-2017-12998</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12999">CVE-2017-12999</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13000">CVE-2017-13000</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13001">CVE-2017-13001</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13002">CVE-2017-13002</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13003">CVE-2017-13003</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13004">CVE-2017-13004</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13005">CVE-2017-13005</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13006">CVE-2017-13006</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13007">CVE-2017-13007</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13008">CVE-2017-13008</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13009">CVE-2017-13009</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13010">CVE-2017-13010</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13012">CVE-2017-13012</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13013">CVE-2017-13013</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13014">CVE-2017-13014</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13015">CVE-2017-13015</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-11543">CVE-2017-11543</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13016">CVE-2017-13016</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13017">CVE-2017-13017</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13018">CVE-2017-13018</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13019">CVE-2017-13019</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13020">CVE-2017-13020</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13021">CVE-2017-13021</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13022">CVE-2017-13022</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13023">CVE-2017-13023</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13024">CVE-2017-13024</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13025">CVE-2017-13025</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13026">CVE-2017-13026</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13027">CVE-2017-13027</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13028">CVE-2017-13028</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13029">CVE-2017-13029</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13030">CVE-2017-13030</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13031">CVE-2017-13031</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13032">CVE-2017-13032</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13033">CVE-2017-13033</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13034">CVE-2017-13034</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13035">CVE-2017-13035</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13036">CVE-2017-13036</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13037">CVE-2017-13037</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13038">CVE-2017-13038</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13039">CVE-2017-13039</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13040">CVE-2017-13040</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13041">CVE-2017-13041</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13042">CVE-2017-13042</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13043">CVE-2017-13043</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13044">CVE-2017-13044</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13045">CVE-2017-13045</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13046">CVE-2017-13046</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13047">CVE-2017-13047</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13048">CVE-2017-13048</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13049">CVE-2017-13049</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13050">CVE-2017-13050</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13051">CVE-2017-13051</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13052">CVE-2017-13052</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13053">CVE-2017-13053</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13054">CVE-2017-13054</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13055">CVE-2017-13055</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13687">CVE-2017-13687</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13688">CVE-2017-13688</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13689">CVE-2017-13689</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13690">CVE-2017-13690</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13725">CVE-2017-13725</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11543">CVE-2017-11543</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13011">CVE-2017-13011</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12989">CVE-2017-12989</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12990">CVE-2017-12990</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12995">CVE-2017-12995</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12997">CVE-2017-12997</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11541">CVE-2017-11541</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11542">CVE-2017-11542</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12893">CVE-2017-12893</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12894">CVE-2017-12894</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12895">CVE-2017-12895</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12896">CVE-2017-12896</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12897">CVE-2017-12897</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12898">CVE-2017-12898</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12899">CVE-2017-12899</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12900">CVE-2017-12900</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12901">CVE-2017-12901</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12902">CVE-2017-12902</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12985">CVE-2017-12985</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12986">CVE-2017-12986</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12987">CVE-2017-12987</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12988">CVE-2017-12988</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12991">CVE-2017-12991</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12992">CVE-2017-12992</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12993">CVE-2017-12993</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11542">CVE-2017-11542</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11541">CVE-2017-11541</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12994">CVE-2017-12994</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12996">CVE-2017-12996</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12998">CVE-2017-12998</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12999">CVE-2017-12999</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13000">CVE-2017-13000</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13001">CVE-2017-13001</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13002">CVE-2017-13002</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13003">CVE-2017-13003</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13004">CVE-2017-13004</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13005">CVE-2017-13005</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13006">CVE-2017-13006</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13007">CVE-2017-13007</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13008">CVE-2017-13008</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13009">CVE-2017-13009</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13010">CVE-2017-13010</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13012">CVE-2017-13012</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13013">CVE-2017-13013</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13014">CVE-2017-13014</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13015">CVE-2017-13015</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11543">CVE-2017-11543</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13016">CVE-2017-13016</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13017">CVE-2017-13017</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13018">CVE-2017-13018</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13019">CVE-2017-13019</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13020">CVE-2017-13020</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13021">CVE-2017-13021</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13022">CVE-2017-13022</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13023">CVE-2017-13023</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13024">CVE-2017-13024</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13025">CVE-2017-13025</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13026">CVE-2017-13026</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13027">CVE-2017-13027</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13028">CVE-2017-13028</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13029">CVE-2017-13029</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13030">CVE-2017-13030</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13031">CVE-2017-13031</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13032">CVE-2017-13032</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13033">CVE-2017-13033</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13034">CVE-2017-13034</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13035">CVE-2017-13035</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13036">CVE-2017-13036</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13037">CVE-2017-13037</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13038">CVE-2017-13038</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13039">CVE-2017-13039</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13040">CVE-2017-13040</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13041">CVE-2017-13041</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13042">CVE-2017-13042</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13043">CVE-2017-13043</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13044">CVE-2017-13044</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13045">CVE-2017-13045</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13046">CVE-2017-13046</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13047">CVE-2017-13047</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13048">CVE-2017-13048</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13049">CVE-2017-13049</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13050">CVE-2017-13050</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13051">CVE-2017-13051</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13052">CVE-2017-13052</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13053">CVE-2017-13053</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13054">CVE-2017-13054</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13055">CVE-2017-13055</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13687">CVE-2017-13687</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13688">CVE-2017-13688</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13689">CVE-2017-13689</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13690">CVE-2017-13690</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13725">CVE-2017-13725</a></li>
 </ul></li>
 </ul>
 
@@ -895,30 +803,28 @@
 <li><p>Several issues related to the Key Reinstallation Attacks (KRACK).</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13077">CVE-2017-13077</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13078">CVE-2017-13078</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13079">CVE-2017-13079</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13080">CVE-2017-13080</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13081">CVE-2017-13081</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13082">CVE-2017-13082</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13086">CVE-2017-13086</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13087">CVE-2017-13087</a></li>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13088">CVE-2017-13088</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13077">CVE-2017-13077</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13078">CVE-2017-13078</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13079">CVE-2017-13079</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13080">CVE-2017-13080</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13081">CVE-2017-13081</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13082">CVE-2017-13082</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13086">CVE-2017-13086</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13087">CVE-2017-13087</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-13088">CVE-2017-13088</a></li>
 </ul></li>
 </ul>
 
 <h5 id="bluez5">bluez5:</h5>
 
 <ul>
-<li><p>SDP server in BlueZ 5.46 and earlier are vulnerable to an</p>
+<li><p>SDP server in BlueZ 5.46 and earlier are vulnerable to an
+information disclosure vulnerability which allows remote
+attackers to obtain sensitive information from the bluetoothd
+process memory</p>
 
 <ul>
-<li>information disclosure vulnerability which allows remote</li>
-<li>attackers to obtain sensitive information from the bluetoothd</li>
-
-<li><p>process memory</p></li>
-
-<li><p><a href="https://access.redhat.com/security/cve/cve-2017-1000250">CVE-2017-1000250</a></p></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-1000250">CVE-2017-1000250</a></li>
 </ul></li>
 </ul>
 
@@ -928,7 +834,7 @@
 <li><p>Prevent unsafe links extracting.</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2011-5325">CVE-2011-5325</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-5325">CVE-2011-5325</a></li>
 </ul></li>
 </ul>
 
@@ -940,16 +846,13 @@
 
 <ul>
 <li>GCC Linaro updated to 7.1.1-2017.08.
-
-<ul>
-<li>OP-TEE updated to 2.6.0.</li>
-</ul></li>
+OP-TEE updated to 2.6.0.</li>
 </ul>
 
 <h4 id="bugs-7">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h3 id="meta-virtualization-layer">Meta Virtualization Layer</h3>
@@ -960,19 +863,16 @@
 
 <ul>
 <li>runc-docker updated to to 1.0-rc3+.
-
-<ul>
-<li>Docker CE updated to 17.06.</li>
-<li>Containerd updated to latest 0.2.x.</li>
-<li>Added support for Python Docker 1.16.1.</li>
-<li>Runc-opencontainers updated to v1.0.0-rc4.</li>
-</ul></li>
+Docker CE updated to 17.06.
+Containerd updated to latest 0.2.x.
+Added support for Python Docker 1.16.1.
+Runc-opencontainers updated to v1.0.0-rc4.</li>
 </ul>
 
 <h4 id="bugs-8">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h3 id="meta-osf-layer">Meta OSF Layer</h3>
@@ -983,13 +883,10 @@
 
 <ul>
 <li>Added new LMP distro configuration.
-
-<ul>
-<li>Match distro version with Yocto.</li>
-<li>Gateway image renamed from rpb-osf-gateway-image to lmp-gateway-image.</li>
-<li>The LMP distribution now using GCC Linaro 7.x.</li>
-<li>Added WKS file for cl-som-imx7.</li>
-</ul></li>
+Match distro version with Yocto.
+Gateway image renamed from rpb-osf-gateway-image to lmp-gateway-image.
+The LMP distribution now using GCC Linaro 7.x.
+Added WKS file for cl-som-imx7.</li>
 </ul>
 
 <h4 id="bugs-9">Bugs</h4>
@@ -1004,10 +901,7 @@
 
 <ul>
 <li>Force resize-helper to wait for udevadm settle so it can always
-
-<ul>
-<li>have a successful run.</li>
-</ul></li>
+have a successful run.</li>
 </ul>
 
 <h3 id="meta-qualcomm-layer">Meta Qualcomm Layer</h3>
@@ -1018,16 +912,13 @@
 
 <ul>
 <li>Added firmware for ath10k (dragonboard820c).
-
-<ul>
-<li>Kernel format changed from Image to Image.gz.</li>
-</ul></li>
+Kernel format changed from Image to Image.gz.</li>
 </ul>
 
 <h4 id="bugs-10">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h3 id="meta-freescale-layer">Meta Freescale Layer</h3>
@@ -1038,22 +929,19 @@
 
 <ul>
 <li>U-Boot-Fslc updated to 2017.09.
-
-<ul>
-<li>U-Boot-Fslc-fw-utils updated to 2017.09.</li>
-<li>UEFI updated to a812f17.</li>
-<li>Added machine configuration for imx25pdk, imx6sllevk and imx7ulpevk.</li>
-<li>wic.gz image format is now used for all i.MX machines by default.</li>
-<li>Added i.MX SDMA firmwares.</li>
-<li>imx-vpu updated to v5.4.37.</li>
-<li>Change git.freescale repository URLs (using code aurora mirror instead).</li>
-</ul></li>
+U-Boot-Fslc-fw-utils updated to 2017.09.
+UEFI updated to a812f17.
+Added machine configuration for imx25pdk, imx6sllevk and imx7ulpevk.
+wic.gz image format is now used for all i.MX machines by default.
+Added i.MX SDMA firmwares.
+imx-vpu updated to v5.4.37.
+Change git.freescale repository URLs (using code aurora mirror instead).</li>
 </ul>
 
 <h4 id="bugs-11">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h3 id="meta-freescale-3rdparty-layer">Meta Freescale 3rdparty Layer</h3>
@@ -1064,17 +952,14 @@
 
 <ul>
 <li>Added machine configuration for imx7d-pico.
-
-<ul>
-<li>Added support for Wandboard D1.</li>
-<li>Added wic image support for several supported machines.</li>
-</ul></li>
+Added support for Wandboard D1.
+Added wic image support for several supported machines.</li>
 </ul>
 
 <h4 id="bugs-12">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h3 id="meta-raspberrypi-layer">Meta RaspberryPi Layer</h3>
@@ -1085,17 +970,14 @@
 
 <ul>
 <li>RaspberryPi firmware updated to tag 1.20170811.
-
-<ul>
-<li>Updated linux-firmware-brcmfmac43430 to 7.45.41.46.</li>
-<li>Improved support for raspberrypi3-64.</li>
-</ul></li>
+Updated linux-firmware-brcmfmac43430 to 7.45.41.46.
+Improved support for raspberrypi3-64.</li>
 </ul>
 
 <h4 id="bugs-13">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h3 id="meta-yocto-layer">Meta Yocto Layer</h3>
@@ -1111,7 +993,7 @@
 <h4 id="bugs-14">Bugs</h4>
 
 <ul>
-<li>no new bugs addressed in this release</li>
+<li>Not addressed in this update</li>
 </ul>
 
                         </div>
