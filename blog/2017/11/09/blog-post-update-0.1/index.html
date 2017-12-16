@@ -223,199 +223,256 @@
 
 <h5 id="gpio-interface-deprecations">GPIO interface deprecations:</h5>
 
-<pre><code>The GPIO_PIN_ENABLE and GPIO_PIN_DISABLE configuration
-constants, which overlap with functionality provided by the
-pinux driver, were deprecated.
+<ul>
+<li>The GPIO_PIN_ENABLE and GPIO_PIN_DISABLE configuration
 
-</code></pre>
+<ul>
+<li>constants, which overlap with functionality provided by the</li>
+<li>pinux driver, were deprecated.</li>
+</ul></li>
+</ul>
 
 <h5 id="new-coap-api">New CoAP API:</h5>
 
-<pre><code>There is a new CoAP API; the existing API has been deprecated.
-
-</code></pre>
+<ul>
+<li>There is a new CoAP API; the existing API has been deprecated.</li>
+</ul>
 
 <h5 id="new-http-api">New HTTP API:</h5>
 
-<pre><code>There is a new HTTP API based on the net-app framework;
-the existing API has been deprecated.
+<ul>
+<li>There is a new HTTP API based on the net-app framework;
 
-Applications using the old API need to ensure
-CONFIG_HTTP is enabled, and CONFIG_HTTP_APP is disabled,
-to continue using the deprecated API. Such applications
-should be updated to use the new API. The HTTP sample
-applications were converted to use the new API, and can
-be used as a reference.
-
-</code></pre>
+<ul>
+<li>the existing API has been deprecated.</li>
+<li></li>
+<li>Applications using the old API need to ensure</li>
+<li>CONFIG_HTTP is enabled, and CONFIG_HTTP_APP is disabled,</li>
+<li>to continue using the deprecated API. Such applications</li>
+<li>should be updated to use the new API. The HTTP sample</li>
+<li>applications were converted to use the new API, and can</li>
+<li>be used as a reference.</li>
+</ul></li>
+</ul>
 
 <h5 id="new-led-strip-api">New LED strip API:</h5>
 
-<pre><code>A public API for strips, or strings, of individually
-addressable LEDs was added, along with drivers for two
-common chipsets and sample applications. Both RGB and
-grayscale LED strip drivers can be implemented within
-these APIs.
+<ul>
+<li>A public API for strips, or strings, of individually
 
-</code></pre>
+<ul>
+<li>addressable LEDs was added, along with drivers for two</li>
+<li>common chipsets and sample applications. Both RGB and</li>
+<li>grayscale LED strip drivers can be implemented within</li>
+<li>these APIs.</li>
+</ul></li>
+</ul>
 
 <h5 id="new-userspace-and-driver-api-checking">New &ldquo;userspace&rdquo; and driver API checking:</h5>
 
-<pre><code>The Zephyr kernel now supports separate system and user
-thread modes. User threads have limited access to kernel
-objects, such as device drivers, semaphores, etc.
+<ul>
+<li>The Zephyr kernel now supports separate system and user
 
-Many drivers had userspace system call handlers added
-(I2C, ADC, PWM, RTC, etc), which enforce the separation
-between the core kernel and a userspace thread at the
-driver API call. However, existing APIs are unchanged.
-
-</code></pre>
+<ul>
+<li>thread modes. User threads have limited access to kernel</li>
+<li>objects, such as device drivers, semaphores, etc.</li>
+<li></li>
+<li>Many drivers had userspace system call handlers added</li>
+<li>(I2C, ADC, PWM, RTC, etc), which enforce the separation</li>
+<li>between the core kernel and a userspace thread at the</li>
+<li>driver API call. However, existing APIs are unchanged.</li>
+</ul></li>
+</ul>
 
 <h5 id="new-random-subsystem">New random subsystem:</h5>
 
-<pre><code>Random number generation in Zephyr is undergoing a significant
-refactor.  A new random subsystem was added, which provides
-implementations for sys_rand32_get() based on hardware sources
-of entropy. These sources in the drivers/random directory were
-moved to &quot;drivers/entropy&quot;. A Xoroshiro128+ PRNG was added to
-the random subsystem; it is only recommended for
-non-cryptographic purposes.
+<ul>
+<li>Random number generation in Zephyr is undergoing a significant
 
-</code></pre>
+<ul>
+<li>refactor.  A new random subsystem was added, which provides</li>
+<li>implementations for sys_rand32_get() based on hardware sources</li>
+<li>of entropy. These sources in the drivers/random directory were</li>
+<li>moved to &ldquo;drivers/entropy&rdquo;. A Xoroshiro128+ PRNG was added to</li>
+<li>the random subsystem; it is only recommended for</li>
+<li>non-cryptographic purposes.</li>
+</ul></li>
+</ul>
 
 <h5 id="updated-crypto-library-usage">Updated crypto library usage:</h5>
 
-<pre><code>Minor changes to the usage of the mbedtls and tinycrypt
-libraries was merged.
+<ul>
+<li>Minor changes to the usage of the mbedtls and tinycrypt
 
-</code></pre>
+<ul>
+<li>libraries was merged.</li>
+</ul></li>
+</ul>
 
 <h5 id="new-net-buf-apis">New net_buf APIs:</h5>
 
-<pre><code>Some new net_buf APIs were merged.
+<ul>
+<li>Some new net_buf APIs were merged.
 
-- net_buf_id(), which allows converting a buffer into a
-  zero-based index. The utility of this API will be
-  limited until a future refactor converts all struct
-  net_bufs to have a fixed user data size, however.
-
-- net_buf_slist_put() and net_buf_slist_get(), which
-  should be used instead of sys_slist_*() equivalents to
-  ensure correct handling of buffer fragments when
-  net_bufs are placed in singly linked lists.
-
-</code></pre>
+<ul>
+<li></li>
+<li>- net_buf_id(), which allows converting a buffer into a</li>
+<li>zero-based index. The utility of this API will be</li>
+<li>limited until a future refactor converts all struct</li>
+<li>net_bufs to have a fixed user data size, however.</li>
+<li></li>
+<li>- net_buf_slist_put() and net_buf_slist_get(), which</li>
+<li>should be used instead of sys<em>slist</em>*() equivalents to</li>
+<li>ensure correct handling of buffer fragments when</li>
+<li>net_bufs are placed in singly linked lists.</li>
+</ul></li>
+</ul>
 
 <h5 id="power-management-for-nrf52">Power management for nRF52:</h5>
 
-<pre><code>nRF52 series SoCs gained architecture-specific power
-management support for transitioning the core into and
-out of low power sleep states. This includes a sample
-application, samples/boards/nrf52/power_mgr.
+<ul>
+<li>nRF52 series SoCs gained architecture-specific power
 
-</code></pre>
+<ul>
+<li>management support for transitioning the core into and</li>
+<li>out of low power sleep states. This includes a sample</li>
+<li>application, samples/boards/nrf52/power_mgr.</li>
+</ul></li>
+</ul>
 
 <h5 id="new-sensor-support-for-disco-l475-iot1">New sensor support for disco_l475_iot1:</h5>
 
-<pre><code>Support for sensors on the STM32L4 board
-disco_l475_iot1 was merged. This supports the LSM6DSL,
-LIS3MDL, LPS22HB, and HTS221 sensors. Support is
-disabled by default. Applications can enable sensor
-support for this board using their .conf files.
+<ul>
+<li>Support for sensors on the STM32L4 board
 
-</code></pre>
+<ul>
+<li>disco_l475_iot1 was merged. This supports the LSM6DSL,</li>
+<li>LIS3MDL, LPS22HB, and HTS221 sensors. Support is</li>
+<li>disabled by default. Applications can enable sensor</li>
+<li>support for this board using their .conf files.</li>
+</ul></li>
+</ul>
 
 <h5 id="usb-improvements">USB improvements:</h5>
 
-<pre><code>Work was merged to the USB subsystem to support CDC ECM
-and composite USB devices.
+<ul>
+<li>Work was merged to the USB subsystem to support CDC ECM
 
-</code></pre>
+<ul>
+<li>and composite USB devices.</li>
+</ul></li>
+</ul>
 
 <h5 id="atmel-sam3-serial-driver-deprecated">Atmel SAM3 serial driver deprecated.:</h5>
 
-<pre><code>The atmel_sam3 serial driver was deprecated.
-
-</code></pre>
+<ul>
+<li>The atmel_sam3 serial driver was deprecated.</li>
+</ul>
 
 <h5 id="lwm2m">LWM2M:</h5>
 
-<pre><code>LwM2M protocol support migrated to the new CoAP API, and
-now supports multiple network fragments.  This removes
-the requirement for the large buffer sizes and makes the
-overall protocol much more flexible.  It also received
-various memory usage optimizations.
+<ul>
+<li>LwM2M protocol support migrated to the new CoAP API, and
 
-</code></pre>
+<ul>
+<li>now supports multiple network fragments.  This removes</li>
+<li>the requirement for the large buffer sizes and makes the</li>
+<li>overall protocol much more flexible.  It also received</li>
+<li>various memory usage optimizations.</li>
+</ul></li>
+</ul>
 
 <h5 id="flash-scripts-rewritten-in-python">Flash scripts rewritten in Python:</h5>
 
-<pre><code>The Zephyr flash and debug scripts, originally ported from
-the RIOT RTOS, have been rewritten in Python to
-eliminate a dependency on a Unix shell, replacing it with a
-cross-platform alternative.
+<ul>
+<li>The Zephyr flash and debug scripts, originally ported from
 
-</code></pre>
+<ul>
+<li>the RIOT RTOS, have been rewritten in Python to</li>
+<li>eliminate a dependency on a Unix shell, replacing it with a</li>
+<li>cross-platform alternative.</li>
+</ul></li>
+</ul>
 
 <h5 id="miscellaneous-stm32-improvements">Miscellaneous STM32 improvements:</h5>
 
-<pre><code>Other miscellaneous STM32-specific board code and
-documentation fixups were merged.
+<ul>
+<li>Other miscellaneous STM32-specific board code and
 
-</code></pre>
+<ul>
+<li>documentation fixups were merged.</li>
+</ul></li>
+</ul>
 
 <h5 id="test-conversions-to-ztest">Test conversions to ztest:</h5>
 
-<pre><code>Numerous test cleanups were merged, including continued
-conversions to the ztest framework.
+<ul>
+<li>Numerous test cleanups were merged, including continued
 
-</code></pre>
+<ul>
+<li>conversions to the ztest framework.</li>
+</ul></li>
+</ul>
 
 <h5 id="documentation-updates-for-new-website">Documentation updates for new website:</h5>
 
-<pre><code>The Zephyr website was given a major re-work, and various
-documentation links were updated accordingly.
+<ul>
+<li>The Zephyr website was given a major re-work, and various
 
-</code></pre>
+<ul>
+<li>documentation links were updated accordingly.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-1">Bugs</h4>
 
 <h5 id="lwm2m-fixes">LWM2M fixes:</h5>
 
-<pre><code>Some bug fixes and simplifications to LWM2M were merged.
-
-</code></pre>
+<ul>
+<li>Some bug fixes and simplifications to LWM2M were merged.</li>
+</ul>
 
 <h5 id="bluetooth-mesh">Bluetooth Mesh:</h5>
 
-<pre><code>Many fixes were merged for Bluetooth Mesh support.
+<ul>
+<li>Many fixes were merged for Bluetooth Mesh support.
 
-Network Message Cache behavior was also improved.
-
-</code></pre>
+<ul>
+<li></li>
+<li>Network Message Cache behavior was also improved.</li>
+</ul></li>
+</ul>
 
 <h5 id="other-bluetooth-fixes">Other Bluetooth fixes:</h5>
 
-<pre><code>Some other fixes to the core BT controller and LE scan
-handling code were also merged.
+<ul>
+<li>Some other fixes to the core BT controller and LE scan
 
-</code></pre>
+<ul>
+<li>handling code were also merged.</li>
+</ul></li>
+</ul>
 
 <h5 id="pae-fix-for-x86">PAE fix for x86:</h5>
 
-<pre><code>The x86 architecture MMU generation had a fix to PAE
-page directory permissions.
+<ul>
+<li>The x86 architecture MMU generation had a fix to PAE
 
-</code></pre>
+<ul>
+<li>page directory permissions.</li>
+</ul></li>
+</ul>
 
 <h5 id="infinite-loop-in-i2c-for-stm32f0-f3-f7">Infinite loop in I2C for STM32F0, F3, F7:</h5>
 
-<pre><code>A fix for a bug in an STM32 I2C driver was merged which
-prevents the driver from entering into an infinite loop;
-this affects F0, F3, and F7 based devices.
+<ul>
+<li>A fix for a bug in an STM32 I2C driver was merged which
 
-</code></pre>
+<ul>
+<li>prevents the driver from entering into an infinite loop;</li>
+<li>this affects F0, F3, and F7 based devices.</li>
+</ul></li>
+</ul>
 
 <h3 id="zephyr-fota-samples">Zephyr FOTA Samples</h3>
 
@@ -423,80 +480,101 @@ this affects F0, F3, and F7 based devices.
 
 <h5 id="memory-optimizations">Memory optimizations:</h5>
 
-<pre><code>Uses of sXprintf() were replaced with sXprintk()
-alternatives, saving about 3.5 KB of flash.
+<ul>
+<li>Uses of sXprintf() were replaced with sXprintk()
 
-</code></pre>
+<ul>
+<li>alternatives, saving about 3.5 KB of flash.</li>
+</ul></li>
+</ul>
 
 <h5 id="dm-hawkbit-mqtt-http-configuration-update">dm-hawkbit-mqtt: HTTP configuration update:</h5>
 
-<pre><code>The application was updated to disable the new HTTP
-library, preserving use of the other, now-deprecated
-library. Applications can use this as a reference while
-transitioning to the new APIs.
+<ul>
+<li>The application was updated to disable the new HTTP
 
-</code></pre>
+<ul>
+<li>library, preserving use of the other, now-deprecated</li>
+<li>library. Applications can use this as a reference while</li>
+<li>transitioning to the new APIs.</li>
+</ul></li>
+</ul>
 
 <h5 id="dm-hawkbit-mqtt-support-for-ble-nano-2-board">dm-hawkbit-mqtt: support for BLE Nano 2 board:</h5>
 
-<pre><code>JSON buffer sizes were tweaked to support longer strings
-generated at runtime on the BLE Nano 2.
+<ul>
+<li>JSON buffer sizes were tweaked to support longer strings
 
-</code></pre>
+<ul>
+<li>generated at runtime on the BLE Nano 2.</li>
+</ul></li>
+</ul>
 
 <h5 id="dm-lwm2m-add-firmware-storage-buffer">dm-lwm2m: add firmware storage buffer:</h5>
 
-<pre><code>The application was updated to explicitly allocate a
-buffer for storing firmware during the download
-process. This is necessary since the upstream LWM2M
-subsystem no longer allocates its own.
+<ul>
+<li>The application was updated to explicitly allocate a
 
-</code></pre>
+<ul>
+<li>buffer for storing firmware during the download</li>
+<li>process. This is necessary since the upstream LWM2M</li>
+<li>subsystem no longer allocates its own.</li>
+</ul></li>
+</ul>
 
 <h5 id="dm-lwm2m-configuration-sync-with-upstream">dm-lwm2m: configuration sync with upstream:</h5>
 
-<pre><code>The large net buffer size setting was removed.  LwM2M no
-longer needs the large contiguous buffer.
+<ul>
+<li>The large net buffer size setting was removed.  LwM2M no
 
-Extra buffer allocations were removed by default.  These
-will eventually be needed for keeping a copy of packets
-to be sent via 6lowpan.  But currently, these are not
-used.
-
-</code></pre>
+<ul>
+<li>longer needs the large contiguous buffer.</li>
+<li></li>
+<li>Extra buffer allocations were removed by default.  These</li>
+<li>will eventually be needed for keeping a copy of packets</li>
+<li>to be sent via 6lowpan.  But currently, these are not</li>
+<li>used.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-2">Bugs</h4>
 
 <h5 id="dm-hawkbit-mqtt-improved-resilience-to-lossy-transports">dm-hawkbit-mqtt: improved resilience to lossy transports:</h5>
 
-<pre><code>BLE devices with minor antenna issues can have data
-transmission delays.  More time is now allocated before
-starting the TCP retry process.
+<ul>
+<li>BLE devices with minor antenna issues can have data
 
-This fixes an issue where net buffers would be exhausted
-due to the previous 200ms TCP retry logic.
-
-</code></pre>
+<ul>
+<li>transmission delays.  More time is now allocated before</li>
+<li>starting the TCP retry process.</li>
+<li></li>
+<li>This fixes an issue where net buffers would be exhausted</li>
+<li>due to the previous 200ms TCP retry logic.</li>
+</ul></li>
+</ul>
 
 <h5 id="dm-hawkbit-mqtt-logging-fixes">dm-hawkbit-mqtt: logging fixes:</h5>
 
-<pre><code>Compilation warnings due to mis-used logging macros were fixed.
-
-</code></pre>
+<ul>
+<li>Compilation warnings due to mis-used logging macros were fixed.</li>
+</ul>
 
 <h5 id="dm-lwm2m-fix-for-http-firmware-updates">dm-lwm2m: fix for HTTP firmware updates:</h5>
 
-<pre><code>When downloading firmware via the cf_proxy (translating
-from HTTP -&gt; CoAP) a CoAP ETAG option is used to specify
-the version of the binary file.
+<ul>
+<li>When downloading firmware via the cf_proxy (translating
 
-The length of that ETAG can be quite large (including a
-UUID), which is greater than what the buffer can hold by
-default. This issue was resolved, fixing errors raised
-when using HTTP download in resource 5/0/1 with
-CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT=y.
-
-</code></pre>
+<ul>
+<li>from HTTP -&gt; CoAP) a CoAP ETAG option is used to specify</li>
+<li>the version of the binary file.</li>
+<li></li>
+<li>The length of that ETAG can be quite large (including a</li>
+<li>UUID), which is greater than what the buffer can hold by</li>
+<li>default. This issue was resolved, fixing errors raised</li>
+<li>when using HTTP download in resource 5/0/1 with</li>
+<li>CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT=y.</li>
+</ul></li>
+</ul>
 
 <h1 id="linux-microplatform">Linux microPlatform</h1>
 
@@ -534,13 +612,16 @@ CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT=y.
 
 <h5 id="layer-update">Layer Update:</h5>
 
-<pre><code>Grub is now compatible with GCC 7 (default version in Rocko).
-Grub's default boot configuration now includes the distro name.
-HiKey serial console now can be configured externally.
-96boards-tools was updated to 0.11, including improvements to the
-rootfs resize script.
+<ul>
+<li>Grub is now compatible with GCC 7 (default version in Rocko).
 
-</code></pre>
+<ul>
+<li>Grub&rsquo;s default boot configuration now includes the distro name.</li>
+<li>HiKey serial console now can be configured externally.</li>
+<li>96boards-tools was updated to 0.11, including improvements to the</li>
+<li>rootfs resize script.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-4">Bugs</h4>
 
@@ -554,29 +635,31 @@ rootfs resize script.
 
 <h5 id="layer-update-1">Layer Update:</h5>
 
-<pre><code>Ipk package creation can now be parallelised.
-Busybox updated to 1.27.2.
-Cmake updated to 3.9.3.
-Glibc updated to 2.25.90.
-BlueZ updated to 5.47.
-systemd updated to 234.
-GCC updated to 7.2.0.
-Binutils updated to 2.29.
-CA-Certificates updated to 20170717.
-U-Boot updated to 2017.09.
-Go updated to 1.9, including major changes in the bbclass.
-Linux-firmware updated to the latest git revision.
-Improved support for WIC, with several minor bugfixes.
+<ul>
+<li>Ipk package creation can now be parallelised.
 
-</code></pre>
+<ul>
+<li>Busybox updated to 1.27.2.</li>
+<li>Cmake updated to 3.9.3.</li>
+<li>Glibc updated to 2.25.90.</li>
+<li>BlueZ updated to 5.47.</li>
+<li>systemd updated to 234.</li>
+<li>GCC updated to 7.2.0.</li>
+<li>Binutils updated to 2.29.</li>
+<li>CA-Certificates updated to 20170717.</li>
+<li>U-Boot updated to 2017.09.</li>
+<li>Go updated to 1.9, including major changes in the bbclass.</li>
+<li>Linux-firmware updated to the latest git revision.</li>
+<li>Improved support for WIC, with several minor bugfixes.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-5">Bugs</h4>
 
 <h5 id="libxml2">libxml2:</h5>
 
-<pre><code>Multiple issues.
-
-</code></pre>
+<ul>
+<li><p>Multiple issues.</p>
 
 <ul>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-0663">CVE-2017-0663</a></li>
@@ -586,36 +669,36 @@ Improved support for WIC, with several minor bugfixes.
 <li><a href="https://access.redhat.com/security/cve/cve-2017-9048">CVE-2017-9048</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-9049">CVE-2017-9049</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-9050">CVE-2017-9050</a></li>
+</ul></li>
 </ul>
 
 <h5 id="wget">wget:</h5>
 
-<pre><code>CRLF injection vulnerability in the url_parse function.
-
-</code></pre>
+<ul>
+<li><p>CRLF injection vulnerability in the url_parse function.</p>
 
 <ul>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-6508">CVE-2017-6508</a></li>
+</ul></li>
 </ul>
 
 <h5 id="curl">curl:</h5>
 
-<pre><code>Multiple issues.
-
-</code></pre>
+<ul>
+<li><p>Multiple issues.</p>
 
 <ul>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-1000099">CVE-2017-1000099</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-1000100">CVE-2017-1000100</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-1000101">CVE-2017-1000101</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-1000254">CVE-2017-1000254</a></li>
+</ul></li>
 </ul>
 
 <h5 id="ncurses">ncurses:</h5>
 
-<pre><code>Multiple issues.
-
-</code></pre>
+<ul>
+<li><p>Multiple issues.</p>
 
 <ul>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13728">CVE-2017-13728</a></li>
@@ -624,24 +707,25 @@ Improved support for WIC, with several minor bugfixes.
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13731">CVE-2017-13731</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13732">CVE-2017-13732</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13734">CVE-2017-13734</a></li>
+</ul></li>
 </ul>
 
 <h5 id="libgcrypt">libgcrypt:</h5>
 
-<pre><code>Libgcrypt before 1.8.1 does not properly consider Curve25519
-side-channel attacks.
-
-</code></pre>
+<ul>
+<li><p>Libgcrypt before 1.8.1 does not properly consider Curve25519</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-0379">CVE-2017-0379</a></li>
+<li><p>side-channel attacks.</p></li>
+
+<li><p><a href="https://access.redhat.com/security/cve/cve-2017-0379">CVE-2017-0379</a></p></li>
+</ul></li>
 </ul>
 
 <h5 id="wpa-supplicant">wpa_supplicant:</h5>
 
-<pre><code>Several issues related to the Key Reinstallation Attacks (KRACK).
-
-</code></pre>
+<ul>
+<li><p>Several issues related to the Key Reinstallation Attacks (KRACK).</p>
 
 <ul>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13077">CVE-2017-13077</a></li>
@@ -653,30 +737,35 @@ side-channel attacks.
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13086">CVE-2017-13086</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13087">CVE-2017-13087</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13088">CVE-2017-13088</a></li>
+</ul></li>
 </ul>
 
 <h5 id="shadow">shadow:</h5>
 
-<pre><code>In shadow before 4.5, the newusers tool could be made to
-manipulate internal data structures in ways unintended by the
-authors.
-
-</code></pre>
+<ul>
+<li><p>In shadow before 4.5, the newusers tool could be made to</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-12424">CVE-2017-12424</a></li>
+<li>manipulate internal data structures in ways unintended by the</li>
+
+<li><p>authors.</p></li>
+
+<li><p><a href="https://access.redhat.com/security/cve/cve-2017-12424">CVE-2017-12424</a></p></li>
+</ul></li>
 </ul>
 
 <h5 id="sqlite3">sqlite3:</h5>
 
-<pre><code>The dump_callback function in SQLite 3.20.0 allows remote
-attackers to cause a denial of service (EXC_BAD_ACCESS
-and application crash) via a crafted file.
-
-</code></pre>
+<ul>
+<li><p>The dump_callback function in SQLite 3.20.0 allows remote</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-13685">CVE-2017-13685</a></li>
+<li>attackers to cause a denial of service (EXC_BAD_ACCESS</li>
+
+<li><p>and application crash) via a crafted file.</p></li>
+
+<li><p><a href="https://access.redhat.com/security/cve/cve-2017-13685">CVE-2017-13685</a></p></li>
+</ul></li>
 </ul>
 
 <h3 id="meta-openembedded-layer">Meta OpenEmbedded Layer</h3>
@@ -685,22 +774,24 @@ and application crash) via a crafted file.
 
 <h5 id="layer-update-2">Layer Update:</h5>
 
-<pre><code>Gvfs updated to 1.32.1.
-Parted updated to 0.28.1.
-VIM updated to 8.0.0983.
-Rsyslog updated to 8.29.
-Dnsmasq upadted to 2.78.
-Tcpdump updated to 4.9.2.
+<ul>
+<li>Gvfs updated to 1.32.1.
 
-</code></pre>
+<ul>
+<li>Parted updated to 0.28.1.</li>
+<li>VIM updated to 8.0.0983.</li>
+<li>Rsyslog updated to 8.29.</li>
+<li>Dnsmasq upadted to 2.78.</li>
+<li>Tcpdump updated to 4.9.2.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-6">Bugs</h4>
 
 <h5 id="tcpdump">tcpdump:</h5>
 
-<pre><code>Multiple issues.
-
-</code></pre>
+<ul>
+<li><p>Multiple issues.</p>
 
 <ul>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-11543">CVE-2017-11543</a></li>
@@ -795,13 +886,13 @@ Tcpdump updated to 4.9.2.
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13689">CVE-2017-13689</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13690">CVE-2017-13690</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13725">CVE-2017-13725</a></li>
+</ul></li>
 </ul>
 
 <h5 id="hostapd">hostapd:</h5>
 
-<pre><code>Several issues related to the Key Reinstallation Attacks (KRACK).
-
-</code></pre>
+<ul>
+<li><p>Several issues related to the Key Reinstallation Attacks (KRACK).</p>
 
 <ul>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13077">CVE-2017-13077</a></li>
@@ -813,29 +904,32 @@ Tcpdump updated to 4.9.2.
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13086">CVE-2017-13086</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13087">CVE-2017-13087</a></li>
 <li><a href="https://access.redhat.com/security/cve/cve-2017-13088">CVE-2017-13088</a></li>
+</ul></li>
 </ul>
 
 <h5 id="bluez5">bluez5:</h5>
 
-<pre><code>SDP server in BlueZ 5.46 and earlier are vulnerable to an
-information disclosure vulnerability which allows remote
-attackers to obtain sensitive information from the bluetoothd
-process memory
-
-</code></pre>
+<ul>
+<li><p>SDP server in BlueZ 5.46 and earlier are vulnerable to an</p>
 
 <ul>
-<li><a href="https://access.redhat.com/security/cve/cve-2017-1000250">CVE-2017-1000250</a></li>
+<li>information disclosure vulnerability which allows remote</li>
+<li>attackers to obtain sensitive information from the bluetoothd</li>
+
+<li><p>process memory</p></li>
+
+<li><p><a href="https://access.redhat.com/security/cve/cve-2017-1000250">CVE-2017-1000250</a></p></li>
+</ul></li>
 </ul>
 
 <h5 id="busybox">busybox:</h5>
 
-<pre><code>Prevent unsafe links extracting.
-
-</code></pre>
+<ul>
+<li><p>Prevent unsafe links extracting.</p>
 
 <ul>
 <li><a href="https://access.redhat.com/security/cve/cve-2011-5325">CVE-2011-5325</a></li>
+</ul></li>
 </ul>
 
 <h3 id="meta-linaro-layer">Meta Linaro Layer</h3>
@@ -844,10 +938,13 @@ process memory
 
 <h5 id="layer-update-3">Layer Update:</h5>
 
-<pre><code>GCC Linaro updated to 7.1.1-2017.08.
-OP-TEE updated to 2.6.0.
+<ul>
+<li>GCC Linaro updated to 7.1.1-2017.08.
 
-</code></pre>
+<ul>
+<li>OP-TEE updated to 2.6.0.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-7">Bugs</h4>
 
@@ -861,13 +958,16 @@ OP-TEE updated to 2.6.0.
 
 <h5 id="layer-update-4">Layer Update:</h5>
 
-<pre><code>runc-docker updated to to 1.0-rc3+.
-Docker CE updated to 17.06.
-Containerd updated to latest 0.2.x.
-Added support for Python Docker 1.16.1.
-Runc-opencontainers updated to v1.0.0-rc4.
+<ul>
+<li>runc-docker updated to to 1.0-rc3+.
 
-</code></pre>
+<ul>
+<li>Docker CE updated to 17.06.</li>
+<li>Containerd updated to latest 0.2.x.</li>
+<li>Added support for Python Docker 1.16.1.</li>
+<li>Runc-opencontainers updated to v1.0.0-rc4.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-8">Bugs</h4>
 
@@ -881,28 +981,34 @@ Runc-opencontainers updated to v1.0.0-rc4.
 
 <h5 id="layer-update-5">Layer Update:</h5>
 
-<pre><code>Added new LMP distro configuration.
-Match distro version with Yocto.
-Gateway image renamed from rpb-osf-gateway-image to lmp-gateway-image.
-The LMP distribution now using GCC Linaro 7.x.
-Added WKS file for cl-som-imx7.
+<ul>
+<li>Added new LMP distro configuration.
 
-</code></pre>
+<ul>
+<li>Match distro version with Yocto.</li>
+<li>Gateway image renamed from rpb-osf-gateway-image to lmp-gateway-image.</li>
+<li>The LMP distribution now using GCC Linaro 7.x.</li>
+<li>Added WKS file for cl-som-imx7.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-9">Bugs</h4>
 
 <h5 id="docker">docker:</h5>
 
-<pre><code>Go-fsinotify fixes to enable docker logs -f on arm64.
-
-</code></pre>
+<ul>
+<li>Go-fsinotify fixes to enable docker logs -f on arm64.</li>
+</ul>
 
 <h5 id="96boards-tools">96boards-tools:</h5>
 
-<pre><code>Force resize-helper to wait for udevadm settle so it can always
-have a successful run.
+<ul>
+<li>Force resize-helper to wait for udevadm settle so it can always
 
-</code></pre>
+<ul>
+<li>have a successful run.</li>
+</ul></li>
+</ul>
 
 <h3 id="meta-qualcomm-layer">Meta Qualcomm Layer</h3>
 
@@ -910,10 +1016,13 @@ have a successful run.
 
 <h5 id="layer-update-6">Layer Update:</h5>
 
-<pre><code>Added firmware for ath10k (dragonboard820c).
-Kernel format changed from Image to Image.gz.
+<ul>
+<li>Added firmware for ath10k (dragonboard820c).
 
-</code></pre>
+<ul>
+<li>Kernel format changed from Image to Image.gz.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-10">Bugs</h4>
 
@@ -927,16 +1036,19 @@ Kernel format changed from Image to Image.gz.
 
 <h5 id="layer-update-7">Layer Update:</h5>
 
-<pre><code>U-Boot-Fslc updated to 2017.09.
-U-Boot-Fslc-fw-utils updated to 2017.09.
-UEFI updated to a812f17.
-Added machine configuration for imx25pdk, imx6sllevk and imx7ulpevk.
-wic.gz image format is now used for all i.MX machines by default.
-Added i.MX SDMA firmwares.
-imx-vpu updated to v5.4.37.
-Change git.freescale repository URLs (using code aurora mirror instead).
+<ul>
+<li>U-Boot-Fslc updated to 2017.09.
 
-</code></pre>
+<ul>
+<li>U-Boot-Fslc-fw-utils updated to 2017.09.</li>
+<li>UEFI updated to a812f17.</li>
+<li>Added machine configuration for imx25pdk, imx6sllevk and imx7ulpevk.</li>
+<li>wic.gz image format is now used for all i.MX machines by default.</li>
+<li>Added i.MX SDMA firmwares.</li>
+<li>imx-vpu updated to v5.4.37.</li>
+<li>Change git.freescale repository URLs (using code aurora mirror instead).</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-11">Bugs</h4>
 
@@ -950,11 +1062,14 @@ Change git.freescale repository URLs (using code aurora mirror instead).
 
 <h5 id="layer-update-8">Layer Update:</h5>
 
-<pre><code>Added machine configuration for imx7d-pico.
-Added support for Wandboard D1.
-Added wic image support for several supported machines.
+<ul>
+<li>Added machine configuration for imx7d-pico.
 
-</code></pre>
+<ul>
+<li>Added support for Wandboard D1.</li>
+<li>Added wic image support for several supported machines.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-12">Bugs</h4>
 
@@ -968,11 +1083,14 @@ Added wic image support for several supported machines.
 
 <h5 id="layer-update-9">Layer Update:</h5>
 
-<pre><code>RaspberryPi firmware updated to tag 1.20170811.
-Updated linux-firmware-brcmfmac43430 to 7.45.41.46.
-Improved support for raspberrypi3-64.
+<ul>
+<li>RaspberryPi firmware updated to tag 1.20170811.
 
-</code></pre>
+<ul>
+<li>Updated linux-firmware-brcmfmac43430 to 7.45.41.46.</li>
+<li>Improved support for raspberrypi3-64.</li>
+</ul></li>
+</ul>
 
 <h4 id="bugs-13">Bugs</h4>
 
@@ -986,9 +1104,9 @@ Improved support for raspberrypi3-64.
 
 <h5 id="layer-update-10">Layer Update:</h5>
 
-<pre><code>Added kernel device tree config for Beagle Bone Green.
-
-</code></pre>
+<ul>
+<li>Added kernel device tree config for Beagle Bone Green.</li>
+</ul>
 
 <h4 id="bugs-14">Bugs</h4>
 
