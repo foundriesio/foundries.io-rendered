@@ -134,9 +134,8 @@ Please feel free to contact us, our customer service center is working for you 2
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/product/</guid>
-      <description>Overview The Zephyr and Linux microPlatforms are extensible software and hardware platforms that make it easier to develop, secure, and maintain Internet-connected embedded devices.
-End-to-end Demonstration Systems shows you how to combine the microPlatforms with server and cloud applications to create complete systems. Using these systems, you can publish sensor data from devices to the cloud and perform firmware over the air (FOTA) updates of the device firmware.
-Linux microPlatform The Linux microPlatform, based on OpenEmbedded / Yocto and Docker, is targeted at Linux-based devices.</description>
+      <description>Overview Open Source Foundries products are Zephyr RTOS and Linux microPlatforms to enable you to rapidly develop secure, OTA updatable connected products. Whether your application is a remote sensor, a smart light or device, an appliance, or even a robot, drone or self-driving car the microPlatforms provide a proven, tested platform on which to securely build your product and applications.
+microPlatforms are configurable minimum footprint implementations of software for building any connected device, whether based on a microcontroller or advanced multi-core SoCs.</description>
     </item>
     
   </channel>
