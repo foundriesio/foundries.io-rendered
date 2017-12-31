@@ -129,6 +129,16 @@ Please feel free to contact us using the form below and we will get back to you 
     </item>
     
     <item>
+      <title>Login</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/login/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/login/</guid>
+      <description>Login in or Sign up here (If cookie exists then just login to user account. If not then follow Sign up flow)
+Interested in using the microPlatforms for your project? Sign up for a free account and you will have access to the most recent public build of the microPlatforms and end to end Reference Implementation. You are free to use this build for any purpose subject to the incorporated standard open source licenses.</description>
+    </item>
+    
+    <item>
       <title>Product</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/product/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
