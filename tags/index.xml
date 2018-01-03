@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2017, Open Source Foundries, Ltd.; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 13 Dec 2017 13:50:46 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ble</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/ble/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/ble/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bugs</title>
@@ -69,9 +78,18 @@
     <item>
       <title>Linux</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux/</link>
-      <pubDate>Wed, 13 Dec 2017 13:50:46 +0200</pubDate>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microplatform</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/</guid>
       <description></description>
     </item>
     
@@ -96,7 +114,7 @@
     <item>
       <title>Update</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/update/</link>
-      <pubDate>Wed, 13 Dec 2017 13:50:46 +0200</pubDate>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/update/</guid>
       <description></description>
@@ -105,7 +123,7 @@
     <item>
       <title>Zephyr</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/zephyr/</link>
-      <pubDate>Wed, 13 Dec 2017 13:50:46 +0200</pubDate>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/zephyr/</guid>
       <description></description>
