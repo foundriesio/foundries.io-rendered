@@ -40,42 +40,6 @@
     </item>
     
     <item>
-      <title>Fota</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/fota/</link>
-      <pubDate>Tue, 10 Oct 2017 13:07:31 +0200</pubDate>
-      
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/fota/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/golang/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
-      
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hawkbit</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/hawkbit/</link>
-      <pubDate>Tue, 10 Oct 2017 13:07:31 +0200</pubDate>
-      
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/hawkbit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/hugo/</link>
-      <pubDate>Thu, 03 Aug 2017 13:39:46 +0200</pubDate>
-      
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Linux</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux/</link>
       <pubDate>Wed, 10 Jan 2018 13:50:46 +0200</pubDate>
@@ -90,24 +54,6 @@
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/programming/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
-      
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Theme</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/theme/</link>
-      <pubDate>Tue, 24 Oct 2017 13:50:46 +0200</pubDate>
-      
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/theme/</guid>
       <description></description>
     </item>
     

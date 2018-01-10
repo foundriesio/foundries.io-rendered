@@ -38,36 +38,6 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/linux-quickstart/</loc>
-    <lastmod>2017-10-24T13:50:46+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/zephyr-quickstart/</loc>
-    <lastmod>2017-10-24T13:50:46+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/10/over-the-air-updates-hawkbit/</loc>
-    <lastmod>2017-10-10T13:07:31+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/10/over-the-air-updates-lwm2m/</loc>
-    <lastmod>2017-10-10T13:07:31+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/08/03/overview-of-threat-modeling/</loc>
-    <lastmod>2017-08-03T13:39:46+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2015/10/02/linked-sample/</loc>
-    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/about/</loc>
   </url>
   
@@ -105,30 +75,6 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/fota/</loc>
-    <lastmod>2017-10-10T13:07:31+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/golang/</loc>
-    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/hawkbit/</loc>
-    <lastmod>2017-10-10T13:07:31+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/hugo/</loc>
-    <lastmod>2017-08-03T13:39:46+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux/</loc>
     <lastmod>2018-01-10T13:50:46+02:00</lastmod>
     <priority>0</priority>
@@ -136,12 +82,6 @@
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/login/</loc>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/lorem/</loc>
-    <lastmod>2017-10-10T13:07:31+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -177,38 +117,8 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/programming/</loc>
-    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/programming/</loc>
-    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/pseudo/</loc>
-    <lastmod>2017-08-03T13:39:46+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/starting/</loc>
-    <lastmod>2017-10-24T13:50:46+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/</loc>
     <lastmod>2018-01-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/theme/</loc>
-    <lastmod>2017-10-24T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
