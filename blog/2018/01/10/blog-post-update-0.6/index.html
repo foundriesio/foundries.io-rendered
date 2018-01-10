@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Theme</title>
+  <title>microPlatform update 0.6</title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://opensourcefoundries.github.io/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="Theme" />
+  <meta property="og:title" content="microPlatform update 0.6" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/osfoundries-rendered/tags/theme//" />
+  <meta property="og:url" content="/osfoundries-rendered/blog/2018/01/10/blog-post-update-0.6//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.github.io/osfoundries-rendered/">
-                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo.png" alt="Theme logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo-small.png" alt="Theme logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Theme - go to homepage</span>
+                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo.png" alt="microPlatform update 0.6 logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo-small.png" alt="microPlatform update 0.6 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">microPlatform update 0.6 - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -176,7 +176,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Theme</h1>
+                <h1>microPlatform update 0.6</h1>
             </div>
         </div>
     </div>
@@ -185,130 +185,218 @@
 
         <div id="content">
             <div class="container">
+
                 <div class="row">
+
                     
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-9" id="blog-post">
 
+                        <p class="text-muted text-uppercase mb-small text-right">January 10, 2018</p>
+
+                        <div id="post-content">
+                          
+
+<h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+
+<h2 id="highlights">Highlights</h2>
+
+<ul>
+<li><strong>Non-fast-forward</strong> Zephyr update to 1.11 development tree</li>
+</ul>
+
+<h2 id="components">Components</h2>
+
+<h3 id="mcuboot">MCUBoot</h3>
+
+<h4 id="features">Features</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h4 id="bugs">Bugs</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h3 id="zephyr">Zephyr</h3>
+
+<h4 id="features-1">Features</h4>
+
+<h5 id="memory-security-improvements-for-arc">Memory security improvements for ARC:</h5>
+
+<ul>
+<li>The ARC architecture has gained additional memory
+security support.</li>
+</ul>
+
+<h5 id="i2c-for-stm32f0">I2C for STM32F0:</h5>
+
+<ul>
+<li>The STM32F0 SoC family gained I2C support.</li>
+</ul>
+
+<h5 id="new-bluetooth-testing-api-and-cases">New Bluetooth testing API and cases:</h5>
+
+<ul>
+<li>Bluetooth grew a new testing API, and several test cases
+were merged.</li>
+</ul>
+
+<h5 id="board-support-and-peripheral-enablement">Board support and peripheral enablement:</h5>
+
+<ul>
+<li>Various fixes and peripheral enablement in the boards,
+across architectures.</li>
+</ul>
+
+<h5 id="ethernet-improvements-for-mcux-driver">Ethernet improvements for mcux driver:</h5>
+
+<ul>
+<li>The mcux ethernet driver now disables promiscuous mode
+by default, and also implements IPv6 multicast group
+joining/leaving.</li>
+</ul>
+
+<h5 id="device-tree-bindings-for-sensors-and-i2c">Device tree bindings for sensors and I2C:</h5>
+
+<ul>
+<li>A generic yaml description for some sensors and I2C
+devices was added to device tree, along with other
+sensor- and I2C-related fixes.</li>
+</ul>
+
+<h5 id="legacy-cleanups">Legacy cleanups:</h5>
+
+<ul>
+<li>Thread groups were removed from the kernel, along with
+other cleanups in clocks and timers.</li>
+</ul>
+
+<h5 id="flashing-debugging-changes">Flashing/debugging changes:</h5>
+
+<ul>
+<li>The flash and debug infrastructure has been reworked to
+largely eliminate the use of environment variables. All
+board files were affected. Out-of-tree boards will need
+to be updated. Users of in-tree boards have been
+updated. User workflows that use the old environment
+variables will need updates.</li>
+</ul>
+
+<h5 id="size-report-changes">size_report changes:</h5>
+
+<ul>
+<li>Similarly to the flashing and debugging changes, the
+size_report script now uses command-line arguments
+instead of environment variables. User workflows that
+use the old environment variables will need updates.</li>
+</ul>
+
+<h4 id="bugs-1">Bugs</h4>
+
+<h5 id="stm32f0-flash-fixes">STM32F0 flash fixes:</h5>
+
+<ul>
+<li>The STM32F0 SoC family has fixes for the flash driver</li>
+</ul>
+
+<h5 id="lwm2m-fixes">LWM2M fixes:</h5>
+
+<ul>
+<li>Several network fixes were merged for the LWM2M library.</li>
+</ul>
+
+<h5 id="ieee-802-15-4-fixes">IEEE 802.15.4 fixes:</h5>
+
+<ul>
+<li>Fixes were merged for IEEE 802.15.4.</li>
+</ul>
+
+<h5 id="some-bt-mesh-fixes">Some BT Mesh fixes:</h5>
+
+<ul>
+<li>A few fixes and improvements were made to the Bluetooth
+Mesh app. The pace of fixes on this new feature appears
+to be slowing down, indicating greater maturity.</li>
+</ul>
+
+<h3 id="zephyr-fota-samples">Zephyr FOTA Samples</h3>
+
+<h4 id="features-2">Features</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h4 id="bugs-2">Bugs</h4>
+
+<h5 id="fixes-for-blockages-in-the-tcp-stack">Fixes for blockages in the TCP stack:</h5>
+
+<ul>
+<li>The dm-hawkbit-mqtt sample reduced the TCP retry count,
+which prevents the TCP stack from blocking due to low
+memory conditions when many retry packets are in flight.
+This is a tradeoff between compliance with RFC
+recommendations for retry time and a working system with
+tight memory constraints.</li>
+</ul>
+
+<h1 id="linux-microplatform">Linux microPlatform</h1>
+
+<h2 id="highlights-1">Highlights</h2>
+
+<ul>
+<li>OSF Unified Linux Kernel updated to the 4.14 series (4.14.7)</li>
+</ul>
+
+<h2 id="components-1">Components</h2>
+
+<h3 id="meta-osf-layer">Meta OSF Layer</h3>
+
+<h4 id="features-3">Features</h4>
+
+<h5 id="layer-update">Layer Update:</h5>
+
+<ul>
+<li>OSF Unified Linux Kernel updated to the 4.14 series (4.14.7).</li>
+</ul>
+
+<h4 id="bugs-3">Bugs</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+                        </div>
                         
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/linux-quickstart/">
-                                          
-                                          <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/banner-1.jpg" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/linux-quickstart/">Quickstart: Linux microPlatform</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          in <a href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/starting">starting</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/linux-quickstart/"><i class="fa fa-calendar-o"></i> October 24, 2017</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro"> Introduction Here&rsquo;s how you use the Linux microPlatform in 30 seconds
-## this is a comment $ echo this is a command this is a command ## edit the file $vi foo.md +++ date = &quot;2014-09-28&quot; title = &quot;creating a new theme&quot; +++ bah and humbug :wq ## show it $ cat foo.md +++ date = &quot;2014-09-28&quot; title = &quot;creating a new theme&quot; +++ bah and humbug $  </p>
-                                    <p class="read-more"><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/linux-quickstart/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/zephyr-quickstart/">
-                                          
-                                          <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/banner-1.jpg" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/zephyr-quickstart/">Quickstart: Zephyr microPlatform</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          in <a href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/starting">starting</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/zephyr-quickstart/"><i class="fa fa-calendar-o"></i> October 24, 2017</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro"> Introduction Here&rsquo;s how you use zephyr
-## this is a comment $ echo this is a command this is a command ## edit the file $vi foo.md +++ date = &quot;2014-09-28&quot; title = &quot;creating a new theme&quot; +++ bah and humbug :wq ## show it $ cat foo.md +++ date = &quot;2014-09-28&quot; title = &quot;creating a new theme&quot; +++ bah and humbug $  </p>
-                                    <p class="read-more"><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/zephyr-quickstart/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2015/10/02/linked-sample/">
-                                          
-                                          <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/banner-4.jpg" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2015/10/02/linked-sample/">Linked post</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          By <a href="#">John Doe</a>
-                                          
-                                          
-                                          
-                                          in <a href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/programming">programming</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2015/10/02/linked-sample/"><i class="fa fa-calendar-o"></i> October 2, 2015</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro">I&rsquo;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:
-menu = &quot;main&quot;  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mauris nulla, vestibulum vel auctor sed, posuere eu lorem. Aliquam consequat augue ut accumsan mollis. Suspendisse malesuada sodales tincidunt. Vivamus sed erat ac augue bibendum porta sed id ipsum. Ut mollis mauris eget ligula sagittis cursus. Aliquam id pharetra tellus.</p>
-                                    <p class="read-more"><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2015/10/02/linked-sample/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "osfoundries" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
                         
 
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
-                            
-                        </ul>
                     </div>
                     
 
@@ -453,6 +541,7 @@ menu = &quot;main&quot;  Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
                 </div>
                 
+
             </div>
             
         </div>

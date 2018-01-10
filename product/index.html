@@ -209,13 +209,13 @@
 
 <p>As well as the microPlatform software itself, the Open Source Foundries product is delivered with an end to end open source reference implementation that shows you how to securely deliver and collect data and services to and from your own or third party server/cloud platforms. Using this software you can securely publish sensor data from devices to the fog or cloud, receive conmands or data back, and perform over the air updates to your devices and applications.</p>
 
-<p>(end to end diagram/photo)</p>
+<p><img src="../img/lwm2m-system.png" alt="IoT System built on LWM2M" /></p>
 
 <h2 id="linux-microplatform">Linux microPlatform</h2>
 
 <p>The Linux microPlatform is a complete software implementation for an updatable, connected device. It comprises a recent Linux kernel.org stable kernel tested on a variety of SoCs, and a minimal set of services to run product applications and services in Docker Containers.  The microPlatform is deliberately intended to be a minimal core implementation using best practices to increase security through reducing attack surfaces, and to increase product quality and performance. A typical headless implementation with networking stack and supporting Docker Containers uses about (350MB) of storage.</p>
 
-<p>(Picture of Stack)</p>
+<p><img src="../img/linux-blockdiagram.png" alt="Linux microPlatform Block diagram" /></p>
 
 <p>Firmware<br>
 To support an end to end secure platform, trusted firmware supporting secure boot and a Trusted Execution Environment (TEE) is required. A reference implementation using Arm Trusted Firmware, OP-TEE and UEFI is available for the HiKey Linux development platform. Documentation is provided to help you follow best practices in implementing a fully secure product for your own hardware choice.</p>
@@ -226,7 +226,7 @@ A recent kernel.org stable kernel version is supported and tested as part of the
 <p>Application Deployment<br>
 The Open Source Foundries end to end reference implementation provides an example of using Containers for yoor own application. The Linux microPlatform is used for a simple gateway application to interface sensors and controllers using IoT protocols such as LWM2M and MQTT to cloud providers. Leshan and Hawkbit open source device management software is used to securely configure, update and manage the gateway application.</p>
 
-<p>(Block diagram of simple gateway)</p>
+<p><img src="../img/lmp-gateway.png" alt="Linux microPlatform Gateway Diagram" /></p>
 
 <h2 id="zephyr-microplatform">Zephyr microPlatform</h2>
 
@@ -243,7 +243,7 @@ The Zephyr Project (link) is a scalable cross-architecture, open governance RTOS
 <li>Example sensor and actuator/control applications</li>
 </ul>
 
-<p>(Picture of Stack)</p>
+<p><img src="../img/zephyr-blockdiagram.png" alt="Zephyr microPlatform Block diagram" /></p>
 
 <p>MCUboot<br>
 MCUboot is a secure, single thread bootloader that executes from flash memory and provides a secure boot process using an immutable public key or key-hash stored in the microcontroller. We provide documentation on how to replace the sample developer key with your own key. The microPlatform can also be modfied to utilize any custom security hardware available.</p>
@@ -317,6 +317,19 @@ The Zephyr microPlatform is designed to enable simple development of secure devi
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/10/blog-post-update-0.6/">
+                          
+                            <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/update.png" class="img-responsive" alt="microPlatform update 0.6">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/10/blog-post-update-0.6/">microPlatform update 0.6</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5/">
                           
                             <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/update.png" class="img-responsive" alt="microPlatform update 0.5">
@@ -338,19 +351,6 @@ The Zephyr microPlatform is designed to enable simple development of secure devi
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/2018-jan-03-opencall/">microPlatform OpenCall meeting minutes</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/blog-post-update-0.4/">
-                          
-                            <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/banners/update.png" class="img-responsive" alt="microPlatform update 0.4">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/blog-post-update-0.4/">microPlatform update 0.4</a></h5>
                     </div>
                 </div>
                 
