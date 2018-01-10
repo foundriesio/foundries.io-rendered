@@ -6,15 +6,13 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login</title>
+  <title>microPlatform update 0.5</title>
   <meta name="author" content="" />
 
   
-  <meta name="keywords" content="Login, Signup, Get Started">
+  <meta name="keywords" content="devows, hugo, go">	
   
 
-  
-  <meta name="description" content="Login and Signup">
   
 
   <meta name="generator" content="Hugo 0.31.1" />
@@ -56,9 +54,9 @@
   <link rel="alternate" href="https://opensourcefoundries.github.io/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="Login" />
+  <meta property="og:title" content="microPlatform update 0.5" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/osfoundries-rendered/login//" />
+  <meta property="og:url" content="/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -77,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.github.io/osfoundries-rendered/">
-                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo.png" alt="Login logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo-small.png" alt="Login logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Login - go to homepage</span>
+                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo.png" alt="microPlatform update 0.5 logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo-small.png" alt="microPlatform update 0.5 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">microPlatform update 0.5 - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -178,7 +176,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Login</h1>
+                <h1>microPlatform update 0.5</h1>
             </div>
         </div>
     </div>
@@ -186,46 +184,368 @@
 
 
         <div id="content">
-            
-
             <div class="container">
 
                 <div class="row">
 
-                    <div class="col-md-12">
+                    
 
-                        <div>
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">January 4, 2018</p>
+
+                        <div id="post-content">
                           
 
-<h2 id="login-in-or-sign-up-here">Login in or Sign up here</h2>
+<h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
 
-<p>(If cookie exists then just login to user account. If not then follow Sign up flow)</p>
-
-<p>Interested in using the microPlatforms for your project? Sign up for a free account and you will have access to the most recent public build of the microPlatforms and end to end Reference Implementation. You are free to use this build for any purpose subject to the incorporated standard open source licenses.</p>
-
-<p>Summary of our Terms of Use (link to full terms)<br></p>
+<h2 id="highlights">Highlights</h2>
 
 <ul>
-<li>The open source builds are made available at present approximately every six months. These are available for your use and are provided without any support or maintenance. They represent a snapshot of the Open Source Foundries microPlatforms at the time of publishing.</li>
-<li>You will receive 3 months of access to the Open Source Foundries Continuous Update and Maintenance service at no cost when you first sign up.</li>
-<li>When you sign up for an account we will require you to provide a valid means of payment - paypal, debit or credit card. We will NOT charge your payment source without your agreement to subscribe to the Open Source Foundries Continuous Update and Maintenance service. If you do not subscribe to the service within 3 months of signing up your account will be deleted, and you will need to create a new one. You will not be entitled to a further free 3 months of Maintenance service.</li>
-<li>If you subscribe to our Continuous Update and Maintenance service you may pay monthly or annually in advance. You may request to cancel your subscription from your account page at any time. You will not receive a refund of any unused subscription period.</li>
-<li>Subscriptions are on a per product basis (we do not charge per unit and there are no other ongoing fees). You are responsible for taking out a new subscription if you use the microPlatforms to develop additional products.</li>
-<li>Your subscription license is for you or your company alone. You may not redistribute it in whole or in part, except when delivered as part of your own end product builds.</li>
+<li><strong>Non-fast-forward</strong> Zephyr update to 1.11 development tree</li>
 </ul>
 
-<hr />
+<h2 id="components">Components</h2>
+
+<h3 id="mcuboot">MCUBoot</h3>
+
+<h4 id="features">Features</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h4 id="bugs">Bugs</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h3 id="zephyr">Zephyr</h3>
+
+<h4 id="features-1">Features</h4>
+
+<h5 id="memory-security-improvements-for-arc">Memory security improvements for ARC:</h5>
+
+<ul>
+<li>The ARC architecture has gained additional memory
+security support.</li>
+</ul>
+
+<h5 id="i2c-for-stm32f0">I2C for STM32F0:</h5>
+
+<ul>
+<li>The STM32F0 SoC family gained I2C support.</li>
+</ul>
+
+<h5 id="new-bluetooth-testing-api-and-cases">New Bluetooth testing API and cases:</h5>
+
+<ul>
+<li>Bluetooth grew a new testing API, and several test cases
+were merged.</li>
+</ul>
+
+<h5 id="board-support-and-peripheral-enablement">Board support and peripheral enablement:</h5>
+
+<ul>
+<li>Various fixes and peripheral enablement in the boards,
+across architectures.</li>
+</ul>
+
+<h5 id="ethernet-improvements-for-mcux-driver">Ethernet improvements for mcux driver:</h5>
+
+<ul>
+<li>The mcux ethernet driver now disables promiscuous mode
+by default, and also implements IPv6 multicast group
+joining/leaving.</li>
+</ul>
+
+<h5 id="device-tree-bindings-for-sensors-and-i2c">Device tree bindings for sensors and I2C:</h5>
+
+<ul>
+<li>A generic yaml description for some sensors and I2C
+devices was added to device tree, along with other
+sensor- and I2C-related fixes.</li>
+</ul>
+
+<h5 id="legacy-cleanups">Legacy cleanups:</h5>
+
+<ul>
+<li>Thread groups were removed from the kernel, along with
+other cleanups in clocks and timers.</li>
+</ul>
+
+<h5 id="flashing-debugging-changes">Flashing/debugging changes:</h5>
+
+<ul>
+<li>The flash and debug infrastructure has been reworked to
+largely eliminate the use of environment variables. All
+board files were affected. Out-of-tree boards will need
+to be updated. Users of in-tree boards have been
+updated. User workflows that use the old environment
+variables will need updates.</li>
+</ul>
+
+<h5 id="size-report-changes">size_report changes:</h5>
+
+<ul>
+<li>Similarly to the flashing and debugging changes, the
+size_report script now uses command-line arguments
+instead of environment variables. User workflows that
+use the old environment variables will need updates.</li>
+</ul>
+
+<h4 id="bugs-1">Bugs</h4>
+
+<h5 id="stm32f0-flash-fixes">STM32F0 flash fixes:</h5>
+
+<ul>
+<li>The STM32F0 SoC family has fixes for the flash driver</li>
+</ul>
+
+<h5 id="lwm2m-fixes">LWM2M fixes:</h5>
+
+<ul>
+<li>Several network fixes were merged for the LWM2M library.</li>
+</ul>
+
+<h5 id="ieee-802-15-4-fixes">IEEE 802.15.4 fixes:</h5>
+
+<ul>
+<li>Fixes were merged for IEEE 802.15.4.</li>
+</ul>
+
+<h5 id="some-bt-mesh-fixes">Some BT Mesh fixes:</h5>
+
+<ul>
+<li>A few fixes and improvements were made to the Bluetooth
+Mesh app. The pace of fixes on this new feature appears
+to be slowing down, indicating greater maturity.</li>
+</ul>
+
+<h3 id="zephyr-fota-samples">Zephyr FOTA Samples</h3>
+
+<h4 id="features-2">Features</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h4 id="bugs-2">Bugs</h4>
+
+<h5 id="fixes-for-blockages-in-the-tcp-stack">Fixes for blockages in the TCP stack:</h5>
+
+<ul>
+<li>The dm-hawkbit-mqtt sample reduced the TCP retry count,
+which prevents the TCP stack from blocking due to low
+memory conditions when many retry packets are in flight.
+This is a tradeoff between compliance with RFC
+recommendations for retry time and a working system with
+tight memory constraints.</li>
+</ul>
+
+<h1 id="linux-microplatform">Linux microPlatform</h1>
+
+<h2 id="highlights-1">Highlights</h2>
+
+<ul>
+<li>Raspberry Pi 3 kernel configuration now uses the OSF config fragment</li>
+</ul>
+
+<h2 id="components-1">Components</h2>
+
+<h3 id="meta-osf-layer">Meta OSF Layer</h3>
+
+<h4 id="features-3">Features</h4>
+
+<h5 id="layer-update">Layer Update:</h5>
+
+<ul>
+<li>Raspberry Pi 3 kernel updated to use the OSF distro config
+fragment.
+Power off bluetooth interface during shutdown if enabled via
+the btattach service.</li>
+</ul>
+
+<h4 id="bugs-3">Bugs</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
 
                         </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "osfoundries" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
 
                     </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">Search</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="Search">
+                <input type="hidden" name="sitesearch" value="https://opensourcefoundries.github.io/osfoundries-rendered/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">Categories</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/lorem">lorem (2)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform">microplatform (6)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/minutes">minutes (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/programming">programming (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/pseudo">pseudo (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/starting">starting (2)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/updates">updates (5)</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+      <h3 class="panel-title">Tags</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/ble"><i class="fa fa-tags"></i> ble</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/bugs"><i class="fa fa-tags"></i> bugs</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/cve"><i class="fa fa-tags"></i> cve</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/fota"><i class="fa fa-tags"></i> fota</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/golang"><i class="fa fa-tags"></i> golang</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/hawkbit"><i class="fa fa-tags"></i> hawkbit</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/hugo"><i class="fa fa-tags"></i> hugo</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux"><i class="fa fa-tags"></i> linux</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform"><i class="fa fa-tags"></i> microplatform</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/programming"><i class="fa fa-tags"></i> programming</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/theme"><i class="fa fa-tags"></i> theme</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/update"><i class="fa fa-tags"></i> update</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/zephyr"><i class="fa fa-tags"></i> zephyr</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
 
                 </div>
                 
 
             </div>
-            
-
             
         </div>
         
