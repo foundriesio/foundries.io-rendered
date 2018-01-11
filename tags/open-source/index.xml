@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ble on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/ble/</link>
-    <description>Recent content in Ble on Open Source Foundries, Ltd.</description>
+    <title>Open Source on Open Source Foundries, Ltd.</title>
+    <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/open-source/</link>
+    <description>Recent content in Open Source on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2017, Open Source Foundries, Ltd.; all rights reserved.</copyright>
     <lastBuildDate>Mon, 08 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/ble/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/08/20180110-ble-dongle/</guid>
       <description>An open source usb dongle / BLE host radio If you&amp;rsquo;ve ever had to ship a product you know how frustrating a critical bug can be when your only driver is proprietary. Many times the problem may be in your code and not the vendor&amp;rsquo;s code, but it is often a difficult journey to find the root cause. Vendors have many customers and finding the right technical contact takes time and without a compelling business case you may ultimately find that your use of the device is not standard and you end up at the back of the line, even sometimes forced to find a different component.</description>
-    </item>
-    
-    <item>
-      <title>microPlatform OpenCall meeting minutes</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/2018-jan-03-opencall/</link>
-      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/2018-jan-03-opencall/</guid>
-      <description>2018 January 3rd Open Call minutes Highlights OSF is now 3 months old and the microPlatforms are reaching full speed. We are working on a few final work items before we move from limited beta to a public beta state for the Zephyr and Linux microPlatforms.
-New BLE Dongle efforts For our initial radio technology, we have chosen BLE (Bluetooth Low Energy) as it is the most mature and public radio technology that is available in both Linux and Zephyr projects.</description>
     </item>
     
   </channel>

@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>microPlatform update 0.5</title>
+  <title>Opensource Bluetooth Low Engergy (BLE) usb dongle</title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://opensourcefoundries.github.io/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="microPlatform update 0.5" />
+  <meta property="og:title" content="Opensource Bluetooth Low Engergy (BLE) usb dongle" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5//" />
+  <meta property="og:url" content="/osfoundries-rendered/blog/2018/01/08/20180110-ble-dongle//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.github.io/osfoundries-rendered/">
-                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo.png" alt="microPlatform update 0.5 logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo-small.png" alt="microPlatform update 0.5 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">microPlatform update 0.5 - go to homepage</span>
+                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo.png" alt="Opensource Bluetooth Low Engergy (BLE) usb dongle logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.github.io/osfoundries-rendered/img/logo-small.png" alt="Opensource Bluetooth Low Engergy (BLE) usb dongle logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Opensource Bluetooth Low Engergy (BLE) usb dongle - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -176,7 +176,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>microPlatform update 0.5</h1>
+                <h1>Opensource Bluetooth Low Engergy (BLE) usb dongle</h1>
             </div>
         </div>
     </div>
@@ -192,196 +192,74 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">January 4, 2018</p>
+                        <p class="text-muted text-uppercase mb-small text-right">January 8, 2018</p>
 
                         <div id="post-content">
                           
 
-<h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+<h1 id="an-open-source-usb-dongle-ble-host-radio">An open source usb dongle / BLE host radio</h1>
 
-<h2 id="summary">Summary</h2>
+<p>If you&rsquo;ve ever had to ship a product you know how frustrating a critical bug can be when your only driver is proprietary.  Many times the problem may be in your code and not the vendor&rsquo;s code, but it is often a difficult journey to find the root cause.  Vendors have many customers and finding the right technical contact takes time and without a compelling business case you may ultimately find that your use of the device is not <em>standard</em> and you end up at the back of the line, even sometimes forced to find a different component.  Well, with Zephyr maybe we are beginning to take a step forward as we now have the ability to control the entire communication path in an almost <em>ready-for-certification</em> Bluetooth low energy radio.</p>
 
-<p>The major change in this update is a non-fast-forward Zephyr
-repository tree based on the upstream 1.11 development tree.</p>
+<h2 id="hardware-requirements">Hardware Requirements</h2>
 
-<h2 id="highlights">Highlights</h2>
-
-<ul>
-<li><strong>Non-fast-forward</strong> Zephyr update to 1.11 development tree</li>
-</ul>
-
-<h2 id="components">Components</h2>
-
-<h3 id="mcuboot">MCUBoot</h3>
-
-<h4 id="features">Features</h4>
+<p>Though we are currently focusing development on the Redbear Labs Nano v2 (nRF52), any nRF51/nRF52 board can be compatible with the setup, as long it provides a UART-USB converter that supports flow control.</p>
 
 <ul>
-<li>Not addressed in this update</li>
+<li>nRF51-PCA10028</li>
+<li>nRF52-PCA10040</li>
+<li>nRF52840-PCA10056</li>
+<li>Redbear Labs Nano v1 (nRF51)</li>
+<li>Redbear Labs Nano v2 (nRF52)</li>
 </ul>
 
-<h4 id="bugs">Bugs</h4>
+<h2 id="sourcecode">Sourcecode</h2>
 
-<ul>
-<li>Not addressed in this update</li>
-</ul>
+<p>To get the radio to work you need to configure a Zephyr sample for your NRF5 device, configure a linux host.  Due to flow control being disabled by default on the DAPLink USB adapter, you will also need to load modified DAPLink firmware.</p>
 
-<h3 id="zephyr">Zephyr</h3>
+<h3 id="daplink-usb-firmware">DAPLink USB firmware</h3>
 
-<h4 id="features-1">Features</h4>
+<p>To use with the stock DAPLink USB 1.5 adapter a firmware update is required, as the stock firmware has several issues the USB CDC UART interface.</p>
 
-<h5 id="memory-security-improvements-for-arc">Memory security improvements for ARC:</h5>
+<p>To update to the latest DAPLink firmware just follow the guide available at <a href="https://github.com/redbear/nRF5x/tree/master/USB-IF#daplink-usb-interface-daplink-v15">https://github.com/redbear/nRF5x/tree/master/USB-IF#daplink-usb-interface-daplink-v15</a> and enable flow control.  (NOTE: we provide a prebuilt version that we used during our internal tests below).</p>
 
-<ul>
-<li>The ARC architecture has gained additional memory
-security support.</li>
-</ul>
+<h3 id="zephyr-hci-uart-sample-changes-required">Zephyr HCI UART sample changes required</h3>
 
-<h5 id="i2c-for-stm32f0">I2C for STM32F0:</h5>
+<p>The source code used for the bluetooth dongle is simply re-purposing the HCI-UART sample within the Zephyr sample tree and adding a few configuration items.</p>
 
-<ul>
-<li>The STM32F0 SoC family gained I2C support.</li>
-</ul>
+<p>For the NRF5 device: $ZEPHYR_BASE/samples/bluetooth/hci_uart/nrf5.conf</p>
 
-<h5 id="new-bluetooth-testing-api-and-cases">New Bluetooth testing API and cases:</h5>
+<pre><code> CONFIG_BT_CTLR_RX_BUFFERS=18
+ CONFIG_BT_CTLR_TX_BUFFERS=19
+ CONFIG_BT_CTLR_TX_BUFFER_SIZE=251
+ CONFIG_BT_CTLR_DATA_LENGTH_MAX=251
+ CONFIG_BT_HCI_CMD_COUNT=20
+ CONFIG_BT_RX_BUF_COUNT=20
+ CONFIG_BT_RX_BUF_LEN=264
+</code></pre>
 
-<ul>
-<li>Bluetooth grew a new testing API, and several test cases
-were merged.</li>
-</ul>
+<p>You can also increase the number if connections above the default of 16 parallel bluetooth connections.  To increase, simply change CONFIG_BT_MAX_CONN in $ZEPHYR_BASE/samples/bluetooth/hci_uart/nrf5.conf.  We&rsquo;ve had some success testing as many as 24 devices concurrently, but you&rsquo;ll want to make sure your performance is acceptable. Additional RX/TX buffers and larger data length should also used for better performance, if not restricted by RAM..</p>
 
-<h5 id="board-support-and-peripheral-enablement">Board support and peripheral enablement:</h5>
+<h3 id="linux-host-changes-required">Linux Host changes required</h3>
 
-<ul>
-<li>Various fixes and peripheral enablement in the boards,
-across architectures.</li>
-</ul>
+<p>To use the BLE dongle in a linux computer you simply need to configure the BT attach service to use the dongle.</p>
 
-<h5 id="ethernet-improvements-for-mcux-driver">Ethernet improvements for mcux driver:</h5>
+<pre><code># Create bluetooth attach configuration file
+cat &lt;&lt; EOF &gt; /etc/bluetooth/btattach.conf
+HCITTY=/dev/ttyACM0
+HCISPEED=1000000
+HCIPROTO=h4
+EOF
 
-<ul>
-<li>The mcux ethernet driver now disables promiscuous mode
-by default, and also implements IPv6 multicast group
-joining/leaving.</li>
-</ul>
+# restart btattach service
+systemctl restart btattach.service
+</code></pre>
 
-<h5 id="device-tree-bindings-for-sensors-and-i2c">Device tree bindings for sensors and I2C:</h5>
+<p>And that&rsquo;s it.</p>
 
-<ul>
-<li>A generic yaml description for some sensors and I2C
-devices was added to device tree, along with other
-sensor- and I2C-related fixes.</li>
-</ul>
+<h2 id="unsupported-pre-release-binaries-and-instructions">Unsupported / pre-release binaries and instructions</h2>
 
-<h5 id="legacy-cleanups">Legacy cleanups:</h5>
-
-<ul>
-<li>Thread groups were removed from the kernel, along with
-other cleanups in clocks and timers.</li>
-</ul>
-
-<h5 id="flashing-debugging-changes">Flashing/debugging changes:</h5>
-
-<ul>
-<li>The flash and debug infrastructure has been reworked to
-largely eliminate the use of environment variables. All
-board files were affected. Out-of-tree boards will need
-to be updated. Users of in-tree boards have been
-updated. User workflows that use the old environment
-variables will need updates.</li>
-</ul>
-
-<h5 id="size-report-changes">size_report changes:</h5>
-
-<ul>
-<li>Similarly to the flashing and debugging changes, the
-size_report script now uses command-line arguments
-instead of environment variables. User workflows that
-use the old environment variables will need updates.</li>
-</ul>
-
-<h4 id="bugs-1">Bugs</h4>
-
-<h5 id="stm32f0-flash-fixes">STM32F0 flash fixes:</h5>
-
-<ul>
-<li>The STM32F0 SoC family has fixes for the flash driver</li>
-</ul>
-
-<h5 id="lwm2m-fixes">LWM2M fixes:</h5>
-
-<ul>
-<li>Several network fixes were merged for the LWM2M library.</li>
-</ul>
-
-<h5 id="ieee-802-15-4-fixes">IEEE 802.15.4 fixes:</h5>
-
-<ul>
-<li>Fixes were merged for IEEE 802.15.4.</li>
-</ul>
-
-<h5 id="some-bt-mesh-fixes">Some BT Mesh fixes:</h5>
-
-<ul>
-<li>A few fixes and improvements were made to the Bluetooth
-Mesh app. The pace of fixes on this new feature appears
-to be slowing down, indicating greater maturity.</li>
-</ul>
-
-<h3 id="zephyr-fota-samples">Zephyr FOTA Samples</h3>
-
-<h4 id="features-2">Features</h4>
-
-<ul>
-<li>Not addressed in this update</li>
-</ul>
-
-<h4 id="bugs-2">Bugs</h4>
-
-<h5 id="fixes-for-blockages-in-the-tcp-stack">Fixes for blockages in the TCP stack:</h5>
-
-<ul>
-<li>The dm-hawkbit-mqtt sample reduced the TCP retry count,
-which prevents the TCP stack from blocking due to low
-memory conditions when many retry packets are in flight.
-This is a tradeoff between compliance with RFC
-recommendations for retry time and a working system with
-tight memory constraints.</li>
-</ul>
-
-<h1 id="linux-microplatform">Linux microPlatform</h1>
-
-<h2 id="summary-1">Summary</h2>
-
-<p>Raspberry Pi 3 kernel was updated to use the same OSF distro configuration
-fragment as used by the other machines.</p>
-
-<h2 id="highlights-1">Highlights</h2>
-
-<ul>
-<li>Raspberry Pi 3 kernel configuration now uses the OSF config fragment</li>
-</ul>
-
-<h2 id="components-1">Components</h2>
-
-<h3 id="meta-osf-layer">Meta OSF Layer</h3>
-
-<h4 id="features-3">Features</h4>
-
-<h5 id="layer-update">Layer Update:</h5>
-
-<ul>
-<li>Raspberry Pi 3 kernel updated to use the OSF distro config
-fragment.
-Power off bluetooth interface during shutdown if enabled via
-the btattach service.</li>
-</ul>
-
-<h4 id="bugs-3">Bugs</h4>
-
-<ul>
-<li>Not addressed in this update</li>
-</ul>
+<p><a href="https://github.com/OpenSourceFoundries/zephyr-ble-dongle/releases">https://github.com/OpenSourceFoundries/zephyr-ble-dongle/releases</a></p>
 
                         </div>
                         
