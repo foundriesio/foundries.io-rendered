@@ -18,7 +18,7 @@
       <pubDate>Wed, 10 Jan 2018 13:50:46 +0200</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/10/blog-post-update-0.6/</guid>
-      <description>Zephyr microPlatform Highlights  Bluetooth behaviors impacting MAC addresses are changed following Linux microPlatform update  Components MCUBoot Features  Not addressed in this update  Bugs  Not addressed in this update  Zephyr Features  Not addressed in this update  Bugs LWM2M packet fix:  The LWM2M stack includes a fix which prevents a packet which may need to be retransmitted from being freed until after this retransmission has completed, if necessary.</description>
+      <description>Zephyr microPlatform Summary The most significant change in this update follows the Linux microPlatform switch to a Linux v4.14-based tree. This impacts compatibility with any gateways relying on the old Bluetooth behavior, and also will cause changes to the MAC addresses reported by the Zephyr microPlatform sample applications. Users of the bt-joiner container whitelist feature in the Linux microPlatform will need to update their whitelists. Specifically, the leading D6:E7 in the MAC addresses must be changed to D4:E7.</description>
     </item>
     
     <item>
@@ -27,7 +27,8 @@
       <pubDate>Thu, 04 Jan 2018 13:50:46 +0200</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5/</guid>
-      <description>Zephyr microPlatform Highlights  Non-fast-forward Zephyr update to 1.11 development tree  Components MCUBoot Features  Not addressed in this update  Bugs  Not addressed in this update  Zephyr Features Memory security improvements for ARC:  The ARC architecture has gained additional memory security support.  I2C for STM32F0:  The STM32F0 SoC family gained I2C support.  New Bluetooth testing API and cases:  Bluetooth grew a new testing API, and several test cases were merged.</description>
+      <description>Zephyr microPlatform Summary The major change in this update is a non-fast-forward Zephyr repository tree based on the upstream 1.11 development tree.
+Highlights  Non-fast-forward Zephyr update to 1.11 development tree  Components MCUBoot Features  Not addressed in this update  Bugs  Not addressed in this update  Zephyr Features Memory security improvements for ARC:  The ARC architecture has gained additional memory security support.  I2C for STM32F0:  The STM32F0 SoC family gained I2C support.</description>
     </item>
     
     <item>
@@ -36,7 +37,9 @@
       <pubDate>Wed, 13 Dec 2017 13:50:46 +0200</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/blog-post-update-0.4/</guid>
-      <description>Zephyr microPlatform Highlights  Zephyr tree based on v1.10  Components MCUBoot Features  Not addressed in this update  Bugs  Not addressed in this update  Zephyr Features  Not addressed in this update  Bugs Bluetooth fixes:  Notable fixes include over ten patches to Bluetooth Mesh, along with two fixes to the core BT controller code.  CMake fixes:  The CMake build system received several fixes for various issues.</description>
+      <description>Zephyr microPlatform Summary This is the final update for the Zephyr v1.10 development cycle.
+The next update will be non-fast-forward update to the Zephyr repository, to begin development based on the v1.11 master branch.
+Highlights  Zephyr tree based on v1.10  Components MCUBoot Features  Not addressed in this update  Bugs  Not addressed in this update  Zephyr Features  Not addressed in this update  Bugs Bluetooth fixes:  Notable fixes include over ten patches to Bluetooth Mesh, along with two fixes to the core BT controller code.</description>
     </item>
     
     <item>
@@ -45,7 +48,9 @@
       <pubDate>Thu, 07 Dec 2017 13:50:46 +0200</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/07/blog-post-update-0.3/</guid>
-      <description>Zephyr microPlatform Highlights  Zephyr tree from 1.10 release candidate, with CMake MCUBoot and FOTA sample build systems ported to CMake  Components MCUBoot Features CMake-based build system:  The Zephyr build system was rewritten to use cmake instead of Kbuild, following the equivalent upstream change.  Bugs Fix jump to invalid target when not validating slot 0:  A bug fix to the core bootloader was merged which affects configurations that do not validate slot 0 before booting into it.</description>
+      <description>Zephyr microPlatform Summary This is the first Zephyr microPlatform update which uses the new CMake build system, which has replaced the use of Kbuild.
+As described in the summary from https://foundries.io/mp/zmp/0.2, all users will need to update any out of tree application build systems.
+Highlights  Zephyr tree from 1.10 release candidate, with CMake MCUBoot and FOTA sample build systems ported to CMake  Components MCUBoot Features CMake-based build system:  The Zephyr build system was rewritten to use cmake instead of Kbuild, following the equivalent upstream change.</description>
     </item>
     
     <item>
@@ -54,7 +59,9 @@
       <pubDate>Thu, 16 Nov 2017 13:50:46 +0200</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/blog-post-update-0.2/</guid>
-      <description>Zephyr microPlatform Highlights  Final Zephyr commit before the build system moves to CMake MCUBoot memory and flash space optimizations  Components MCUBoot Features Simulator tests rewritten in Cargo test format:  &amp;ldquo;The simulator tests have been rewritten to use Rust&amp;rsquo;s native testing framework. Users can run the tests by running \&amp;ldquo;cargo test\&amp;rdquo; from the sim/ directory.&amp;rdquo;  mbedTLS memory allocator:  The Zephyr port now uses a memory allocator from mbedTLS, which provides some memory and flash savings over the native Zephyr allocator.</description>
+      <description>Zephyr microPlatform Summary &amp;ldquo;This is the final release which uses the Linux kernel Kbuild build system. The next release will have a CMake-based build system. All out of tree applications will need updates to their build systems to move to CMake. Refer to the Zephyr Application Development Primer for details:
+http://docs.zephyrproject.org/application/application.html&amp;quot;
+Highlights  Final Zephyr commit before the build system moves to CMake MCUBoot memory and flash space optimizations  Components MCUBoot Features Simulator tests rewritten in Cargo test format:  &amp;ldquo;The simulator tests have been rewritten to use Rust&amp;rsquo;s native testing framework.</description>
     </item>
     
     <item>
@@ -63,7 +70,9 @@
       <pubDate>Thu, 09 Nov 2017 13:50:46 +0200</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/09/blog-post-update-0.1/</guid>
-      <description>Zephyr microPlatform Highlights  Zephyr tree from 1.10 development cycle, before CMake transition MCUBoot tree following the 1.0.0 release Fixes and other improvements to sample applications  Components MCUBoot Features  Not addressed in this update  Bugs  Not addressed in this update  Zephyr Features GPIO interface deprecations:  The GPIO_PIN_ENABLE and GPIO_PIN_DISABLE configuration constants, which overlap with functionality provided by the pinux driver, were deprecated.  New CoAP API:  There is a new CoAP API; the existing API has been deprecated.</description>
+      <description>Zephyr microPlatform Summary This release includes a Zephyr tree from the the 1.10 development cycle. This tree does not yet include the conversion of the build system to CMake.
+It includes an MCUBoot tree based on work done in the master branch following the v1.0.0 tag, which includes some work making it easier to port new boards to the bootloader than it was in that release.
+Finally, several sample applications are included, with numerous improvements from publicly released versions.</description>
     </item>
     
   </channel>
