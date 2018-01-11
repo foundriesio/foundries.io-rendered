@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2017, Open Source Foundries, Ltd.; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 10 Jan 2018 13:50:46 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/updates/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>microPlatform update 0.6</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/10/blog-post-update-0.6/</link>
-      <pubDate>Wed, 10 Jan 2018 13:50:46 +0200</pubDate>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/10/blog-post-update-0.6/</guid>
       <description>Zephyr microPlatform Summary The most significant change in this update follows the Linux microPlatform switch to a Linux v4.14-based tree. This impacts compatibility with any gateways relying on the old Bluetooth behavior, and also will cause changes to the MAC addresses reported by the Zephyr microPlatform sample applications. Users of the bt-joiner container whitelist feature in the Linux microPlatform will need to update their whitelists. Specifically, the leading D6:E7 in the MAC addresses must be changed to D4:E7.</description>
@@ -24,7 +24,7 @@
     <item>
       <title>microPlatform update 0.5</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5/</link>
-      <pubDate>Thu, 04 Jan 2018 13:50:46 +0200</pubDate>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5/</guid>
       <description>Zephyr microPlatform Summary The major change in this update is a non-fast-forward Zephyr repository tree based on the upstream 1.11 development tree.
@@ -34,7 +34,7 @@ Highlights  Non-fast-forward Zephyr update to 1.11 development tree  Components 
     <item>
       <title>microPlatform update 0.4</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/blog-post-update-0.4/</link>
-      <pubDate>Wed, 13 Dec 2017 13:50:46 +0200</pubDate>
+      <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/blog-post-update-0.4/</guid>
       <description>Zephyr microPlatform Summary This is the final update for the Zephyr v1.10 development cycle.
@@ -45,7 +45,7 @@ Highlights  Zephyr tree based on v1.10  Components MCUBoot Features  Not address
     <item>
       <title>microPlatform update 0.3</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/07/blog-post-update-0.3/</link>
-      <pubDate>Thu, 07 Dec 2017 13:50:46 +0200</pubDate>
+      <pubDate>Thu, 07 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/07/blog-post-update-0.3/</guid>
       <description>Zephyr microPlatform Summary This is the first Zephyr microPlatform update which uses the new CMake build system, which has replaced the use of Kbuild.
@@ -56,7 +56,7 @@ Highlights  Zephyr tree from 1.10 release candidate, with CMake MCUBoot and FOTA
     <item>
       <title>microPlatform update 0.2</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/blog-post-update-0.2/</link>
-      <pubDate>Thu, 16 Nov 2017 13:50:46 +0200</pubDate>
+      <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/blog-post-update-0.2/</guid>
       <description>Zephyr microPlatform Summary &amp;ldquo;This is the final release which uses the Linux kernel Kbuild build system. The next release will have a CMake-based build system. All out of tree applications will need updates to their build systems to move to CMake. Refer to the Zephyr Application Development Primer for details:
@@ -67,7 +67,7 @@ Highlights  Final Zephyr commit before the build system moves to CMake MCUBoot m
     <item>
       <title>microPlatform update 0.1</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/09/blog-post-update-0.1/</link>
-      <pubDate>Thu, 09 Nov 2017 13:50:46 +0200</pubDate>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/09/blog-post-update-0.1/</guid>
       <description>Zephyr microPlatform Summary This release includes a Zephyr tree from the the 1.10 development cycle. This tree does not yet include the conversion of the build system to CMake.
