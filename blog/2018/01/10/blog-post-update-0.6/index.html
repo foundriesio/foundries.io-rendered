@@ -202,7 +202,7 @@
 <h2 id="highlights">Highlights</h2>
 
 <ul>
-<li><strong>Non-fast-forward</strong> Zephyr update to 1.11 development tree</li>
+<li>Bluetooth behaviors impacting MAC addresses are changed following Linux microPlatform update</li>
 </ul>
 
 <h2 id="components">Components</h2>
@@ -225,123 +225,52 @@
 
 <h4 id="features-1">Features</h4>
 
-<h5 id="memory-security-improvements-for-arc">Memory security improvements for ARC:</h5>
-
 <ul>
-<li>The ARC architecture has gained additional memory
-security support.</li>
-</ul>
-
-<h5 id="i2c-for-stm32f0">I2C for STM32F0:</h5>
-
-<ul>
-<li>The STM32F0 SoC family gained I2C support.</li>
-</ul>
-
-<h5 id="new-bluetooth-testing-api-and-cases">New Bluetooth testing API and cases:</h5>
-
-<ul>
-<li>Bluetooth grew a new testing API, and several test cases
-were merged.</li>
-</ul>
-
-<h5 id="board-support-and-peripheral-enablement">Board support and peripheral enablement:</h5>
-
-<ul>
-<li>Various fixes and peripheral enablement in the boards,
-across architectures.</li>
-</ul>
-
-<h5 id="ethernet-improvements-for-mcux-driver">Ethernet improvements for mcux driver:</h5>
-
-<ul>
-<li>The mcux ethernet driver now disables promiscuous mode
-by default, and also implements IPv6 multicast group
-joining/leaving.</li>
-</ul>
-
-<h5 id="device-tree-bindings-for-sensors-and-i2c">Device tree bindings for sensors and I2C:</h5>
-
-<ul>
-<li>A generic yaml description for some sensors and I2C
-devices was added to device tree, along with other
-sensor- and I2C-related fixes.</li>
-</ul>
-
-<h5 id="legacy-cleanups">Legacy cleanups:</h5>
-
-<ul>
-<li>Thread groups were removed from the kernel, along with
-other cleanups in clocks and timers.</li>
-</ul>
-
-<h5 id="flashing-debugging-changes">Flashing/debugging changes:</h5>
-
-<ul>
-<li>The flash and debug infrastructure has been reworked to
-largely eliminate the use of environment variables. All
-board files were affected. Out-of-tree boards will need
-to be updated. Users of in-tree boards have been
-updated. User workflows that use the old environment
-variables will need updates.</li>
-</ul>
-
-<h5 id="size-report-changes">size_report changes:</h5>
-
-<ul>
-<li>Similarly to the flashing and debugging changes, the
-size_report script now uses command-line arguments
-instead of environment variables. User workflows that
-use the old environment variables will need updates.</li>
+<li>Not addressed in this update</li>
 </ul>
 
 <h4 id="bugs-1">Bugs</h4>
 
-<h5 id="stm32f0-flash-fixes">STM32F0 flash fixes:</h5>
+<h5 id="lwm2m-packet-fix">LWM2M packet fix:</h5>
 
 <ul>
-<li>The STM32F0 SoC family has fixes for the flash driver</li>
-</ul>
-
-<h5 id="lwm2m-fixes">LWM2M fixes:</h5>
-
-<ul>
-<li>Several network fixes were merged for the LWM2M library.</li>
-</ul>
-
-<h5 id="ieee-802-15-4-fixes">IEEE 802.15.4 fixes:</h5>
-
-<ul>
-<li>Fixes were merged for IEEE 802.15.4.</li>
-</ul>
-
-<h5 id="some-bt-mesh-fixes">Some BT Mesh fixes:</h5>
-
-<ul>
-<li>A few fixes and improvements were made to the Bluetooth
-Mesh app. The pace of fixes on this new feature appears
-to be slowing down, indicating greater maturity.</li>
+<li>The LWM2M stack includes a fix which prevents a packet
+which may need to be retransmitted from being freed
+until after this retransmission has completed, if necessary.</li>
 </ul>
 
 <h3 id="zephyr-fota-samples">Zephyr FOTA Samples</h3>
 
 <h4 id="features-2">Features</h4>
 
+<h5 id="config-net-l2-bt-zep1656-disabled">CONFIG_NET_L2_BT_ZEP1656 disabled:</h5>
+
 <ul>
-<li>Not addressed in this update</li>
+<li>This obscure option was used to preserve compatibility
+contrary to the Bluetooth specification with
+implementation characteristics in the Linux kernel. Now
+that the upstream Linux microPlatform was updated to
+v4.14, which has fixes for these characteristics, the
+option can be disabled.</li>
+</ul>
+
+<h5 id="dm-hawkbit-mqtt-cleanups-and-optimizations">dm-hawkbit-mqtt cleanups and optimizations:</h5>
+
+<ul>
+<li>Various confusing implementation details in this
+application have been fixed and otherwise cleaned
+up. The resulting application now requires less memory.</li>
 </ul>
 
 <h4 id="bugs-2">Bugs</h4>
 
-<h5 id="fixes-for-blockages-in-the-tcp-stack">Fixes for blockages in the TCP stack:</h5>
+<h5 id="packet-pool-workaround-for-mqtt">Packet pool workaround for MQTT:</h5>
 
 <ul>
-<li>The dm-hawkbit-mqtt sample reduced the TCP retry count,
-which prevents the TCP stack from blocking due to low
-memory conditions when many retry packets are in flight.
-This is a tradeoff between compliance with RFC
-recommendations for retry time and a working system with
-tight memory constraints.</li>
+<li>The dm-hawkbit-mqttt sample now uses an extra packet
+pool when the underlying link layer is Bluetooth. This
+keeps the network stack working in the face of IPv6
+packet header compression.</li>
 </ul>
 
 <h1 id="linux-microplatform">Linux microPlatform</h1>
