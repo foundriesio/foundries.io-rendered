@@ -67,3 +67,13 @@
 .btn-more:hover {
     color: #FFA900;
 }
+.overview {
+  position: relative;
+  background: #38a7bb;
+  padding: 60px 0;
+}
+.overview.background-image-fixed-2 {
+  background: url('../img/photogrid.jpg') center top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
