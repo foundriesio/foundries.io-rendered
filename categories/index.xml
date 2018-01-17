@@ -22,9 +22,27 @@
     </item>
     
     <item>
+      <title>Docker</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/docker/</link>
+      <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/linux/</link>
+      <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Microplatform</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/</link>
-      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/</guid>
       <description></description>
@@ -36,6 +54,15 @@
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/minutes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quickstart</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/quickstart/</link>
+      <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/quickstart/</guid>
       <description></description>
     </item>
     

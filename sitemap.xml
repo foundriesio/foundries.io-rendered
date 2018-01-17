@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/container-management/</loc>
+    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/multi-arch-containers/</loc>
+    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/10/blog-post-update-0.6/</loc>
     <lastmod>2018-01-10T00:00:00+00:00</lastmod>
   </url>
@@ -54,7 +64,7 @@
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/</loc>
-    <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -81,14 +91,50 @@
   </url>
   
   <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/containers/</loc>
+    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/cve/</loc>
     <lastmod>2018-01-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/docker/</loc>
+    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/docker/</loc>
+    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/k8s/</loc>
+    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/kubernetes/</loc>
+    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux/</loc>
-    <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/linux/</loc>
+    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -98,13 +144,13 @@
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/</loc>
-    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/</loc>
-    <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -126,12 +172,18 @@
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/</loc>
-    <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/product/</loc>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/quickstart/</loc>
+    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -143,6 +195,12 @@
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/radio/</loc>
     <lastmod>2018-01-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/resin/</loc>
+    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   

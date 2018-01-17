@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2017, Open Source Foundries, Ltd.; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jan 2018 13:50:46 +0200</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How To Manage LMP Containers</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/container-management/</link>
+      <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/container-management/</guid>
+      <description>Introduction The Linux microPlatform uses a set of Docker containers to provide end-to-end services used by the Zephyr microPlatform. The containers and their configurations are deployed using a simple shell script that wraps Ansible. The scripts require a version of Ansible with Docker support. Some distro packages such as Ubuntu 16.04 don&amp;rsquo;t have this, so make sure you install Ansible from a proper source before continuing.
+	+------------+ +-------------+ | | | | | LMP Device | | Host System | | 10.</description>
+    </item>
+    
+    <item>
+      <title>Simplify your life: multi-architecture docker containers</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/multi-arch-containers/</link>
+      <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/multi-arch-containers/</guid>
+      <description>Introduction  “The great thing about Docker is that your developers run the exact same container as what runs in production.”
+ This is what the Docker hype is about, creating reproducibile enviroments for applications. The technology enables us to create lightweight secure microservices which run on an array of SoCs that can be updated over the air in a matter of seconds. We believe that accelerating code delivery will utimately reduce time to market.</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.6</title>
