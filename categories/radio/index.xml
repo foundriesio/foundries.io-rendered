@@ -18,7 +18,7 @@
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/08/20180110-ble-dongle/</guid>
-      <description>An open source USB dongle / BLE host radio If you&amp;rsquo;ve ever had to ship a product you know how frustrating a critical bug can be when your only driver is proprietary. Many times the problem may be in your code and not the vendor&amp;rsquo;s code, but it is often a difficult journey to find the root cause. Vendors have many customers and finding the right technical contact takes time and without a compelling business case you may ultimately find that your use of the device is not standard and you end up at the back of the line, even sometimes forced to find a different component.</description>
+      <description>An open source USB dongle / BLE host radio If you&amp;rsquo;ve ever had to ship a product you know how frustrating a critical bug can be when your only driver is proprietary. Many times the problem may be in your code and not the vendor&amp;rsquo;s code, but it is often a difficult journey to find the root cause. Vendors have many customers and finding the right technical contact takes time, and without a compelling business case you may ultimately find that your use of the device is not standard and you end up at the back of the line, even sometimes forced to find a different component.</description>
     </item>
     
   </channel>
