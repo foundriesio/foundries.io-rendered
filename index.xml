@@ -6,7 +6,7 @@
     <description>Recent content on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright (c) 2018, Open Source Foundries, Ltd.; all rights reserved.</copyright>
+    <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
     <lastBuildDate>Wed, 17 Jan 2018 13:50:46 +0200</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/index.xml" rel="self" type="application/rss+xml" />
@@ -162,7 +162,8 @@ Key differentiators of microPlatforms We can support any CPU Architecture</descr
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/product/</guid>
       <description>Overview The Zephyr RTOS and Linux microPlatform products enable you to rapidly develop and maintain secure, OTA updatable connected devices.
-The microPlatforms are configurable, small footprint, open source software for building connected devices, whether they are based on microcontrollers, advanced multi-core SoCs, or combinations of these. Whether you&amp;rsquo;re making a remote sensor, smart light, appliance, robot, drone, or self-driving car, the microPlatforms provide a proven, tested platform to build upon.</description>
+The microPlatforms are configurable, small footprint, open source software for building connected devices, based on microcontrollers, advanced multi-core SoCs, or both. Whether you&amp;rsquo;re making a remote sensor, smart light, appliance, robot, drone, or self-driving car, the microPlatforms provide a proven, tested platform to build upon.
+Open Source Foundries offers a per-product (not per-unit) subscription service to the latest microPlatform updates to enable you to maintain your product with the latest security fixes, updates and new functionality throughout its lifetime.</description>
     </item>
     
   </channel>
