@@ -161,8 +161,8 @@ Key differentiators of microPlatforms We can support any CPU Architecture</descr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/product/</guid>
-      <description>Overview Open Source Foundries products are Zephyr RTOS and Linux microPlatforms to enable you to rapidly develop secure, OTA updatable connected products. Whether your application is a remote sensor, a smart light or device, an appliance, or even a robot, drone or self-driving car the microPlatforms provide a proven, tested platform on which to securely build your product and applications.
-microPlatforms are configurable minimum footprint implementations of software for building any connected device, whether based on a microcontroller or advanced multi-core SoCs.</description>
+      <description>Overview The Zephyr RTOS and Linux microPlatform products enable you to rapidly develop and maintain secure, OTA updatable connected devices.
+The microPlatforms are configurable, small footprint, open source software for building connected devices, whether they are based on microcontrollers, advanced multi-core SoCs, or combinations of these. Whether you&amp;rsquo;re making a remote sensor, smart light, appliance, robot, drone, or self-driving car, the microPlatforms provide a proven, tested platform to build upon.</description>
     </item>
     
   </channel>
