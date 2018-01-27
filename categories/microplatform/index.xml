@@ -7,10 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jan 2018 13:50:46 +0200</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How To Manage LMP Containers</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/201801-container-management/</link>
+      <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/201801-container-management/</guid>
+      <description>&lt;p&gt;The Linux microPlatform uses a set of Docker containers to provide end-to-end
+services used by the Zephyr microPlatform. The containers and their
+configurations are deployed using a simple &lt;a href=&#34;https://github.com/OpenSourceFoundries/gateway-ansible&#34;&gt;shell script&lt;/a&gt; that wraps
+&lt;a href=&#34;https://www.ansible.com/&#34;&gt;Ansible&lt;/a&gt;. The scripts require a version of Ansible
+with Docker support. Some distro packages such as Ubuntu 16.04 don&amp;rsquo;t have this,
+so make sure you install Ansible from a &lt;a href=&#34;http://docs.ansible.com/ansible/latest/intro_installation.html&#34;&gt;proper source&lt;/a&gt;
+before continuing.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.6</title>
@@ -29,6 +45,16 @@
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5/</guid>
       <description>Zephyr microPlatform Summary The major change in this update is a non-fast-forward Zephyr repository tree based on the upstream 1.11 development tree.
 Highlights  Non-fast-forward Zephyr update to 1.11 development tree  Components MCUBoot Features  Not addressed in this update  Bugs  Not addressed in this update  Zephyr Features Memory security improvements for ARC:  The ARC architecture has gained additional memory security support.  I2C for STM32F0:  The STM32F0 SoC family gained I2C support.</description>
+    </item>
+    
+    <item>
+      <title>Jan 3, 2018 - microPlatform OpenCall meeting minutes</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/201801-opencall/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/201801-opencall/</guid>
+      <description>&lt;p&gt;OSF is now 3 months old and the microPlatforms are reaching full speed.  We are working on a few final work items before we move from limited beta to a public beta state for the Zephyr and Linux microPlatforms.
+&lt;/p&gt;</description>
     </item>
     
     <item>
