@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/bugs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>microPlatform update 0.7</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/25/blog-post-update-0.7/</link>
+      <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/25/blog-post-update-0.7/</guid>
+      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;The most significant change in this update follows the Linux
+microPlatform switch to a Linux v4.14-based tree. This impacts
+compatibility with any gateways relying on the old Bluetooth
+behavior, and also will cause changes to the MAC addresses reported
+by the Zephyr microPlatform sample applications. Users of the
+bt-joiner container whitelist feature in the Linux microPlatform
+will need to update their whitelists. Specifically, the leading
+D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.6</title>
@@ -18,7 +40,20 @@
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/10/blog-post-update-0.6/</guid>
-      <description>Zephyr microPlatform Summary The most significant change in this update follows the Linux microPlatform switch to a Linux v4.14-based tree. This impacts compatibility with any gateways relying on the old Bluetooth behavior, and also will cause changes to the MAC addresses reported by the Zephyr microPlatform sample applications. Users of the bt-joiner container whitelist feature in the Linux microPlatform will need to update their whitelists. Specifically, the leading D6:E7 in the MAC addresses must be changed to D4:E7.</description>
+      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;The most significant change in this update follows the Linux
+microPlatform switch to a Linux v4.14-based tree. This impacts
+compatibility with any gateways relying on the old Bluetooth
+behavior, and also will cause changes to the MAC addresses reported
+by the Zephyr microPlatform sample applications. Users of the
+bt-joiner container whitelist feature in the Linux microPlatform
+will need to update their whitelists. Specifically, the leading
+D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -37,8 +72,14 @@
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5/</guid>
-      <description>Zephyr microPlatform Summary The major change in this update is a non-fast-forward Zephyr repository tree based on the upstream 1.11 development tree.
-Highlights  Non-fast-forward Zephyr update to 1.11 development tree  Components MCUBoot Features  Not addressed in this update  Bugs  Not addressed in this update  Zephyr Features Memory security improvements for ARC:  The ARC architecture has gained additional memory security support.  I2C for STM32F0:  The STM32F0 SoC family gained I2C support.</description>
+      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;The major change in this update is a non-fast-forward Zephyr
+repository tree based on the upstream 1.11 development tree.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -47,9 +88,16 @@ Highlights  Non-fast-forward Zephyr update to 1.11 development tree  Components 
       <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/blog-post-update-0.4/</guid>
-      <description>Zephyr microPlatform Summary This is the final update for the Zephyr v1.10 development cycle.
-The next update will be non-fast-forward update to the Zephyr repository, to begin development based on the v1.11 master branch.
-Highlights  Zephyr tree based on v1.10  Components MCUBoot Features  Not addressed in this update  Bugs  Not addressed in this update  Zephyr Features  Not addressed in this update  Bugs Bluetooth fixes:  Notable fixes include over ten patches to Bluetooth Mesh, along with two fixes to the core BT controller code.</description>
+      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;This is the final update for the Zephyr v1.10 development cycle.&lt;/p&gt;
+
+&lt;p&gt;The next update will be non-fast-forward update to the Zephyr
+repository, to begin development based on the v1.11 master branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,9 +106,17 @@ Highlights  Zephyr tree based on v1.10  Components MCUBoot Features  Not address
       <pubDate>Thu, 07 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/07/blog-post-update-0.3/</guid>
-      <description>Zephyr microPlatform Summary This is the first Zephyr microPlatform update which uses the new CMake build system, which has replaced the use of Kbuild.
-As described in the summary from https://foundries.io/mp/zmp/0.2, all users will need to update any out of tree application build systems.
-Highlights  Zephyr tree from 1.10 release candidate, with CMake MCUBoot and FOTA sample build systems ported to CMake  Components MCUBoot Features CMake-based build system:  The Zephyr build system was rewritten to use cmake instead of Kbuild, following the equivalent upstream change.</description>
+      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;This is the first Zephyr microPlatform update which uses the new CMake
+build system, which has replaced the use of Kbuild.&lt;/p&gt;
+
+&lt;p&gt;As described in the summary from &lt;a href=&#34;https://foundries.io/mp/zmp/0.2&#34;&gt;https://foundries.io/mp/zmp/0.2&lt;/a&gt;, all
+users will need to update any out of tree application build systems.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -69,9 +125,19 @@ Highlights  Zephyr tree from 1.10 release candidate, with CMake MCUBoot and FOTA
       <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/blog-post-update-0.2/</guid>
-      <description>Zephyr microPlatform Summary &amp;ldquo;This is the final release which uses the Linux kernel Kbuild build system. The next release will have a CMake-based build system. All out of tree applications will need updates to their build systems to move to CMake. Refer to the Zephyr Application Development Primer for details:
-http://docs.zephyrproject.org/application/application.html&amp;quot;
-Highlights  Final Zephyr commit before the build system moves to CMake MCUBoot memory and flash space optimizations  Components MCUBoot Features Simulator tests rewritten in Cargo test format:  &amp;ldquo;The simulator tests have been rewritten to use Rust&amp;rsquo;s native testing framework.</description>
+      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&amp;ldquo;This is the final release which uses the Linux kernel Kbuild
+build system. The next release will have a CMake-based build
+system. &lt;strong&gt;All out of tree applications will need updates&lt;/strong&gt; to
+their build systems to move to CMake. Refer to the Zephyr
+Application Development Primer for details:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.zephyrproject.org/application/application.html&amp;quot;&#34;&gt;http://docs.zephyrproject.org/application/application.html&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -80,9 +146,23 @@ Highlights  Final Zephyr commit before the build system moves to CMake MCUBoot m
       <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/09/blog-post-update-0.1/</guid>
-      <description>Zephyr microPlatform Summary This release includes a Zephyr tree from the the 1.10 development cycle. This tree does not yet include the conversion of the build system to CMake.
-It includes an MCUBoot tree based on work done in the master branch following the v1.0.0 tag, which includes some work making it easier to port new boards to the bootloader than it was in that release.
-Finally, several sample applications are included, with numerous improvements from publicly released versions.</description>
+      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;This release includes a Zephyr tree from the the 1.10 development
+cycle. This tree does not yet include the conversion of the build
+system to CMake.&lt;/p&gt;
+
+&lt;p&gt;It includes an MCUBoot tree based on work done in the master
+branch following the v1.0.0 tag, which includes some work making it
+easier to port new boards to the bootloader than it was in that
+release.&lt;/p&gt;
+
+&lt;p&gt;Finally, several sample applications are included, with numerous
+improvements from publicly released versions.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
