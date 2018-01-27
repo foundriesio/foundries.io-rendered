@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/docker/</loc>
-    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/docker/</loc>
+    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/docker/</loc>
-    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/docker/</loc>
+    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -131,13 +131,13 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/linux/</loc>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux/</loc>
     <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux/</loc>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/linux/</loc>
     <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -147,13 +147,13 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/</loc>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/</loc>
     <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/</loc>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/</loc>
     <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -187,13 +187,13 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/radio/</loc>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/radio/</loc>
     <lastmod>2018-01-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/radio/</loc>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/radio/</loc>
     <lastmod>2018-01-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
