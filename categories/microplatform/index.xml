@@ -7,20 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 17 Jan 2018 13:50:46 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>How To Manage LMP Containers</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/container-management/</link>
-      <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
-      
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/container-management/</guid>
-      <description>Introduction The Linux microPlatform uses a set of Docker containers to provide end-to-end services used by the Zephyr microPlatform. The containers and their configurations are deployed using a simple shell script that wraps Ansible. The scripts require a version of Ansible with Docker support. Some distro packages such as Ubuntu 16.04 don&amp;rsquo;t have this, so make sure you install Ansible from a proper source before continuing.
-	+------------+ +-------------+ | | | | | LMP Device | | Host System | | 10.</description>
-    </item>
     
     <item>
       <title>microPlatform update 0.6</title>
@@ -39,16 +29,6 @@
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5/</guid>
       <description>Zephyr microPlatform Summary The major change in this update is a non-fast-forward Zephyr repository tree based on the upstream 1.11 development tree.
 Highlights  Non-fast-forward Zephyr update to 1.11 development tree  Components MCUBoot Features  Not addressed in this update  Bugs  Not addressed in this update  Zephyr Features Memory security improvements for ARC:  The ARC architecture has gained additional memory security support.  I2C for STM32F0:  The STM32F0 SoC family gained I2C support.</description>
-    </item>
-    
-    <item>
-      <title>microPlatform OpenCall meeting minutes</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/2018-jan-03-opencall/</link>
-      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/2018-jan-03-opencall/</guid>
-      <description>2018 January 3rd Open Call minutes Highlights OSF is now 3 months old and the microPlatforms are reaching full speed. We are working on a few final work items before we move from limited beta to a public beta state for the Zephyr and Linux microPlatforms.
-New BLE Dongle efforts For our initial radio technology, we have chosen BLE (Bluetooth Low Energy) as it is the most mature and public radio technology that is available in both Linux and Zephyr projects.</description>
     </item>
     
     <item>
