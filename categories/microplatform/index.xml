@@ -7,10 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Open Source Foundries at Embedded World 2018</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/27/201801-embeddedworld/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/27/201801-embeddedworld/</guid>
+      <description>&lt;p&gt;Open Source Foundries is excited to have an opportunity to demonstrate
+our end to end IoT microPlatforms at this years Embedded World conference in
+Nuremburg, Germany.  The Embedded World conference takes place between
+February 27-March first at the Embedded World conference Center.
+OSF will be presenting in the Zephyr booth, located in
+&lt;a href=&#34;https://www.embedded-world.de/en/exhibitors/participation/floor-plan&#34;&gt;Hall 4, booth number: 4-680&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Open Source Foundries at ELC IoT Summit 2018</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/26/201801-iotsummit/</link>
+      <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/26/201801-iotsummit/</guid>
+      <description>&lt;p&gt;Open Source Foundries is excited to have an opportunity to demonstrate
+our end to end IoT microPlatforms at this years Embedded Linux conference and
+the IoT Summit alongside the Zephry project.&lt;/p&gt;
+
+&lt;p&gt;This year, the conference will take place in Portland Oregon, at the downtown
+Portland Hilton, March 12-15.&lt;/p&gt;
+
+&lt;p&gt;Open Source Foundries will be presenting on 4 topics at this year&amp;rsquo;s IoT Summit.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.7</title>

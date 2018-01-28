@@ -22,11 +22,38 @@
     </item>
     
     <item>
+      <title>Conferences</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/conferences/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/conferences/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/docker/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embedded</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/embedded/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/embedded/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iot</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/iot/</link>
+      <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/iot/</guid>
       <description></description>
     </item>
     
@@ -42,7 +69,7 @@
     <item>
       <title>Microplatform</title>
       <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/</link>
-      <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/</guid>
       <description></description>

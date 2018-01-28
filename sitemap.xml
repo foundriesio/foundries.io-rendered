@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/27/201801-embeddedworld/</loc>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/26/201801-iotsummit/</loc>
+    <lastmod>2018-01-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/25/blog-post-update-0.7/</loc>
     <lastmod>2018-01-25T00:00:00+00:00</lastmod>
   </url>
@@ -73,7 +83,7 @@
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/blog/</loc>
-    <lastmod>2018-01-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -96,6 +106,12 @@
   </url>
   
   <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/conferences/</loc>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/contact/</loc>
   </url>
   
@@ -113,13 +129,25 @@
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/docker/</loc>
-    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/docker/</loc>
     <lastmod>2018-01-17T13:07:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/embedded/</loc>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/iot/</loc>
+    <lastmod>2018-01-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -137,7 +165,7 @@
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux/</loc>
-    <lastmod>2018-01-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -153,13 +181,13 @@
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/</loc>
-    <lastmod>2018-01-17T13:50:46+02:00</lastmod>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/</loc>
-    <lastmod>2018-01-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -181,7 +209,7 @@
   
   <url>
     <loc>https://opensourcefoundries.github.io/osfoundries-rendered/</loc>
-    <lastmod>2018-01-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
