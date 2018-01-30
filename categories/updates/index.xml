@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Updates on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.com/categories/updates/</link>
+    <link>http://opensourcefoundries.com/categories/updates/</link>
     <description>Recent content in Updates on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
     <lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.com/categories/updates/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://opensourcefoundries.com/categories/updates/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>microPlatform update 0.7</title>
-      <link>https://opensourcefoundries.com/blog/2018/01/25/blog-post-update-0.7/</link>
+      <link>http://opensourcefoundries.com/blog/2018/01/25/blog-post-update-0.7/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/01/25/blog-post-update-0.7/</guid>
+      <guid>http://opensourcefoundries.com/blog/2018/01/25/blog-post-update-0.7/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -36,10 +36,10 @@ D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.6</title>
-      <link>https://opensourcefoundries.com/blog/2018/01/10/blog-post-update-0.6/</link>
+      <link>http://opensourcefoundries.com/blog/2018/01/10/blog-post-update-0.6/</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/01/10/blog-post-update-0.6/</guid>
+      <guid>http://opensourcefoundries.com/blog/2018/01/10/blog-post-update-0.6/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -58,10 +58,10 @@ D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.5</title>
-      <link>https://opensourcefoundries.com/blog/2018/01/04/blog-post-update-0.5/</link>
+      <link>http://opensourcefoundries.com/blog/2018/01/04/blog-post-update-0.5/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/01/04/blog-post-update-0.5/</guid>
+      <guid>http://opensourcefoundries.com/blog/2018/01/04/blog-post-update-0.5/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -74,10 +74,10 @@ repository tree based on the upstream 1.11 development tree.&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.4</title>
-      <link>https://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/</link>
+      <link>http://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/</link>
       <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/</guid>
+      <guid>http://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -92,10 +92,10 @@ repository, to begin development based on the v1.11 master branch.&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.3</title>
-      <link>https://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/</link>
+      <link>http://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/</link>
       <pubDate>Thu, 07 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/</guid>
+      <guid>http://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -111,10 +111,10 @@ users will need to update any out of tree application build systems.&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.2</title>
-      <link>https://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/</link>
+      <link>http://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/</link>
       <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/</guid>
+      <guid>http://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -132,10 +132,10 @@ Application Development Primer for details:&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.1</title>
-      <link>https://opensourcefoundries.com/blog/2017/11/09/blog-post-update-0.1/</link>
+      <link>http://opensourcefoundries.com/blog/2017/11/09/blog-post-update-0.1/</link>
       <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2017/11/09/blog-post-update-0.1/</guid>
+      <guid>http://opensourcefoundries.com/blog/2017/11/09/blog-post-update-0.1/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;

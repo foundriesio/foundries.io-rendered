@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Radio on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.com/categories/radio/</link>
+    <link>http://opensourcefoundries.com/categories/radio/</link>
     <description>Recent content in Radio on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
     <lastBuildDate>Mon, 08 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.com/categories/radio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://opensourcefoundries.com/categories/radio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Open Source Bluetooth Low Energy (BLE) USB dongle</title>
-      <link>https://opensourcefoundries.com/blog/2018/01/08/20180110-ble-dongle/</link>
+      <link>http://opensourcefoundries.com/blog/2018/01/08/20180110-ble-dongle/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/01/08/20180110-ble-dongle/</guid>
+      <guid>http://opensourcefoundries.com/blog/2018/01/08/20180110-ble-dongle/</guid>
       <description>&lt;p&gt;Open Source Foundries has released binaries and source code for a Zephyr-based Bluetooth Low Energy USB dongle to the public.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

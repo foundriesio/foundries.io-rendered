@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quickstart on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.com/categories/quickstart/</link>
+    <link>http://opensourcefoundries.com/categories/quickstart/</link>
     <description>Recent content in Quickstart on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
     <lastBuildDate>Wed, 17 Jan 2018 13:50:46 +0200</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.com/categories/quickstart/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://opensourcefoundries.com/categories/quickstart/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How To Manage LMP Containers</title>
-      <link>https://opensourcefoundries.com/blog/2018/01/17/201801-container-management/</link>
+      <link>http://opensourcefoundries.com/blog/2018/01/17/201801-container-management/</link>
       <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/01/17/201801-container-management/</guid>
+      <guid>http://opensourcefoundries.com/blog/2018/01/17/201801-container-management/</guid>
       <description>&lt;p&gt;The Linux microPlatform uses a set of Docker containers to provide end-to-end
 services used by the Zephyr microPlatform. The containers and their
 configurations are deployed using a simple &lt;a href=&#34;https://github.com/OpenSourceFoundries/gateway-ansible&#34;&gt;shell script&lt;/a&gt; that wraps
