@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.github.io/osfoundries-rendered/</link>
+    <link>https://opensourcefoundries.com/</link>
     <description>Recent content on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
     <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://opensourcefoundries.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Open Source Foundries at Embedded World 2018</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/27/201801-embeddedworld/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/27/201801-embeddedworld/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/27/201801-embeddedworld/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/27/201801-embeddedworld/</guid>
       <description>&lt;p&gt;Open Source Foundries is excited to have an opportunity to demonstrate
 our end to end IoT microPlatforms at this years Embedded World conference in
 Nuremburg, Germany.  The Embedded World conference takes place between
@@ -30,10 +30,10 @@ OSF will be presenting in the Zephyr booth, located in
     
     <item>
       <title>Open Source Foundries at ELC / Open IoT Summit 2018</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/26/201801-iotsummit/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/26/201801-iotsummit/</link>
       <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/26/201801-iotsummit/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/26/201801-iotsummit/</guid>
       <description>&lt;p&gt;Open Source Foundries is excited to have an opportunity to demonstrate
 our end to end IoT microPlatforms at this years Embedded Linux Conference and
 the Open IoT Summit alongside the Zephry project.&lt;/p&gt;
@@ -47,10 +47,10 @@ on 4 topics at this year&amp;rsquo;s IoT Summit.&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.7</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/25/blog-post-update-0.7/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/25/blog-post-update-0.7/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/25/blog-post-update-0.7/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/25/blog-post-update-0.7/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -69,10 +69,10 @@ D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
     
     <item>
       <title>How To Manage LMP Containers</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/201801-container-management/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/17/201801-container-management/</link>
       <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/201801-container-management/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/17/201801-container-management/</guid>
       <description>&lt;p&gt;The Linux microPlatform uses a set of Docker containers to provide end-to-end
 services used by the Zephyr microPlatform. The containers and their
 configurations are deployed using a simple &lt;a href=&#34;https://github.com/OpenSourceFoundries/gateway-ansible&#34;&gt;shell script&lt;/a&gt; that wraps
@@ -85,10 +85,10 @@ before continuing.
     
     <item>
       <title>Simplify your life: multi-architecture docker containers</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/201801-multi-arch-containers/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/17/201801-multi-arch-containers/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/17/201801-multi-arch-containers/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/17/201801-multi-arch-containers/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;“The great thing about Docker is that your developers run the exact same container as what runs in production.”&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -99,10 +99,10 @@ before continuing.
     
     <item>
       <title>microPlatform update 0.6</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/10/blog-post-update-0.6/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/10/blog-post-update-0.6/</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/10/blog-post-update-0.6/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/10/blog-post-update-0.6/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -121,10 +121,10 @@ D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
     
     <item>
       <title>Open Source Bluetooth Low Energy (BLE) USB dongle</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/08/20180110-ble-dongle/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/08/20180110-ble-dongle/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/08/20180110-ble-dongle/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/08/20180110-ble-dongle/</guid>
       <description>&lt;p&gt;Open Source Foundries has released binaries and source code for a Zephyr-based Bluetooth Low Energy USB dongle to the public.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -132,10 +132,10 @@ D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.5</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/04/blog-post-update-0.5/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/04/blog-post-update-0.5/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/04/blog-post-update-0.5/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -148,20 +148,20 @@ repository tree based on the upstream 1.11 development tree.&lt;/p&gt;
     
     <item>
       <title>Jan 3, 2018 - microPlatform OpenCall meeting minutes</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/201801-opencall/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/03/201801-opencall/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/201801-opencall/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/03/201801-opencall/</guid>
       <description>&lt;p&gt;OSF is now 3 months old and the microPlatforms are reaching full speed.  We are working on a few final work items before we move from limited beta to a public beta state for the Zephyr and Linux microPlatforms.
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>microPlatform update 0.4</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/blog-post-update-0.4/</link>
+      <link>https://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/</link>
       <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/13/blog-post-update-0.4/</guid>
+      <guid>https://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -176,10 +176,10 @@ repository, to begin development based on the v1.11 master branch.&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.3</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/07/blog-post-update-0.3/</link>
+      <link>https://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/</link>
       <pubDate>Thu, 07 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/12/07/blog-post-update-0.3/</guid>
+      <guid>https://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -195,10 +195,10 @@ users will need to update any out of tree application build systems.&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.2</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/blog-post-update-0.2/</link>
+      <link>https://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/</link>
       <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/16/blog-post-update-0.2/</guid>
+      <guid>https://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -216,10 +216,10 @@ Application Development Primer for details:&lt;/p&gt;
     
     <item>
       <title>microPlatform update 0.1</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/09/blog-post-update-0.1/</link>
+      <link>https://opensourcefoundries.com/blog/2017/11/09/blog-post-update-0.1/</link>
       <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/11/09/blog-post-update-0.1/</guid>
+      <guid>https://opensourcefoundries.com/blog/2017/11/09/blog-post-update-0.1/</guid>
       <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -241,48 +241,48 @@ improvements from publicly released versions.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/about/</link>
+      <link>https://opensourcefoundries.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/about/</guid>
+      <guid>https://opensourcefoundries.com/about/</guid>
       <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;nav.html&#34; . }}   Open Source Foundries We provide best-in-class software platforms with lifetime support for building and maintaining connected products, ranging from the smallest sensors to smart and edge devices. Our core products are Zephyr RTOS and Linux based microPlatforms, which provide product quality templates to build secure, OTA updatable connected devices for industrial and consumer markets.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/product/</link>
+      <link>https://opensourcefoundries.com/product/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/product/</guid>
+      <guid>https://opensourcefoundries.com/product/</guid>
       <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;nav.html&#34; . }}   microPlatforms The Zephyr RTOS and Linux microPlatform products enable you to rapidly develop and maintain secure, OTA updatable connected devices. The microPlatforms are configurable, small footprint, open source software for building connected devices, based on microcontrollers, advanced multi-core SoCs, or both. Whether you&#39;re making a remote sensor, smart light, appliance, robot, drone, or self-driving car, the microPlatforms provide a proven, tested platform to build upon.</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/contact/</link>
+      <link>https://opensourcefoundries.com/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/contact/</guid>
+      <guid>https://opensourcefoundries.com/contact/</guid>
       <description>We are here to help you Whether you have a question, want to know more, or would like to partner with us, we would like to hear from you.
 Please feel free to contact us using the form below and we will get back to you as soon as we can.</description>
     </item>
     
     <item>
       <title>Login</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/login/</link>
+      <link>https://opensourcefoundries.com/login/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/login/</guid>
+      <guid>https://opensourcefoundries.com/login/</guid>
       <description>Login in or Sign up here (If cookie exists then just login to user account. If not then follow Sign up flow)
 Interested in using the microPlatforms for your project? Sign up for a free account and you will have access to the most recent public build of the microPlatforms and end to end Reference Implementation. You are free to use this build for any purpose subject to the incorporated standard open source licenses.</description>
     </item>
     
     <item>
       <title>Open Source Foundries Partner Program</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/partners/</link>
+      <link>https://opensourcefoundries.com/partners/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/partners/</guid>
+      <guid>https://opensourcefoundries.com/partners/</guid>
       <description>Our Partners As an open source company working with partners across the ecosystem is key to our success. Partners have access to our products for internal use, and are weclome to both use and contribute to our work. If you are interested in the microPlatforms please contact us, or sign up using the form below.
 What is a microPlatform?
 Key differentiators of microPlatforms We can support any CPU Architecture</description>

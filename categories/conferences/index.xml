@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conferences on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/conferences/</link>
+    <link>https://opensourcefoundries.com/categories/conferences/</link>
     <description>Recent content in Conferences on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
     <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/conferences/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://opensourcefoundries.com/categories/conferences/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Open Source Foundries at Embedded World 2018</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/27/201801-embeddedworld/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/27/201801-embeddedworld/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/27/201801-embeddedworld/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/27/201801-embeddedworld/</guid>
       <description>&lt;p&gt;Open Source Foundries is excited to have an opportunity to demonstrate
 our end to end IoT microPlatforms at this years Embedded World conference in
 Nuremburg, Germany.  The Embedded World conference takes place between
@@ -30,10 +30,10 @@ OSF will be presenting in the Zephyr booth, located in
     
     <item>
       <title>Open Source Foundries at ELC / Open IoT Summit 2018</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/26/201801-iotsummit/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/26/201801-iotsummit/</link>
       <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/26/201801-iotsummit/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/26/201801-iotsummit/</guid>
       <description>&lt;p&gt;Open Source Foundries is excited to have an opportunity to demonstrate
 our end to end IoT microPlatforms at this years Embedded Linux Conference and
 the Open IoT Summit alongside the Zephry project.&lt;/p&gt;

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Embedded on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/embedded/</link>
+    <link>https://opensourcefoundries.com/categories/embedded/</link>
     <description>Recent content in Embedded on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
     <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/embedded/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://opensourcefoundries.com/categories/embedded/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Open Source Foundries at Embedded World 2018</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/27/201801-embeddedworld/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/27/201801-embeddedworld/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/27/201801-embeddedworld/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/27/201801-embeddedworld/</guid>
       <description>&lt;p&gt;Open Source Foundries is excited to have an opportunity to demonstrate
 our end to end IoT microPlatforms at this years Embedded World conference in
 Nuremburg, Germany.  The Embedded World conference takes place between

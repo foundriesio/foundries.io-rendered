@@ -2,112 +2,112 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/</link>
+    <link>https://opensourcefoundries.com/categories/</link>
     <description>Recent content in Categories on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
     <lastBuildDate>Mon, 08 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://opensourcefoundries.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bluetooth</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/bluetooth/</link>
+      <link>https://opensourcefoundries.com/categories/bluetooth/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/bluetooth/</guid>
+      <guid>https://opensourcefoundries.com/categories/bluetooth/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Conferences</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/conferences/</link>
+      <link>https://opensourcefoundries.com/categories/conferences/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/conferences/</guid>
+      <guid>https://opensourcefoundries.com/categories/conferences/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/docker/</link>
+      <link>https://opensourcefoundries.com/categories/docker/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/docker/</guid>
+      <guid>https://opensourcefoundries.com/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Embedded</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/embedded/</link>
+      <link>https://opensourcefoundries.com/categories/embedded/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/embedded/</guid>
+      <guid>https://opensourcefoundries.com/categories/embedded/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Iot</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/iot/</link>
+      <link>https://opensourcefoundries.com/categories/iot/</link>
       <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/iot/</guid>
+      <guid>https://opensourcefoundries.com/categories/iot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/linux/</link>
+      <link>https://opensourcefoundries.com/categories/linux/</link>
       <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/linux/</guid>
+      <guid>https://opensourcefoundries.com/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microplatform</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/</link>
+      <link>https://opensourcefoundries.com/categories/microplatform/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/microplatform/</guid>
+      <guid>https://opensourcefoundries.com/categories/microplatform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Minutes</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/minutes/</link>
+      <link>https://opensourcefoundries.com/categories/minutes/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/minutes/</guid>
+      <guid>https://opensourcefoundries.com/categories/minutes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quickstart</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/quickstart/</link>
+      <link>https://opensourcefoundries.com/categories/quickstart/</link>
       <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/quickstart/</guid>
+      <guid>https://opensourcefoundries.com/categories/quickstart/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Radio</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/radio/</link>
+      <link>https://opensourcefoundries.com/categories/radio/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/radio/</guid>
+      <guid>https://opensourcefoundries.com/categories/radio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Updates</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/updates/</link>
+      <link>https://opensourcefoundries.com/categories/updates/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/categories/updates/</guid>
+      <guid>https://opensourcefoundries.com/categories/updates/</guid>
       <description></description>
     </item>
     

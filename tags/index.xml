@@ -2,139 +2,139 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/</link>
+    <link>https://opensourcefoundries.com/tags/</link>
     <description>Recent content in Tags on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
     <lastBuildDate>Mon, 08 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://opensourcefoundries.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ble</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/ble/</link>
+      <link>https://opensourcefoundries.com/tags/ble/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/ble/</guid>
+      <guid>https://opensourcefoundries.com/tags/ble/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bugs</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/bugs/</link>
+      <link>https://opensourcefoundries.com/tags/bugs/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/bugs/</guid>
+      <guid>https://opensourcefoundries.com/tags/bugs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Containers</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/containers/</link>
+      <link>https://opensourcefoundries.com/tags/containers/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/containers/</guid>
+      <guid>https://opensourcefoundries.com/tags/containers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cve</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/cve/</link>
+      <link>https://opensourcefoundries.com/tags/cve/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/cve/</guid>
+      <guid>https://opensourcefoundries.com/tags/cve/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/docker/</link>
+      <link>https://opensourcefoundries.com/tags/docker/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/docker/</guid>
+      <guid>https://opensourcefoundries.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>K8s</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/k8s/</link>
+      <link>https://opensourcefoundries.com/tags/k8s/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/k8s/</guid>
+      <guid>https://opensourcefoundries.com/tags/k8s/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/kubernetes/</link>
+      <link>https://opensourcefoundries.com/tags/kubernetes/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/kubernetes/</guid>
+      <guid>https://opensourcefoundries.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux/</link>
+      <link>https://opensourcefoundries.com/tags/linux/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/linux/</guid>
+      <guid>https://opensourcefoundries.com/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microplatform</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/</link>
+      <link>https://opensourcefoundries.com/tags/microplatform/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/</guid>
+      <guid>https://opensourcefoundries.com/tags/microplatform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Open Source</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/open-source/</link>
+      <link>https://opensourcefoundries.com/tags/open-source/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/open-source/</guid>
+      <guid>https://opensourcefoundries.com/tags/open-source/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Radio</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/radio/</link>
+      <link>https://opensourcefoundries.com/tags/radio/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/radio/</guid>
+      <guid>https://opensourcefoundries.com/tags/radio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Resin</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/resin/</link>
+      <link>https://opensourcefoundries.com/tags/resin/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/resin/</guid>
+      <guid>https://opensourcefoundries.com/tags/resin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Update</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/update/</link>
+      <link>https://opensourcefoundries.com/tags/update/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/update/</guid>
+      <guid>https://opensourcefoundries.com/tags/update/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zephyr</title>
-      <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/zephyr/</link>
+      <link>https://opensourcefoundries.com/tags/zephyr/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/tags/zephyr/</guid>
+      <guid>https://opensourcefoundries.com/tags/zephyr/</guid>
       <description></description>
     </item>
     
