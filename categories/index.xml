@@ -49,6 +49,15 @@
     </item>
     
     <item>
+      <title>Fota</title>
+      <link>http://opensourcefoundries.com/categories/fota/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://opensourcefoundries.com/categories/fota/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Iot</title>
       <link>http://opensourcefoundries.com/categories/iot/</link>
       <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
@@ -63,6 +72,24 @@
       <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
       
       <guid>http://opensourcefoundries.com/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lwm2m</title>
+      <link>http://opensourcefoundries.com/categories/lwm2m/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://opensourcefoundries.com/categories/lwm2m/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mcuboot</title>
+      <link>http://opensourcefoundries.com/categories/mcuboot/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://opensourcefoundries.com/categories/mcuboot/</guid>
       <description></description>
     </item>
     
@@ -99,6 +126,15 @@
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://opensourcefoundries.com/categories/radio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Threats</title>
+      <link>http://opensourcefoundries.com/categories/threats/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://opensourcefoundries.com/categories/threats/</guid>
       <description></description>
     </item>
     

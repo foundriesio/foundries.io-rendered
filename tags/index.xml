@@ -67,6 +67,15 @@
     </item>
     
     <item>
+      <title>Keys</title>
+      <link>http://opensourcefoundries.com/tags/keys/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://opensourcefoundries.com/tags/keys/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Kubernetes</title>
       <link>http://opensourcefoundries.com/tags/kubernetes/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
@@ -85,6 +94,24 @@
     </item>
     
     <item>
+      <title>Lwm2m</title>
+      <link>http://opensourcefoundries.com/tags/lwm2m/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://opensourcefoundries.com/tags/lwm2m/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mcuboot</title>
+      <link>http://opensourcefoundries.com/tags/mcuboot/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://opensourcefoundries.com/tags/mcuboot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Microplatform</title>
       <link>http://opensourcefoundries.com/tags/microplatform/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
@@ -96,9 +123,18 @@
     <item>
       <title>Open Source</title>
       <link>http://opensourcefoundries.com/tags/open-source/</link>
-      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://opensourcefoundries.com/tags/open-source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ota</title>
+      <link>http://opensourcefoundries.com/tags/ota/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://opensourcefoundries.com/tags/ota/</guid>
       <description></description>
     </item>
     
@@ -117,6 +153,15 @@
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
       <guid>http://opensourcefoundries.com/tags/resin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>http://opensourcefoundries.com/tags/security/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://opensourcefoundries.com/tags/security/</guid>
       <description></description>
     </item>
     
