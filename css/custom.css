@@ -1,4 +1,14 @@
 /* your styles go here */
+
+.anchor{
+  display: block;
+  height: 100px; /*same height as header*/
+  margin-top: -100px; /*same height as header*/
+  visibility: hidden;
+  /*padding-top: -200px;*/
+
+}
+
 .navbar {
     z-index: 9000;
     text-rendering: optimizeLegibility;
@@ -184,4 +194,13 @@
 
 #copyright {
     padding: 20px 0;
+}
+
+.blockdiagram {
+    text-align: center;
+}
+
+.blockdiagram img {
+    margin: 0 auto;
+    display: block;
 }
