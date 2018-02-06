@@ -229,12 +229,17 @@
                                             <a href="http://opensourcefoundries.com/blog/2018/02/02/blog-post-update-0.8/"><i class="fa fa-calendar-o"></i> February 2, 2018</a>
                                         </p>
                                     </div>
-                                    <p class="intro"><h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+                                    <p class="intro"><h1 id="summary">Summary</h1>
 
-<h2 id="summary">Summary</h2>
+<h2 id="zephyr-microplatform-changes-for-0-8">Zephyr microPlatform changes for 0.8</h2>
 
 <p>This is a new MCUBoot release, and an incremental merge of the
 Zephyr development branch.</p>
+
+<h2 id="linux-microplatform-changes-for-0-8">Linux microPlatform changes for 0.8</h2>
+
+<p>OSF Unified Linux Kernel updated to the 4.14.15 stable release.
+Default GCC version was changed from the 7.1-Linaro to the latest OpenEmbedded 7.2 release.</p>
 
 <p></p></p>
                                     <p class="read-more"><a href="http://opensourcefoundries.com/blog/2018/02/02/blog-post-update-0.8/" class="btn btn-template-main">Continue reading</a>
@@ -353,9 +358,9 @@ on 4 topics at this year&rsquo;s IoT Summit.</p>
                                             <a href="http://opensourcefoundries.com/blog/2018/01/25/blog-post-update-0.7/"><i class="fa fa-calendar-o"></i> January 25, 2018</a>
                                         </p>
                                     </div>
-                                    <p class="intro"><h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+                                    <p class="intro"><h1 id="summary">Summary</h1>
 
-<h2 id="summary">Summary</h2>
+<h2 id="zephyr-microplatform-changes-for-0-7">Zephyr microPlatform changes for 0.7</h2>
 
 <p>The most significant change in this update follows the Linux
 microPlatform switch to a Linux v4.14-based tree. This impacts
@@ -365,6 +370,11 @@ by the Zephyr microPlatform sample applications. Users of the
 bt-joiner container whitelist feature in the Linux microPlatform
 will need to update their whitelists. Specifically, the leading
 D6:E7 in the MAC addresses must be changed to D4:E7.</p>
+
+<h2 id="linux-microplatform-changes-for-0-7">Linux microPlatform changes for 0.7</h2>
+
+<p>This kernel update includes x86 support for kernel page-table isolation
+(KPTI), which mitigates the recent meltdown security vulnerability.</p>
 
 <p></p></p>
                                     <p class="read-more"><a href="http://opensourcefoundries.com/blog/2018/01/25/blog-post-update-0.7/" class="btn btn-template-main">Continue reading</a>
@@ -441,9 +451,9 @@ before continuing.
                                             <a href="http://opensourcefoundries.com/blog/2018/01/10/blog-post-update-0.6/"><i class="fa fa-calendar-o"></i> January 10, 2018</a>
                                         </p>
                                     </div>
-                                    <p class="intro"><h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+                                    <p class="intro"><h1 id="summary">Summary</h1>
 
-<h2 id="summary">Summary</h2>
+<h2 id="zephyr-microplatform-changes-for-0-6">Zephyr microPlatform changes for 0.6</h2>
 
 <p>The most significant change in this update follows the Linux
 microPlatform switch to a Linux v4.14-based tree. This impacts
@@ -453,6 +463,13 @@ by the Zephyr microPlatform sample applications. Users of the
 bt-joiner container whitelist feature in the Linux microPlatform
 will need to update their whitelists. Specifically, the leading
 D6:E7 in the MAC addresses must be changed to D4:E7.</p>
+
+<h2 id="linux-microplatform-changes-for-0-6">Linux microPlatform changes for 0.6</h2>
+
+<p>OSF Unified Linux Kernel was updated to the 4.14 series. The Linux Kernel
+update also includes changes required to properly implement RFC 766 (IPv6 over
+Bluetooth Low Energy), causing incompatibilities with Zephyr devices using the
+NET_L2_BT_ZEP1656 Zephyr workaround (required for kernels older than 4.12).</p>
 
 <p></p></p>
                                     <p class="read-more"><a href="http://opensourcefoundries.com/blog/2018/01/10/blog-post-update-0.6/" class="btn btn-template-main">Continue reading</a>
@@ -488,12 +505,17 @@ D6:E7 in the MAC addresses must be changed to D4:E7.</p>
                                             <a href="http://opensourcefoundries.com/blog/2018/01/04/blog-post-update-0.5/"><i class="fa fa-calendar-o"></i> January 4, 2018</a>
                                         </p>
                                     </div>
-                                    <p class="intro"><h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+                                    <p class="intro"><h1 id="summary">Summary</h1>
 
-<h2 id="summary">Summary</h2>
+<h2 id="zephyr-microplatform-changes-for-0-5">Zephyr microPlatform changes for 0.5</h2>
 
 <p>The major change in this update is a non-fast-forward Zephyr
 repository tree based on the upstream 1.11 development tree.</p>
+
+<h2 id="linux-microplatform-changes-for-0-5">Linux microPlatform changes for 0.5</h2>
+
+<p>Raspberry Pi 3 kernel was updated to use the same OSF distro configuration
+fragment as used by the other machines.</p>
 
 <p></p></p>
                                     <p class="read-more"><a href="http://opensourcefoundries.com/blog/2018/01/04/blog-post-update-0.5/" class="btn btn-template-main">Continue reading</a>
@@ -564,14 +586,18 @@ repository tree based on the upstream 1.11 development tree.</p>
                                             <a href="http://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/"><i class="fa fa-calendar-o"></i> December 13, 2017</a>
                                         </p>
                                     </div>
-                                    <p class="intro"><h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+                                    <p class="intro"><h1 id="summary">Summary</h1>
 
-<h2 id="summary">Summary</h2>
+<h2 id="zephyr-microplatform-changes-for-0-4">Zephyr microPlatform changes for 0.4</h2>
 
 <p>This is the final update for the Zephyr v1.10 development cycle.</p>
 
 <p>The next update will be non-fast-forward update to the Zephyr
 repository, to begin development based on the v1.11 master branch.</p>
+
+<h2 id="linux-microplatform-changes-for-0-4">Linux microPlatform changes for 0.4</h2>
+
+<p>No changes have gone into the LMP since 0.3.</p>
 
 <p></p></p>
                                     <p class="read-more"><a href="http://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/" class="btn btn-template-main">Continue reading</a>
@@ -607,15 +633,22 @@ repository, to begin development based on the v1.11 master branch.</p>
                                             <a href="http://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/"><i class="fa fa-calendar-o"></i> December 7, 2017</a>
                                         </p>
                                     </div>
-                                    <p class="intro"><h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+                                    <p class="intro"><h1 id="summary">Summary</h1>
 
-<h2 id="summary">Summary</h2>
+<h2 id="zephyr-microplatform-changes-for-0-3">Zephyr microPlatform changes for 0.3</h2>
 
 <p>This is the first Zephyr microPlatform update which uses the new CMake
 build system, which has replaced the use of Kbuild.</p>
 
 <p>As described in the summary from <a href="https://foundries.io/mp/zmp/0.2">https://foundries.io/mp/zmp/0.2</a>, all
 users will need to update any out of tree application build systems.</p>
+
+<h2 id="linux-microplatform-changes-for-0-3">Linux microPlatform changes for 0.3</h2>
+
+<p>Linux microPlatform add supports for generic 64bit Intel targets.
+Validated with Minnowboard Turbot and NUC variants.</p>
+
+<p>Layer updates for meta-osf, and meta-intel.</p>
 
 <p></p></p>
                                     <p class="read-more"><a href="http://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/" class="btn btn-template-main">Continue reading</a>

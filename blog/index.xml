@@ -18,12 +18,17 @@
       <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://opensourcefoundries.com/blog/2018/02/02/blog-post-update-0.8/</guid>
-      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-8&#34;&gt;Zephyr microPlatform changes for 0.8&lt;/h2&gt;
 
 &lt;p&gt;This is a new MCUBoot release, and an incremental merge of the
 Zephyr development branch.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-8&#34;&gt;Linux microPlatform changes for 0.8&lt;/h2&gt;
+
+&lt;p&gt;OSF Unified Linux Kernel updated to the 4.14.15 stable release.
+Default GCC version was changed from the 7.1-Linaro to the latest OpenEmbedded 7.2 release.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -67,9 +72,9 @@ on 4 topics at this year&amp;rsquo;s IoT Summit.&lt;/p&gt;
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://opensourcefoundries.com/blog/2018/01/25/blog-post-update-0.7/</guid>
-      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-7&#34;&gt;Zephyr microPlatform changes for 0.7&lt;/h2&gt;
 
 &lt;p&gt;The most significant change in this update follows the Linux
 microPlatform switch to a Linux v4.14-based tree. This impacts
@@ -79,6 +84,11 @@ by the Zephyr microPlatform sample applications. Users of the
 bt-joiner container whitelist feature in the Linux microPlatform
 will need to update their whitelists. Specifically, the leading
 D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-7&#34;&gt;Linux microPlatform changes for 0.7&lt;/h2&gt;
+
+&lt;p&gt;This kernel update includes x86 support for kernel page-table isolation
+(KPTI), which mitigates the recent meltdown security vulnerability.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -141,9 +151,9 @@ before continuing.
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://opensourcefoundries.com/blog/2018/01/10/blog-post-update-0.6/</guid>
-      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-6&#34;&gt;Zephyr microPlatform changes for 0.6&lt;/h2&gt;
 
 &lt;p&gt;The most significant change in this update follows the Linux
 microPlatform switch to a Linux v4.14-based tree. This impacts
@@ -153,6 +163,13 @@ by the Zephyr microPlatform sample applications. Users of the
 bt-joiner container whitelist feature in the Linux microPlatform
 will need to update their whitelists. Specifically, the leading
 D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-6&#34;&gt;Linux microPlatform changes for 0.6&lt;/h2&gt;
+
+&lt;p&gt;OSF Unified Linux Kernel was updated to the 4.14 series. The Linux Kernel
+update also includes changes required to properly implement RFC 766 (IPv6 over
+Bluetooth Low Energy), causing incompatibilities with Zephyr devices using the
+NET_L2_BT_ZEP1656 Zephyr workaround (required for kernels older than 4.12).&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -174,12 +191,17 @@ D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://opensourcefoundries.com/blog/2018/01/04/blog-post-update-0.5/</guid>
-      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-5&#34;&gt;Zephyr microPlatform changes for 0.5&lt;/h2&gt;
 
 &lt;p&gt;The major change in this update is a non-fast-forward Zephyr
 repository tree based on the upstream 1.11 development tree.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-5&#34;&gt;Linux microPlatform changes for 0.5&lt;/h2&gt;
+
+&lt;p&gt;Raspberry Pi 3 kernel was updated to use the same OSF distro configuration
+fragment as used by the other machines.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -200,14 +222,18 @@ repository tree based on the upstream 1.11 development tree.&lt;/p&gt;
       <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>http://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/</guid>
-      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-4&#34;&gt;Zephyr microPlatform changes for 0.4&lt;/h2&gt;
 
 &lt;p&gt;This is the final update for the Zephyr v1.10 development cycle.&lt;/p&gt;
 
 &lt;p&gt;The next update will be non-fast-forward update to the Zephyr
 repository, to begin development based on the v1.11 master branch.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-4&#34;&gt;Linux microPlatform changes for 0.4&lt;/h2&gt;
+
+&lt;p&gt;No changes have gone into the LMP since 0.3.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -218,15 +244,22 @@ repository, to begin development based on the v1.11 master branch.&lt;/p&gt;
       <pubDate>Thu, 07 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>http://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/</guid>
-      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-3&#34;&gt;Zephyr microPlatform changes for 0.3&lt;/h2&gt;
 
 &lt;p&gt;This is the first Zephyr microPlatform update which uses the new CMake
 build system, which has replaced the use of Kbuild.&lt;/p&gt;
 
 &lt;p&gt;As described in the summary from &lt;a href=&#34;https://foundries.io/mp/zmp/0.2&#34;&gt;https://foundries.io/mp/zmp/0.2&lt;/a&gt;, all
 users will need to update any out of tree application build systems.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-3&#34;&gt;Linux microPlatform changes for 0.3&lt;/h2&gt;
+
+&lt;p&gt;Linux microPlatform add supports for generic 64bit Intel targets.
+Validated with Minnowboard Turbot and NUC variants.&lt;/p&gt;
+
+&lt;p&gt;Layer updates for meta-osf, and meta-intel.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -237,9 +270,9 @@ users will need to update any out of tree application build systems.&lt;/p&gt;
       <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>http://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/</guid>
-      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-2&#34;&gt;Zephyr microPlatform changes for 0.2&lt;/h2&gt;
 
 &lt;p&gt;&amp;ldquo;This is the final release which uses the Linux kernel Kbuild
 build system. The next release will have a CMake-based build
@@ -249,18 +282,26 @@ Application Development Primer for details:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://docs.zephyrproject.org/application/application.html&amp;quot;&#34;&gt;http://docs.zephyrproject.org/application/application.html&amp;quot;&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-2&#34;&gt;Linux microPlatform changes for 0.2&lt;/h2&gt;
+
+&lt;p&gt;Linux microPlatform build system improvements to easy the platform build process
+in docker containers.&lt;/p&gt;
+
+&lt;p&gt;Layer updates for meta-osf, meta-freescale-3rdparty meta-qcom, meta-raspberrypi
+and openembedded-core and meta-linaro.&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>microPlatform update 0.1</title>
-      <link>http://opensourcefoundries.com/blog/2017/11/09/blog-post-update-0.1/</link>
-      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      <link>http://opensourcefoundries.com/blog/2017/11/08/blog-post-update-0.1/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://opensourcefoundries.com/blog/2017/11/09/blog-post-update-0.1/</guid>
-      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+      <guid>http://opensourcefoundries.com/blog/2017/11/08/blog-post-update-0.1/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-1&#34;&gt;Zephyr microPlatform changes for 0.1&lt;/h2&gt;
 
 &lt;p&gt;This release includes a Zephyr tree from the the 1.10 development
 cycle. This tree does not yet include the conversion of the build
@@ -274,6 +315,13 @@ release.&lt;/p&gt;
 &lt;p&gt;Finally, several sample applications are included, with numerous
 improvements from publicly released versions.&lt;/p&gt;
 
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-1&#34;&gt;Linux microPlatform changes for 0.1&lt;/h2&gt;
+
+&lt;p&gt;This release includes a major OpenEmbedded / Yocto update, which is now based
+on the latest Rocko (2.4) baseline (which is in the process to be released).&lt;/p&gt;
+
+&lt;p&gt;Go was updated to 1.9 and Docker was updated to the CE 17.06 release.&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -283,9 +331,9 @@ improvements from publicly released versions.&lt;/p&gt;
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>http://opensourcefoundries.com/blog/2017/10/13/blog-post-update-17.10.1/</guid>
-      <description>&lt;h1 id=&#34;zephyr-microplatform&#34;&gt;Zephyr microPlatform&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-17-10-1&#34;&gt;Zephyr microPlatform changes for 17.10.1&lt;/h2&gt;
 
 &lt;p&gt;This release includes MCUBoot version 1.0.0, and a Zephyr tree that
 is based on 1.10. It also includes a new IoT Foundry application.&lt;/p&gt;
@@ -298,6 +346,10 @@ fixes.&lt;/p&gt;
 
 &lt;p&gt;A new IoT Foundry application was added for a demonstration system
 providing firmware update and device communication via LWM2M.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-17-10-1&#34;&gt;Linux microPlatform changes for 17.10.1&lt;/h2&gt;
+
+&lt;p&gt;This is the first Linux microPlatform release created by Open Source Foundries.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

@@ -205,9 +205,9 @@
                         <p class="text-muted text-uppercase mb-small text-right">January 25, 2018</p>
 
                         <div id="post-content">
-                          <h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+                          <h1 id="summary">Summary</h1>
 
-<h2 id="summary">Summary</h2>
+<h2 id="zephyr-microplatform-changes-for-0-7">Zephyr microPlatform changes for 0.7</h2>
 
 <p>The most significant change in this update follows the Linux
 microPlatform switch to a Linux v4.14-based tree. This impacts
@@ -218,7 +218,25 @@ bt-joiner container whitelist feature in the Linux microPlatform
 will need to update their whitelists. Specifically, the leading
 D6:E7 in the MAC addresses must be changed to D4:E7.</p>
 
+<h2 id="linux-microplatform-changes-for-0-7">Linux microPlatform changes for 0.7</h2>
+
+<p>This kernel update includes x86 support for kernel page-table isolation
+(KPTI), which mitigates the recent meltdown security vulnerability.</p>
+
 <p></p>
+
+<h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+
+<h2 id="summary-1">Summary</h2>
+
+<p>The most significant change in this update follows the Linux
+microPlatform switch to a Linux v4.14-based tree. This impacts
+compatibility with any gateways relying on the old Bluetooth
+behavior, and also will cause changes to the MAC addresses reported
+by the Zephyr microPlatform sample applications. Users of the
+bt-joiner container whitelist feature in the Linux microPlatform
+will need to update their whitelists. Specifically, the leading
+D6:E7 in the MAC addresses must be changed to D4:E7.</p>
 
 <h2 id="highlights">Highlights</h2>
 
@@ -296,12 +314,10 @@ packet header compression.</li>
 
 <h1 id="linux-microplatform">Linux microPlatform</h1>
 
-<h2 id="summary-1">Summary</h2>
+<h2 id="summary-2">Summary</h2>
 
 <p>This kernel update includes x86 support for kernel page-table isolation
 (KPTI), which mitigates the recent meltdown security vulnerability.</p>
-
-<!--more-->
 
 <h2 id="highlights-1">Highlights</h2>
 
