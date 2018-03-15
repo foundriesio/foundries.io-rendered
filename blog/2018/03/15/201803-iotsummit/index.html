@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lwm2m</title>
+  <title>ELC / Open IoT Summit 2018 Slides now available</title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://opensourcefoundries.com/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="Lwm2m" />
+  <meta property="og:title" content="ELC / Open IoT Summit 2018 Slides now available" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/categories/lwm2m//" />
+  <meta property="og:url" content="/blog/2018/03/15/201803-iotsummit//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.com/">
-                    <img src="https://opensourcefoundries.com/img/logo.png" alt="Lwm2m logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="Lwm2m logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Lwm2m - go to homepage</span>
+                    <img src="https://opensourcefoundries.com/img/logo.png" alt="ELC / Open IoT Summit 2018 Slides now available logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="ELC / Open IoT Summit 2018 Slides now available logo" class="visible-xs visible-sm">
+                    <span class="sr-only">ELC / Open IoT Summit 2018 Slides now available - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -186,7 +186,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Lwm2m</h1>
+                <h1>ELC / Open IoT Summit 2018 Slides now available</h1>
             </div>
         </div>
     </div>
@@ -195,60 +195,142 @@
 
         <div id="content">
             <div class="container">
+
                 <div class="row">
+
                     
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-9" id="blog-post">
 
+                        <p class="text-muted text-uppercase mb-small text-right">March 15, 2018</p>
+
+                        <div id="post-content">
+                          <p>Open Source Foundries presented 4 sessions at this year&rsquo;s IoT Summit and Embedded
+Linux Conference and the slides are now available.</p>
+
+<p></p>
+
+<p><strong>Zephyr and MCUBoot as Foundations for Secure IOT Products - Marti Bolivar</strong> - <a href="/conf/2018elc/2018-ELC-Bolivar.pdf">[Slides]</a></p>
+
+<pre><code>The Zephyr RTOS and its MCUBoot bootloader port are both active, fast-moving
+open source projects with the potential to bring a Linux kernel style
+development model and community to IoT.
+
+However, while the components are well-documented, there's a lack of
+information on how to combine them to build complete, secure, updatable
+products with clearly stated threat models. This presentation aims to close
+that gap, by describing a concrete, open source IoT application based on
+Zephyr, MCUBoot, and LWM2M, as well as the developer tooling and security
+model underlying it.
+
+The emphasis is on practical application of these tools, rather than an
+abstract discussion of the components themselves. Previous experience with
+Zephyr or MCUBoot is helpful, but not required.
+</code></pre>
+
+<p><strong>BoF: Blockchain of Things - Tyler Baker</strong> - <a href="/conf/2018elc/2018-ELC-Baker.pdf">[Slides]</a></p>
+
+<pre><code>Blockchain based protocols can be utilized to solve difficult problems in
+the IoT and Embedded spaces. In this BoF we will discuss how to use this
+technology to establish a decentralized root of trust, that allows device
+control, ownership, and secure data transfer for devices with constrained
+footprints.
+
+In addition to blockchain, we will delve into new distributed
+ledger technology, and zero-knowledge proofs which allow one party (the prover)
+to prove to another (the verifier) that a statement is true, without revealing
+any information beyond the validity of the statement itself. This is important
+for anonymous machine to machine transactions to occur with very little
+compute resources.
+
+</code></pre>
+
+<p><strong>Zephyr Now Supports OMA LwM2M Protocol! What Can it Do for Me? - Michael Scott</strong> - <a href="/conf/2018elc/2018-ELC-Scott.pdf">[Slides]</a></p>
+
+<pre><code>The Linux Foundation’s Zephyr RTOS continues to evolve at a rapid pace! A
+current focus is to support secure production-ready IoT protocols that can
+fit on constrained hardware. The OMA LwM2M protocol provides a solution and
+was introduced in Zephyr’s 1.9 September 2017 release.
+
+As the maintainer for
+the LwM2M library in Zephyr, Michael Scott will discuss how the library has
+evolved from the 1.9 release through what’s available in the master branch of
+Zephyr today (to be released as 1.11). Attendees can also expect
+binary size / RAM usage breakdowns based on typical hardware configurations
+as well as instructions for testing the Zephyr LwM2M client via QEMU and
+connecting to a LwM2M server secured with DTLS.
+</code></pre>
+
+<p><strong>DIY Connected IoT Products Using Open Source Software - Alan Bennett</strong>  - <a href="/conf/2018elc/2018-ELC-Bennett.pdf">[Slides]</a></p>
+
+<pre><code>For the past 2 years our team has been built reference IoT products using
+Open Embedded / Yocto, the Linux kernel, Zephyr and some open source device
+management platforms. We have struggled through incomplete frameworks,
+proprietary radio bugs, multiple IP stacks and an every growing number of
+CVEs.
+
+Now we want to share all of our knowledge in a hands-on
+workshop/tutorial. In the workshop, you will learn about all of the
+components involved in an open source end-to-end IoT system and be able to
+build, test, deploy and delivery software updates to fielded devices. From
+the Cloud to the Edge and into wireless sensor devices, we will show you how
+to take advantage of all that open source software has to offer to build
+safe, secure and updatable devices.
+</code></pre>
+
+<p><strong>&ldquo;Embedded Linux Conference &amp; IoT Summit</strong></p>
+
+<p>Embedded Linux Conference (ELC) has been the premier vendor-neutral technical
+conference for the past 13 years for companies and developers using Linux in
+embedded products. After a decade of collaboration, the conference extended
+its scope to include user-space developers – the people building applications
+on embedded Linux – and has become the preeminent space for product vendors
+as well as kernel and systems developers to collaborate with these
+influential technologists.</p>
+
+<p>OpenIoT Summit is a technical conference for the developers and architects
+working on industrial IoT. The new industrial transformation – Industry 4.0 –
+requires a highly skilled pool of software engineers, developers, programmers
+and architects, specializing in a number of disciplines across the ecosystem.</p>
+
+<p>OpenIoT Summit joins the technical experts paving the way for this
+transformation, along with those looking to develop the skills needed
+to succeed, for education, collaboration and deep dive learning
+opportunities. Unlike other IoT events, OpenIoT Summit is specifically
+for technologists. It is a technical event created to serve the unique
+needs of system architects, firmware developers and software developers
+in the booming IoT ecosystem. Experts from the world’s leading companies
+and open source projects will present the information needed to lead
+successful IoT developments and progress the development of IoT solutions.&rdquo;</p>
+
+<p>Find out more about the IoT Summit at <a href="https://events.linuxfoundation.org/events/elc-openiot-north-america-2018/">ELC2018 &amp; IoT Summit</a></p>
+                        </div>
                         
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://opensourcefoundries.com/blog/2018/01/17/20180117-lwm2m-update/">
-                                          
-                                          <img src="https://opensourcefoundries.com/img/banners/lwm2m.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://opensourcefoundries.com/blog/2018/01/17/20180117-lwm2m-update/">Update an embedded device with LwM2M</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          in <a href="https://opensourcefoundries.com/categories/lwm2m">LwM2M</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://opensourcefoundries.com/blog/2018/01/17/20180117-lwm2m-update/"><i class="fa fa-calendar-o"></i> January 17, 2018</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro"><p><a href="http://openmobilealliance.org/iot/lightweight-m2m-lwm2m">OMA Lightweight M2M</a> (LWM2M) offers a firmware object interface for directing client devices to download and apply firmware updates.  Using the Zephyr microPlaform and Eclipse&rsquo;s <a href="https://www.eclipse.org/leshan/">Leshan Demo Server</a>, this seemingly complex process can be demonstrated in a few easy steps.</p>
-
-<p>To illustrate how a firmware update is delivered via LwM2M, you will make a small change to the Zephyr microPlatform (ZMP) LwM2M sample project which disables the Light Control object.  When flashed to an embedded device, the Leshan UI will be missing the &ldquo;Light Control&rdquo; portion near the bottom of the client detail page.  Once this &ldquo;bug&rdquo; is found, you will fix the LwM2M sample, recompile and deliver your updated firmware as an over the air (OTA) update.  The new firmware can be confirmed by locating the &ldquo;Light Control&rdquo; object in the Leshan UI.
-</p></p>
-                                    <p class="read-more"><a href="https://opensourcefoundries.com/blog/2018/01/17/20180117-lwm2m-update/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "osfoundries" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
                         
 
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
-                            
-                        </ul>
                     </div>
                     
 
@@ -450,6 +532,7 @@
 
                 </div>
                 
+
             </div>
             
         </div>

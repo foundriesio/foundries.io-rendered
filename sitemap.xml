@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://opensourcefoundries.com/blog/2018/03/15/201803-iotsummit/</loc>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.com/blog/2018/03/13/blog-post-update-0.10/</loc>
     <lastmod>2018-03-13T00:00:00+00:00</lastmod>
   </url>
@@ -130,7 +135,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/blog/</loc>
-    <lastmod>2018-03-13T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -154,7 +159,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/categories/conferences/</loc>
-    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -188,7 +193,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/docker/</loc>
-    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -218,7 +223,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/categories/iot/</loc>
-    <lastmod>2018-01-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -242,7 +247,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/linux/</loc>
-    <lastmod>2018-03-13T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -282,13 +287,13 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/microplatform/</loc>
-    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.com/categories/microplatform/</loc>
-    <lastmod>2018-03-13T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -310,7 +315,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/</loc>
-    <lastmod>2018-03-13T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -376,7 +381,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/zephyr/</loc>
-    <lastmod>2018-03-13T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

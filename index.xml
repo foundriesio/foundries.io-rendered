@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 13 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ELC / Open IoT Summit 2018 Slides now available</title>
+      <link>https://opensourcefoundries.com/blog/2018/03/15/201803-iotsummit/</link>
+      <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/03/15/201803-iotsummit/</guid>
+      <description>&lt;p&gt;Open Source Foundries presented 4 sessions at this year&amp;rsquo;s IoT Summit and Embedded
+Linux Conference and the slides are now available.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.10</title>
