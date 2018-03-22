@@ -7,10 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 15 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>microPlatform update 0.11</title>
+      <link>https://opensourcefoundries.com/blog/2018/03/20/blog-post-update-0.11/</link>
+      <pubDate>Tue, 20 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/03/20/blog-post-update-0.11/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-11&#34;&gt;Zephyr microPlatform changes for 0.11&lt;/h2&gt;
+
+&lt;p&gt;This update includes Zephyr&amp;rsquo;s official v1.11 release, along with
+some MCUboot changes which are required to keep compatibility with
+a Zephyr API change.&lt;/p&gt;
+
+&lt;p&gt;The sample applications have turned off some unnecessary Bluetooth
+options, saving approximately 4 KB.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-11&#34;&gt;Linux microPlatform changes for 0.11&lt;/h2&gt;
+
+&lt;p&gt;No changes have gone into the LMP since 0.10.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>ELC / Open IoT Summit 2018 Slides now available</title>

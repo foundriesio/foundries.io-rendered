@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Update an embedded device with LwM2M</title>
+  <title>microPlatform update 0.11</title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://opensourcefoundries.com/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="Update an embedded device with LwM2M" />
+  <meta property="og:title" content="microPlatform update 0.11" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/blog/2018/01/17/20180117-lwm2m-update//" />
+  <meta property="og:url" content="/blog/2018/03/20/blog-post-update-0.11//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.com/">
-                    <img src="https://opensourcefoundries.com/img/logo.png" alt="Update an embedded device with LwM2M logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="Update an embedded device with LwM2M logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Update an embedded device with LwM2M - go to homepage</span>
+                    <img src="https://opensourcefoundries.com/img/logo.png" alt="microPlatform update 0.11 logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="microPlatform update 0.11 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">microPlatform update 0.11 - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -186,7 +186,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Update an embedded device with LwM2M</h1>
+                <h1>microPlatform update 0.11</h1>
             </div>
         </div>
     </div>
@@ -202,133 +202,166 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">January 17, 2018</p>
+                        <p class="text-muted text-uppercase mb-small text-right">March 20, 2018</p>
 
                         <div id="post-content">
-                          <p><a href="http://openmobilealliance.org/iot/lightweight-m2m-lwm2m">OMA Lightweight M2M</a> (LWM2M) offers a firmware object interface for directing client devices to download and apply firmware updates.  Using the Zephyr microPlaform and Eclipse&rsquo;s <a href="https://www.eclipse.org/leshan/">Leshan Demo Server</a>, this seemingly complex process can be demonstrated in a few easy steps.</p>
+                          <h1 id="summary">Summary</h1>
 
-<p>To illustrate how a firmware update is delivered via LwM2M, you will make a small change to the Zephyr microPlatform (ZMP) LwM2M sample project which disables the Light Control object.  When flashed to an embedded device, the Leshan UI will be missing the &ldquo;Light Control&rdquo; portion near the bottom of the client detail page.  Once this &ldquo;bug&rdquo; is found, you will fix the LwM2M sample, recompile and deliver your updated firmware as an over the air (OTA) update.  The new firmware can be confirmed by locating the &ldquo;Light Control&rdquo; object in the Leshan UI.
+<h2 id="zephyr-microplatform-changes-for-0-11">Zephyr microPlatform changes for 0.11</h2>
+
+<p>This update includes Zephyr&rsquo;s official v1.11 release, along with
+some MCUboot changes which are required to keep compatibility with
+a Zephyr API change.</p>
+
+<p>The sample applications have turned off some unnecessary Bluetooth
+options, saving approximately 4 KB.</p>
+
+<h2 id="linux-microplatform-changes-for-0-11">Linux microPlatform changes for 0.11</h2>
+
+<p>No changes have gone into the LMP since 0.10.
 </p>
 
-<h2 id="hardware-requirements">Hardware Requirements</h2>
+<h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+
+<h2 id="summary-1">Summary</h2>
+
+<p>This update includes Zephyr&rsquo;s official v1.11 release, along with
+some MCUboot changes which are required to keep compatibility with
+a Zephyr API change.</p>
+
+<p>The sample applications have turned off some unnecessary Bluetooth
+options, saving approximately 4 KB.</p>
+
+<h2 id="highlights">Highlights</h2>
 
 <ul>
-<li>Redbear Labs Nano v2 (nRF52) connected to your developer host machine.</li>
-<li>A device running the Linux microPlatform (LMP) to be configured as an LwM2M gateway.</li>
+<li>Zephyr version 1.11</li>
+<li>Compatibility updates to MCUboot</li>
+<li>Flash savings in the sample applications</li>
 </ul>
 
-<h2 id="software-requirements">Software Requirements</h2>
+<h2 id="components">Components</h2>
 
-<p>Before you begin, <a href="https://foundries.io/docs/latest/tutorial/index.html">set up the LWM2M system described in the microPlatforms Getting Started Tutorial</a>.  (These instructions were tested with the 0.7 public release of the microPlatforms; the LWM2M instructions may move in future versions.)</p>
+<h3 id="mcuboot">MCUboot</h3>
 
-<h2 id="initial-setup-of-the-lwm2m-client-device">Initial setup of the LwM2M client device</h2>
+<h4 id="features">Features</h4>
 
-<p><strong>Create a &ldquo;bug&rdquo; in the Zephyr microPlatform LwM2M sample</strong></p>
-
-<p>From the base directory of the Zephyr microPlatform, the LwM2M sample source code is located at: zephyr-fota-samples/dm-lwm2m.  Make the following changes to disable instance 0 of the &ldquo;Light Control&rdquo; object:</p>
-
-<pre><code>diff --git a/prj.conf b/prj.conf
-index 48abe3c..f19d284 100644
---- a/prj.conf
-+++ b/prj.conf
-@@ -47,7 +47,7 @@ CONFIG_LWM2M_COAP_BLOCK_SIZE=256
- CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT=y
- CONFIG_LWM2M_IPSO_SUPPORT=y
- CONFIG_LWM2M_IPSO_TEMP_SENSOR=y
--CONFIG_LWM2M_IPSO_LIGHT_CONTROL=y
-+# CONFIG_LWM2M_IPSO_LIGHT_CONTROL is not set
- CONFIG_SYS_LOG_LWM2M_LEVEL=3
-
- # Logging
-</code></pre>
-
-<p><strong>Build and flash the sample to the BLE Nano 2</strong></p>
-
-<p>Use the following commands from the base directory of the ZMP:</p>
-
-<pre><code>./zmp build --board nrf52_blenano2 zephyr-fota-samples/dm-lwm2m
-./zmp flash --board nrf52_blenano2 zephyr-fota-samples/dm-lwm2m
-</code></pre>
-
-<p><strong>Confirm that Leshan UI displays your connected device</strong></p>
-
-<p>Open your own Leshan Demo Server instance in a web browser using the following URL: <a href="http://localhost:8081">http://localhost:8081</a></p>
-
-<p>Find the BLE Nano 2 under the &ldquo;Client Endpoint&rdquo; list.  The endpoint is generated semi-randomly using unique data from the device to ensure that each endpoint name is unique.</p>
-
-<p><img src="../../../../../img/blog/leshan-client-list.png" alt="Leshan Demo Server client list" /></p>
-
-<p>Click on it to view all of the available LwM2M objects.  You should be able to confirm that &ldquo;Light Control&rdquo; object is not present at the bottom of the list.</p>
-
-<p><img src="../../../../../img/blog/leshan-light-control-no-instance.png" alt="Leshan Demo Server client detail: Light Control w/o instance0" /></p>
-
-<h2 id="fix-the-bug-and-deploy-an-ota-update">Fix the &ldquo;bug&rdquo; and deploy an OTA update</h2>
-
-<p><strong>Re-enable &ldquo;Light Control&rdquo;</strong></p>
-
-<pre><code>diff --git a/prj.conf b/prj.conf
-index 48abe3c..f19d284 100644
---- a/prj.conf
-+++ b/prj.conf
-@@ -47,7 +47,7 @@ CONFIG_LWM2M_COAP_BLOCK_SIZE=256
- CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT=y
- CONFIG_LWM2M_IPSO_SUPPORT=y
- CONFIG_LWM2M_IPSO_TEMP_SENSOR=y
--# CONFIG_LWM2M_IPSO_LIGHT_CONTROL is not set
-+CONFIG_LWM2M_IPSO_LIGHT_CONTROL=y
- CONFIG_SYS_LOG_LWM2M_LEVEL=3
-
- # Logging
-</code></pre>
-
-<p><strong>Rebuild the LwM2M sample</strong></p>
-
-<pre><code>./zmp build --board nrf52_blenano2 zephyr-fota-samples/dm-lwm2m
-</code></pre>
-
-<p><strong>Start an HTTP server to host the new firmware</strong></p>
-
-<p>Start a docker contained HTTP server to host the new firmware binary from the base of the Zephyr microPlatform.</p>
-
-<pre><code>docker run -dit -p 8003:80 -v $(pwd):/usr/share/nginx/html --name nginx opensourcefoundries/nginx:latest
-</code></pre>
-
-<p>You can use a web browser to confirm the following url will download the new firmware:
-http://{developer host IP}:8003/outdir/zephyr-fota-samples/dm-lwm2m/nrf52_blenano2/app/zephyr/dm-lwm2m-nrf52_blenano2-signed.bin</p>
-
-<p>NOTE: Be sure to use your local IP address and not &ldquo;localhost&rdquo; as this URL will be used on the embedded device.</p>
-
-<p><strong>Use Leshan UI to trigger a firmware download</strong></p>
-
-<p>Open your own Leshan Demo Server instance in a web browser using the following URL: <a href="http://localhost:8081">http://localhost:8081</a></p>
-
-<p>Look for the BLE Nano 2 client endpoint and click on it.  Under the &ldquo;Firmware Update&rdquo; section do the following:</p>
+<h5 id="zephyr-api-change">Zephyr API change:</h5>
 
 <ul>
-<li>Click on the &ldquo;Write&rdquo; button next to &ldquo;Package URI&rdquo;</li>
-<li>Paste the above firmware URI as the &ldquo;Value&rdquo;</li>
-<li>Click &ldquo;Update&rdquo;</li>
+<li>The main stack pointer on ARM targets is now set with
+__set_MSP instead of _MspSet. The latter has been
+removed from Zephyr; the former is available from
+CMSIS and will work with new and old Zephyr trees.</li>
 </ul>
 
-<p><img src="../../../../../img/blog/leshan-firmware-update-package-url.png" alt="Leshan Demo Server client detail: Firmware Update" /></p>
+<h4 id="bugs">Bugs</h4>
 
-<p><img src="../../../../../img/blog/leshan-firmware-update-package-url-value.png" alt="Leshan Demo Server client detail: Firmware Update w/ URL" /></p>
+<h5 id="arduino-101-build-fix">Arduino 101 build fix:</h5>
 
-<p>If you can monitor the UART output of the BLE Nano 2, you should notice that the firmware is now being downloaded.</p>
+<ul>
+<li>The arduino_101 build was fixed by fixing the .conf
+overlay directory on Zephyr targets.</li>
+</ul>
 
-<p>Instead of using UART, you can use Leshan UI to watch the &ldquo;State&rdquo; field of the &ldquo;Firmware Update&rdquo; object by clicking on it&rsquo;s &ldquo;Observe&rdquo; button.  During the download, this should be a value of 1, and once complete, the value should change to 2.  Any other  value indicates a problem downloading the firmware.</p>
+<h3 id="zephyr">Zephyr</h3>
 
-<p><img src="../../../../../img/blog/leshan-firmware-update-observe.png" alt="Leshan Demo Server client detail: Firmware Update observe Status" /></p>
+<h4 id="features-1">Features</h4>
 
-<p><strong>Trigger the firmware update</strong></p>
+<h5 id="version-1-11-0">Version 1.11.0:</h5>
 
-<p>Once the &ldquo;Status&rdquo; shows a value of 2 (or you&rsquo;ve reached 100% by watching the UART log), you can tell the device to apply the update by clicking on the &ldquo;Exec&rdquo; button next to the &ldquo;Update&rdquo; resource.   In Leshan, the device&rsquo;s detail page may be reloaded briefly while the device reboots and reconnects.</p>
+<ul>
+<li>This merges the Zephyr v1.11.0 release into the OSF
+tree. This is the last commit which will be drawn from
+the v1.11 development series. The next commit in this
+tree will be a non-fast-forward update to the v1.12
+development series. Since the previous mergeup was
+based on a v1.11 release candidate, only stabilization
+changes and fixes have been merged.</li>
+</ul>
 
-<p>Once reloaded, you should notice that the &ldquo;Light Control&rdquo; block is now back at the bottom of the page.</p>
+<h5 id="frdm-k64f-testing">FRDM-K64F testing:</h5>
 
-<p><img src="../../../../../img/blog/leshan-light-control-instance0.png" alt="Leshan Demo Server client detail: Light Control w/ instance0" /></p>
+<ul>
+<li>The ARM based FRDM-K64F board is now build-tested by
+default in sanitycheck. This will help avoid build
+regressions for more complex features, such as those
+used by Zephyr&rsquo;s userspace support.</li>
+</ul>
 
-<p>Your update is now complete.</p>
+<h5 id="linux-foundation-bluetooth-company-id">Linux Foundation Bluetooth company ID:</h5>
+
+<ul>
+<li>Bluetooth Mesh now uses the Linux Foundation company
+ID.</li>
+</ul>
+
+<h5 id="uart6-for-96b-carbon">UART6 for 96b_carbon:</h5>
+
+<ul>
+<li>UART6 support was added to 96b_carbon.</li>
+</ul>
+
+<h5 id="posix-semaphore-api">POSIX semaphore API:</h5>
+
+<ul>
+<li>A POSIX API for semaphores was merged, continuing the
+POSIX API compatibility support effort.</li>
+</ul>
+
+<h4 id="bugs-1">Bugs</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h3 id="hawkbit-and-mqtt-sample-application">hawkBit and MQTT sample application</h3>
+
+<h4 id="features-2">Features</h4>
+
+<h5 id="flash-savings">Flash savings:</h5>
+
+<ul>
+<li>Unnecessary Bluetooth options were disabled, saving
+approximately 4KB of flash.</li>
+</ul>
+
+<h4 id="bugs-2">Bugs</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h3 id="lwm2m-sample-application">LWM2M sample application</h3>
+
+<h4 id="features-3">Features</h4>
+
+<h5 id="flash-savings-1">Flash savings:</h5>
+
+<ul>
+<li>Unnecessary Bluetooth options were disabled, saving
+approximately 4KB of flash.</li>
+</ul>
+
+<h4 id="bugs-3">Bugs</h4>
+
+<ul>
+<li><p>Not addressed in this update</p>
+
+<h1 id="linux-microplatform">Linux microPlatform</h1></li>
+</ul>
+
+<h2 id="summary-2">Summary</h2>
+
+<p>No changes have gone into the LMP since 0.10.</p>
+
+<h2 id="highlights-1">Highlights</h2>
+
+<ul>
+<li>No changes have gone into the LMP since 0.10.</li>
+</ul>
+
+<h2 id="components-1">Components</h2>
                         </div>
                         
                         
