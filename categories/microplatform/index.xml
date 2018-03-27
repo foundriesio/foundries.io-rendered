@@ -7,10 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 20 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/categories/microplatform/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>microPlatform update 0.12</title>
+      <link>https://opensourcefoundries.com/blog/2018/03/27/blog-post-update-0.12/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/03/27/blog-post-update-0.12/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-12&#34;&gt;Zephyr microPlatform changes for 0.12&lt;/h2&gt;
+
+&lt;p&gt;The Zephyr tree incorporates significant changes from the v1.12
+merge window, including virtual file system support, websockets,
+network logging, and more.&lt;/p&gt;
+
+&lt;p&gt;The MCUboot tree includes a single new feature, allowing users to
+set device tree overlays.&lt;/p&gt;
+
+&lt;p&gt;The zmp tool includes several new features, which are taken
+advantage of in the reference applications.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-12&#34;&gt;Linux microPlatform changes for 0.12&lt;/h2&gt;
+
+&lt;p&gt;No changes have gone into the LMP since 0.11.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.11</title>
