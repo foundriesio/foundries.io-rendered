@@ -234,32 +234,40 @@
 <li>Azure IoT Edge integration and proof-of-concept for container creating and management</li>
 </ul>
 
-<p><strong>Features nearing release</strong>
-* TUF / Uptane compliant (OTA) ‘over the air’ updates enabled by OTA+ Community Edition
-* EdgeX integration with the Linux microPlatform on x86, including the latest California pre-release with Go containers</p>
+<p><strong>Features nearing release</strong></p>
 
 <ul>
-<li><p><em>NOTE: We have Edge-X running on ARM, but some cpu/memory constrained devices struggle with the requirements of the early EdgeX services; the California release (June 2018), promises new Go-based services that make EdgeX close to a reality</em></p></li>
+<li>TUF / Uptane compliant (OTA) ‘over the air’ updates enabled by OTA+ Community Edition</li>
+<li>EdgeX integration with the Linux microPlatform on x86, including the latest California pre-release with Go containers
 
-<li><p>Cellular modem support and specifically the WNC M14A2A module paired with a NXP K64F freedom board to provide LTE/LTE-M connectivity on AT&amp;T’s network</p></li>
+<ul>
+<li><em>NOTE: We have Edge-X running on ARM, but some cpu/memory constrained devices struggle with the requirements of the early EdgeX services; the California release (June 2018), promises new Go-based services that make EdgeX close to a reality</em></li>
+</ul></li>
+<li>Cellular modem support and specifically the WNC M14A2A module paired with a NXP K64F freedom board to provide LTE/LTE-M connectivity on AT&amp;T’s network</li>
 </ul>
 
-<p><strong>Experiments</strong>
-* Publishing IoT sensor data onto the blockchain, specifically the IOTA tangle and researching zcash possibilities and benefits
-* Providing a complete Open Source LwM2M light project
-* X.org and direct framebuffer graphics enablement from within containers</p>
+<p><strong>Experiments</strong></p>
 
-<p><strong>Board Support</strong>
-* Raspberry PI 3 x64
-* Compulab IoT Gate
-* Intel Core i7 / x86_64 *
-* Toradex Colibri i.mx7 *
-* Beaglebone Black / Beaglebone Black Wireless *
-* Lemaker Hikey *
-* Qualcomm Dragonboard 410c * &amp; Dragonboard 820c *
-* Solidrun Hummingboard *</p>
+<ul>
+<li>Publishing IoT sensor data onto the blockchain, specifically the IOTA tangle and researching zcash possibilities and benefits</li>
+<li>Providing a complete Open Source LwM2M light project</li>
+<li>X.org and direct framebuffer graphics enablement from within containers</li>
+</ul>
 
-<p>_ * we make a best effort to support these new boards, but may or may not have full automation testing running_</p>
+<p><strong>Board Support</strong></p>
+
+<ul>
+<li>Raspberry PI 3 x64</li>
+<li>Compulab IoT Gate</li>
+<li>Intel Core i7 / x86_64 *</li>
+<li>Toradex Colibri i.mx7 *</li>
+<li>Beaglebone Black / Beaglebone Black Wireless *</li>
+<li>Lemaker Hikey *</li>
+<li>Qualcomm Dragonboard 410c * &amp; Dragonboard 820c *</li>
+<li>Solidrun Hummingboard *</li>
+</ul>
+
+<p><em>* we make a best effort to support these new boards, but may or may not have full automation testing running</em></p>
 
 <h2 id="testing-and-ci-automation-tools">Testing and CI / Automation tools</h2>
 
@@ -286,35 +294,56 @@
 <li>Functional Tests [Qemu Boot Simulation, FOTA testing on bare metal]</li>
 </ul>
 
-<p><em>OSF MCUBoot Testing</em>
- * Target compilation Tests [Zephyr+FOTA tests]
- * Functional Tests [MCUBoot Simulator, FOTA testing on bare metal]</p>
+<p><em>OSF MCUBoot Testing</em></p>
+
+<ul>
+<li>Target compilation Tests [Zephyr+FOTA tests]</li>
+<li>Functional Tests [MCUBoot Simulator, FOTA testing on bare metal]</li>
+</ul>
 
 <p><strong>Zephyr</strong></p>
 
-<p><em>Upstream testing on every upstream Zephyr</em>
- * Compilation [Sanitycheck, FOTA compile tests]</p>
+<p><em>Upstream testing on every upstream Zephyr</em></p>
 
-<p><em>Internal testing on every OSF commit</em>
- * Target Compilation [Checkpatch, Sanity check, FOTA Samples]
- * Functional Tests [Drivers, IPM, Kernel Alert API, Kernel ARM Runtime, Kernel ARM NMI Runtime, Kernel Common, Kernel Context, Kernel Critical, Kernel Fatal Stack Sentinel, Kernel FIFO API, Kernel Generate ISR Table, Kernel Threads Custom Data API, Kernel Threads Lifecycle API, Kernel XIP, Bare Metal FOTA]</p>
+<ul>
+<li>Compilation [Sanitycheck, FOTA compile tests]</li>
+</ul>
 
-<p>_ FOTA Sample Application Testing on every commit_
- * Compilation tests [Checkpatch, FOTA Samples]
- * OSF MCUBoot on target</p>
+<p><em>Internal testing on every OSF commit</em></p>
 
-<p><strong>End to End Testing</strong>
-* Currently triggered for each update candidate
-* Zephyr and Linux Devices from bare metal
- * 90 LwM2M roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices
- * 90 HTTP / Hawkbit roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices</p>
+<ul>
+<li>Target Compilation [Checkpatch, Sanity check, FOTA Samples]</li>
+<li>Functional Tests [Drivers, IPM, Kernel Alert API, Kernel ARM Runtime, Kernel ARM NMI Runtime, Kernel Common, Kernel Context, Kernel Critical, Kernel Fatal Stack Sentinel, Kernel FIFO API, Kernel Generate ISR Table, Kernel Threads Custom Data API, Kernel Threads Lifecycle API, Kernel XIP, Bare Metal FOTA]</li>
+</ul>
 
-<p><strong>Linux microPlatform Testing</strong>
-* Build and boot testing using KernelCI.org
-* Netperf, Docker, more tests coming online
-* Exploratory testing by engineers
-* OTA/OSTree testing
-* Stress and soak testing</p>
+<p><em>FOTA Sample Application Testing on every commit</em></p>
+
+<ul>
+<li>Compilation tests [Checkpatch, FOTA Samples]</li>
+<li>OSF MCUBoot on target</li>
+</ul>
+
+<p><strong>End to End Testing</strong></p>
+
+<ul>
+<li>Currently triggered for each update candidate</li>
+<li>Zephyr and Linux Devices from bare metal
+
+<ul>
+<li>90 LwM2M roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices</li>
+<li>90 HTTP / Hawkbit roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices</li>
+</ul></li>
+</ul>
+
+<p><strong>Linux microPlatform Testing</strong></p>
+
+<ul>
+<li>Build and boot testing using KernelCI.org</li>
+<li>Netperf, Docker, more tests coming online</li>
+<li>Exploratory testing by engineers</li>
+<li>OTA/OSTree testing</li>
+<li>Stress and soak testing</li>
+</ul>
 
 <p>Though the focus has been on end to end testing on each commit both up and downstream, we are starting to analyze testing efficiency and also moving to add more stress/soak testing and increasing depth testing.</p>
 
