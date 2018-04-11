@@ -13,6 +13,17 @@
     
     
     <item>
+      <title>Linux microPlatform, now with OTA updates (beta)</title>
+      <link>https://opensourcefoundries.com/blog/2018/04/11/20180411-over-the-air/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/04/11/20180411-over-the-air/</guid>
+      <description>&lt;p&gt;Starting with Linux microPlatform update 0.13, we are including support for over-the-air (OTA) updates.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Using AT&amp;T&#39;s IoT Dev Kit</title>
       <link>https://opensourcefoundries.com/blog/2018/04/11/20180411-iot-dev-kit/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>

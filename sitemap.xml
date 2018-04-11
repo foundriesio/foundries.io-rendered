@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://opensourcefoundries.com/blog/2018/04/11/20180411-over-the-air/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.com/blog/2018/04/11/20180411-iot-dev-kit/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
   </url>
@@ -302,6 +307,18 @@
   <url>
     <loc>https://opensourcefoundries.com/categories/linux/</loc>
     <lastmod>2018-01-17T13:50:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.com/tags/lmp/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.com/categories/lmp/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
