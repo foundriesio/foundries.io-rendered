@@ -251,9 +251,12 @@ the highest level of security for embedded system software updates.</p>
 <h2 id="overview">Overview</h2>
 
 <ul>
-<li>As this support is part of a subscriber update, you&rsquo;ll need to setup a trial subscription account on <a href="https://foundries.io">https://foundries.io</a></li>
-<li>Get a supported hardware development platform (Raspberry Pi 3, DB 410c, DB 820C, Toradex Colibri, Solidrun Hummingboard, Compulab IoT Gate, Beaglebone Black Wireless, x86)</li>
-<li>Download the latest system image: <a href="https://foundries.io/mp/lmp/latest/artifacts/">https://foundries.io/mp/lmp/latest/artifacts/</a> (0.13 and later will be OTA ready)</li>
+<li>As this support is part of a subscriber update, you&rsquo;ll need to setup a trial
+subscription account on <a href="https://foundries.io">https://foundries.io</a></li>
+<li>Get a supported hardware development platform (Raspberry Pi 3, DB 410c, DB 820C,
+Toradex Colibri, Solidrun Hummingboard, Compulab IoT Gate, Beaglebone Black Wireless, x86)</li>
+<li>Download the latest system image: <a href="https://foundries.io/mp/lmp/latest/artifacts/">https://foundries.io/mp/lmp/latest/artifacts/</a>
+(0.13 and later will be OTA ready)</li>
 <li>Follow the documentation to <a href="https://foundries.io/docs/latest/tutorial/installation-linux.html">install the Linux microplatform</a></li>
 <li>Upload an OS to ATS Garage for deployment</li>
 <li>Provision your device</li>
@@ -275,12 +278,15 @@ the highest level of security for embedded system software updates.</p>
 <p><strong>Create your ATS Garage credentials</strong>
 * Generate your auto provisioning credentials at <a href="https://app.atsgarage.com/#/profile/access-keys">https://app.atsgarage.com/#/profile/access-keys</a></p>
 
-<p>You can use these credentials on many devices.  These credentials are used to generate device-specific keys during initialization
-Manual provisioning of pre-built LMP images at ATS Garage</p>
+<p>Once you generate your credentials you can use the same credentials on many
+devices. These credentials are used to generate device-specific keys during
+initial device provisioning and to sign the OSTree repository when you upload
+the repo to ATS garage.</p>
 
 <p><strong>Push the Linux microPlatform image to ATS garage</strong></p>
 
-<p>You can use a command line tool to sign and publish the artifacts of a build to ATS Garage (e.g. for Raspberry Pi 3)</p>
+<p>You can use a command line tool to sign and publish the artifacts of a build to
+ATS Garage (e.g. for Raspberry Pi 3)</p>
 
 <pre><code>#create a clean directory with your credentials.zip file and the OSTree Repo
 $ mkdir lmp
