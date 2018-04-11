@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 08 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Att</title>
+      <link>https://opensourcefoundries.com/tags/att/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/tags/att/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ble</title>
@@ -139,9 +148,18 @@
     </item>
     
     <item>
+      <title>Lte</title>
+      <link>https://opensourcefoundries.com/tags/lte/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/tags/lte/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Lwm2m</title>
       <link>https://opensourcefoundries.com/tags/lwm2m/</link>
-      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.com/tags/lwm2m/</guid>
       <description></description>
@@ -168,7 +186,7 @@
     <item>
       <title>Open Source</title>
       <link>https://opensourcefoundries.com/tags/open-source/</link>
-      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.com/tags/open-source/</guid>
       <description></description>
@@ -177,7 +195,7 @@
     <item>
       <title>Ota</title>
       <link>https://opensourcefoundries.com/tags/ota/</link>
-      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.com/tags/ota/</guid>
       <description></description>

@@ -13,6 +13,19 @@
     
     
     <item>
+      <title>Using AT&amp;T&#39;s IoT Dev Kit</title>
+      <link>https://opensourcefoundries.com/blog/2018/04/11/20180411-iot-dev-kit/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/04/11/20180411-iot-dev-kit/</guid>
+      <description>&lt;p&gt;In the Zephyr microPlatform update 0.13, we have released support for the
+&lt;a href=&#34;https://marketplace.att.com/products/att-iot-starter-kit-lte-m&#34;&gt;AT&amp;amp;T IoT Starter Kit (LTE-M)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;With the following instructions you can start using Zephyr and the IoT Starter Kit with LWM2M in a matter of minutes.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Zephyr Newsletter 11 April 2018</title>
       <link>https://opensourcefoundries.com/blog/2018/04/11/zephyr-news-11-apr-18/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
