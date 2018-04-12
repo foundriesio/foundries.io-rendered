@@ -329,11 +329,17 @@ also be used.</p>
 
 <p><strong>Copy and start the Aktualizr client daemon</strong></p>
 
+<p>on your host machine:</p>
+
 <pre><code>$ scp credentials.zip osf@raspberrypi3-64.local:~/
-$ sudo mv credentials.zip /var/sota/sota_provisioning_credentials.zip
+</code></pre>
+
+<p>on your target machine:</p>
+
+<pre><code>$ sudo mv credentials.zip /var/sota/sota_provisioning_credentials.zip
 $ sudo cp /usr/lib/sota/sota_autoprov.toml /var/sota/sota.toml
 
-# Aktualizr will start automatically once it finds /var/sota/sota.toml
+# Note: Aktualizr will start automatically once it finds /var/sota/sota.toml
 </code></pre>
 
 <p><strong>Browse to your ATS Garage account and manage the device&rsquo;s root filysystem</strong></p>
