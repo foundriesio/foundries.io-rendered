@@ -310,8 +310,7 @@ $ tar -jxvf raspberrypi3-64-ostree_repo.tar.bz2
 # When prompted for the password, enter your token (Access Tokens: https://foundries.io/s/)
 
 # Sign and push the image to ATS garage
-$ docker run --rm -it -v $PWD:/build --workdir=/build \
-    hub.foundries.io/development/microplatforms/linux/extra-containers/aktualizr \
+$ docker run --rm -it -v $PWD:/build --workdir=/build hub.foundries.io/aktualizr \
 	  ota-publish -m raspberrypi3-64 -c credentials.zip -r ostree_repo
 
 </code></pre>
