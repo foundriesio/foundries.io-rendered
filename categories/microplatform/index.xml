@@ -93,10 +93,10 @@ options, saving approximately 4 KB.&lt;/p&gt;
     
     <item>
       <title>ELC / Open IoT Summit 2018 Slides now available</title>
-      <link>https://opensourcefoundries.com/blog/2018/03/15/201803-iotsummit/</link>
+      <link>https://opensourcefoundries.com/blog/2018/03/15/20180315-iotsummit/</link>
       <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/03/15/201803-iotsummit/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/03/15/20180315-iotsummit/</guid>
       <description>&lt;p&gt;Open Source Foundries presented 4 sessions at this year&amp;rsquo;s IoT Summit and Embedded
 Linux Conference and the slides are now available.&lt;/p&gt;
 
@@ -170,10 +170,10 @@ Default GCC version was changed from the 7.1-Linaro to the latest OpenEmbedded 7
     
     <item>
       <title>Open Source Foundries at Embedded World 2018</title>
-      <link>https://opensourcefoundries.com/blog/2018/01/27/201801-embeddedworld/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/27/20180127-embeddedworld/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/01/27/201801-embeddedworld/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/27/20180127-embeddedworld/</guid>
       <description>&lt;p&gt;Open Source Foundries is excited to have an opportunity to demonstrate
 our end to end IoT microPlatforms at this years Embedded World conference in
 Nuremburg, Germany.  The Embedded World conference takes place between
@@ -186,10 +186,10 @@ OSF will be presenting in the Zephyr booth, located in
     
     <item>
       <title>Open Source Foundries at ELC / Open IoT Summit 2018</title>
-      <link>https://opensourcefoundries.com/blog/2018/01/26/201801-iotsummit/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/26/20180126-iotsummit/</link>
       <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/01/26/201801-iotsummit/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/26/20180126-iotsummit/</guid>
       <description>&lt;p&gt;Open Source Foundries is excited to have an opportunity to demonstrate
 our end to end IoT microPlatforms at this years Embedded Linux Conference and
 the Open IoT Summit alongside the Zephry project.&lt;/p&gt;
@@ -230,10 +230,10 @@ D6:E7 in the MAC addresses must be changed to D4:E7.&lt;/p&gt;
     
     <item>
       <title>How To Manage LMP Containers</title>
-      <link>https://opensourcefoundries.com/blog/2018/01/17/201801-container-management/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/17/20180117-container-management/</link>
       <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/01/17/201801-container-management/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/17/20180117-container-management/</guid>
       <description>&lt;p&gt;The Linux microPlatform uses a set of Docker containers to provide end-to-end
 services used by the Zephyr microPlatform. The containers and their
 configurations are deployed using a simple &lt;a href=&#34;https://github.com/OpenSourceFoundries/gateway-ansible&#34;&gt;shell script&lt;/a&gt; that wraps
@@ -296,10 +296,10 @@ fragment as used by the other machines.&lt;/p&gt;
     
     <item>
       <title>Jan 3, 2018 - microPlatform OpenCall meeting minutes</title>
-      <link>https://opensourcefoundries.com/blog/2018/01/03/201801-opencall/</link>
+      <link>https://opensourcefoundries.com/blog/2018/01/03/20180103-opencall/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/01/03/201801-opencall/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/01/03/20180103-opencall/</guid>
       <description>&lt;p&gt;OSF is now 3 months old and the microPlatforms are reaching full speed.  We are working on a few final work items before we move from limited beta to a public beta state for the Zephyr and Linux microPlatforms.
 &lt;/p&gt;</description>
     </item>

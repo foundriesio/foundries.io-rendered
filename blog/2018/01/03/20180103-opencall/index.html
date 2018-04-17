@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>How To Manage LMP Containers</title>
+  <title>Jan 3, 2018 - microPlatform OpenCall meeting minutes</title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://opensourcefoundries.com/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="How To Manage LMP Containers" />
+  <meta property="og:title" content="Jan 3, 2018 - microPlatform OpenCall meeting minutes" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/blog/2018/01/17/201801-container-management//" />
+  <meta property="og:url" content="/blog/2018/01/03/20180103-opencall//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.com/">
-                    <img src="https://opensourcefoundries.com/img/logo.png" alt="How To Manage LMP Containers logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="How To Manage LMP Containers logo" class="visible-xs visible-sm">
-                    <span class="sr-only">How To Manage LMP Containers - go to homepage</span>
+                    <img src="https://opensourcefoundries.com/img/logo.png" alt="Jan 3, 2018 - microPlatform OpenCall meeting minutes logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="Jan 3, 2018 - microPlatform OpenCall meeting minutes logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Jan 3, 2018 - microPlatform OpenCall meeting minutes - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -186,7 +186,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>How To Manage LMP Containers</h1>
+                <h1>Jan 3, 2018 - microPlatform OpenCall meeting minutes</h1>
             </div>
         </div>
     </div>
@@ -202,52 +202,57 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">January 17, 2018</p>
+                        <p class="text-muted text-uppercase mb-small text-right">January 3, 2018</p>
 
                         <div id="post-content">
-                          <p>The Linux microPlatform uses a set of Docker containers to provide end-to-end
-services used by the Zephyr microPlatform. The containers and their
-configurations are deployed using a simple <a href="https://github.com/OpenSourceFoundries/gateway-ansible">shell script</a> that wraps
-<a href="https://www.ansible.com/">Ansible</a>. The scripts require a version of Ansible
-with Docker support. Some distro packages such as Ubuntu 16.04 don&rsquo;t have this,
-so make sure you install Ansible from a <a href="http://docs.ansible.com/ansible/latest/intro_installation.html">proper source</a>
-before continuing.
+                          <p>OSF is now 3 months old and the microPlatforms are reaching full speed.  We are working on a few final work items before we move from limited beta to a public beta state for the Zephyr and Linux microPlatforms.
 </p>
 
-<pre><code>		+------------+      +-------------+
-		|            |      |             |
-		| LMP Device |      | Host System |
-		|  10.10.0.10|      |  10.10.0.12 |
-		|            |      | (eg laptop) |
-		+------------+      +-------------+
+<h2 id="new-ble-dongle-efforts">New BLE Dongle efforts</h2>
 
-</code></pre>
+<p>For our initial radio technology, we have chosen BLE (Bluetooth Low Energy) as it is the most mature and public radio technology that is available in both Linux and Zephyr projects.  On most of the boards we have used we have found critical bugs with the proprietary BLE radio code, but with the UART/ACHI sample code already in Zephyr and a capable Nordic NRF52 module available on the BLE Nano 2, we now have a fully functional and surprisingly stable BLE Dongle that we can use with our host.</p>
 
-<h2 id="the-simple-case">The Simple Case</h2>
+<p>Todo:
+* Integrate sample code with MCUBOOT so we can use &lsquo;zmp build&rsquo; and &lsquo;zmp flash&rsquo; commands
+* Release documentation to use the BLE Nano 2 + BLE Nano 2 programmer board as a peripheral BLE dongle</p>
 
-<p>In the most simple scenario, your device management system (<a href="https://foundries.io/docs/latest/iotfoundry/hawkbit-howto.html">Hawkbit</a> or <a href="https://foundries.io/docs/latest/iotfoundry/lwm2m-howto.html">Leshan</a>)
-will be running on your host system. In this case the script only needs to know
-the IP address of your LMP device to set it up:</p>
+<h2 id="linux-microplatform">Linux microPlatform</h2>
 
-<pre><code>REGISTRY=hub.docker.com GW_HOSTNAME=10.10.0.10 ./iot-gateway.sh
-</code></pre>
+<p><strong>Kernel:</strong></p>
 
-<h2 id="specifying-the-device-management-server-s-ip">Specifying The Device Management Server&rsquo;s IP</h2>
+<p>Current efforts are working on preparing and releasing an update for the microPlatforms that transitions to the Linux microPlatform to use the 4.14 Linux Kernel.  This effort is in final testing and integration and we expect a microPlatform update to be released in a matter of days.</p>
 
-<p>The previous script works by trying to guess the externally routable IP of your
-host system. If this probing is guessing your IP incorrectly or you run this
-service on another system, it can explicitly set it with:</p>
+<p><strong>Source code mirrors:</strong></p>
 
-<pre><code>REGISTRY=hub.docker.com GW_HOSTNAME=10.10.0.10 MGMT_SERVER=10.10.0.10 ./iot-gateway.sh
-</code></pre>
+<p>The microPlatform is based on software and source code made available by upstream projects and hardware manufacturers.  To ensure that the microPlatform can always be built from source we have created some OSF mirrors that will provide a higher level of service so that OSF subscribers will always be able to build the microPlatforms from source, even in the event that the upstream repositories may not be reachable.</p>
 
-<h2 id="using-an-alternative-docker-registry">Using an Alternative Docker Registry</h2>
+<p>Recent issues addressed:</p>
 
-<p>The script also supports passing a username and password to authenticate with
-a secured Docker registry when needed:</p>
+<ul>
+<li>We have found that enabling the UART on the Raspberry PI 3 causes significant system instability, including BLE performance.  We are now recommending doing no system validation with UART enabled on the Raspberry PI 3.  This causes some problems with automation as a LAVA-based automation requires UART for controlling the device under test.  We are working on enabling Raspberry PI 3 testing by using a combination of UART and SSH rather than just UART.</li>
+</ul>
 
-<pre><code>REGISTRY=YOUR_SECURE_REGISTRY GW_HOSTNAME=10.10.0.10 REGISTRY_USER=&lt;USER&gt; REGISTRY_PASSWD=&lt;PASS&gt; ./iot-gateway.sh
-</code></pre>
+<h2 id="zephyr-microplatform">Zephyr microPlatform</h2>
+
+<p><strong>Grove sensor troubleshooting:</strong></p>
+
+<p>We have done some initial preparation work to enable generic analog to digital sensor integration into Zephyr.  We are currently working to propose some fixes to Zephyr to fix some of the infrastructure problems upstream, but we expect to have a Zephyr microPlatform demo that has a minimal set of out of tree patches available soon.</p>
+
+<p><strong>Encrypted communication:</strong></p>
+
+<p>When we build connected devices we want to have reference samples that are securable, and a fundamental requirement is to support encrypted communication protocols.  Of course on a constrained device, the memory limits make this quite a challenge and we are working on how to best enable Zephyr TCP (TLS) and UDP (DTLS) encryption.</p>
+
+<p><strong>Key storage:</strong></p>
+
+<p>As we work towards a reference design for secure communication,  we are working with FCB / Flash Circular Buffer (<a href="https://mynewt.apache.org/latest/os/modules/fcb/fcb/">https://mynewt.apache.org/latest/os/modules/fcb/fcb/</a>) integration within Zephyr.  There is an initial patch in review and we hope to enable our sample applications to use FCB for key storage soon.</p>
+
+<h2 id="upcoming-events">Upcoming Events</h2>
+
+<ul>
+<li>January Engineering Sprint - Austin TX, January 15 - 17</li>
+<li>Embedded World 2018 - February 27 - March 1</li>
+<li>Embedded Linux Conference - March 12 - 14</li>
+</ul>
                         </div>
                         
                         
