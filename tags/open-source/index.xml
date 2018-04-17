@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Zephyr microPlatform, Zephyr OTA via DFU/mcumgr</title>
+      <link>https://opensourcefoundries.com/blog/2018/04/17/20180417-mcumgr-dfu/</link>
+      <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/04/17/20180417-mcumgr-dfu/</guid>
+      <description>&lt;p&gt;In this blog we describe how to use the Zephyr microPlatform and the in-tree Zephyr samples to perform an Over-The-Air (OTA) of Zephyr over BLE.  This demonstration uses the DFU support within Zephyr and the mcumgr framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Linux microPlatform, now with OTA updates (beta)</title>

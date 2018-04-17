@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://opensourcefoundries.com/blog/2018/04/17/20180417-mcumgr-dfu/</loc>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.com/blog/2018/04/11/20180411-over-the-air/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
   </url>
@@ -176,7 +181,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/blog/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -258,7 +263,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/categories/fota/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -382,7 +387,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/open-source/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -392,13 +397,13 @@
   
   <url>
     <loc>https://opensourcefoundries.com/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.com/tags/ota/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -465,6 +470,18 @@
   <url>
     <loc>https://opensourcefoundries.com/categories/zephyr-news/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.com/tags/zmp/</loc>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.com/categories/zmp/</loc>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
