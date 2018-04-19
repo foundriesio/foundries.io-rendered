@@ -7,10 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/categories/updates/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>microPlatform update 0.14</title>
+      <link>https://opensourcefoundries.com/blog/2018/04/18/blog-post-update-0.14/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/04/18/blog-post-update-0.14/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-14&#34;&gt;Zephyr microPlatform changes for 0.14&lt;/h2&gt;
+
+&lt;p&gt;Zephyr updates from 0.12 cycle, no MCUboot changes&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-14&#34;&gt;Linux microPlatform changes for 0.14&lt;/h2&gt;
+
+&lt;p&gt;OSF Unified Linux Kernel updated to the 4.14.33 stable release.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.13</title>
