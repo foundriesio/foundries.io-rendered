@@ -378,6 +378,55 @@ available soon.</p>
 the ATS web system and then reboot the target device to activate the image.</p>
 
 <p>Further documentation will be available soon.</p>
+
+<h1 id="issues-and-observations">Issues and observations</h1>
+
+<h2 id="watching-the-aktualizr-logs">Watching the aktualizr logs</h2>
+
+<p>If you are having a problem with the device connecting to ATS garage, you can
+watch the client logs with the following commands</p>
+
+<pre><code>sudo journalctl -f -u aktualizr.service
+</code></pre>
+
+<h2 id="device-fails-to-show-up-on-ats-garage">Device fails to show up on ATS garage</h2>
+
+<p>We have recently noticed a variety of timeouts when communicating with ATS
+garage.  From our experience, most of these timeouts and communication failures
+will self-recover.  If you notice a delay in device communication or
+registration you can review the aktualizr client logs (see above).</p>
+
+<p>A sample set of errors that seem to be recoverable may look like:</p>
+
+<pre><code>Apr 26 17:15:18 raspberrypi3-64 aktualizr[592]: curl error 28 (http code 0): Timeout was reached
+Apr 26 17:15:19 raspberrypi3-64 aktualizr[592]: curl error 35 (http code 0): SSL connect error
+
+</code></pre>
+
+<h2 id="device-fails-to-sync-and-krejectall-observed">Device fails to sync and kRejectAll observed</h2>
+
+<p>We have noticed that from time to time, the aktualizr client delivered in
+update 0.13 is susceptible to an issue that has been fixed in 0.14 and later
+microPlatform updates.</p>
+
+<p>The issue, which has been fixed in the upstream aktualizr client, puts the
+device into a state where it can not take an update.</p>
+
+<p>To work around this issue you can use the following commands to modify the
+SQLite database.</p>
+
+<pre><code># stop the aktualizr service
+sudo systemctl stop aktualizr.service
+
+# remove the 'meta' table from the sqlite database
+docker run -v /var/sota/sql.db:/sql.db opensourcefoundries/utilities sqlite3 /sql.db &quot;drop table meta;&quot;
+
+# start the aktualizer service
+sudo systemctl start aktualizr.service
+
+# OPTIONAL: you can watch the aktualizr logs to verify the connection
+sudo journalctl -f -u aktualizr.service
+</code></pre>
                         </div>
                         
                         
