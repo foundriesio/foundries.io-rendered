@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 26 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Zephyr News, 4 May 2018</title>
+      <link>https://opensourcefoundries.com/blog/2018/05/04/zephyr-news-20180504/</link>
+      <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/05/04/zephyr-news-20180504/</guid>
+      <description>&lt;p&gt;This is the 4 May 2018 newsletter tracking the latest
+&lt;a href=&#34;https://www.zephyrproject.org/&#34;&gt;Zephyr&lt;/a&gt; development merged into
+the &lt;a href=&#34;https://github.com/zephyrproject-rtos/zephyr&#34;&gt;mainline tree on
+GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.15</title>

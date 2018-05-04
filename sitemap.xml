@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://opensourcefoundries.com/blog/2018/05/04/zephyr-news-20180504/</loc>
+    <lastmod>2018-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.com/blog/2018/04/26/blog-post-update-0.15/</loc>
     <lastmod>2018-04-26T00:00:00+00:00</lastmod>
   </url>
@@ -196,7 +201,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/blog/</loc>
-    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -412,7 +417,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/</loc>
-    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -478,13 +483,13 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/zephyr/</loc>
-    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.com/categories/zephyr-news/</loc>
-    <lastmod>2018-04-18T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
