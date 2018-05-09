@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://opensourcefoundries.com/blog/2018/05/08/using-docker-compose.yml-with-portainer/</loc>
+    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.com/blog/2018/05/04/zephyr-news-20180504/</loc>
     <lastmod>2018-05-04T00:00:00+00:00</lastmod>
   </url>
@@ -244,6 +249,12 @@
   </url>
   
   <url>
+    <loc>https://opensourcefoundries.com/tags/container/</loc>
+    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.com/tags/containers/</loc>
     <lastmod>2018-01-17T13:07:31+02:00</lastmod>
     <priority>0</priority>
@@ -275,13 +286,19 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/docker/</loc>
-    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.com/categories/docker/</loc>
     <lastmod>2018-01-17T13:07:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.com/tags/docker-compose/</loc>
+    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -353,7 +370,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/categories/lmp/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -434,6 +451,12 @@
   <url>
     <loc>https://opensourcefoundries.com/tags/ota/</loc>
     <lastmod>2018-04-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.com/tags/portainer/</loc>
+    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

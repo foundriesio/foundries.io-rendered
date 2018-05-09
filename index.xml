@@ -24,6 +24,15 @@
     </item>
     
     <item>
+      <title>Using docker-compose.yml with Portainer</title>
+      <link>https://opensourcefoundries.com/blog/2018/05/08/using-docker-compose.yml-with-portainer/</link>
+      <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/05/08/using-docker-compose.yml-with-portainer/</guid>
+      <description>Portainer has been a great asset and we have started to rely on it for single-container image management. Unfortunately, Portainer has been designed for 2 key use-cases. single containers and &amp;ldquo;stacks&amp;rdquo; that are meant to be deployed onto Kubernetes or Swarm orchestrators. For many of our demo&amp;rsquo;s we want to manage a suite of containers and orchestrate their startup so we can manage large container suites like the 9+ container-based micro-services that comprise the Edge-X project.</description>
+    </item>
+    
+    <item>
       <title>Zephyr News, 4 May 2018</title>
       <link>https://opensourcefoundries.com/blog/2018/05/04/zephyr-news-20180504/</link>
       <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>

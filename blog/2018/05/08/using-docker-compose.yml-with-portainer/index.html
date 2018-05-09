@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using docker-compose.yml with Portainer</title>
+  <meta name="author" content="" />
+
+  
+  <meta name="keywords" content="microPlatform, osf, updates">	
+  
+
+  
+
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="https://opensourcefoundries.com/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="https://opensourcefoundries.com/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+
+  
+  <link href="https://opensourcefoundries.com/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="https://opensourcefoundries.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://opensourcefoundries.com/img/apple-touch-icon.png" />
+  
+
+  <link href="https://opensourcefoundries.com/css/owl.carousel.css" rel="stylesheet">
+  <link href="https://opensourcefoundries.com/css/owl.theme.css" rel="stylesheet">
+
+  <link rel="alternate" href="https://opensourcefoundries.com/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
+
+  
+  <meta property="og:title" content="Using docker-compose.yml with Portainer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/blog/2018/05/08/using-docker-compose.yml-with-portainer//" />
+  <meta property="og:image" content="img/logo.png" />
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="https://opensourcefoundries.com/">
+                    <img src="https://opensourcefoundries.com/img/logo.png" alt="Using docker-compose.yml with Portainer logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="Using docker-compose.yml with Portainer logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Using docker-compose.yml with Portainer - go to homepage</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">Toggle Navigation</span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+
+                    
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          
+                            <li><a href="/product/#overview">Overview</a></li>
+                          
+                            <li><a href="/product/#linux-microplatform">Linux microPlatform</a></li>
+                          
+                            <li><a href="/product/#zephyr-microplatform">Zephyr microPlatform</a></li>
+                          
+                            <li><a href="/product/#lifetime-support">Lifetime Support</a></li>
+                          
+                            <li><a href="/product/#hardware">Hardware</a></li>
+                          
+                            <li><a href="/product/#pricing">Pricing</a></li>
+                          
+                        </ul>
+                    
+                  </li>
+                  
+
+                    
+                        <li class="dropdown"><a href="/partners/">Partners</a>
+                    
+                  </li>
+                  
+
+                    
+                        <li class="dropdown"><a href="/blog/">Blog</a>
+                    
+                  </li>
+                  
+
+                    
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          
+                            <li><a href="/about/#company">Company</a></li>
+                          
+                            <li><a href="/about/#investors">Investors</a></li>
+                          
+                            <li><a href="/about/#team">Team</a></li>
+                          
+                            <li><a href="/about/#community">Community</a></li>
+                          
+                            <li><a href="/about/#careers">Careers</a></li>
+                          
+                        </ul>
+                    
+                  </li>
+                  
+
+                    
+                        <li>
+                            <p class="btn btn-template-main btn-template-main-gettingstarted">
+                                <a class="btn-template-main-gettingstarted" role="button" href="https://foundries.io">Get Started</a>
+                            </p>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Using docker-compose.yml with Portainer</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">By <a href="#">Alan Bennett</a> | May 8, 2018</p>
+
+                        <div id="post-content">
+                          
+
+<p>Portainer has been a great asset and we have started to rely on it for single-container image management.  Unfortunately, Portainer has been designed for 2 key use-cases.  single containers and &ldquo;stacks&rdquo; that are meant to be deployed onto Kubernetes or Swarm orchestrators.  For many of our demo&rsquo;s we want to manage a suite of containers and orchestrate their startup so we can manage large container suites like the 9+ container-based micro-services that comprise the Edge-X project.  For remote control we initially started with Ansible, and though it&rsquo;s great for a controlled container management system, it doesn&rsquo;t demo as well as Portainer does.  In this blog we&rsquo;ll describe about how we use Portainer and docker compose to deploy and coordinate multiple containers at Open Source foundries.</p>
+
+<!-- More -->
+
+<h2 id="overview">Overview</h2>
+
+<ol>
+<li>Docker-compose in Docker</li>
+<li>Storing docker-compose compose files</li>
+<li>Custom launch scripts for docker-compose files</li>
+<li>Portainer templates</li>
+<li>See it all work</li>
+</ol>
+
+<p>For an introduction on running portainer on the microplatform, check out the <a href="/blog/2018/05/08/20180508-portainer-container-management-on-linux-microplatform-/">How to run Portainer on the Linux microPlatform Blog</a>.</p>
+
+<h2 id="docker-compose-in-a-docker-container">Docker-compose in a docker container</h2>
+
+<p>I created a simple Docker container to run docker-compose.</p>
+
+<pre><code>FROM alpine
+RUN apk add --no-cache python3 py3-pip
+RUN pip3 install docker-compose
+</code></pre>
+
+<p>And to run docker-compose you simply bind-mount the docker lock file.</p>
+
+<pre><code>docker build -t simple-compose .
+docker run -v /var/lock/docker.sock:/var/lock/docker.sock simple-compose
+</code></pre>
+
+<p>Using this container we could now launch Portainer and launch docker-compose on a docker-compose file.  But how do we get the docker-compose file somewhere where it can be referenced by portainer.</p>
+
+<h2 id="where-do-we-store-compose-files">Where do we store compose files?</h2>
+
+<ol>
+<li>on the network (http?), using some fetch logic and use a environment variable to reference the URL?</li>
+<li>in git?, using git clone logic and use a environment variable to locate the git repo?</li>
+<li>in the container? 1 compose file and 1 container?</li>
+<li>put a suite of compose files in the container and just reference the one you want with an environment variable</li>
+</ol>
+
+<p>I&rsquo;m sure there could be a better option, but after a review, I opted to store all of my compose files into a single container and put some lose command scripts around them (more or less option 4).</p>
+
+<p>The container:</p>
+
+<pre><code>FROM alpine
+
+RUN apk add --no-cache python3-dev py3-pip docker git bash curl
+RUN pip3 install --upgrade pip docker-compose
+COPY compose-files/* /
+COPY compose-launcher/start.sh /
+RUN chmod +x /*.sh
+CMD /start.sh
+</code></pre>
+
+<p>And then by default I simply use the environment variable $TARGET to bring up the docker-compose services as daemons in the order they are written with no special logic.</p>
+
+<p>The start.sh script</p>
+
+<pre><code>#/bin/sh
+
+set -x
+
+docker-compose -H unix:///var/run/docker.sock -f /$TARGET up -d
+</code></pre>
+
+<p>So now I can describe a template process in Portainer, add an environment variable that points to a specific compose file that lives in our compose-launcher docker image(s).</p>
+
+<h2 id="docker-compose-custom-launch-scripts">Docker-compose custom launch scripts</h2>
+
+<p>Ah, but then there are challenges.  What about projects that mandate the order and timing that containers can come up in?  like Edge X.  There is promise in the future that the EdgeX micro-services will not be order dependent, but for now they still are, so we want to script the order the files are brought up.</p>
+
+<p>To do this, we add the use of Portainer&rsquo;s Container &ldquo;CMD&rdquo; override option to run a script that we can use to refine the deployment steps of a docker compose file.</p>
+
+<pre><code>set -x
+COMPOSE_FILE=/edgex.yml
+
+echo &quot;Starting mongo&quot;
+docker-compose -f $COMPOSE_FILE up -d mongo
+echo &quot;Starting consul&quot;
+docker-compose -f $COMPOSE_FILE up -d config-seed
+
+echo &quot;Sleeping before launching remaining services&quot;
+sleep 15
+
+echo &quot;Starting support-logging&quot;
+docker-compose -f $COMPOSE_FILE up -d logging
+echo &quot;Starting core-metadata&quot;
+docker-compose -f $COMPOSE_FILE up -d metadata
+echo &quot;Starting core-data&quot;
+docker-compose -f $COMPOSE_FILE up -d data
+echo &quot;Starting core-command&quot;
+docker-compose -f $COMPOSE_FILE up -d command
+echo &quot;Starting core-export-client&quot;
+docker-compose -f $COMPOSE_FILE up -d export-client
+echo &quot;Starting core-export-distro&quot;
+docker-compose -f $COMPOSE_FILE up -d export-distro
+
+echo &quot;Starting device-virtual&quot;
+docker-compose -f $COMPOSE_FILE up -d device-virtual
+</code></pre>
+
+<h2 id="the-portainer-template-samples">The Portainer template samples.</h2>
+
+<p>Here is a simple case.  just run all the containers described in a docker-compose file.</p>
+
+<pre><code>{
+    &quot;type&quot;: &quot;container&quot;,
+    &quot;title&quot;: &quot;The OSF Gateway&quot;,
+    &quot;description&quot;: &quot;A demonstration set of containers to create a BLE IoT gateway&quot;,
+    &quot;platform&quot;: &quot;linux&quot;,
+    &quot;restart_policy&quot;: &quot;no&quot;,
+    &quot;image&quot;: &quot;opensourcefoundries/compose-launcher:latest&quot;,
+    &quot;categories&quot;: [
+      &quot;IoT&quot;,
+      &quot;Gateway&quot;,
+      &quot;Demonstration&quot;
+    ],
+    &quot;env&quot;: [
+      {
+        &quot;name&quot;: &quot;TARGET&quot;,
+        &quot;description&quot;: &quot;Docker compose file to run&quot;,
+        &quot;set&quot;: &quot;simple-gateway.yml&quot;
+      },
+      {
+        &quot;name&quot;: &quot;ACCOUNT&quot;,
+        &quot;description&quot;: &quot;Docker hub account&quot;,
+        &quot;set&quot;: &quot;opensourcefoundries&quot;
+      }
+    ],
+    &quot;volumes&quot;: [
+      {
+        &quot;container&quot;: &quot;/var/run/docker.sock&quot;,
+        &quot;bind&quot;: &quot;/var/run/docker.sock&quot;
+      }
+    ]
+  },
+</code></pre>
+
+<p>Here we want to control the order that the docker compose files are being brought up and add a delay, so we create s simple bash script and execute it using the command override feature in Portainer.</p>
+
+<pre><code>{
+    &quot;type&quot;: &quot;container&quot;,
+    &quot;title&quot;: &quot;EdgeX pre-release&quot;,
+    &quot;description&quot;: &quot;EdgeX - x86 only - ALPHA quality, Work in progress upstream&quot;,
+    &quot;platform&quot;: &quot;linux&quot;,
+    &quot;image&quot;: &quot;opensourcefoundries/compose-launcher:latest&quot;,
+    &quot;restart_policy&quot;: &quot;no&quot;,
+    &quot;categories&quot;: [
+      &quot;IoT&quot;,
+      &quot;Gateway&quot;,
+      &quot;Demonstration&quot;
+    ],
+    &quot;command&quot;: &quot;/bin/bash -c /edgex-docker-launch.sh&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;container&quot;: &quot;/var/run/docker.sock&quot;,
+        &quot;bind&quot;: &quot;/var/run/docker.sock&quot;
+      }
+    ]
+  }
+</code></pre>
+
+<h2 id="deploying-multiple-containers-in-only-a-few-clicks">Deploying multiple containers in only a few clicks</h2>
+
+<p>As an initial implementation there are likely many ways we can improve this scenario, but it works for now and we get to use Portainer and docker-compose to orchestrate single-node demos all with only a couple of button clicks.</p>
+
+<p><img src="/uploads/2018/05/09/Selecttemplate.png" alt="" /></p>
+
+<p><img src="/uploads/2018/05/09/deployIoTGateway.png" alt="" /></p>
+
+<p><img src="/uploads/2018/05/09/Itsagateway.png" alt="" /></p>
+
+                        </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "osfoundries" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">Search</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="Search">
+                <input type="hidden" name="sitesearch" value="https://opensourcefoundries.com/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">Categories</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            <li><a href="https://opensourcefoundries.com/categories/blockchain">blockchain (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/bluetooth">bluetooth (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/conferences">conferences (3)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/corporate">corporate (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/docker">docker (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/embedded">embedded (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/fota">fota (4)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/iot">iot (2)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/linux">linux (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/lmp">lmp (2)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/lwm2m">lwm2m (2)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/mcuboot">mcuboot (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/microplatform">microplatform (22)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/minutes">minutes (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/newsletter">newsletter (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/quickstart">quickstart (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/radio">radio (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/threats">threats (1)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/updates">updates (17)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/zephyr-news">zephyr-news (3)</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/categories/zmp">zmp (1)</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+      <h3 class="panel-title">Tags</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            <li><a href="https://opensourcefoundries.com/tags/att"><i class="fa fa-tags"></i> att</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/ble"><i class="fa fa-tags"></i> ble</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/blockchain"><i class="fa fa-tags"></i> blockchain</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/bugs"><i class="fa fa-tags"></i> bugs</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/container"><i class="fa fa-tags"></i> container</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/containers"><i class="fa fa-tags"></i> containers</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/crypto"><i class="fa fa-tags"></i> crypto</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/cve"><i class="fa fa-tags"></i> cve</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/decentralized"><i class="fa fa-tags"></i> decentralized</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/docker"><i class="fa fa-tags"></i> docker</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/docker-compose"><i class="fa fa-tags"></i> docker-compose</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/general"><i class="fa fa-tags"></i> general</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/iot"><i class="fa fa-tags"></i> iot</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/k8s"><i class="fa fa-tags"></i> k8s</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/keys"><i class="fa fa-tags"></i> keys</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/kubernetes"><i class="fa fa-tags"></i> kubernetes</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/linux"><i class="fa fa-tags"></i> linux</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/lmp"><i class="fa fa-tags"></i> lmp</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/lte"><i class="fa fa-tags"></i> lte</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/lwm2m"><i class="fa fa-tags"></i> lwm2m</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/mcuboot"><i class="fa fa-tags"></i> mcuboot</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/microplatform"><i class="fa fa-tags"></i> microplatform</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/open-source"><i class="fa fa-tags"></i> open-source</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/ota"><i class="fa fa-tags"></i> ota</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/portainer"><i class="fa fa-tags"></i> portainer</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/radio"><i class="fa fa-tags"></i> radio</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/resin"><i class="fa fa-tags"></i> resin</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/security"><i class="fa fa-tags"></i> security</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/update"><i class="fa fa-tags"></i> update</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/zephyr"><i class="fa fa-tags"></i> zephyr</a>
+            </li>
+            
+            <li><a href="https://opensourcefoundries.com/tags/zmp"><i class="fa fa-tags"></i> zmp</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <script src="js/cookie-message.js"></script>
+
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>About us</h4>
+
+            We provide best-in-class software platforms with lifetime support for
+    building and maintaining connected products, ranging from the smallest sensors to
+    smart and edge devices. Our core products are Zephyr RTOS and Linux based microPlatforms,
+    which provide product quality templates to build secure, OTA updatable, connected devices
+    for industrial and consumer markets.
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+              
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>Contact</h4>
+
+            <strong>Open Source Foundries Ltd.</strong>
+        <br>Cambridge, UK
+        <br><br><strong>Open Source Foundries Inc.</strong>
+        <br>Boulder CO, USA
+      </p>
+      
+
+
+            <a class="btn btn-template-main" role="button" href="/contact">Contact Us</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright 2018 Open Source Foundries Ltd. All rights reserved.</p>
+            
+            <p class="pull-right">
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-111281311-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+
+<script src="https://opensourcefoundries.com/js/front.js"></script>
+
+
+<script src="https://opensourcefoundries.com/js/owl.carousel.min.js"></script>
+
+
+  </body>
+</html>

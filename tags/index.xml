@@ -49,6 +49,15 @@
     </item>
     
     <item>
+      <title>Container</title>
+      <link>https://opensourcefoundries.com/tags/container/</link>
+      <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/tags/container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Containers</title>
       <link>https://opensourcefoundries.com/tags/containers/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
@@ -87,9 +96,18 @@
     <item>
       <title>Docker</title>
       <link>https://opensourcefoundries.com/tags/docker/</link>
-      <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker Compose</title>
+      <link>https://opensourcefoundries.com/tags/docker-compose/</link>
+      <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/tags/docker-compose/</guid>
       <description></description>
     </item>
     
@@ -207,6 +225,15 @@
       <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.com/tags/ota/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Portainer</title>
+      <link>https://opensourcefoundries.com/tags/portainer/</link>
+      <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/tags/portainer/</guid>
       <description></description>
     </item>
     
