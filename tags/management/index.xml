@@ -7,17 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 08 May 2018 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 May 2018 06:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/tags/management/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Portainer Container Management on Linux microPlatform </title>
-      <link>https://opensourcefoundries.com/blog/2018/05/08/20180508-portainer-container-management-on-linux-microplatform-/</link>
-      <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
+      <link>https://opensourcefoundries.com/blog/2018/05/07/20180508-portainer-container-management-on-linux-microplatform-/</link>
+      <pubDate>Mon, 07 May 2018 06:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/05/08/20180508-portainer-container-management-on-linux-microplatform-/</guid>
+      <guid>https://opensourcefoundries.com/blog/2018/05/07/20180508-portainer-container-management-on-linux-microplatform-/</guid>
       <description>&lt;p&gt;At Open Source Foundries, we are constantly looking across the ecosystem  for the best projects to complement the microPlatforms.  One such project is &lt;a href=&#34;https://portainer.io&#34; title=&#34;Portainer&#34;&gt;Portainer&lt;/a&gt;. &amp;ldquo;Portainer is an open-source lightweight management UI which allows you to easily manage your Docker hosts or swarm clusters.&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
