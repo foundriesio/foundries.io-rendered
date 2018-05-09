@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blogs</title>
+  <title>Portainer Container Management on Linux microPlatform </title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://opensourcefoundries.com/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="Blogs" />
+  <meta property="og:title" content="Portainer Container Management on Linux microPlatform " />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/blog//" />
+  <meta property="og:url" content="/blog/2018/05/08/20180508-portainer-container-management-on-linux-microplatform-//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.com/">
-                    <img src="https://opensourcefoundries.com/img/logo.png" alt="Blogs logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="Blogs logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Blogs - go to homepage</span>
+                    <img src="https://opensourcefoundries.com/img/logo.png" alt="Portainer Container Management on Linux microPlatform  logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="Portainer Container Management on Linux microPlatform  logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Portainer Container Management on Linux microPlatform  - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -186,7 +186,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Blogs</h1>
+                <h1>Portainer Container Management on Linux microPlatform </h1>
             </div>
         </div>
     </div>
@@ -195,286 +195,75 @@
 
         <div id="content">
             <div class="container">
+
                 <div class="row">
+
                     
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-9" id="blog-post">
 
+                        <p class="text-muted text-uppercase mb-small text-right">May 8, 2018</p>
+
+                        <div id="post-content">
+                          <p>At Open Source Foundries, we are constantly looking across the ecosystem  for the best projects to complement the microPlatforms.  One such project is <a href="https://portainer.io" title="Portainer">Portainer</a>. &ldquo;Portainer is an open-source lightweight management UI which allows you to easily manage your Docker hosts or swarm clusters.&rdquo;</p>
+
+<p></p>
+
+<p>You can easily try out portainer and some of our experimental containers by ssh&rsquo;ing into a system running the Linux microPlatform and running</p>
+
+<pre><code>docker run -d -p 9000:9000 --restart always --name portainer  -v $PWD/data:/data -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --logo https://foundries.io/static/img/logo.png --templates https://raw.githubusercontent.com/OpenSourceFoundries/ez/master/templates.json
+</code></pre>
+
+<p><img src="/uploads/2018/05/08/runportainer.png" alt="" title="Run portainer on LmP Device" /></p>
+
+<p>After you get the service running, you can access the portainer UI.  In this example, the IP of my LmP device is 192.168.1.80, so I open a browser and put the following address in the go box: <a href="http://192.168.1.80:9000">http://192.168.1.80:9000</a></p>
+
+<p>First step is to create an administrative username and password.</p>
+
+<p><img src="/uploads/2018/05/08/create-account.png" alt="" /></p>
+
+<p>Next, Connect to the Local device:</p>
+
+<p><img src="/uploads/2018/05/08/connect-local.png" alt="" /></p>
+
+<p>After Local is selected, click &ldquo;Connect&rdquo;</p>
+
+<p><img src="/uploads/2018/05/08/connect-locally.png" alt="" /></p>
+
+<p>Now you have access to the Portainer UI.  From here you can create, refresh, stop, start re-create, inspect all of the containers running on your device.</p>
+
+<p><img src="/uploads/2018/05/08/front-page.png" alt="" /></p>
+
+<p>You can also try out some sample &lsquo;experimental&rsquo; apps that we are compiling to demonstrate the ease of using containers on the Linux microPlatform.  Though these efforts come out of our forge / (our test Labs) efforts, we use them for demonstrations and other setups</p>
+
+<p><img src="/uploads/2018/05/08/experimental-apps.png" alt="" /></p>
+                        </div>
                         
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/">
-                                          
-                                          <img src="https://opensourcefoundries.com/img/banners/update.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/">microPlatform update 0.4</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          in <a href="https://opensourcefoundries.com/categories/updates">updates</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/"><i class="fa fa-calendar-o"></i> December 13, 2017</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro"><h1 id="summary">Summary</h1>
-
-<h2 id="zephyr-microplatform-changes-for-0-4">Zephyr microPlatform changes for 0.4</h2>
-
-<p>This is the final update for the Zephyr v1.10 development cycle.</p>
-
-<p>The next update will be non-fast-forward update to the Zephyr
-repository, to begin development based on the v1.11 master branch.</p>
-
-<h2 id="linux-microplatform-changes-for-0-4">Linux microPlatform changes for 0.4</h2>
-
-<p>No changes have gone into the LMP since 0.3.</p>
-
-<p></p></p>
-                                    <p class="read-more"><a href="https://opensourcefoundries.com/blog/2017/12/13/blog-post-update-0.4/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/">
-                                          
-                                          <img src="https://opensourcefoundries.com/img/banners/update.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/">microPlatform update 0.3</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          in <a href="https://opensourcefoundries.com/categories/updates">updates</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/"><i class="fa fa-calendar-o"></i> December 7, 2017</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro"><h1 id="summary">Summary</h1>
-
-<h2 id="zephyr-microplatform-changes-for-0-3">Zephyr microPlatform changes for 0.3</h2>
-
-<p>This is the first Zephyr microPlatform update which uses the new CMake
-build system, which has replaced the use of Kbuild.</p>
-
-<p>As described in the summary from <a href="https://foundries.io/mp/zmp/0.2">https://foundries.io/mp/zmp/0.2</a>, all
-users will need to update any out of tree application build systems.</p>
-
-<h2 id="linux-microplatform-changes-for-0-3">Linux microPlatform changes for 0.3</h2>
-
-<p>Linux microPlatform add supports for generic 64bit Intel targets.
-Validated with Minnowboard Turbot and NUC variants.</p>
-
-<p>Layer updates for meta-osf, and meta-intel.</p>
-
-<p></p></p>
-                                    <p class="read-more"><a href="https://opensourcefoundries.com/blog/2017/12/07/blog-post-update-0.3/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/">
-                                          
-                                          <img src="https://opensourcefoundries.com/img/banners/update.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/">microPlatform update 0.2</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          in <a href="https://opensourcefoundries.com/categories/updates">updates</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/"><i class="fa fa-calendar-o"></i> November 16, 2017</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro"><h1 id="summary">Summary</h1>
-
-<h2 id="zephyr-microplatform-changes-for-0-2">Zephyr microPlatform changes for 0.2</h2>
-
-<p>&ldquo;This is the final release which uses the Linux kernel Kbuild
-build system. The next release will have a CMake-based build
-system. <strong>All out of tree applications will need updates</strong> to
-their build systems to move to CMake. Refer to the Zephyr
-Application Development Primer for details:</p>
-
-<p><a href="http://docs.zephyrproject.org/application/application.html&quot;">http://docs.zephyrproject.org/application/application.html&quot;</a></p>
-
-<h2 id="linux-microplatform-changes-for-0-2">Linux microPlatform changes for 0.2</h2>
-
-<p>Linux microPlatform build system improvements to easy the platform build process
-in docker containers.</p>
-
-<p>Layer updates for meta-osf, meta-freescale-3rdparty meta-qcom, meta-raspberrypi
-and openembedded-core and meta-linaro.</p>
-
-<p></p></p>
-                                    <p class="read-more"><a href="https://opensourcefoundries.com/blog/2017/11/16/blog-post-update-0.2/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://opensourcefoundries.com/blog/2017/11/08/blog-post-update-0.1/">
-                                          
-                                          <img src="https://opensourcefoundries.com/img/banners/update.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://opensourcefoundries.com/blog/2017/11/08/blog-post-update-0.1/">microPlatform update 0.1</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          in <a href="https://opensourcefoundries.com/categories/updates">updates</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://opensourcefoundries.com/blog/2017/11/08/blog-post-update-0.1/"><i class="fa fa-calendar-o"></i> November 8, 2017</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro"><h1 id="summary">Summary</h1>
-
-<h2 id="zephyr-microplatform-changes-for-0-1">Zephyr microPlatform changes for 0.1</h2>
-
-<p>This release includes a Zephyr tree from the the 1.10 development
-cycle. This tree does not yet include the conversion of the build
-system to CMake.</p>
-
-<p>It includes an MCUBoot tree based on work done in the master
-branch following the v1.0.0 tag, which includes some work making it
-easier to port new boards to the bootloader than it was in that
-release.</p>
-
-<p>Finally, several sample applications are included, with numerous
-improvements from publicly released versions.</p>
-
-<h2 id="linux-microplatform-changes-for-0-1">Linux microPlatform changes for 0.1</h2>
-
-<p>This release includes a major OpenEmbedded / Yocto update, which is now based
-on the latest Rocko (2.4) baseline (which is in the process to be released).</p>
-
-<p>Go was updated to 1.9 and Docker was updated to the CE 17.06 release.</p>
-
-<p></p></p>
-                                    <p class="read-more"><a href="https://opensourcefoundries.com/blog/2017/11/08/blog-post-update-0.1/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://opensourcefoundries.com/blog/2017/10/13/blog-post-update-17.10.1/">
-                                          
-                                          <img src="https://opensourcefoundries.com/img/banners/update.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://opensourcefoundries.com/blog/2017/10/13/blog-post-update-17.10.1/">microPlatform update 17.10.1</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          in <a href="https://opensourcefoundries.com/categories/updates">updates</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://opensourcefoundries.com/blog/2017/10/13/blog-post-update-17.10.1/"><i class="fa fa-calendar-o"></i> October 13, 2017</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro"><h1 id="summary">Summary</h1>
-
-<h2 id="zephyr-microplatform-changes-for-17-10-1">Zephyr microPlatform changes for 17.10.1</h2>
-
-<p>This release includes MCUBoot version 1.0.0, and a Zephyr tree that
-is based on 1.10. It also includes a new IoT Foundry application.</p>
-
-<p>The Zephyr tree includes many new features and bug fixes. Notable
-improvements for the Zephyr microPlatform include LWM2M protocol
-support, mainline support for 96Boards Carbon networking, DTLS
-support for the net_app library, and various Bluetooth and networking
-fixes.</p>
-
-<p>A new IoT Foundry application was added for a demonstration system
-providing firmware update and device communication via LWM2M.</p>
-
-<h2 id="linux-microplatform-changes-for-17-10-1">Linux microPlatform changes for 17.10.1</h2>
-
-<p>This is the first Linux microPlatform release created by Open Source Foundries.</p>
-
-<p></p></p>
-                                    <p class="read-more"><a href="https://opensourcefoundries.com/blog/2017/10/13/blog-post-update-17.10.1/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "osfoundries" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
                         
 
-                        <ul class="pager">
-                            
-                            <li class="previous"><a href="/blog/page/3/">&larr; Newer</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
-                            
-                        </ul>
                     </div>
                     
 
@@ -706,6 +495,7 @@ providing firmware update and device communication via LWM2M.</p>
 
                 </div>
                 
+
             </div>
             
         </div>
