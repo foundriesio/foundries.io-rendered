@@ -17,7 +17,7 @@
       <pubDate>Wed, 09 May 2018 19:48:23 +0000</pubDate>
       
       <guid>https://opensourcefoundries.com/blog/2018/05/09/google-assistant-on-the-lmp/</guid>
-      <description>&lt;p&gt;In this blog, we&amp;rsquo;ll describe how we create a container to run Google&amp;rsquo;s Assistant on a simple Raspberry PI with a speaker and microphone.  Once you gather all the information necessary, this sample creates a simple, portable and easy to reproduce Google Assistant appliance out of your Raspberry PI.&lt;/p&gt;
+      <description>&lt;p&gt;In this blog, we&amp;rsquo;ll describe how we run the Google Assistant SDK on a simple Raspberry PI with an external speaker and microphone.  After you get things configured and gather key pieces of information you&amp;rsquo;ll have a simple, portable and easy to reproduce Google Assistant appliance.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
