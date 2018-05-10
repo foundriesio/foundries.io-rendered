@@ -319,11 +319,11 @@ Subdevice #0: subdevice #0</li>
 <p>$ docker run -it &ndash;privileged -e MIC_ADDR=&ldquo;hw:2,0&rdquo; -e SPEAKER_ADDR=&ldquo;hw:2,0&rdquo; opensourcefoundries/ok-google alsamixer</p></li>
 </ol>
 
-<p><img src="/uploads/2018/05/10/card.png" alt="" /></p>
+<p><img src="/uploads/2018/05/09/card.png" alt="" /></p>
 
-<p><img src="/uploads/2018/05/10/sp-vol.png" alt="" /></p>
+<p><img src="/uploads/2018/05/09/sp-vol.png" alt="" /></p>
 
-<p><img src="/uploads/2018/05/10/mic-vol.png" alt="" /></p>
+<p><img src="/uploads/2018/05/09/mic-vol.png" alt="" /></p>
 
 <p>After you adjust the volume, you can retest using speaker-test command from step 1 above.</p>
 
@@ -418,17 +418,17 @@ google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-proto
 
 <p>Note three values from your credentials file</p>
 
-<pre><code>cat /root/.config/google-oauthlib-tool/credentials.json 
+<pre><code>cat /root/.config/google-oauthlib-tool/credentials.json
 
 {
-  &quot;client_secret&quot;: &quot;kF4ZOjX&quot;,
+  &quot;client_secret&quot;: &quot;kF4ZLu-X&quot;,
   &quot;scopes&quot;: [
     &quot;https://www.googleapis.com/auth/assistant-sdk-prototype&quot;,
     &quot;https://www.googleapis.com/auth/gcm&quot;
   ],
   &quot;token_uri&quot;: &quot;https://accounts.google.com/o/oauth2/token&quot;,
-  &quot;client_id&quot;: &quot;7520-5883.apps.googleusercontent.com&quot;,
-  &quot;refresh_token&quot;: &quot;1/Ux2UDvinAjHYb6jbA&quot;
+  &quot;client_id&quot;: &quot;7508-5d3.apps.googleusercontent.com&quot;,
+  &quot;refresh_token&quot;: &quot;1/Ux0k2DAjHYb6jbA&quot;
 }
 </code></pre>
 
@@ -447,9 +447,9 @@ setup authorized credentials file
 setup alsa configuration
 + exec bash -c 'googlesamples-assistant-hotword --project_id ${PROJECT_ID}  --device_model_id ${MODEL_ID}'
 device_model_id: voice-kit-01-number2-flc5yj
-device_id: FB5D19145D253C8575B061402DF93723
+device_id: FB5DB23
 
-https://embeddedassistant.googleapis.com/v1alpha2/projects/voice-kit-01/devices/FB5D19145D253C8575B061402DF93723 404
+https://embeddedassistant.googleapis.com/v1alpha2/projects/voice-kit-01/devices/FB5DB23 404
 Registering....
 Device registered.
 ON_MUTED_CHANGED:
@@ -471,23 +471,23 @@ ON_CONVERSATION_TURN_FINISHED:
 
 <p>One you know the necessary variables, you can use our Portainer templates to launch the container.</p>
 
-<p>[How to run Portainer on the Linux microPlatform Blog](/blog/2018/05/07/20180508-portainer-container-management-on-linux-microplatform-/)</p>
+<p><a href="/blog/2018/05/07/20180508-portainer-container-management-on-linux-microplatform-/">How to run Portainer on the Linux microPlatform Blog</a></p>
 
 <h4 id="open-the-app-templates-and-select-ok-google">Open the App Templates and select <strong>OK Google</strong></h4>
 
-<p><img src="/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.25.43 PM.png" alt="" /></p>
+<p><img src="/uploads/2018/05/09/templates.png" alt="" /></p>
 
 <h4 id="fill-in-all-the-details-for-the-service">Fill in all the details for the service</h4>
 
-<p><img src="/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.29.02 PM.png" alt="" /></p>
+<p><img src="/uploads/2018/05/09/details.png" alt="" /></p>
 
 <h4 id="the-container-should-be-running">The container should be running.</h4>
 
-<p><img src="/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.29.12 PM.png" alt="" /></p>
+<p><img src="/uploads/2018/05/09/running.png" alt="" /></p>
 
 <h4 id="check-the-logs">Check the logs</h4>
 
-<p><img src="/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.30.06 PM.png" alt="" /></p>
+<p><img src="/uploads/2018/05/09/logs.png" alt="" /></p>
 
                         </div>
                         
