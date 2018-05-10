@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://opensourcefoundries.com/blog/2018/05/09/google-assistant-on-the-lmp/</loc>
+    <lastmod>2018-05-09T19:48:23+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.com/blog/2018/05/08/using-docker-compose.yml-with-portainer/</loc>
     <lastmod>2018-05-08T06:00:00+00:00</lastmod>
   </url>
@@ -191,6 +196,18 @@
   </url>
   
   <url>
+    <loc>https://opensourcefoundries.com/tags/alsa/</loc>
+    <lastmod>2018-05-09T19:48:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.com/tags/assistant/</loc>
+    <lastmod>2018-05-09T19:48:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.com/tags/att/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -216,7 +233,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/blog/</loc>
-    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
+    <lastmod>2018-05-09T19:48:23+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -321,6 +338,12 @@
   </url>
   
   <url>
+    <loc>https://opensourcefoundries.com/tags/google/</loc>
+    <lastmod>2018-05-09T19:48:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.com/tags/iot/</loc>
     <lastmod>2018-02-23T13:07:31+02:00</lastmod>
     <priority>0</priority>
@@ -370,7 +393,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/categories/lmp/</loc>
-    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
+    <lastmod>2018-05-09T19:48:23+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -450,7 +473,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/</loc>
-    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
+    <lastmod>2018-05-09T19:48:23+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -498,7 +521,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-09T19:48:23+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alsa on Open Source Foundries, Ltd.</title>
+    <link>https://opensourcefoundries.com/tags/alsa/</link>
+    <description>Recent content in Alsa on Open Source Foundries, Ltd.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright 2018 Open Source Foundries Ltd. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 09 May 2018 19:48:23 +0000</lastBuildDate>
+    
+	<atom:link href="https://opensourcefoundries.com/tags/alsa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google Assistant on the LmP</title>
+      <link>https://opensourcefoundries.com/blog/2018/05/09/google-assistant-on-the-lmp/</link>
+      <pubDate>Wed, 09 May 2018 19:48:23 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/05/09/google-assistant-on-the-lmp/</guid>
+      <description>In this blog, we&amp;rsquo;ll describe how we create a container to run Google&amp;rsquo;s Assistant on a simple Raspberry PI with a speaker and microphone. Once you gather all the information necessary, this sample creates a simple, portable and easy to reproduce Google Assistant appliance out of your Raspberry PI.
+Hardware needed  Raspberry PI 3b (others should work, but for this demo we&amp;rsquo;ll use the 3b)  All the peripherals (5V micro-usb power, 8GB microSD card)  External speaker and Microphone  $85 - JABRA 510 USB/Bluetooth speaker phone (speaker &amp;amp; Mic) $12 - USHonk USB Speaker (speaker only) Headphones (speaker only) $5 - Kinobo USB mic (Mic only)   Load the latest Linux microPlatform Get all the latest software by using the latest microPlatform release.</description>
+    </item>
+    
+  </channel>
+</rss>
