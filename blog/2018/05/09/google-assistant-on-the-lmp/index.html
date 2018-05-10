@@ -255,7 +255,7 @@
 <li>Load and run a container that contains the ALSA subsystem (not this also happens to be the container we&rsquo;ll use to run the Google Assistant, but for now we are going to use it only to find the HW device IDs)
 
 <ol>
-<li>Find the microphone device (Note: <strong>Card: 2</strong> and <strong>Device: 0</strong>)</li>
+<li>Find the microphone device (Note: <strong>Card: 2</strong> and <strong>Device: 0</strong>) (unfortunately, the card ID may may change over reboots)</li>
 </ol></li>
 </ol>
 
@@ -270,7 +270,7 @@ Subdevice #0: subdevice #0
 </code></pre>
 
 <ol>
-<li>Find the speaker device Jabra: <strong>Card: 2</strong> and <strong>Device: 0</strong> again</li>
+<li>Find the speaker device (Note: <strong>Card: 2</strong> and <strong>Device: 0</strong>) (unfortunately, the card ID may may change over reboots)</li>
 </ol>
 
 <pre><code>docker run -it --privileged opensourcefoundries/ok-google aplay -l
@@ -298,7 +298,7 @@ card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
   ÅSubdevice #0: subdevice #0
 </code></pre>
 
-<p>Now we know that the MIC is <strong>2,0</strong> and the Speaker is <strong>2,0</strong> we will be able to pass this information into the container for further adjustments.</p>
+<p>Now we know that the MIC is <strong>2,0</strong> and the Speaker is <strong>2,0</strong> we will be able to pass this information into the container for further adjustments.  (Note: the card ID may may change over reboots)</p>
 
 <ol>
 <li>Test the speaker volume
@@ -317,7 +317,9 @@ card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
 <li>Adjust the speaker volume, you can also adjust the MIC gain using the alsamixer application</li>
 </ol>
 
-<pre><code>docker run -it --privileged -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google alsamixer --card=2 --view=all
+<pre><code>docker run -it --privileged -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google alsamixer
+  OR
+docker run -it --privileged -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google alsamixer --card=2 --view=all
 </code></pre>
 
 <h4 id="select-the-right-device-aka-sound-card">Select the right device (aka Sound Card)</h4>
