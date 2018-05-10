@@ -209,6 +209,28 @@
 
 <p></p>
 
+<p>Running the Google SDK on the LmP is extremely simple, just run the following docker command and you&rsquo;ll have the demo running in a matter of minutes.</p>
+
+<pre><code>docker run -it --device /dev/snd \
+   -e MIC_ADDR=$MIC_ADDR -e SPEAKER_ADDR=$SPEAKER_ADDR -e PROJECT_ID=$PROJECT_ID \
+   -e MODEL_ID=$MODEL_ID -e CLIENT_SECRET=$CLIENT_SECRET -e CLIENT_ID=$CLIENT_ID \
+   -e REFRESH_TOKEN=$REFRESH_TOKEN \
+   --name ok-google-cli-demo opensourcefoundries/ok-google
+</code></pre>
+
+<p>Ok, maybe the challenge isn&rsquo;t running the sample, but figuring out the hardware addresses and Google Cloud variables necessary.</p>
+
+<pre><code>MIC_ADDR=&quot;hw:2,0&quot;
+SPEAKER_ADDR=&quot;hw:2,0&quot;
+PROJECT_ID=voice-kit-01
+MODEL_ID=voice-kit-01-number2-flc5yj
+CLIENT_ID=7508-5d3.apps.googleusercontent.com
+CLIENT_SECRET=kF4ZLu-X
+REFRESH_TOKEN=1/Ux0k2DAjHYb6jbA
+</code></pre>
+
+<p>In the rest of this blog, we&rsquo;ll show you where to collect all of these values so that running the Google Assistant will be easy, repeatable and portable.</p>
+
 <h2 id="hardware-needed">Hardware needed</h2>
 
 <ol>
