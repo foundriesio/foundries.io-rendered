@@ -223,6 +223,10 @@
 
 <ol>
 <li>$85 - <a href="https://www.amazon.com/Jabra-Wireless-Bluetooth-Softphone-Packaging/dp/B00AQUO5RI">JABRA 510 USB/Bluetooth speaker phone</a> (speaker &amp; Mic)</li>
+</ol></li>
+<li>Other Hardware tested
+
+<ol>
 <li>$12 - <a href="https://www.amazon.com/USHONK-Speaker-Computer-Multimedia-Notebook/dp/B075M7FHM1">USHonk USB Speaker</a> (speaker only)</li>
 <li>Headphones (speaker only)</li>
 <li>$5 - <a href="https://www.amazon.com/Kinobo-Microphone-Desktop-Recognition-Software/dp/B00IR8R7WQ">Kinobo USB mic</a> (Mic only)</li>
@@ -253,7 +257,7 @@
 <li>Load and run a container that contains the ALSA subsystem (not this also happens to be the container we&rsquo;ll use to run the Google Assistant, but for now we are going to use it only to find the HW device IDs)
 
 <ol>
-<li>Find the microphone device (Note: <strong>Card 2</strong> and <strong>Device 0</strong>)</li>
+<li>Find the microphone device (Note: <strong>Card: 2</strong> and <strong>Device: 0</strong>)</li>
 </ol></li>
 </ol>
 
@@ -268,7 +272,7 @@ Subdevice #0: subdevice #0
 </code></pre>
 
 <ol>
-<li>Find the speaker device Jabra: <strong>Card 2:</strong> and <strong>Device: 0</strong> again</li>
+<li>Find the speaker device Jabra: <strong>Card: 2</strong> and <strong>Device: 0</strong> again</li>
 </ol>
 
 <pre><code>docker run -it --privileged opensourcefoundries/ok-google aplay -l
