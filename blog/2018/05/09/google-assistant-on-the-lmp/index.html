@@ -259,7 +259,7 @@
 </ol></li>
 </ol>
 
-<pre><code>docker run -it --privileged opensourcefoundries/ok-google arecord -l
+<pre><code>docker run -it --device /dev/snd opensourcefoundries/ok-google arecord -l
 setup authorized credentials file
 setup alsa configuration
 + exec arecord -l
@@ -273,7 +273,7 @@ Subdevice #0: subdevice #0
 <li>Find the speaker device (Note: <strong>Card: 2</strong> and <strong>Device: 0</strong>) (unfortunately, the card ID may may change over reboots)</li>
 </ol>
 
-<pre><code>docker run -it --privileged opensourcefoundries/ok-google aplay -l
+<pre><code>docker run -it --device /dev/snd opensourcefoundries/ok-google aplay -l
 setup authorized credentials file
 setup alsa configuration
 + exec aplay -l
@@ -309,7 +309,7 @@ card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
 </ol></li>
 </ol>
 
-<pre><code>docker run -it --privileged -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google speaker-test -t wav
+<pre><code>docker run -it --device /dev/snd -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google speaker-test -t wav
 </code></pre>
 
 <ol>
@@ -317,9 +317,9 @@ card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
 <li>Adjust the speaker volume, you can also adjust the MIC gain using the alsamixer application</li>
 </ol>
 
-<pre><code>docker run -it --privileged -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google alsamixer
+<pre><code>docker run -it --device /dev/snd -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google alsamixer
   OR
-docker run -it --privileged -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google alsamixer --card=2 --view=all
+docker run -it --device /dev/snd -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google alsamixer --card=2 --view=all
 </code></pre>
 
 <h4 id="select-the-right-device-aka-sound-card">Select the right device (aka Sound Card)</h4>
@@ -414,7 +414,7 @@ See the device model JSON <a href="https://developers.google.com/assistant/sdk/
 
 <p>In order to connect your device to the Google services you will first need to generate the appropriate credentials.  We&rsquo;ll do this in a more interactive version using the bash shell and mapping in our credentials.json file from above.</p>
 
-<pre><code>docker run -it --privileged -v ${PWD}/credentials.json:/credentials.json opensourcefoundries/ok-google bash
+<pre><code>docker run -it --device /dev/snd -v ${PWD}/credentials.json:/credentials.json opensourcefoundries/ok-google bash
 google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype \
           --scope https://www.googleapis.com/auth/gcm \
           --save --headless --client-secrets /credentials.json
@@ -448,15 +448,18 @@ google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-proto
 
 <p>Now we can exit the container and re-launch it to run the ok-google sample and pass in all of the variables we have discovered.</p>
 
-<pre><code>docker run -it --privileged \
-   -e MIC_ADDR=&quot;hw:2,0&quot; \
-   -e SPEAKER_ADDR=&quot;hw:2,0&quot; \
-   -e PROJECT_ID=voice-kit-01 \
-   -e MODEL_ID=voice-kit-01-number2-flc5yj \
-   -e CLIENT_SECRET=kF4ZLu-X \
-   -e CLIENT_ID=7508-5d3.apps.googleusercontent.com \
-   -e REFRESH_TOKEN=&quot;1/Ux0k2DAjHYb6jbA&quot; \
-   opensourcefoundries/ok-google
+<pre><code>MIC_ADDR=&quot;hw:2,0&quot;
+SPEAKER_ADDR=&quot;hw:2,0&quot;
+PROJECT_ID=voice-kit-01
+MODEL_ID=voice-kit-01-number2-flc5yj
+CLIENT_ID=7508-5d3.apps.googleusercontent.com
+CLIENT_SECRET=kF4ZLu-X
+REFRESH_TOKEN=1/Ux0k2DAjHYb6jbA
+docker run -it --device /dev/snd \
+   -e MIC_ADDR=$MIC_ADDR -e SPEAKER_ADDR=$SPEAKER_ADDR -e PROJECT_ID=$PROJECT_ID \
+   -e MODEL_ID=$MODEL_ID -e CLIENT_SECRET=$CLIENT_SECRET -e CLIENT_ID=$CLIENT_ID \
+   -e REFRESH_TOKEN=$REFRESH_TOKEN \
+   --name ok-google-cli-demo opensourcefoundries/ok-google
 setup authorized credentials file
 setup alsa configuration
 + exec bash -c 'googlesamples-assistant-hotword --project_id ${PROJECT_ID}  --device_model_id ${MODEL_ID}'
