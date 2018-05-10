@@ -205,14 +205,14 @@
                         <p class="text-muted text-uppercase mb-small text-right">By <a href="#">Alan Bennett</a> | May 9, 2018</p>
 
                         <div id="post-content">
-                          <p>In this blog, we&rsquo;ll describe how we run the Google Assistant SDK on a simple Raspberry PI with an external speaker and microphone.  After you get things configured and gather key pieces of information you&rsquo;ll have a simple, portable and easy to reproduce Google Assistant appliance.</p>
+                          <p>In this blog, we&rsquo;ll describe how we run the Google Assistant SDK on a simple Raspberry Pi with an external speaker and microphone.  After you get things configured and gather key pieces of information you&rsquo;ll have a simple, portable and easy to reproduce Google Assistant appliance.</p>
 
 <p></p>
 
 <h2 id="hardware-needed">Hardware needed</h2>
 
 <ol>
-<li>Raspberry PI 3b (others lmp devices will work, but for this demo we&rsquo;ll use the 3b)
+<li>Raspberry Pi 3b (others LmP devices will work, but for this demo we&rsquo;ll use the 3b)
 
 <ol>
 <li>All the peripherals (Ethernet cable, 5V micro-usb power, 8GB microSD card)</li>
@@ -235,11 +235,11 @@
 
 <p>Get all the latest software by using the latest microPlatform release. Sign up for a free trial to the subscription @ <a href="https://foundries.io" title="https://foundries.io">https://foundries.io</a> and download the latest artifacts @ <a href="https://foundries.io/mp/lmp/latest/artifacts/" title="https://foundries.io/mp/lmp/latest/artifacts/">https://foundries.io/mp/lmp/latest/artifacts/</a>.</p>
 
-<p>Download a LmP pre-built binary for your Raspberry PI 3b, write it to a microSD card (using <a href="https://etcher.io/">Resin&rsquo;s Etcher.io project</a>) or decompress and write it to the flash device using the dd command.</p>
+<p>Download a LmP pre-built binary for your Raspberry Pi 3b, write it to a microSD card (using <a href="https://etcher.io/">Resin&rsquo;s Etcher.io project</a>) or decompress and write it to the flash device using the dd command.</p>
 
-<p>If you are unfamiliar with the Linux microPlatform, more detailed instructions on loading the Linux microPlatform can be found at <a href="https://foundries.io/docs/latest/tutorial/installation-linux.html">Documentation on how to install the Linux microPlatform</a></p>
+<p>If you are unfamiliar with the Linux microPlatform, more detailed instructions on using the Linux microPlatform can be found at <a href="https://foundries.io/docs/latest/tutorial/installation-linux.html">Documentation on how to install the Linux microPlatform</a></p>
 
-<h3 id="1-connect-to-your-raspberry-pi-using-ssh">1. Connect to your raspberry PI using SSH</h3>
+<h3 id="1-connect-to-your-raspberry-pi-using-ssh">1. Connect to your Raspberry Pi using SSH</h3>
 
 <pre><code>ssh osf@raspberrypi3-64.local
 </code></pre>
@@ -251,7 +251,7 @@
 <p>In order to route the audio to the right device we will need to find the hardware addresses (and possibly adjust the volume a bit).</p>
 
 <ol>
-<li>Plug your device(s) into your Raspberry PI 3b (we will be using the Jabra Device)</li>
+<li>Plug your device(s) into your Raspberry Pi (we will be using the Jabra Device)</li>
 <li>Load and run a container that contains the ALSA subsystem (not this also happens to be the container we&rsquo;ll use to run the Google Assistant, but for now we are going to use it only to find the HW device IDs)
 
 <ol>
