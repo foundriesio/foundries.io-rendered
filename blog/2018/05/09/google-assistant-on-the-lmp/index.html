@@ -250,84 +250,89 @@
 
 <ol>
 <li>Plug your device(s) into your Raspberry PI 3b (we will be using the Jabra Device)</li>
-
-<li><p>Load and run a container that contains the ALSA subsystem (not this also happens to be the container we&rsquo;ll use to run the Google Assistant, but for now we are going to use it only to find the HW device IDs)</p>
+<li>Load and run a container that contains the ALSA subsystem (not this also happens to be the container we&rsquo;ll use to run the Google Assistant, but for now we are going to use it only to find the HW device IDs)
 
 <ol>
-<li><p>Find the microphone device (Note: <strong>Card 2</strong> and <strong>Device 0</strong>)</p>
-
-<p>$ docker run -it &ndash;privileged opensourcefoundries/ok-google arecord -l
-  setup authorized credentials file
-  setup alsa configuration</p>
-
-<ul>
-<li>exec arecord -l
-**** List of CAPTURE Hardware Devices ****
-card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
-Subdevices: <sup>1</sup>&frasl;<sub>1</sub>
-Subdevice #0: subdevice #0</li>
-</ul></li>
-
-<li><p>Find the speaker device Jabra: <strong>Card 2:</strong> and <strong>Device: 0</strong> again</p>
-
-<p>$ docker run -it &ndash;privileged opensourcefoundries/ok-google aplay -l
-  setup authorized credentials file
-  setup alsa configuration</p>
-
-<ul>
-<li>exec aplay -l
-**** List of PLAYBACK Hardware Devices ****
-card 0: vc4hdmi [vc4-hdmi], device 0: MAI PCM vc4-hdmi-hifi-0 []
-Subdevices: <sup>1</sup>&frasl;<sub>1</sub>
-Subdevice #0: subdevice #0
-card 1: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
-Subdevices: <sup>7</sup>&frasl;<sub>7</sub>
-Subdevice #0: subdevice #0
-Subdevice #1: subdevice #1
-Subdevice #2: subdevice #2
-Subdevice #3: subdevice #3
-Subdevice #4: subdevice #4
-Subdevice #5: subdevice #5
-Subdevice #6: subdevice #6
-card 1: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
-Subdevices: <sup>1</sup>&frasl;<sub>1</sub>
-Subdevice #0: subdevice #0
-card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
-Subdevices: <sup>1</sup>&frasl;<sub>1</sub>
-Subdevice #0: subdevice #0</li>
-</ul></li>
+<li>Find the microphone device (Note: <strong>Card 2</strong> and <strong>Device 0</strong>)</li>
 </ol></li>
 </ol>
+
+<pre><code>docker run -it --privileged opensourcefoundries/ok-google arecord -l
+setup authorized credentials file
+setup alsa configuration
++ exec arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
+Subdevices: 1/1
+Subdevice #0: subdevice #0
+</code></pre>
+
+<ol>
+<li>Find the speaker device Jabra: <strong>Card 2:</strong> and <strong>Device: 0</strong> again</li>
+</ol>
+
+<pre><code>docker run -it --privileged opensourcefoundries/ok-google aplay -l
+setup authorized credentials file
+setup alsa configuration
++ exec aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: vc4hdmi [vc4-hdmi], device 0: MAI PCM vc4-hdmi-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
+  Subdevices: 7/7
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+card 1: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
+  Subdevices: 1/1
+  ÅSubdevice #0: subdevice #0
+</code></pre>
 
 <p>Now we know that the MIC is <strong>2,0</strong> and the Speaker is <strong>2,0</strong> we will be able to pass this information into the container for further adjustments.</p>
 
 <ol>
-<li><p>Test the speaker volume</p>
+<li>Test the speaker volume
 
 <ol>
-<li>Note: we pass in MIC<strong>ADDR  and a SPEAKER</strong>ADDR environment variables</li>
-
-<li><p>Note: we also call the &lsquo;speaker-test&rsquo; utility and run the wav test.  You should hear &ldquo;Front Left&rdquo;</p>
-
-<p>$ docker run -it &ndash;privileged -e MIC_ADDR=&ldquo;hw:2,0&rdquo; -e SPEAKER_ADDR=&ldquo;hw:2,0&rdquo; opensourcefoundries/ok-google speaker-test -t wav</p></li>
-
-<li><p>Press CTRL-C to exit</p></li>
+<li>Note: we pass in MIC_ADDR  and a SPEAKER_ADDR environment variables</li>
+<li>Note: we also call the &lsquo;speaker-test&rsquo; utility and run the wav test.  You should hear &ldquo;Front Left&rdquo;</li>
 </ol></li>
-
-<li><p>Adjust the speaker volume, you can also adjust the MIC gain if you want using the alsamixer application</p>
-
-<p>$ docker run -it &ndash;privileged -e MIC_ADDR=&ldquo;hw:2,0&rdquo; -e SPEAKER_ADDR=&ldquo;hw:2,0&rdquo; opensourcefoundries/ok-google alsamixer</p></li>
 </ol>
+
+<pre><code>docker run -it --privileged -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google speaker-test -t wav
+</code></pre>
+
+<ol>
+<li>Press CTRL-C to exit</li>
+<li>Adjust the speaker volume, you can also adjust the MIC gain if you want using the alsamixer application</li>
+</ol>
+
+<pre><code>$ docker run -it --privileged -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google alsamixer
+</code></pre>
+
+<h4 id="select-the-right-device-aka-sound-card">Select the right device (aka Sound Card)</h4>
 
 <p><img src="/uploads/2018/05/09/card.png" alt="" /></p>
 
+<h4 id="adjust-speaker-volume">Adjust speaker volume</h4>
+
 <p><img src="/uploads/2018/05/09/sp-vol.png" alt="" /></p>
+
+<h4 id="adjust-microphone-gain">Adjust microphone gain</h4>
 
 <p><img src="/uploads/2018/05/09/mic-vol.png" alt="" /></p>
 
 <p>After you adjust the volume, you can retest using speaker-test command from step 1 above.</p>
 
-<h3 id="3-now-to-authorize-your-device-with-the-google-cloud-services">3. Now to Authorize your device with the Google Cloud services</h3>
+<h3 id="3-authorize-your-device-with-the-google-cloud-services">3. Authorize your device with the Google Cloud services</h3>
 
 <p>Note: Much of this blog was excerpted from Google&rsquo;s SDK documentation at <a href="https://developers.google.com/assistant/sdk/guides/library/python/" title="https://developers.google.com/assistant/sdk/guides/library/python/">https://developers.google.com/assistant/sdk/guides/library/python/</a></p>
 
@@ -414,7 +419,13 @@ google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-proto
 
 <p>Running google-oauthlib-tool will return a HTTPS URL that you will need to copy and paste into your browser to complete the authorization steps.</p>
 
+<p><img src="/uploads/2018/05/09/auth-dance.png" alt="" /></p>
+
+<p><img src="/uploads/2018/05/09/code.png" alt="" /></p>
+
 <p>Copy the authorization code back into your terminal window to complete the authorization dance and get your credentials.</p>
+
+<p><img src="/uploads/2018/05/09/copyback.png" alt="" /></p>
 
 <p>Note three values from your credentials file</p>
 
