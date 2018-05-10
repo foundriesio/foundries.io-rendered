@@ -6,10 +6,29 @@
     <description>Recent content in Updates on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/categories/updates/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>microPlatform update 0.17</title>
+      <link>https://opensourcefoundries.com/blog/2018/05/09/blog-post-update-0.17/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/05/09/blog-post-update-0.17/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-17&#34;&gt;Zephyr microPlatform changes for 0.17&lt;/h2&gt;
+
+&lt;p&gt;Zephyr heading towards end of v1.12 development cycle, MCUboot
+heading towards 1.2.0 release, samples compatibility updates.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-17&#34;&gt;Linux microPlatform changes for 0.17&lt;/h2&gt;
+
+&lt;p&gt;No changes have gone into the LMP since 0.16.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.16</title>

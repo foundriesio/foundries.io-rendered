@@ -23,6 +23,25 @@
     </item>
     
     <item>
+      <title>microPlatform update 0.17</title>
+      <link>https://opensourcefoundries.com/blog/2018/05/09/blog-post-update-0.17/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/05/09/blog-post-update-0.17/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-17&#34;&gt;Zephyr microPlatform changes for 0.17&lt;/h2&gt;
+
+&lt;p&gt;Zephyr heading towards end of v1.12 development cycle, MCUboot
+heading towards 1.2.0 release, samples compatibility updates.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-17&#34;&gt;Linux microPlatform changes for 0.17&lt;/h2&gt;
+
+&lt;p&gt;No changes have gone into the LMP since 0.16.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Using docker-compose.yml with Portainer</title>
       <link>https://opensourcefoundries.com/blog/2018/05/08/using-docker-compose.yml-with-portainer/</link>
       <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
