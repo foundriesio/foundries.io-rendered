@@ -314,8 +314,11 @@ card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
 
 <ol>
 <li>Press CTRL-C to exit</li>
-<li>Adjust the speaker volume, you can also adjust the MIC gain if you want using the alsamixer application</li>
+<li>Adjust the speaker volume, you can also adjust the MIC gain using the alsamixer application</li>
 </ol>
+
+<pre><code>docker run -it --privileged -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google alsamixer --card=2 --view=all 
+</code></pre>
 
 <pre><code>$ docker run -it --privileged -e MIC_ADDR=&quot;hw:2,0&quot; -e SPEAKER_ADDR=&quot;hw:2,0&quot; opensourcefoundries/ok-google alsamixer
 </code></pre>
