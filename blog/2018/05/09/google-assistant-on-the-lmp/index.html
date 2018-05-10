@@ -345,16 +345,16 @@ card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
 <ol>
 <li><a href="https://console.actions.google.com/">Open the Actions Console</a>.</li>
 <li>Click on Add/import project.</li>
-<li>To create a new project, type a name in the Project name box and click CREATE PROJECT.</li>
+<li>To create a new project, type a name in the Project name box and click CREATE PROJECT.
+<em>If you already have an existing Google Cloud Platform project, you can select that project and import it instead.</em></li>
+<li>Click the <strong>Device registration</strong> box.</li>
+
+<li><p>Enable the Google Assistant API on the project you selected (see the <a href="https://developers.google.com/assistant/sdk/terms-of-service">Terms of Service</a>). You need to do this in the Cloud Platform Console.</p>
+
+<p><a href="https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview">ENABLE THE API in Console.develoopers.google.com</a></p>
+
+<p>Then Click <strong>Enable</strong>.</p></li>
 </ol>
-
-<p><em>If you already have an existing Google Cloud Platform project, you can select that project and import it instead.</em>
-4. Click the <strong>Device registration</strong> box.
-5. Enable the Google Assistant API on the project you selected (see the <a href="https://developers.google.com/assistant/sdk/terms-of-service">Terms of Service</a>). You need to do this in the Cloud Platform Console.</p>
-
-<p><a href="https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview">ENABLE THE API</a></p>
-
-<p>Click <strong>Enable</strong>.</p>
 
 <h4 id="set-activity-controls-for-your-account">Set activity controls for your account</h4>
 
@@ -388,11 +388,10 @@ card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
 <h4 id="create-model">Create model</h4>
 
 <ol>
-<li>Fill out all of the fields for your device.</li>
+<li>Fill out all of the fields for your device.
+See the device model JSON <a href="https://developers.google.com/assistant/sdk/reference/device-registration/model-and-instance-schemas.html#device_model_json">reference</a> for more information on these fields.</li>
+<li>When you are finished, click <strong>REGISTER MODEL</strong></li>
 </ol>
-
-<p>See the device model JSON <a href="https://developers.google.com/assistant/sdk/reference/device-registration/model-and-instance-schemas.html#device_model_json">reference</a> for more information on these fields.
-2. When you are finished, click <strong>REGISTER MODEL</strong></p>
 
 <h4 id="download-credentials-file">Download credentials file</h4>
 
