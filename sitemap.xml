@@ -225,13 +225,13 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/tags/blockchain/</loc>
+    <loc>https://opensourcefoundries.com/categories/blockchain/</loc>
     <lastmod>2018-02-23T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/categories/blockchain/</loc>
+    <loc>https://opensourcefoundries.com/tags/blockchain/</loc>
     <lastmod>2018-02-23T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -307,14 +307,14 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/tags/docker/</loc>
-    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
+    <loc>https://opensourcefoundries.com/categories/docker/</loc>
+    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/categories/docker/</loc>
-    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
+    <loc>https://opensourcefoundries.com/tags/docker/</loc>
+    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -349,14 +349,14 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/tags/iot/</loc>
-    <lastmod>2018-02-23T13:07:31+02:00</lastmod>
+    <loc>https://opensourcefoundries.com/categories/iot/</loc>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/categories/iot/</loc>
-    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
+    <loc>https://opensourcefoundries.com/tags/iot/</loc>
+    <lastmod>2018-02-23T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -379,26 +379,26 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/tags/linux/</loc>
-    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://opensourcefoundries.com/categories/linux/</loc>
     <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/tags/lmp/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <loc>https://opensourcefoundries.com/tags/linux/</loc>
+    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.com/categories/lmp/</loc>
     <lastmod>2018-05-09T19:48:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.com/tags/lmp/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -413,13 +413,13 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/tags/lwm2m/</loc>
+    <loc>https://opensourcefoundries.com/categories/lwm2m/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/categories/lwm2m/</loc>
+    <loc>https://opensourcefoundries.com/tags/lwm2m/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -431,26 +431,26 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/tags/mcuboot/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://opensourcefoundries.com/categories/mcuboot/</loc>
     <lastmod>2018-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/tags/microplatform/</loc>
-    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
+    <loc>https://opensourcefoundries.com/tags/mcuboot/</loc>
+    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.com/categories/microplatform/</loc>
     <lastmod>2018-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.com/tags/microplatform/</loc>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -501,13 +501,13 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/tags/radio/</loc>
+    <loc>https://opensourcefoundries.com/categories/radio/</loc>
     <lastmod>2018-01-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/categories/radio/</loc>
+    <loc>https://opensourcefoundries.com/tags/radio/</loc>
     <lastmod>2018-01-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -561,13 +561,13 @@
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/tags/zmp/</loc>
+    <loc>https://opensourcefoundries.com/categories/zmp/</loc>
     <lastmod>2018-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://opensourcefoundries.com/categories/zmp/</loc>
+    <loc>https://opensourcefoundries.com/tags/zmp/</loc>
     <lastmod>2018-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
