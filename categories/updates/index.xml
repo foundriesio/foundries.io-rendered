@@ -6,10 +6,30 @@
     <description>Recent content in Updates on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/categories/updates/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>microPlatform update 0.18</title>
+      <link>https://opensourcefoundries.com/blog/2018/05/18/blog-post-update-0.18/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/05/18/blog-post-update-0.18/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-18&#34;&gt;Zephyr microPlatform changes for 0.18&lt;/h2&gt;
+
+&lt;p&gt;Zephyr from near the end of the v1.12 cycle, minor application
+updates for new Bluetooth APIs.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-18&#34;&gt;Linux microPlatform changes for 0.18&lt;/h2&gt;
+
+&lt;p&gt;OSF Unified Linux Kernel updated to the 4.16.8 stable release.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.17</title>
