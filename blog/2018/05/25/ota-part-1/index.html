@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Categories</title>
+  <title>How We Chose a Software Update System</title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://opensourcefoundries.com/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="Categories" />
+  <meta property="og:title" content="How We Chose a Software Update System" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/categories//" />
+  <meta property="og:url" content="/blog/2018/05/25/ota-part-1//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.com/">
-                    <img src="https://opensourcefoundries.com/img/logo.png" alt="Categories logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="Categories logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Categories - go to homepage</span>
+                    <img src="https://opensourcefoundries.com/img/logo.png" alt="How We Chose a Software Update System logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="How We Chose a Software Update System logo" class="visible-xs visible-sm">
+                    <span class="sr-only">How We Chose a Software Update System - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -186,7 +186,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Categories</h1>
+                <h1>How We Chose a Software Update System</h1>
             </div>
         </div>
     </div>
@@ -195,23 +195,71 @@
 
         <div id="content">
             <div class="container">
+
                 <div class="row">
+
                     
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-9" id="blog-post">
 
+                        <p class="text-muted text-uppercase mb-small text-right">May 25, 2018</p>
+
+                        <div id="post-content">
+                          <p>One of the first big decisions we had to make for the Linux microPlatform was our Over-The-Air Update (OTA) strategy. This decision required a lot of time, meetings, beer, and coffee. This article is the first of a small series explaining our recommended approach to OTA for the LMP. This article explains how and why we ultimately chose <a href="https://github.com/advancedtelematic/ota-community-edition">OTA Community Edition</a>.
+</p>
+
+<p>Everyone had thoughts on what they wanted from an OTA system. This was no surprise, as most of us have backgrounds in traditional embedded Linux, Android, and Linux distros. We also firmly believe in using open source software that&rsquo;s secure by design. With all that in mind, we established a list of things we wanted in an OTA solution.</p>
+
+<h3 id="self-hosted-and-open-source">Self-Hosted and Open Source</h3>
+
+<p>Open Source Foundries believes in providing open source software with no vendor lock-in. We also hope to help contribute to and grow a healthy community working on an OTA solution.</p>
+
+<h3 id="ostree">OSTree</h3>
+
+<p><a href="https://ostree.readthedocs.io/en/latest/">OSTree</a> can be thought of as Git for system images. An OSTree client can &ldquo;pull&rdquo; down a specific image from an OSTree server by telling it which SHA it wants. Each update to a system will have a new SHA and the &ldquo;pull&rdquo; operation will only pull down a delta between the two images. The project has nice comparison to other projects that describes the <a href="https://ostree.readthedocs.io/en/latest/manual/related-projects/">pros and cons</a> of the OSTree approach.</p>
+
+<h3 id="tuf">TUF</h3>
+
+<p>If you think of OSTree as a repository hosting a bunch of images that can be downloaded, <a href="https://theupdateframework.github.io/">The Update Framework</a>(TUF) is a cryptographically sound way of describing what images are valid for a device. It&rsquo;s in use by several <a href="https://theupdateframework.github.io/adoptions.html">high profile</a> projects to achieve similar goals. A great feature of TUF is its belief that a private key will eventually get compromised, but that recovery is possible because of their multi-level key management strategy where signing <a href="https://docs.atsgarage.com/prod/rotating-signing-keys.html">keys are kept offline and can be rotated</a>.</p>
+
+<h3 id="uptane">Uptane</h3>
+
+<p><a href="https://uptane.github.io/">Uptane</a> goes a step beyond TUF to provide a really secure update system that&rsquo;s trusted by the automobile industry. With OSTree and TUF providing and describing what can be installed, Uptane has the ability for an operator to tell a device what it <em>should</em> have installed.</p>
+
+<h2 id="the-solution">The Solution</h2>
+
+<p>We found a project called <a href="https://github.com/advancedtelematic/aktualizr/">Aktualizr</a> that is basically an open source implementation of an OSTree and Uptane daemon for a managed device. The maintainers of the project are responsive. They&rsquo;ve taken <a href="https://github.com/advancedtelematic/aktualizr/pull/606">trivial patches</a> from us when we were strangers, helped <a href="https://github.com/advancedtelematic/aktualizr/pull/767">guide us</a> through adding more complex functionality, and are open to <a href="https://github.com/advancedtelematic/aktualizr/issues/771">new feature requests</a>. They&rsquo;ve also been patient and helpful working through <a href="https://github.com/advancedtelematic/ota-tuf/issues/184">difficult bugs</a>.</p>
+
+<p>The company behind Aktualizr also makes an open source project out of their commercial ATS Garage offering called OTA Community Edition. There&rsquo;s nothing technically binding Aktualizr to this service. However, it&rsquo;s the only integrated solution that handles OSTree and Uptane we&rsquo;ve found.</p>
+
+<p>In following articles, we&rsquo;ll delve into what OTA Community Edition is and how to deploy it.</p>
+                        </div>
                         
                         
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "osfoundries" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
 
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
-                            
-                        </ul>
                     </div>
                     
 
@@ -464,6 +512,7 @@
 
                 </div>
                 
+
             </div>
             
         </div>

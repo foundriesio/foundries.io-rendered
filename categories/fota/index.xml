@@ -6,10 +6,20 @@
     <description>Recent content in Fota on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/categories/fota/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How We Chose a Software Update System</title>
+      <link>https://opensourcefoundries.com/blog/2018/05/25/ota-part-1/</link>
+      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/05/25/ota-part-1/</guid>
+      <description>&lt;p&gt;One of the first big decisions we had to make for the Linux microPlatform was our Over-The-Air Update (OTA) strategy. This decision required a lot of time, meetings, beer, and coffee. This article is the first of a small series explaining our recommended approach to OTA for the LMP. This article explains how and why we ultimately chose &lt;a href=&#34;https://github.com/advancedtelematic/ota-community-edition&#34;&gt;OTA Community Edition&lt;/a&gt;.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Zephyr microPlatform, Zephyr OTA via DFU/mcumgr</title>
