@@ -810,7 +810,7 @@ providing firmware update and device communication via LWM2M.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.com/labs/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;nav.html&#34; . }}   Open Source Foundries Labs At Open Source Foundries, we are constantly creating software and new technologies that help us deliver on our microPlatform mission. These efforts, though they may not be formally supported as products, often help us demonstrate the capabilities of our microPlatforms or help us improve the overall ecosystems we participate in     JobServ Automation is paramount to our success and to meet our huge goals we built the horizontally scalable open source CI system JobServ, find out more about JobServ on Github @ https://github.</description>
+      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;nav.html&#34; . }}   Open Source Foundries Labs At Open Source Foundries, we are constantly creating software and new technologies that help us deliver on our microPlatform mission. These efforts, though they may not be formally supported as products, often help us demonstrate the capabilities of our microPlatforms or help us improve the overall ecosystems we participate in     JobServ Automation is paramount to our success and to meet our huge goals we built the horizontally scalable open source CI system JobServ.</description>
     </item>
     
     <item>
