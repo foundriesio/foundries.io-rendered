@@ -806,6 +806,15 @@ providing firmware update and device communication via LWM2M.&lt;/p&gt;
     
     <item>
       <title></title>
+      <link>https://opensourcefoundries.com/labs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/labs/</guid>
+      <description>{{ partial &#34;head.html&#34; . }}   {{ partial &#34;top.html&#34; . }} {{ partial &#34;nav.html&#34; . }}   Open Source Foundries Labs At Open Source Foundries, we are constantly creating software and new technologies that help us deliver on our microPlatform mission. These efforts, though they may not be formally supported as products, often help us demonstrate the capabilities of our microPlatforms or help us improve the overall ecosystems we participate in     EZ containers / App Store Our EZ containers project uses the Portainer software project.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://opensourcefoundries.com/product/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
