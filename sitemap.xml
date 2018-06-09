@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://opensourcefoundries.com/blog/2018/06/08/blog-post-update-0.20/</loc>
+    <lastmod>2018-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://opensourcefoundries.com/blog/2018/06/05/zephyr-news-20180605/</loc>
     <lastmod>2018-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.com/blog/2018/05/25/ota-part-1/</loc>
+    <lastmod>2018-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://opensourcefoundries.com/blog/2018/05/25/blog-post-update-0.19/</loc>
     <lastmod>2018-05-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -267,7 +277,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/blog/</loc>
-    <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -279,7 +289,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/bugs/</loc>
-    <lastmod>2018-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -325,7 +335,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/cve/</loc>
-    <lastmod>2018-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -409,7 +419,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/linux/</loc>
-    <lastmod>2018-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -479,7 +489,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/categories/microplatform/</loc>
-    <lastmod>2018-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -507,7 +517,7 @@
   
   <url>
     <loc>https://opensourcefoundries.com/</loc>
-    <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -567,19 +577,19 @@
   
   <url>
     <loc>https://opensourcefoundries.com/tags/update/</loc>
-    <lastmod>2018-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.com/categories/updates/</loc>
-    <lastmod>2018-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://opensourcefoundries.com/tags/zephyr/</loc>
-    <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
