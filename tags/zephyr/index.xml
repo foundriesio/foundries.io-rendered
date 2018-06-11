@@ -6,10 +6,27 @@
     <description>Recent content in Zephyr on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/tags/zephyr/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Zephyr Development News 11 June 2018</title>
+      <link>https://opensourcefoundries.com/blog/2018/06/11/zephyr-news-20180611/</link>
+      <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/06/11/zephyr-news-20180611/</guid>
+      <description>&lt;p&gt;This is the 11 June 2018 newsletter tracking the latest
+&lt;a href=&#34;https://www.zephyrproject.org/&#34;&gt;Zephyr&lt;/a&gt; development merged into the
+&lt;a href=&#34;https://github.com/zephyrproject-rtos/zephyr&#34;&gt;mainline tree on
+GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We&amp;rsquo;ve renamed the series to &amp;ldquo;Zephyr Development News&amp;rdquo; to avoid a
+name clash with a publication produced by another entity.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.20</title>

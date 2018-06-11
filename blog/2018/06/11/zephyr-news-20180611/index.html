@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>microPlatform update 0.12</title>
+  <title>Zephyr Development News 11 June 2018</title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://opensourcefoundries.com/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="microPlatform update 0.12" />
+  <meta property="og:title" content="Zephyr Development News 11 June 2018" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/blog/2018/03/27/blog-post-update-0.12//" />
+  <meta property="og:url" content="/blog/2018/06/11/zephyr-news-20180611//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.com/">
-                    <img src="https://opensourcefoundries.com/img/logo.png" alt="microPlatform update 0.12 logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="microPlatform update 0.12 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">microPlatform update 0.12 - go to homepage</span>
+                    <img src="https://opensourcefoundries.com/img/logo.png" alt="Zephyr Development News 11 June 2018 logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="Zephyr Development News 11 June 2018 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Zephyr Development News 11 June 2018 - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -188,7 +188,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>microPlatform update 0.12</h1>
+                <h1>Zephyr Development News 11 June 2018</h1>
             </div>
         </div>
     </div>
@@ -204,404 +204,314 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">March 27, 2018</p>
+                        <p class="text-muted text-uppercase mb-small text-right">By <a href="#">Marti Bolivar</a> | June 11, 2018</p>
 
                         <div id="post-content">
-                          <h1 id="summary">Summary</h1>
+                          <p>This is the 11 June 2018 newsletter tracking the latest
+<a href="https://www.zephyrproject.org/">Zephyr</a> development merged into the
+<a href="https://github.com/zephyrproject-rtos/zephyr">mainline tree on
+GitHub</a>.</p>
 
-<h2 id="zephyr-microplatform-changes-for-0-12">Zephyr microPlatform changes for 0.12</h2>
+<p><strong>We&rsquo;ve renamed the series to &ldquo;Zephyr Development News&rdquo; to avoid a
+name clash with a publication produced by another entity.</strong></p>
 
-<p>The Zephyr tree incorporates significant changes from the v1.12
-merge window, including virtual file system support, websockets,
-network logging, and more.</p>
+<p></p>
 
-<p>The MCUboot tree includes a single new feature, allowing users to
-set device tree overlays.</p>
-
-<p>The zmp tool includes several new features, which are taken
-advantage of in the reference applications.</p>
-
-<h2 id="linux-microplatform-changes-for-0-12">Linux microPlatform changes for 0.12</h2>
-
-<p>No changes have gone into the LMP since 0.11.
-</p>
-
-<h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
-
-<h2 id="summary-1">Summary</h2>
-
-<p>The Zephyr tree incorporates significant changes from the v1.12
-merge window, including virtual file system support, websockets,
-network logging, and more.</p>
-
-<p>The MCUboot tree includes a single new feature, allowing users to
-set device tree overlays.</p>
-
-<p>The zmp tool includes several new features, which are taken
-advantage of in the reference applications.</p>
-
-<h2 id="highlights">Highlights</h2>
+<p>As usual, content is broken down as follows:</p>
 
 <ul>
-<li>Zephyr tree from the v1.12 merge window</li>
-<li>OSF samples with increased security and improved MCUboot integration</li>
-<li>Several zmp tool and reference application improvements</li>
-<li>Rewritten history, commit 33de222e (&rdquo;[OSF temphack] temporary hack for mcuboot&rdquo;) has zero diff from 0.11 update</li>
-</ul>
-
-<h2 id="components">Components</h2>
-
-<h3 id="mcuboot">MCUboot</h3>
-
-<h4 id="features">Features</h4>
-
-<h5 id="user-device-tree-overlays">User device tree overlays:</h5>
+<li><strong>Highlights</strong>
 
 <ul>
-<li>It is now possible for users to specify their own
-device tree overlays when building MCUboot.</li>
-</ul>
-
-<h4 id="bugs">Bugs</h4>
-
-<ul>
-<li>Not addressed in this update</li>
-</ul>
-
-<h3 id="zephyr">Zephyr</h3>
-
-<h4 id="features-1">Features</h4>
-
-<h5 id="virtual-file-system-support">Virtual File System support:</h5>
+<li>Important changes: ABI/API breaks and some features</li>
+<li>New features: non-exhaustive descriptions of new features</li>
+<li>Bug fixes: non-exhaustive list of fixed bugs</li>
+</ul></li>
+<li><strong>Individual changes</strong>: a complete list of patches, sorted
+chronologically and categorized into areas, like:
 
 <ul>
-<li>Zephyr now has a virtual file system (VFS) switch,
-similar in spirit to other operating systems. This
-also allows supporting multiple file systems in a
-single Zephyr configuration.</li>
+<li>Architectures</li>
+<li>Kernel</li>
+<li>Drivers</li>
+<li>etc.</li>
+</ul></li>
 </ul>
 
-<h5 id="network-backed-syslog-logging">Network-backed syslog logging:</h5>
+<h1 id="highlights">Highlights</h1>
+
+<p>As announced previously on the mailing lists, Zephyr v1.12.0 has been
+tagged. Hurray!</p>
+
+<p>This newsletter covers changes in the following inclusive range, which
+closes out the v1.12 release candidate period:</p>
 
 <ul>
-<li>Zephyr&rsquo;s logging subsystem now support a syslog-
-compliant network backend. This logging protocol is
-standardized in RFC 5424 and RFC 5426.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/6a138977cf9e293205f96bf7e98dc53caacabf00">6a138977</a> susbys: disk: Fix misleading menuconfig prompts</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/f58d9caba242e52a4e0150dd1be0c99e239a9d42">f58d9cab</a> release: Update VERSION for 1.12.0 release</li>
 </ul>
 
-<h5 id="websockets-support">Websockets support:</h5>
+<h2 id="important-changes">Important Changes</h2>
+
+<p>The areas most affected during this period, as might be expected, were
+documentation and testing. There were also a fairly large number of
+ARC architecture changes.</p>
+
+<h2 id="features">Features</h2>
+
+<p><strong>Continuous Integration:</strong></p>
+
+<p>Sanitycheck can now export tests in CSV format.</p>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+
+<p><strong>Arches:</strong></p>
+
+<p>A variety of ARC fixes were merged. These fix overflows in the
+privileged stack, IRQ offloading, the ADC and watchdog timer priority
+levels, reset instability, and a couple of issues related to exception
+handling.</p>
+
+<p>A bug preventing i.MX RT SoCs from booting correctly was fixed as
+well; this also has the nice benefit of eliminating a vast number of
+Kconfig warnings emitted when building for other boards.</p>
+
+<p><strong>Bluetooth:</strong></p>
+
+<p>A fix for a Coverity bug related to corrupted flash storage of
+persistent settings was merged, along with a fix to retransmit
+interval handling in the Mesh implementation, and an invalid pointer
+access after disconnect in the ATT code.</p>
+
+<p><strong>Build:</strong></p>
+
+<p>A fix to the kernel helpers for the GCC toolchain was merged which
+resolves unaligned access issues on GCC &gt;= 7.</p>
+
+<p><strong>Continuous Integration:</strong></p>
+
+<p>A sanitycheck bug leading to false positive test pass reporting was
+fixed.</p>
+
+<p><strong>Documentation:</strong></p>
+
+<p>The final batch of documentation patches covered release notes, issues
+in the Getting Started guide, initial documentation for the
+experimental West meta-tool, updates to the security documentation,
+and some watchdog API documentation.</p>
+
+<p><strong>Kernel:</strong></p>
+
+<p>Architecture-specific attempts to provide thread arguments using its
+initial stack layout were replaced with common code, trading off extra
+memory to fix broken and incomplete implementations in some
+architectures.</p>
+
+<p><strong>Libraries:</strong></p>
+
+<p>A fix was merged for a readdir() buffer out of bounds access
+discovered by Coverity.</p>
+
+<p><strong>Networking:</strong></p>
+
+<p>An LWM2M bug was fixed which fixes mandatory rate limiting on the
+frequency of notifications for observed object instance attributes.
+The LWM2M engine thread priority was also lowered, fixing a thread
+starvation issue when running LWM2M concurrently with Bluetooth
+(e.g. as part of a 6LoWPAN setup).</p>
+
+<p>The IPv4 stack now correctly updates the time-to-live value based on
+the received packet header; a similar fix was merged for IPv6 hop
+limits.</p>
+
+<p><strong>Samples:</strong></p>
+
+<p>Some last-minute changes were merged to crypto and networking samples.</p>
+
+<p>The crypto changes appear to have been merged because
+samples/drivers/crypto is in fact being used as a test case in
+addition to serving as sample code, so they perhaps could be
+considered test fixes.</p>
+
+<p>The networking changes were fixes for bugs discovered by Coverity.</p>
+
+<p><strong>Testing:</strong></p>
+
+<p>A variety of patches fixing up and tuning the test cases were merged
+in the final days of v1.12 development.</p>
+
+<h1 id="individual-changes">Individual Changes</h1>
+
+<p>Patches by area (76 patches total):</p>
 
 <ul>
-<li>The networking subsystem now has a net-app based
-websocket library. Initial support is provided for the
-server role, with optional TLS. Sample applications
-are provided in samples/net/ws_echo_server and
-samples/net/ws_console.</li>
+<li>Arches: 11</li>
+<li>Bluetooth: 3</li>
+<li>Boards: 1</li>
+<li>Build: 1</li>
+<li>Continuous Integration: 2</li>
+<li>Documentation: 22</li>
+<li>Firmware Update: 1</li>
+<li>Kernel: 2</li>
+<li>Libraries: 1</li>
+<li>Miscellaneous: 3</li>
+<li>Networking: 5</li>
+<li>Samples: 8</li>
+<li>Scripts: 1</li>
+<li>Storage: 2</li>
+<li>Testing: 13</li>
 </ul>
 
-<h5 id="arm-cmsis-header-changes">ARM CMSIS header changes:</h5>
+<p>Arches (11):</p>
 
 <ul>
-<li>Some ARM CMSIS headers were cleaned up and removed,
-which will break applications using removed APIs.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/b423ee5f2a8760a661c5ce8b961f10ece25c36c1">b423ee5f</a> nxp_imx: Move i.MX RT PLL selects to Kconfig.soc</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/c5cb8e943c40e997df3794ee2911868ee37f231a">c5cb8e94</a> arch/arc: Set the right priority for WDT on quark_se</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/718597fe32cdef56e179f9b60b412c708043902f">718597fe</a> arch/arm: Fix THREAD_MONITOR entry struct</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/7f7718a09a35b5ff297b9da63e16b86e43f625f3">7f7718a0</a> arch: stm32: remove .hex binary build by default</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/5b6f860539d5f31ded42fbbed73dba7f262191be">5b6f8605</a> arch: arc: use a separate stack for exception handling</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/5dd552e66bba49fc1a27ac60de53a524f6e95223">5dd552e6</a> arch: arc: STACK_CHECK_FAIL of STACK_CHECK not hang the system</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/fb3d2d3785604f032c3b95885a755dec65afd9ed">fb3d2d37</a> arch: arc: remove unused codes</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/c63298ea65214430aa06f90170b74ce4b6d05679">c63298ea</a> arch: arc: improve the reset code</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/1c4fe3edc036461042407637ad3c8ba0002cac65">1c4fe3ed</a> arch/arc: Set the right priority for ADC/AON on quark_se</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/97d043648690eeb7ea0164d8f228075adbcc8cb9">97d04364</a> arch: arc: use top of isr stack as exception stack and bug fixes</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/d5bc9d7beea14aafbbbcbdd80156ad4a68b2bd97">d5bc9d7b</a> arch: arc: adjust privileged stack size of arc to 384 bytes</li>
 </ul>
 
-<h5 id="nrf5-to-nrf-global-rename">nRF5 to nRF global rename:</h5>
+<p>Bluetooth (3):</p>
 
 <ul>
-<li>The nRF5 SoC family support was globally renamed to
-nRF, to accomodate incoming SoC support for Nordic
-targets that are not part of the nRF5 family. This may
-break applications using Kconfig or other names that
-were affected.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/ae829b269db87e91bbf4b81e5649de62fa8bc53d">ae829b26</a> Bluetooth: Fix unchecked settings value lengths</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/ed5fb3ff379603530e0522d22c4127b55a15b966">ed5fb3ff</a> Bluetooth: Mesh: Fix (re)transmit interval handling</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/1218648ed1758f288c6a8e47cbc0af6e18dd35fb">1218648e</a> Bluetooth: ATT: Fix clearing context at disconnect</li>
 </ul>
 
-<h5 id="elixir-indexing-for-zepyr">Elixir indexing for Zepyr:</h5>
+<p>Boards (1):</p>
 
 <ul>
-<li>Though not strictly a Zephyr feature, there is now an
-Elixir code indexing server available for current and
-older Zephyr versions available from Bootlin at
-<a href="https://elixir.bootlin.com/zephyr/latest/source">https://elixir.bootlin.com/zephyr/latest/source</a>.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/f0bafc307b62390eb6c71afded997e8d53591474">f0bafc30</a> boards: make em_starterkit_em7d default test platform</li>
 </ul>
 
-<h5 id="base64-library">base64 library:</h5>
+<p>Build (1):</p>
 
 <ul>
-<li>A base64 library was added to Zephyr&rsquo;s core; it was
-imported from the mbedTLS implementation. The mgmt
-subsystem and websockets support use this new base64
-library.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/a37e037264164738da2984b14fa206157c3abb7b">a37e0372</a> toolchain: gcc: Add compiler barrier at the end of UNALIGNED_PUT()</li>
 </ul>
 
-<h5 id="new-stm-support-and-features">New STM support and features:</h5>
+<p>Continuous Integration (2):</p>
 
 <ul>
-<li>New architecture-related features include support for
-STM32F051X8, STM32L073xZ, STM32F070XB, and STM32F412CG
-MCUs, as well as stm32l0 and stm32f446 SoCs.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/5d6e7eb7c6cb5119af308cb33fa681ee787e7583">5d6e7eb7</a> sanitycheck: export list of tests as CSV</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/b20c4846dd5eb916827ae1cb69de4f9e1fc7dffa">b20c4846</a> sanitycheck: fail on faults/panics/oopses</li>
 </ul>
 
-<p>Clock control, GPIO, interrupts, and pinmux drivers
-were merged for stm32l0x.</p>
-
-<h5 id="new-arm-v8m-features">New ARM v8M features:</h5>
+<p>Documentation (22):</p>
 
 <ul>
-<li>The effort to support ARM v8M continues with
-additional fault handling and logging for processor
-states present in those SoCs.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/65e191fa7a84f4263ef867c8d77b11d276ae87af">65e191fa</a> api: watchdog: fix wdt_install_timeout doxygen comment</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/265f502b8e48ba3299bfbbef7814cbab196af0b3">265f502b</a> releasenotes: update with doc issues addressed</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/72d4d8bce1642b0e6779b8989654fd478bf3b898">72d4d8bc</a> doc: release notes: Fill in summary, arch, and kernel sections for 1.12</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/d04a7efd8d55c5054dbae45edabe27ad47e83e2a">d04a7efd</a> releasenotes: updated documentation changes</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/59027fb689aaa3d9509ac7bde768199336060fcd">59027fb6</a> doc: relnotes: Correct a couple of headline items</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/b0abf365af9d5ddb23ba265a5d0c59a676d390d0">b0abf365</a> doc: relnotes: 1.12 Bluetooth release notes</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/2825f79a2c5b6a17ed1700653a78a7c12da2b5a6">2825f79a</a> doc: security: Update security overview for recent features</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/8b9042c4192e1625744eb3b7fe60bc82ac6f336d">8b9042c4</a> doc: security: Remove revision history</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/3fc206fa5387aa0bb0dc0a89755cafdaba0cde0f">3fc206fa</a> getting_started: fix UNIX-ism</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/9ca4d840791f5f5a08d40c2a76afbfe189b9cd39">9ca4d840</a> getting_started: fixes for intro section</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/64ab13264ae3ba14d2140217e02e875cab93b7b2">64ab1326</a> getting_started: fixes and cleanups for installation_linux</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/c6c15013553bbd0d0b5db2bf09e7f776a9670aa8">c6c15013</a> getting_started: building: fix inaccuracies</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/e8d0e72adf62bf3dedf6a9e1901a9c9bc1fdb36b">e8d0e72a</a> doc: extensions: fix :app: behavior for zephyr-app-commands</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/e802d8de35819d3d7e2f7e54ab8e597188aed567">e802d8de</a> doc: conf.py: remove unused import</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/1c852ddf5ca0107ee903c5811e7e7c288ca74f6b">1c852ddf</a> doc: conf.py: make sure west is importable from Python</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/3a766aedf0c2c3c48312f6514f9ee4f673cff5ef">3a766aed</a> doc: conf.py: add sphinx.ext.autodoc extension</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/869e9cce013ac1ae6da707c42fb931127eff8d63">869e9cce</a> doc: add initial west documentation</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/f8251693bb150041fad4b200a4e823f097fc004d">f8251693</a> conf.py: clean up exit if ZEPHYR_BASE is unset</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/d6f2858a142a936cf806c139461eaa976223226f">d6f2858a</a> doc: relnotes: Add security vulnerability information</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/8e89206815acdfceed5b059f2cdb8aca8b360273">8e892068</a> doc: release notes: Update 1.12 release notes with GitHub issues</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/d3afa353a805fc5d3ef45515837c8609871a484d">d3afa353</a> doc: release notes: Update 1.12 release notes with more GitHub issues</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/51ae306b59f806fea1d2b81286f7775af56f14aa">51ae306b</a> doc: release notes: Finalize 1.12 release notes and docs</li>
 </ul>
 
-<h5 id="i2c-support-in-device-tree">I2C support in device tree:</h5>
+<p>Firmware Update (1):</p>
 
 <ul>
-<li>x86 and nRF SoC support for I2C now comes from device
-tree, with board support for x86 on the galileo,
-curie, quark_x1000, and quark_d200 boards, and nRF
-support on bbc_microbit, nrf51_vbluno51,
-nrf52_vbluno52.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/2cba701703d03816f208c159e4fe8f3bec01964d">2cba7017</a> subsys: mgmt: Remove unnecessary comparison</li>
 </ul>
 
-<h5 id="arc-device-tree-support">ARC device tree support:</h5>
+<p>Kernel (2):</p>
 
 <ul>
-<li>The ARC architecture now supports DTS, with nodes
-added for UARTs.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/0e23ad889ee683f6a52bc71163b938e45d67a944">0e23ad88</a> kernel: k_work: k_work_init() should initialize all fields</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/2dd91eca0e25e35ab00567461ff4f3d773db24db">2dd91eca</a> kernel: move thread monitor init to common code</li>
 </ul>
 
-<h5 id="stack-growth-configuration-knob">Stack growth configuration knob:</h5>
+<p>Libraries (1):</p>
 
 <ul>
-<li>Support for configuring the direction of stack growth
-via Kconfig was added.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/bf1e0198a78b7e1a51306a1fe24c73c3cdc5ab9a">bf1e0198</a> lib: posix: fix out-of-bound write</li>
 </ul>
 
-<h5 id="entropy-driver-for-nrf">Entropy driver for nRF:</h5>
+<p>Miscellaneous (3):</p>
 
 <ul>
-<li>The Bluetooth-specific LL randomness driver was ported
-to the Zephyr entropy framework. The Bluetooth core
-now uses the entropy subsystem instead of this random
-driver.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/eb9df85f8412cddd49ef1ab5fa3c9264322cb31a">eb9df85f</a> release: Move version to 1.12.0-rc3</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/3b1fb7f9a927da0936d81d4778fe6f3d89eae704">3b1fb7f9</a> release: update footprint data</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/f58d9caba242e52a4e0150dd1be0c99e239a9d42">f58d9cab</a> release: Update VERSION for 1.12.0 release</li>
 </ul>
 
-<h5 id="ethernet-enabled-by-default-for-sam-e70-explained">Ethernet enabled by default for sam_e70_explained:</h5>
+<p>Networking (5):</p>
 
 <ul>
-<li>The sam_e70_explained board now enables Ethernet by
-default.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/955552210eed6c6c62cd0672dfaa56e5f82bb7cf">95555221</a> net: shell: Correct help text for &ldquo;mem&rdquo; command</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/a957107d50baef45dd406fe2ec8e6a851e33f9e9">a957107d</a> net: lwm2m: lower priority of engine thread</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/d9a14f5a27eec75d2d8f64d810fc7200e4edcbc1">d9a14f5a</a> net: ipv6: Set hop limit in net_pkt according to IPv6 header</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/e72dcf02901efe48c60bc528a9f44ff00f92db03">e72dcf02</a> net: ipv4: Set TTL in net_pkt according to IPv4 header</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/ed3ea06f8801f1445d243c11420b972d7b11d572">ed3ea06f</a> net: lwm2m: fix observer attribute update logic</li>
 </ul>
 
-<h5 id="ethernet-over-usb-by-default-for-nucleo-f412zg">Ethernet over USB by default for nucleo_f412zg:</h5>
+<p>Samples (8):</p>
 
 <ul>
-<li>The nucleo_f412zg board now uses ethernet over USB as
-its default network interface.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/cf3da3c6c48fbeec88b02a6f273372126004b82f">cf3da3c6</a> samples: crypto: Ensure cap_flags is always initialized</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/858cd199edb2ef3bbe74f85c9ec3095f930a480c">858cd199</a> samples: drivers: crypto: Do not show colors in logs</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/d06eecbe29c6513b8aa208854da966d88ec59c43">d06eecbe</a> samples: drivers: crypto: Update expected sample output</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/d05442ee9ce583c583e934d0a3933f5f7fa353be">d05442ee</a> samples: crypto: adapt harness</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/fd561dd596f4c52aed64b3b78a46b0e297ee0d58">fd561dd5</a> samples: net: Check the return value of nats_publish</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/e7a3d01dc5ec18bd3994684a7657245460df7453">e7a3d01d</a> samples: net: dumb_http_server: Handle recv() errors</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/b7ad50b47346e334f3f7a333df936bb5a4500fe5">b7ad50b4</a> samples: net: rpl_border_router: Fix out-of-bounds write</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/7cfd5a4184bcb1d44db8ed1d248d4267240c0a96">7cfd5a41</a> samples: net: hrpl_border_router: Fix NULL pointer dereference</li>
 </ul>
 
-<h5 id="ethernet-driver-for-posix-target">Ethernet driver for POSIX target:</h5>
+<p>Scripts (1):</p>
 
 <ul>
-<li>The native POSIX target now has an Ethernet driver. A
-sample is provided in samples/net/eth_native_posix.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/c6c856bc60d6954d97db30e31c5d850f04d85905">c6c856bc</a> scripts: west: cherry-pick upstream 321ab2e17</li>
 </ul>
 
-<h5 id="usb-for-arduino-zero-trinket-m0">USB for Arduino Zero, Trinket M0:</h5>
+<p>Storage (2):</p>
 
 <ul>
-<li>USB support was enabled on the Arduino Zero and
-Trinket M0 boards.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/6a138977cf9e293205f96bf7e98dc53caacabf00">6a138977</a> susbys: disk: Fix misleading menuconfig prompts</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/bfdb6acaf691dc6ec3a542787c29b8edd593f3a7">bfdb6aca</a> subsys: settings: Fix file exist error.</li>
 </ul>
 
-<h5 id="device-tree-for-usb-for-nrf52840-pca10056">Device tree for USB for nrf52840_pca10056:</h5>
+<p>Testing (13):</p>
 
 <ul>
-<li>Device-tree based USB support was added for
-nrf52840_pca10056.</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/9cefce816824c80791ca8a1967bc413f1634f690">9cefce81</a> tests: remove obsolete k_thread_cancel</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/a803af2fa74706f54786d3b72561c36981d92253">a803af2f</a> tests/kernel/preempt: Add yield and sleep cases</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/a026b9eacaca4634c2b711967851e01baebd6d21">a026b9ea</a> tests: crypto: Fully initialize variables using named initializers</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/a07d0731c7e4e10694ce2f2d6a2780d20997ed21">a07d0731</a> tests: mbox_api: Fully initialize k_box_msg struct</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/a803335a7c54fb6245be7f7d733debe05173e49c">a803335a</a> tests: net: Increase the stack size of frdm-k64f</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/b43000f5eba943425f03c5ee8fff847727ae84d7">b43000f5</a> tests: net: trickle: Fix running on frdm-k64f</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/59bf65f481205c0171a0665845f7eb520fa65a56">59bf65f4</a> tests: net: Fix tests so they can be run in real hw</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/3057da079ab4fe498eeb6965ed6638804c6f38fe">3057da07</a> tests: logger-hook: increase ztest stack size</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/bb631076f63347fdd33e98bd276cf0c5f4fbd384">bb631076</a> tests: arm: irq_vector_table: Fix Kconfig override</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/fb2e142b0e6cb7faa2f1c8dc9060f641193ba31f">fb2e142b</a> tests: fix test identifiers</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/33aa90539a48325e6813f039ff0f68f4baeb0fb2">33aa9053</a> tests: kernel: fifo_timeout: Do not potentially dereference NULL ptrs</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/144a4390b5736900b28c1ddad4be258b1addcb08">144a4390</a> tests: fix the bug of sentinel.conf</li>
+<li><a href="https://github.com/zephyrproject-rtos/zephyr/commit/a91f1e5e142a223b7408858465c0012bd89dc1be">a91f1e5e</a> tests: modify the test conditions for emsk_em7d_v22</li>
 </ul>
-
-<h5 id="spi2-for-olimexino-stm32">SPI2 for olimexino_stm32:</h5>
-
-<ul>
-<li>SPI2 support was enabled on the olimexino_stm32 board.</li>
-</ul>
-
-<h5 id="new-boards">New boards:</h5>
-
-<ul>
-<li>Support was added for the Adafruit Feather M0 Basic
-Proto, nucleo-f446re, NUCLEO-L073RZ, nucleo_f070rb,
-STM32F0DISCOVERY, Waveshare BLE400, 96Boards Argonkey,
-Olimex stm32-h407, and Dragino boards.</li>
-</ul>
-
-<h5 id="new-atmel-sam-peripheral-drivers">New Atmel SAM peripheral drivers:</h5>
-
-<ul>
-<li>USB, GPIO, and SPI device drivers were merged for
-Atmel SAM0.</li>
-</ul>
-
-<p>An interrupt-driven UART driver was added for SAM E70.</p>
-
-<h5 id="semtech-sx1509b-i2c-based-gpio-extender">Semtech SX1509B I2C-based GPIO extender:</h5>
-
-<ul>
-<li>A GPIO driver was merged for Semtech SX1509B I2C-based
-GPIO chips.</li>
-</ul>
-
-<h5 id="i2c-driver-core-cleanups">I2C driver core cleanups:</h5>
-
-<ul>
-<li>Numerous cleanups and improvements were merged to the
-I2C driver core and individual drivers.</li>
-</ul>
-
-<h5 id="scheduler-api-cleanups">Scheduler API cleanups:</h5>
-
-<ul>
-<li>Cleanups and unifications were merged to the core
-scheduler APIs.</li>
-</ul>
-
-<h5 id="new-sockets-features">New sockets features:</h5>
-
-<ul>
-<li>Improvements to the the BSD-like sockets API include
-MSG_DONTWAIT and MSG_PEEK support in recvfrom,
-MSG_DONTWAIT in sendto, a freeaddrinfo implementation,
-and empty service support in getaddrinfo.</li>
-</ul>
-
-<h5 id="stack-unwind-on-x86">Stack unwind on x86:</h5>
-
-<ul>
-<li>x86 targets now unwind the stack on fatal errors.</li>
-</ul>
-
-<h4 id="bugs-1">Bugs</h4>
-
-<h5 id="mps2-cleanup">MPS2 cleanup:</h5>
-
-<ul>
-<li>The Arm MPS2 SoC support was cleaned up.</li>
-</ul>
-
-<h5 id="posix-semaphore-fixes">POSIX semaphore fixes:</h5>
-
-<ul>
-<li>POSIX target semaphore support received fixes.</li>
-</ul>
-
-<h5 id="bluetooth-mesh-fixes">Bluetooth Mesh fixes:</h5>
-
-<ul>
-<li>Bluetooth Mesh fixes for cfg_cli were merged,
-addressing a null pointer dereference and a race
-condition.</li>
-</ul>
-
-<h5 id="arduino-zero-spi-fix">Arduino Zero SPI fix:</h5>
-
-<ul>
-<li>The SPI pinmux was fixed on Arduino Zero.</li>
-</ul>
-
-<h5 id="nrf-usb-fixes">nRF USB fixes:</h5>
-
-<ul>
-<li>Fixes to the nRF USB driver were merged affecting
-isochronous endpoints and CDC-ACM OUT endpoints.</li>
-</ul>
-
-<h5 id="kernel-memory-partitions-fix">Kernel memory partitions fix:</h5>
-
-<ul>
-<li>Kernel memory partitions are now correctly placed in
-kernel memory when building with userspace support.</li>
-</ul>
-
-<h5 id="scheduler-undefined-behavior-fix">Scheduler undefined behavior fix:</h5>
-
-<ul>
-<li>A bug fix in the scheduler avoids undefined integer
-shifting behavior.</li>
-</ul>
-
-<h5 id="networking-fixes">Networking fixes:</h5>
-
-<ul>
-<li>Networking fixes include net-app debug level checks,
-better handling for malformed ICMPv6 echo requests, a
-compilation fix if the neighbor cache is disabled, an
-IPv6 memory leak caused by echo requests,</li>
-</ul>
-
-<h3 id="hawkbit-and-mqtt-sample-application">hawkBit and MQTT sample application</h3>
-
-<h4 id="features-2">Features</h4>
-
-<h5 id="config-bootloader-mcuboot-support">CONFIG_BOOTLOADER_MCUBOOT support:</h5>
-
-<ul>
-<li>Rather than setting MCUboot-related configuration
-options manually, the application now makes use of a
-configuration knob provided by upstream to request
-linking for loading by MCUboot.</li>
-</ul>
-
-<h4 id="bugs-2">Bugs</h4>
-
-<h5 id="entropy-driver-support">Entropy driver support:</h5>
-
-<ul>
-<li>The sample application no longer uses the insecure
-TEST_RANDOM_GENERATOR on nRF targets, now that they
-support a proper entropy driver. This allows network
-communication protocols to use the hardware true
-random number generator.</li>
-</ul>
-
-<h3 id="lwm2m-sample-application">LWM2M sample application</h3>
-
-<h4 id="features-3">Features</h4>
-
-<h5 id="config-bootloader-mcuboot-support-1">CONFIG_BOOTLOADER_MCUBOOT support:</h5>
-
-<ul>
-<li>Rather than setting MCUboot-related configuration
-options manually, the application now makes use of a
-configuration knob provided by upstream to request
-linking for loading by MCUboot.</li>
-</ul>
-
-<h4 id="bugs-3">Bugs</h4>
-
-<h5 id="entropy-driver-support-1">Entropy driver support:</h5>
-
-<ul>
-<li>The sample application no longer uses the insecure
-TEST_RANDOM_GENERATOR on nRF targets, now that they
-support a proper entropy driver. This allows network
-communication protocols to use the hardware true
-random number generator.</li>
-</ul>
-
-<h1 id="linux-microplatform">Linux microPlatform</h1>
-
-<h2 id="summary-2">Summary</h2>
-
-<p>No changes have gone into the LMP since 0.11.</p>
-
-<h2 id="highlights-1">Highlights</h2>
-
-<ul>
-<li>No changes have gone into the LMP since 0.11.</li>
-</ul>
-
-<h2 id="components-1">Components</h2>
                         </div>
                         
                         
