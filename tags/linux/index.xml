@@ -6,10 +6,31 @@
     <description>Recent content in Linux on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>microPlatform update 0.21</title>
+      <link>https://opensourcefoundries.com/blog/2018/06/18/blog-post-update-0.21/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/06/18/blog-post-update-0.21/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-21&#34;&gt;Zephyr microPlatform changes for 0.21&lt;/h2&gt;
+
+&lt;p&gt;Zephyr v1.12, MCUboot changes for v1.2.0, minor sample adjustments&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-21&#34;&gt;Linux microPlatform changes for 0.21&lt;/h2&gt;
+
+&lt;p&gt;OSF Unified Linux Kernel updated to the 4.16.15 stable release.
+U-Boot-Fslc updated to the 2018.05-based release.
+Core layer updates based on the latest Yocto master changes.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.20</title>
