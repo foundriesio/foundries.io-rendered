@@ -47,6 +47,16 @@ Core layer updates based on the latest Yocto master changes.&lt;/p&gt;
     </item>
     
     <item>
+      <title>What Is OTA Community Edition</title>
+      <link>https://opensourcefoundries.com/blog/2018/06/14/ota-part-2/</link>
+      <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/06/14/ota-part-2/</guid>
+      <description>&lt;p&gt;Continuing with the &lt;a href=&#34;https://opensourcefoundries.com/blog/2018/05/25/ota-part-1/&#34;&gt;OTA blog series&lt;/a&gt;, this article will explain what &lt;a href=&#34;https://github.com/advancedtelematic/ota-community-edition&#34;&gt;OTA Community Edition&lt;/a&gt; is and how it implements the TUF/Uptane/OSTree specifications.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Zephyr Development News 11 June 2018</title>
       <link>https://opensourcefoundries.com/blog/2018/06/11/zephyr-news-20180611/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>

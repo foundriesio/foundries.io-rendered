@@ -6,10 +6,20 @@
     <description>Recent content in Fota on Open Source Foundries, Ltd.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://opensourcefoundries.com/categories/fota/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What Is OTA Community Edition</title>
+      <link>https://opensourcefoundries.com/blog/2018/06/14/ota-part-2/</link>
+      <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.com/blog/2018/06/14/ota-part-2/</guid>
+      <description>&lt;p&gt;Continuing with the &lt;a href=&#34;https://opensourcefoundries.com/blog/2018/05/25/ota-part-1/&#34;&gt;OTA blog series&lt;/a&gt;, this article will explain what &lt;a href=&#34;https://github.com/advancedtelematic/ota-community-edition&#34;&gt;OTA Community Edition&lt;/a&gt; is and how it implements the TUF/Uptane/OSTree specifications.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How We Chose a Software Update System</title>

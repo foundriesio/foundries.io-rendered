@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zmp</title>
+  <title>What Is OTA Community Edition</title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://opensourcefoundries.com/index.xml" type="application/rss+xml" title="Open Source Foundries, Ltd.">
 
   
-  <meta property="og:title" content="Zmp" />
+  <meta property="og:title" content="What Is OTA Community Edition" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/tags/zmp//" />
+  <meta property="og:url" content="/blog/2018/06/14/ota-part-2//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://opensourcefoundries.com/">
-                    <img src="https://opensourcefoundries.com/img/logo.png" alt="Zmp logo" class="hidden-xs hidden-sm">
-                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="Zmp logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Zmp - go to homepage</span>
+                    <img src="https://opensourcefoundries.com/img/logo.png" alt="What Is OTA Community Edition logo" class="hidden-xs hidden-sm">
+                    <img src="https://opensourcefoundries.com/img/logo-small.png" alt="What Is OTA Community Edition logo" class="visible-xs visible-sm">
+                    <span class="sr-only">What Is OTA Community Edition - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -188,7 +188,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Zmp</h1>
+                <h1>What Is OTA Community Edition</h1>
             </div>
         </div>
     </div>
@@ -197,63 +197,141 @@
 
         <div id="content">
             <div class="container">
+
                 <div class="row">
+
                     
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-9" id="blog-post">
 
+                        <p class="text-muted text-uppercase mb-small text-right">June 14, 2018</p>
+
+                        <div id="post-content">
+                          <p>Continuing with the <a href="https://opensourcefoundries.com/blog/2018/05/25/ota-part-1/">OTA blog series</a>, this article will explain what <a href="https://github.com/advancedtelematic/ota-community-edition">OTA Community Edition</a> is and how it implements the TUF/Uptane/OSTree specifications.
+</p>
+
+<p>OTA Community Edition is open-source server software that supports devices compatible with <a href="https://github.com/advancedtelematic/aktualizr/">Aktualizr</a>. It has a micro-service architecture that&rsquo;s designed to be deployed inside Kubernetes. This article will explain the main micro-services, how they are related, and how easy they&rsquo;d be to replace with another implementation. The services described are:</p>
+
+<ul>
+<li><a href="https://github.com/advancedtelematic/treehub">TreeHub</a></li>
+<li><a href="https://github.com/advancedtelematic/ota-tuf/tree/master/reposerver">Repo Server</a></li>
+<li><a href="https://github.com/advancedtelematic/director">Director</a></li>
+<li><a href="https://github.com/advancedtelematic/ota-device-registry/">Device Registry</a></li>
+<li><a href="https://github.com/advancedtelematic/ota-plus-server">OTA+ Web</a></li>
+<li>Gateway</li>
+</ul>
+
+<p>Take a look at <a href="https://opensourcefoundries.com/blog/2018/05/25/ota-part-1/">part 1</a> of this blog series if you&rsquo;d like a little more background on TUF and Uptane.</p>
+
+<h3 id="treehub">TreeHub</h3>
+
+<p>The TreeHub is the easiest component to understand. It mostly operates like a web server handling static content. The server is responsible for returning the contents of objects request by a client. The default configuration deployed by OTA Community Edition uses a persistent storage volume. This means only one copy of the service can run and is thus a single point of failure. However, it also has support for <a href="https://github.com/advancedtelematic/treehub/blob/master/src/main/scala/com/advancedtelematic/treehub/object_store/S3BlobStore.scala">S3</a> and could be configured to use S3 or a Google Storage Bucket in an HA friendly manner.</p>
+
+<p>This server has no built-in HTTP security. If it&rsquo;s exposed publicly, anyone can push OSTree images to it. In order to host this securely, you&rsquo;ll want to put a reverse HTTP proxy in front of it. The garage-push tool supports three forms of authentication: <a href="https://github.com/advancedtelematic/aktualizr/blob/master/src/sota_tools/authenticate.cc">HTTP Basic, OAuth2, and SSL client certs</a>. So any server that honors those options will work seamlessly.</p>
+
+<p><strong><em>Replaceability SWAG</em></strong>: <em>Medium</em> - Most OSTree implementations are geared for static HTTP hosting on a single system or servers rsynced with each other. It wouldn&rsquo;t be too hard to write your own Kubernetes friendly web service that could do this.</p>
+
+<h3 id="repo-server">Repo Server</h3>
+
+<p>The Repo Server is part of the <a href="https://github.com/advancedtelematic/ota-tuf/">OTA-TUF project</a> and handles TUF metadata files that describe the contents of the TreeHub. In terms of the Open Source Foundries Linux microPlatform, this means it&rsquo;s responsible for securely providing a list of known <a href="https://api.foundries.io/lmp/repo/release/api/v1/user_repo/targets.json">good images</a>. This service is stateless and can be scaled out horizontally to provide high availability.</p>
+
+<p>The security model is almost identical to TreeHub. In fact the garage-sign tool that interacts with the Repo Server uses the same credentials.zip used by garage-push. There is one <a href="https://github.com/advancedtelematic/ota-tuf/issues/162">notable difference</a> in that garage-sign does not have support for HTTP Basic authentication.</p>
+
+<p><strong><em>Replaceability SWAG</em></strong>: <em>Hard</em> - There&rsquo;s the <a href="https://github.com/theupdateframework/tuf">TUF reference</a> project could probably be extended, but their on-disk format is slightly different and cryptography is never easy.</p>
+
+<h3 id="director">Director</h3>
+
+<p>The Director implements the server side Uptane logic. It uses online keys to sign metadata that tells the device (Aktualizr) what image from the Repo Server it should be running. The /var/sota/metadata/director/targets.json is generated from the Director. This service is stateless and can be scaled out horizontally to provide high availability.</p>
+
+<p>The Director sits behind the Gateway service so it doesn&rsquo;t require any built-in authentication logic.</p>
+
+<p><strong><em>Replaceability SWAG</em></strong>: <em>Hard</em> - The <a href="https://github.com/uptane/uptane/">Uptane reference implementation</a> would be a good starting point, but Uptane is complex.</p>
+
+<h3 id="device-registry">Device Registry</h3>
+
+<p>The Device Registry handles the management of device status and configuration information. Aktualizr reports packages installed, hardware and IP information, and the results of <code>lshw</code> to the registry. This service is stateless and can be scaled out horizontally to provide high availability.</p>
+
+<p>The Device Registry sits behind the Gateway service so it doesn&rsquo;t require any built-in authentication logic.</p>
+
+<p><strong><em>Replaceability SWAG</em></strong>: <em>Medium</em> - There&rsquo;s nothing quite like it to start from, but mostly it&rsquo;s an effort of mapping REST API calls to a database.</p>
+
+<h3 id="ota-web">OTA+ Web</h3>
+
+<p>OTA+ Web provides a web front-end to the OTA Community Edition components. The web interface shows information about devices and images and allows a user to update a device. This service is stateless and can be scaled out horizontally to provide high availability.</p>
+
+<p>The default configuration supports no authentication and is single-user only. However, there are a few <a href="https://github.com/advancedtelematic/ota-plus-server#authentication">authentication options</a>.</p>
+
+<p><strong><em>Replaceability SWAG</em></strong>: <em>Easy/Medium</em> - It depends on how fancy the UI should be. Open Source Foundries implemented its own custom interface in less than a week that suited our specific needs.</p>
+
+<h3 id="gateway">Gateway</h3>
+
+<p>The Gateway isn&rsquo;t really a component, but implements an NGINX reverse proxy that authenticates requests from Aktualizr and routes them to the proper internal micro-service. The service is stateless and is connected to a publicly exposed Kubernetes load balancer service.</p>
+
+<p>This service uses SSL client <a href="https://github.com/advancedtelematic/ota-community-edition/blob/master/scripts/start.sh#L109">certificates</a> to authenticate all incoming traffic.</p>
+
+<p><strong><em>Replaceability SWAG</em></strong>: <em>Easy</em> - You basically customize this to suite your <a href="https://github.com/OpenSourceFoundries/ota-community-edition/commit/f6b80d34b46001f25ed68f7d89e49dc835e0d612">deployment needs</a>.</p>
+
+<h2 id="putting-it-all-together">Putting It All Together</h2>
+
+<p>The Gateway and OTA+ Web are responsible for securely proxying requests from devices and the browser to the Device Registry, Director, Repo Server, and TreeHub. The garage-push and garage-sign tools used by OE builds require access to the TreeHub and Repo Server respectively. These have no built-in authentication, so a custom proxy must be created if you want to host these securely on the Internet.</p>
+
+<pre><code>     +-----+  +-----+       +---------+    +-------------+ +-------------+
+     |     |  |     |       |         |    |             | |             |
+     | LMP |  | LMP |       | Browser |    | garage-push | | garage-sign |
+     |     |  |     |       |         |    |             | |             |
+     +---+-+  +-+---+       +---+-----+    +----+--------+ +---+---------+
+         |      |               |               |              |
+    +----|------|---------------|---------------|--------------|---+
+    |    |      |  Internet     |               |              |   |
+    +----|------|---------------|---------------|--------------|---+
+         |      |               |               |              |
++--------|------|---------------|---------------|--------------|---------+
+|        |      |               |               |              |         |
+|        |      |               |               |              |         |
+|        |      |               |             +-v--------------v------+  |
+|      +-v------v----+     +----v---------+   |                       |  |
+|      |             |     |              |   | Your Custom Proxy to  |  |
+|      |   Gateway   |     |   OTA+ Web   |   | TreeHub / Repo Server |  |
+|      |             |     |              |   |                       |  |
+|      +-------------+     +--------------+   +-----------------------+  |
+|                                                                        |
+|                                                                        |
+|  +----------+   +----------+         +-------------+   +---------+     |
+|  |          |   |          |         |             |   |         |     |
+|  | Registry |   | Director |         | Repo Server |   | TreeHub |     |
+|  |          |   |          |         |             |   |         |     |
+|  +----------+   +----------+         +-------------+   +---------+     |
+|                                                                        |
+|        Kubernetes                                                      |
++------------------------------------------------------------------------+
+</code></pre>
+                        </div>
                         
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://opensourcefoundries.com/blog/2018/04/17/20180417-mcumgr-dfu/">
-                                          
-                                          <img src="https://opensourcefoundries.com/img/banners/ota.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://opensourcefoundries.com/blog/2018/04/17/20180417-mcumgr-dfu/">Zephyr microPlatform, Zephyr OTA via DFU/mcumgr</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          in <a href="https://opensourcefoundries.com/categories/zmp">zmp</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://opensourcefoundries.com/blog/2018/04/17/20180417-mcumgr-dfu/"><i class="fa fa-calendar-o"></i> April 17, 2018</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro"><p>In this blog we describe how to use the Zephyr microPlatform and the in-tree
-Zephyr samples to build, flash and perform an over the air (OTA) update of a
-Zephyr application over Bluetooth Low Energy (BLE).  This demonstration uses the
-DFU support within Zephyr provided by
-<a href="http://docs.zephyrproject.org/subsystems/mgmt.html">mcumgr</a>.</p>
-
-<p></p></p>
-                                    <p class="read-more"><a href="https://opensourcefoundries.com/blog/2018/04/17/20180417-mcumgr-dfu/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "osfoundries" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
                         
 
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
-                            
-                        </ul>
                     </div>
                     
 
@@ -506,6 +584,7 @@ DFU support within Zephyr provided by
 
                 </div>
                 
+
             </div>
             
         </div>
