@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Zmp on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.com/categories/zmp/</link>
-    <description>Recent content in Zmp on Open Source Foundries, Ltd.</description>
+    <title>Zmp on Foundries.io</title>
+    <link>https://foundries.io/categories/zmp/</link>
+    <description>Recent content in Zmp on Foundries.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.com/categories/zmp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://foundries.io/categories/zmp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Zephyr microPlatform, Zephyr OTA via DFU/mcumgr</title>
-      <link>https://opensourcefoundries.com/blog/2018/04/17/20180417-mcumgr-dfu/</link>
+      <link>https://foundries.io/blog/2018/04/17/20180417-mcumgr-dfu/</link>
       <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/blog/2018/04/17/20180417-mcumgr-dfu/</guid>
+      <guid>https://foundries.io/blog/2018/04/17/20180417-mcumgr-dfu/</guid>
       <description>&lt;p&gt;In this blog we describe how to use the Zephyr microPlatform and the in-tree
 Zephyr samples to build, flash and perform an over the air (OTA) update of a
 Zephyr application over Bluetooth Low Energy (BLE).  This demonstration uses the

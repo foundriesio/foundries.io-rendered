@@ -1,202 +1,202 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.com/categories/</link>
-    <description>Recent content in Categories on Open Source Foundries, Ltd.</description>
+    <title>Categories on Foundries.io</title>
+    <link>https://foundries.io/categories/</link>
+    <description>Recent content in Categories on Foundries.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Feb 2018 13:07:31 +0200</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://foundries.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blockchain</title>
-      <link>https://opensourcefoundries.com/categories/blockchain/</link>
+      <link>https://foundries.io/categories/blockchain/</link>
       <pubDate>Fri, 23 Feb 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/blockchain/</guid>
+      <guid>https://foundries.io/categories/blockchain/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bluetooth</title>
-      <link>https://opensourcefoundries.com/categories/bluetooth/</link>
+      <link>https://foundries.io/categories/bluetooth/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/bluetooth/</guid>
+      <guid>https://foundries.io/categories/bluetooth/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Conferences</title>
-      <link>https://opensourcefoundries.com/categories/conferences/</link>
+      <link>https://foundries.io/categories/conferences/</link>
       <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/conferences/</guid>
+      <guid>https://foundries.io/categories/conferences/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Corporate</title>
-      <link>https://opensourcefoundries.com/categories/corporate/</link>
+      <link>https://foundries.io/categories/corporate/</link>
       <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/corporate/</guid>
+      <guid>https://foundries.io/categories/corporate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://opensourcefoundries.com/categories/docker/</link>
+      <link>https://foundries.io/categories/docker/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/docker/</guid>
+      <guid>https://foundries.io/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Embedded</title>
-      <link>https://opensourcefoundries.com/categories/embedded/</link>
+      <link>https://foundries.io/categories/embedded/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/embedded/</guid>
+      <guid>https://foundries.io/categories/embedded/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fota</title>
-      <link>https://opensourcefoundries.com/categories/fota/</link>
+      <link>https://foundries.io/categories/fota/</link>
       <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/fota/</guid>
+      <guid>https://foundries.io/categories/fota/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Iot</title>
-      <link>https://opensourcefoundries.com/categories/iot/</link>
+      <link>https://foundries.io/categories/iot/</link>
       <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/iot/</guid>
+      <guid>https://foundries.io/categories/iot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://opensourcefoundries.com/categories/linux/</link>
+      <link>https://foundries.io/categories/linux/</link>
       <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/linux/</guid>
+      <guid>https://foundries.io/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lmp</title>
-      <link>https://opensourcefoundries.com/categories/lmp/</link>
+      <link>https://foundries.io/categories/lmp/</link>
       <pubDate>Wed, 09 May 2018 19:48:23 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/lmp/</guid>
+      <guid>https://foundries.io/categories/lmp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lwm2m</title>
-      <link>https://opensourcefoundries.com/categories/lwm2m/</link>
+      <link>https://foundries.io/categories/lwm2m/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/lwm2m/</guid>
+      <guid>https://foundries.io/categories/lwm2m/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mcuboot</title>
-      <link>https://opensourcefoundries.com/categories/mcuboot/</link>
+      <link>https://foundries.io/categories/mcuboot/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/mcuboot/</guid>
+      <guid>https://foundries.io/categories/mcuboot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microplatform</title>
-      <link>https://opensourcefoundries.com/categories/microplatform/</link>
+      <link>https://foundries.io/categories/microplatform/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/microplatform/</guid>
+      <guid>https://foundries.io/categories/microplatform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Minutes</title>
-      <link>https://opensourcefoundries.com/categories/minutes/</link>
+      <link>https://foundries.io/categories/minutes/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/minutes/</guid>
+      <guid>https://foundries.io/categories/minutes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Newsletter</title>
-      <link>https://opensourcefoundries.com/categories/newsletter/</link>
+      <link>https://foundries.io/categories/newsletter/</link>
       <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/newsletter/</guid>
+      <guid>https://foundries.io/categories/newsletter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quickstart</title>
-      <link>https://opensourcefoundries.com/categories/quickstart/</link>
+      <link>https://foundries.io/categories/quickstart/</link>
       <pubDate>Wed, 17 Jan 2018 13:50:46 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/quickstart/</guid>
+      <guid>https://foundries.io/categories/quickstart/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Radio</title>
-      <link>https://opensourcefoundries.com/categories/radio/</link>
+      <link>https://foundries.io/categories/radio/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/radio/</guid>
+      <guid>https://foundries.io/categories/radio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Threats</title>
-      <link>https://opensourcefoundries.com/categories/threats/</link>
+      <link>https://foundries.io/categories/threats/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/threats/</guid>
+      <guid>https://foundries.io/categories/threats/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Updates</title>
-      <link>https://opensourcefoundries.com/categories/updates/</link>
+      <link>https://foundries.io/categories/updates/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/updates/</guid>
+      <guid>https://foundries.io/categories/updates/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zephyr News</title>
-      <link>https://opensourcefoundries.com/categories/zephyr-news/</link>
+      <link>https://foundries.io/categories/zephyr-news/</link>
       <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/zephyr-news/</guid>
+      <guid>https://foundries.io/categories/zephyr-news/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zmp</title>
-      <link>https://opensourcefoundries.com/categories/zmp/</link>
+      <link>https://foundries.io/categories/zmp/</link>
       <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/categories/zmp/</guid>
+      <guid>https://foundries.io/categories/zmp/</guid>
       <description></description>
     </item>
     

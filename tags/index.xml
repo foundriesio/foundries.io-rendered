@@ -1,328 +1,328 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Open Source Foundries, Ltd.</title>
-    <link>https://opensourcefoundries.com/tags/</link>
-    <description>Recent content in Tags on Open Source Foundries, Ltd.</description>
+    <title>Tags on Foundries.io</title>
+    <link>https://foundries.io/tags/</link>
+    <description>Recent content in Tags on Foundries.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 May 2018 19:48:23 +0000</lastBuildDate>
     
-	<atom:link href="https://opensourcefoundries.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://foundries.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Alsa</title>
-      <link>https://opensourcefoundries.com/tags/alsa/</link>
+      <link>https://foundries.io/tags/alsa/</link>
       <pubDate>Wed, 09 May 2018 19:48:23 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/alsa/</guid>
+      <guid>https://foundries.io/tags/alsa/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Assistant</title>
-      <link>https://opensourcefoundries.com/tags/assistant/</link>
+      <link>https://foundries.io/tags/assistant/</link>
       <pubDate>Wed, 09 May 2018 19:48:23 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/assistant/</guid>
+      <guid>https://foundries.io/tags/assistant/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Att</title>
-      <link>https://opensourcefoundries.com/tags/att/</link>
+      <link>https://foundries.io/tags/att/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/att/</guid>
+      <guid>https://foundries.io/tags/att/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ble</title>
-      <link>https://opensourcefoundries.com/tags/ble/</link>
+      <link>https://foundries.io/tags/ble/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/ble/</guid>
+      <guid>https://foundries.io/tags/ble/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blockchain</title>
-      <link>https://opensourcefoundries.com/tags/blockchain/</link>
+      <link>https://foundries.io/tags/blockchain/</link>
       <pubDate>Fri, 23 Feb 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/blockchain/</guid>
+      <guid>https://foundries.io/tags/blockchain/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bugs</title>
-      <link>https://opensourcefoundries.com/tags/bugs/</link>
+      <link>https://foundries.io/tags/bugs/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/bugs/</guid>
+      <guid>https://foundries.io/tags/bugs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Container</title>
-      <link>https://opensourcefoundries.com/tags/container/</link>
+      <link>https://foundries.io/tags/container/</link>
       <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/container/</guid>
+      <guid>https://foundries.io/tags/container/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Containers</title>
-      <link>https://opensourcefoundries.com/tags/containers/</link>
+      <link>https://foundries.io/tags/containers/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/containers/</guid>
+      <guid>https://foundries.io/tags/containers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Crypto</title>
-      <link>https://opensourcefoundries.com/tags/crypto/</link>
+      <link>https://foundries.io/tags/crypto/</link>
       <pubDate>Fri, 23 Feb 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/crypto/</guid>
+      <guid>https://foundries.io/tags/crypto/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cve</title>
-      <link>https://opensourcefoundries.com/tags/cve/</link>
+      <link>https://foundries.io/tags/cve/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/cve/</guid>
+      <guid>https://foundries.io/tags/cve/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Decentralized</title>
-      <link>https://opensourcefoundries.com/tags/decentralized/</link>
+      <link>https://foundries.io/tags/decentralized/</link>
       <pubDate>Fri, 23 Feb 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/decentralized/</guid>
+      <guid>https://foundries.io/tags/decentralized/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://opensourcefoundries.com/tags/docker/</link>
+      <link>https://foundries.io/tags/docker/</link>
       <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/docker/</guid>
+      <guid>https://foundries.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker Compose</title>
-      <link>https://opensourcefoundries.com/tags/docker-compose/</link>
+      <link>https://foundries.io/tags/docker-compose/</link>
       <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/docker-compose/</guid>
+      <guid>https://foundries.io/tags/docker-compose/</guid>
       <description></description>
     </item>
     
     <item>
       <title>General</title>
-      <link>https://opensourcefoundries.com/tags/general/</link>
+      <link>https://foundries.io/tags/general/</link>
       <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/general/</guid>
+      <guid>https://foundries.io/tags/general/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Google</title>
-      <link>https://opensourcefoundries.com/tags/google/</link>
+      <link>https://foundries.io/tags/google/</link>
       <pubDate>Wed, 09 May 2018 19:48:23 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/google/</guid>
+      <guid>https://foundries.io/tags/google/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Iot</title>
-      <link>https://opensourcefoundries.com/tags/iot/</link>
+      <link>https://foundries.io/tags/iot/</link>
       <pubDate>Fri, 23 Feb 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/iot/</guid>
+      <guid>https://foundries.io/tags/iot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>K8s</title>
-      <link>https://opensourcefoundries.com/tags/k8s/</link>
+      <link>https://foundries.io/tags/k8s/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/k8s/</guid>
+      <guid>https://foundries.io/tags/k8s/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Keys</title>
-      <link>https://opensourcefoundries.com/tags/keys/</link>
+      <link>https://foundries.io/tags/keys/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/keys/</guid>
+      <guid>https://foundries.io/tags/keys/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://opensourcefoundries.com/tags/kubernetes/</link>
+      <link>https://foundries.io/tags/kubernetes/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/kubernetes/</guid>
+      <guid>https://foundries.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://opensourcefoundries.com/tags/linux/</link>
+      <link>https://foundries.io/tags/linux/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/linux/</guid>
+      <guid>https://foundries.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lmp</title>
-      <link>https://opensourcefoundries.com/tags/lmp/</link>
+      <link>https://foundries.io/tags/lmp/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/lmp/</guid>
+      <guid>https://foundries.io/tags/lmp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lte</title>
-      <link>https://opensourcefoundries.com/tags/lte/</link>
+      <link>https://foundries.io/tags/lte/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/lte/</guid>
+      <guid>https://foundries.io/tags/lte/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lwm2m</title>
-      <link>https://opensourcefoundries.com/tags/lwm2m/</link>
+      <link>https://foundries.io/tags/lwm2m/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/lwm2m/</guid>
+      <guid>https://foundries.io/tags/lwm2m/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Management</title>
-      <link>https://opensourcefoundries.com/tags/management/</link>
+      <link>https://foundries.io/tags/management/</link>
       <pubDate>Mon, 07 May 2018 06:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/management/</guid>
+      <guid>https://foundries.io/tags/management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mcuboot</title>
-      <link>https://opensourcefoundries.com/tags/mcuboot/</link>
+      <link>https://foundries.io/tags/mcuboot/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/mcuboot/</guid>
+      <guid>https://foundries.io/tags/mcuboot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microplatform</title>
-      <link>https://opensourcefoundries.com/tags/microplatform/</link>
+      <link>https://foundries.io/tags/microplatform/</link>
       <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/microplatform/</guid>
+      <guid>https://foundries.io/tags/microplatform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Open Source</title>
-      <link>https://opensourcefoundries.com/tags/open-source/</link>
+      <link>https://foundries.io/tags/open-source/</link>
       <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/open-source/</guid>
+      <guid>https://foundries.io/tags/open-source/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ota</title>
-      <link>https://opensourcefoundries.com/tags/ota/</link>
+      <link>https://foundries.io/tags/ota/</link>
       <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/ota/</guid>
+      <guid>https://foundries.io/tags/ota/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Portainer</title>
-      <link>https://opensourcefoundries.com/tags/portainer/</link>
+      <link>https://foundries.io/tags/portainer/</link>
       <pubDate>Tue, 08 May 2018 06:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/portainer/</guid>
+      <guid>https://foundries.io/tags/portainer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Radio</title>
-      <link>https://opensourcefoundries.com/tags/radio/</link>
+      <link>https://foundries.io/tags/radio/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/radio/</guid>
+      <guid>https://foundries.io/tags/radio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Resin</title>
-      <link>https://opensourcefoundries.com/tags/resin/</link>
+      <link>https://foundries.io/tags/resin/</link>
       <pubDate>Wed, 17 Jan 2018 13:07:31 +0200</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/resin/</guid>
+      <guid>https://foundries.io/tags/resin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Security</title>
-      <link>https://opensourcefoundries.com/tags/security/</link>
+      <link>https://foundries.io/tags/security/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/security/</guid>
+      <guid>https://foundries.io/tags/security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Update</title>
-      <link>https://opensourcefoundries.com/tags/update/</link>
+      <link>https://foundries.io/tags/update/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/update/</guid>
+      <guid>https://foundries.io/tags/update/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zephyr</title>
-      <link>https://opensourcefoundries.com/tags/zephyr/</link>
+      <link>https://foundries.io/tags/zephyr/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/zephyr/</guid>
+      <guid>https://foundries.io/tags/zephyr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zmp</title>
-      <link>https://opensourcefoundries.com/tags/zmp/</link>
+      <link>https://foundries.io/tags/zmp/</link>
       <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://opensourcefoundries.com/tags/zmp/</guid>
+      <guid>https://foundries.io/tags/zmp/</guid>
       <description></description>
     </item>
     
