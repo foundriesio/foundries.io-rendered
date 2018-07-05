@@ -610,7 +610,7 @@ repository, to begin development based on the v1.11 master branch.&lt;/p&gt;
 &lt;p&gt;This is the first Zephyr microPlatform update which uses the new CMake
 build system, which has replaced the use of Kbuild.&lt;/p&gt;
 
-&lt;p&gt;As described in the summary from &lt;a href=&#34;https://foundries.io/mp/zmp/0.2&#34;&gt;https://foundries.io/mp/zmp/0.2&lt;/a&gt;, all
+&lt;p&gt;As described in the summary from &lt;a href=&#34;https://app.foundries.io/mp/zmp/0.2&#34;&gt;https://app.foundries.io/mp/zmp/0.2&lt;/a&gt;, all
 users will need to update any out of tree application build systems.&lt;/p&gt;
 
 &lt;h2 id=&#34;linux-microplatform-changes-for-0-3&#34;&gt;Linux microPlatform changes for 0.3&lt;/h2&gt;
