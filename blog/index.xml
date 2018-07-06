@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on Foundries.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://foundries.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deploying OTA Community Edition</title>
+      <link>https://foundries.io/blog/2018/06/27/ota-part-3/</link>
+      <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://foundries.io/blog/2018/06/27/ota-part-3/</guid>
+      <description>&lt;p&gt;Continuing with the OTA blog series &lt;a href=&#34;https://foundries.io/blog/2018/05/25/ota-part-1/&#34;&gt;part one&lt;/a&gt; and &lt;a href=&#34;https://foundries.io/blog/2018/06/14/ota-part-2/&#34;&gt;part two&lt;/a&gt;, this article shows you how to deploy OTA Community Edition inside Google&amp;rsquo;s Kubernetes Engine (GKE). After completion of these instructions, you&amp;rsquo;ll have an OTA server available on the internet with a single QEMU device registered to it.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.22</title>

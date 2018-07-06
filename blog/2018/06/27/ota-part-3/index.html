@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zephyr microPlatform, Zephyr OTA via DFU/mcumgr</title>
+  <title>Deploying OTA Community Edition</title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://foundries.io/index.xml" type="application/rss+xml" title="Foundries.io">
 
   
-  <meta property="og:title" content="Zephyr microPlatform, Zephyr OTA via DFU/mcumgr" />
+  <meta property="og:title" content="Deploying OTA Community Edition" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/blog/2018/04/17/20180417-mcumgr-dfu//" />
+  <meta property="og:url" content="/blog/2018/06/27/ota-part-3//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://foundries.io/">
-                    <img src="https://foundries.io/img/logo.png" alt="Zephyr microPlatform, Zephyr OTA via DFU/mcumgr logo" class="hidden-xs hidden-sm">
-                    <img src="https://foundries.io/img/logo-small.png" alt="Zephyr microPlatform, Zephyr OTA via DFU/mcumgr logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Zephyr microPlatform, Zephyr OTA via DFU/mcumgr - go to homepage</span>
+                    <img src="https://foundries.io/img/logo.png" alt="Deploying OTA Community Edition logo" class="hidden-xs hidden-sm">
+                    <img src="https://foundries.io/img/logo-small.png" alt="Deploying OTA Community Edition logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Deploying OTA Community Edition - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -188,7 +188,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Zephyr microPlatform, Zephyr OTA via DFU/mcumgr</h1>
+                <h1>Deploying OTA Community Edition</h1>
             </div>
         </div>
     </div>
@@ -204,232 +204,123 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">April 17, 2018</p>
+                        <p class="text-muted text-uppercase mb-small text-right">By <a href="#">Andy Doan</a> | June 27, 2018</p>
 
                         <div id="post-content">
-                          <p>In this blog we describe how to use the Zephyr microPlatform and the in-tree
-Zephyr samples to build, flash and perform an over the air (OTA) update of a
-Zephyr application over Bluetooth Low Energy (BLE).  This demonstration uses the
-DFU support within Zephyr provided by
-<a href="http://docs.zephyrproject.org/subsystems/mgmt.html">mcumgr</a>.</p>
+                          <p>Continuing with the OTA blog series <a href="https://foundries.io/blog/2018/05/25/ota-part-1/">part one</a> and <a href="https://foundries.io/blog/2018/06/14/ota-part-2/">part two</a>, this article shows you how to deploy OTA Community Edition inside Google&rsquo;s Kubernetes Engine (GKE). After completion of these instructions, you&rsquo;ll have an OTA server available on the internet with a single QEMU device registered to it.
+</p>
 
-<p></p>
+<h3 id="requirements">Requirements</h3>
 
-<h1 id="overview">Overview</h1>
-
-<p>Before getting started, some of the features described in this blog require
-accessing features released to subscribers of the Zephyr microPlatform.  You can
-find out more about subscriptions at:
-<a href="https://app.foundries.io">https://app.foundries.io</a>.</p>
-
-<p>In this blog, we will prepare will prepare developer&rsquo;s workstation to use the
-Zephyr microPlatform; deploy our initial code to an
-<a href="https://www.nordicsemi.com/eng/Products/nRF52840-DK">nRF52840-DK</a> dev board,
-and then deploy new code to the device using an OTA update.</p>
-
-<h2 id="install-the-zephyr-microplatform">Install the Zephyr microPlatform:</h2>
-
-<p>Please refer to our documentation to install the Zephyr microPlatform at:
-   <a href="https://app.foundries.io/mp/zmp/latest/docs/tutorial/installation-zephyr.html">https://app.foundries.io/mp/zmp/latest/docs/tutorial/installation-zephyr.html</a></p>
-
-<p><strong>NOTE:</strong> in this blog, we use the nRF52840-DK board instead of the BLE Nano
-   2 used by default in the documentation. To use the nRF52840-DK, the following
-   changes are needed:</p>
+<p>You&rsquo;ll need a few things in place to be able to deploy this to GKE:</p>
 
 <ul>
-<li><p>Use &ldquo;-b nrf52840_pca10056&rdquo; instead of &ldquo;-b nrf52_blenano2&rdquo; when running ZMP</p></li>
-
-<li><p>Install the <a href="http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.tools%2Fdita%2Ftools%2Fnrf5x_command_line_tools%2Fnrf5x_nrfjprogexe.html">nRF5x command line
- tools</a>,
- instead of PyOCD.</p></li>
+<li>An account with the <a href="https://console.cloud.google.com">Google Cloud Platform</a> (GCP).</li>
+<li>A Project defined in your GCP account.</li>
+<li>Git and Docker to run the deployment scripts.</li>
 </ul>
 
-<h2 id="install-mcumgr-on-your-development-workstation">Install mcumgr on your development workstation</h2>
+<p>It&rsquo;s also highly recommended that you are able to add DNS records to a domain you own. Otherwise, you&rsquo;ll have to edit /etc/hosts to access the services.</p>
 
-<p>Install the mcumgr application using &ldquo;go get&rdquo; (requires Go 1.7 or later):</p>
+<h3 id="overview">Overview</h3>
 
-<pre><code> $ go get github.com/apache/mynewt-mcumgr-cli/mcumgr
+<p>OTA Community Edition deploys several <a href="https://foundries.io/blog/2018/06/14/ota-part-2/">micro-services</a> to Kubernetes. However, it doesn&rsquo;t come with any built-in security. The approach taken by this article is to expose the unsafe services via a single nginx reverse-proxy. This will make it obvious what services need to be locked down. Part four of the blog series will describe an approach for securing the reverse-proxy. When the deployment is completed, you&rsquo;ll have a system with these caveats:</p>
+
+<ul>
+<li><strong>INSECURE</strong> - Anyone can push to the TreeHub</li>
+<li><strong>INSECURE</strong> - Anyone can access and manage devices via the web application</li>
+</ul>
+
+<p>Part 4 of the blog series will go into the details of securing everything.</p>
+
+<h3 id="one-time-only-steps">One-Time Only Steps</h3>
+
+<p>First get the OTA Community Edition source. This article relies on 3 out-of-tree patches to streamline the process:</p>
+
+<pre><code>  git clone -b ota-blog-part3 https://github.com/OpenSourceFoundries/ota-community-edition
+  cd ota-community-edition
+
+  # If you are curious about the out-of-tree patches:
+  git log -3
 </code></pre>
 
-<p>Make sure ~/go/bin is on the PATH of the user that runs the &ldquo;mcumgr&rdquo;
-   commands.</p>
+<p>OTA Community Edition has several dependencies that aren&rsquo;t easy to install. This article uses a container provided by the project to make things easier. If you have the tools installed locally you can always skip this step and call things like <code>kubectl</code> and <code>gcloud</code> directly.</p>
 
-<h2 id="build-and-flash-the-smp-svr-application">Build and flash the smp_svr application</h2>
-
-<p>With your device console connected (115200 baud, 8N1), build and flash the
-   smp_svr application, which allows DFU firmware update via BLE:</p>
-
-<pre><code> $ ./zmp build -b nrf52840_pca10056 zephyr/samples/subsys/mgmt/mcumgr/smp_svr/
- $ ./zmp flash -b nrf52840_pca10056 zephyr/samples/subsys/mgmt/mcumgr/smp_svr/
+<pre><code>  # Build the container:
+  ./contrib/gke/docker-build.sh
 </code></pre>
 
-<p>If the flash step fails, make sure your NRF52840-DK is connected via USB. One
-   way to check is to make sure running &ldquo;nrfjprog &ndash;ids&rdquo; lists the board&rsquo;s ID.</p>
+<p>With the container in place, you need to configure the <code>gcloud</code> tools to use your GCP project:</p>
 
-<p>The console output should look like this:</p>
-
-<pre><code>   ***** Booting Zephyr OS v1.1.0-52-g5bac42f *****
-   [MCUBOOT] [INF] main: Starting bootloader
-   [MCUBOOT] [INF] boot_status_source: Image 0: magic=unset, copy_done=0xff, image_ok=0xff
-   [MCUBOOT] [INF] boot_status_source: Scratch: magic=unset, copy_done=0x0, image_ok=0xff
-   [MCUBOOT] [INF] boot_status_source: Boot source: slot 0
-   [MCUBOOT] [INF] boot_swap_type: Swap type: none
-   [MCUBOOT] [ERR] main: Unable to find bootable image
-   ***** Booting Zephyr OS v1.1.0-52-g5bac42f *****
-   [MCUBOOT] [INF] main: Starting bootloader
-   [MCUBOOT] [INF] boot_status_source: Image 0: magic=unset, copy_done=0xff, image_ok=0xff
-   [MCUBOOT] [INF] boot_status_source: Scratch: magic=unset, copy_done=0x0, image_ok=0xff
-   [MCUBOOT] [INF] boot_status_source: Boot source: slot 0
-   [MCUBOOT] [INF] boot_swap_type: Swap type: none
-   [MCUBOOT] [INF] main: Bootloader chainload address offset: 0xc000
-   [MCUBOOT] [INF] main: Jumping to the first image slot
-   ***** Booting Zephyr OS v1.11.0-633-g973b01a68 *****
-   Zephyr Shell, Zephyr version: 1.11.99
-   Type 'help' for a list of available commands
-   shell&gt; Bluetooth initialized
-   Advertising successfully started
+<pre><code>  EXTRA_ARGS=&quot;-it&quot; ./contrib/gke/gcloud auth login
+  ./contrib/gke/gcloud config set project &lt;YOUR PROJECT&gt;
+  # You can use any GCP region you wish below
+  ./contrib/gke/gcloud config set compute/zone us-central1-c
 </code></pre>
 
-<h2 id="manage-the-device-using-mcumgr">Manage the device using mcumgr</h2>
+<h3 id="deploy-ota-community-edition">Deploy OTA Community Edition</h3>
 
-<p>In this section you will connect, update and query the device using mcumgr.</p>
+<p>The ota-blog-part3 branch of OTA Community Edition includes a helper script to deploy OTA Community Edition. The script isn&rsquo;t very long and is worth taking a close look at to understand the mechanics of deploying OTA Community Edition. Deploying is as simple as::</p>
 
-<p><strong>Connect to the device using mcumgr</strong></p>
-
-<p>These commands generally have to be run as root (commands run as root instead
-   of your normal user are prefixed with <code>#</code> instead of <code>$</code> in this blog post).
-   First make sure mcumgr is in root&rsquo;s PATH.</p>
-
-<pre><code> $ sudo -s
- # export PATH=$PATH:/home/YOUR_USERNAME/go/bin
+<pre><code>  ./create-cluster.sh example.com
 </code></pre>
 
-<p>Now verify you can connect to your device.</p>
+<h3 id="set-up-dns">Set up DNS</h3>
 
-<p><strong>Note:</strong> In this demo we are referencing hci0 which may be different on
-   your system.  For the demo to work, you will need a Bluetooth 4.0
-   compatible adapter and a recent Linux distribution (we performed this demo
-   with Ubuntu 17.10) with &lsquo;bluez&rsquo; installed.  Once you install bluez, you can
-   identify your device using the &lsquo;hciconfig&rsquo; utility.</p>
+<p>You now need DNS entries in place to access the OTA server. Add the following entries into your DNS management tool:</p>
 
-<pre><code> # mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' echo hello
- hello
+<pre><code> # Get the IP of the nginx reverse-proxy:
+ ./contrib/gke/kubectl get svc reverse-proxy
+
+ # Point these entries at the reverse-proxy IP:
+ tuf-reposerver.&lt;DNS_NAME&gt;, treehub.&lt;DNS_NAME&gt;, app.&lt;DNS_NAME&gt;
+
+ # Get the IP of the device gateway:
+ ./contrib/gke/kubectl get svc gateway-service
+ # Point &lt;SERVER_NAME&gt; at this IP
 </code></pre>
 
-<p>If that doesn&rsquo;t work, make sure a &lsquo;Zephyr&rsquo; device shows up in your &lsquo;hcitool
-   lescan&rsquo; output and try again.</p>
+<p>If you don&rsquo;t have real DNS in place, you can hack your /etc/hosts with something like:</p>
 
-<p>If you get errors like &ldquo;Error: NMP timeout&rdquo; when running mcumgr, reset your
-   device and try again using nrfjprog:</p>
-
-<pre><code> $ nrfjprog --reset
+<pre><code>  # A quick entry generator for /etc/hosts:
+ echo $(./contrib/gke/kubectl get svc reverse-proxy -o json | jq -r '.status.loadBalancer.ingress[0].ip')    treehub.&lt;DNS_NAME&gt; tuf-reposerver.&lt;DNS_NAME&gt;  app.&lt;DNS_NAME&gt;
 </code></pre>
 
-<p><strong>Verify that only one application image is installed.</strong></p>
+<p>As a sanity check, you can validate everything is working with:</p>
 
-<p>Use the following command to check the set of available Zephyr images on your
-   device.</p>
-
-<pre><code># mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' image list
-Images:
-slot=0
-   version: 0.0.0
-   bootable: true
-   flags: active confirmed
-   hash: c7567dd9b84d15ddb4345e38435822ef102f5d1683e8425d5447bafd5cb15c11
+<pre><code>  curl http://tuf-reposerver.&lt;DNS_NAME&gt;/api/v1/user_repo/targets.json
+  curl http://treehub.&lt;DNS_NAME&gt;/api/v3/config
 </code></pre>
 
-<p><strong>Modify the sample application and perform an OTA update</strong></p>
+<h3 id="secure-the-tuf-keys">Secure the TUF Keys</h3>
 
-<p>Edit the file zephyr/samples/subsys/mgmt/mcumgr/smp_svr/src/main.c, adding
-   a printline to the main() function:</p>
+<p>OTA Community Edition is running and exposed to the internet. The nginx reverse-proxy has no built-in security and the TUF private keys are available to <strong>anyone</strong>. This can be fixed even though the reverse-proxy has no authentication/authorization logic. In fact, it&rsquo;s a great example of how TUF protects you from the leaking of a private key. The ota-blog-part3 branch includes a script to make it easy:</p>
 
-<pre><code>printk(&quot;This application has been updated\n&quot;);
+<pre><code>  ./rotate-keys.sh example.com
 </code></pre>
 
-<p>Now re-build it with a different version number using zmp.</p>
+<h3 id="upload-an-image">Upload an Image</h3>
 
-<p><em>Important: do this from a <strong>non-root</strong> shell</em>:</p>
+<p><a href="https://foundries.io/docs/0.22/reference/linux-ota.html#upload-image-to-ats-garage">Uploading an image</a> is a great way to validate the server is working and will be needed when you register a device:</p>
 
-<pre><code>$ ./zmp build -b nrf52840_pca10056 --imgtool-version 0.1.0 zephyr/samples/subsys/mgmt/mcumgr/smp_svr
+<pre><code>  wget https://foundries.io/mp/lmp/0.22/artifacts/other-intel-corei7-64/other/intel-corei7-64-ostree_repo.tar.bz2
+  tar -xf intel-corei7-64-ostree_repo.tar.bz2
+  # if you hacked /etc/hosts then include &quot;--network host&quot;
+  docker run --rm -it -v $PWD:/build --workdir=/build opensourcefoundries/aktualizr \
+    ota-publish -m intel-corei7-64  -c ./credentials.zip -r ostree_repo
 </code></pre>
 
-<p>From the root shell, upload the modified image to your device:</p>
+<h3 id="register-a-device">Register a Device</h3>
 
-<pre><code># mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' image upload outdir/zephyr/samples/subsys/mgmt/mcumgr/smp_svr/nrf52840_pca10056/app/zephyr/smp_svr-nrf52840_pca10056-signed.bin
+<p>OTA Community Edition requires <a href="https://github.com/advancedtelematic/aktualizr/blob/master/docs/implicit-provisioning.adoc">implicit provisioning</a>. Creating a device is fairly easy:</p>
+
+<pre><code>  # DEVICE_ID = The name of the device to appear in OTA Community Edition
+  ./contrib/gke/make SERVER_NAME=&lt;SERVER_NAME&gt; DEVICE_ID=&lt;DEVICE_ID&gt; SKIP_CLIENT=true new-client
 </code></pre>
 
-<p><strong>Query the device and make sure 0.1.0 is visible:</strong></p>
+<p>You can then copy these credentials to your target device to register. Instrusctions for that can be found at:</p>
 
-<pre><code># mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' image list
-Images:
-slot=0
-   version: 0.0.0
-   bootable: true
-   flags: active confirmed
-   hash: c7567dd9b84d15ddb4345e38435822ef102f5d1683e8425d5447bafd5cb15c11
-slot=1
-   version: 0.1.0
-   bootable: true
-   flags:
-   hash: 7806e0a1239aa772f3c1c9ea121c8c95d485fc38b2b3bb930275b63a7962f938
-Split status: N/A (0)
-</code></pre>
-
-<p>Note the presence of an update image in slot 1 with updated image version
-   <code>0.1.0</code>, which corresponds to the value of the <code>--imgtool-version</code> argument
-   you passed to <code>zmp build</code> earlier.</p>
-
-<p><strong>Confirm the update</strong></p>
-
-<p>&ldquo;Confirm&rdquo; the slot 1 image by SHA. This will make the bootloader, MCUboot,
-   install it during the next boot. From the above example,</p>
-
-<pre><code># mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' image test 7806e0a1239aa772f3c1c9ea121c8c95d485fc38b2b3bb930275b63a7962f938
-Images:
-slot=0
-   version: 0.0.0
-   bootable: true
-   flags: active confirmed
-   hash: c7567dd9b84d15ddb4345e38435822ef102f5d1683e8425d5447bafd5cb15c11
-slot=1
-   version: 0.1.0
-   bootable: true
-   flags: pending
-   hash: 7806e0a1239aa772f3c1c9ea121c8c95d485fc38b2b3bb930275b63a7962f938
-Split status: N/A (0)
-</code></pre>
-
-<p>Note how the <code>flags</code> field now says <code>pending</code>. This means the update image
-   will be used at the next device reset.</p>
-
-<p><strong>Reboot the device using DFU:</strong></p>
-
-<pre><code># mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' reset
-</code></pre>
-
-<p>You will see bootloader output confirming MCUboot is swapping into the new
-   image, then see the new printline with the string <code>This application has been
-   updated</code>:</p>
-
-<pre><code> ***** Booting Zephyr OS v1.1.0-52-g5bac42f *****
- [MCUBOOT] [INF] main: Starting bootloader
- [MCUBOOT] [INF] boot_status_source: Image 0: magic=unset, copy_done=0xff, image_ok=0xff
- [MCUBOOT] [INF] boot_status_source: Scratch: magic=unset, copy_done=0x0, image_ok=0xff
- [MCUBOOT] [INF] boot_status_source: Boot source: slot 0
- [MCUBOOT] [INF] boot_swap_type: Swap type: test
- [MCUBOOT] [INF] main: Bootloader chainload address offset: 0xc000
- [MCUBOOT] [INF] main: Jumping to the first image slot
- ***** Booting Zephyr OS v1.11.0-633-g973b01a68 *****
- Zephyr Shell, Zephyr version: 1.11.99
- Type 'help' for a list of available commands
- shell&gt; This application has been updated
- Bluetooth initialized
- Advertising successfully started
-</code></pre>
-
-<p>Since the updated application also supports the mcumgr protocol, you can make
-   additional changes and update it with a third version using the above steps.</p>
+<p><a href="https://foundries.io/docs/0.22/reference/linux-ota.html#register-device">https://foundries.io/docs/0.22/reference/linux-ota.html#register-device</a></p>
                         </div>
                         
                         
