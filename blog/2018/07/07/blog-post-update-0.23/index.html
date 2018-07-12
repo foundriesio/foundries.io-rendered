@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lmp</title>
+  <title>microPlatform update 0.23</title>
   <meta name="author" content="" />
 
   
@@ -54,9 +54,9 @@
   <link rel="alternate" href="https://foundries.io/index.xml" type="application/rss+xml" title="Foundries.io">
 
   
-  <meta property="og:title" content="Lmp" />
+  <meta property="og:title" content="microPlatform update 0.23" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/tags/lmp//" />
+  <meta property="og:url" content="/blog/2018/07/07/blog-post-update-0.23//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://foundries.io/">
-                    <img src="https://foundries.io/img/logo.png" alt="Lmp logo" class="hidden-xs hidden-sm">
-                    <img src="https://foundries.io/img/logo-small.png" alt="Lmp logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Lmp - go to homepage</span>
+                    <img src="https://foundries.io/img/logo.png" alt="microPlatform update 0.23 logo" class="hidden-xs hidden-sm">
+                    <img src="https://foundries.io/img/logo-small.png" alt="microPlatform update 0.23 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">microPlatform update 0.23 - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -205,7 +205,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Lmp</h1>
+                <h1>microPlatform update 0.23</h1>
             </div>
         </div>
     </div>
@@ -214,59 +214,580 @@
 
         <div id="content">
             <div class="container">
+
                 <div class="row">
+
                     
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-9" id="blog-post">
 
+                        <p class="text-muted text-uppercase mb-small text-right">July 7, 2018</p>
+
+                        <div id="post-content">
+                          <h1 id="summary">Summary</h1>
+
+<h2 id="zephyr-microplatform-changes-for-0-23">Zephyr microPlatform changes for 0.23</h2>
+
+<p>Zephyr&rsquo;s first batch of v1.13 patches; code cleanups to the sample
+applications.</p>
+
+<h2 id="linux-microplatform-changes-for-0-23">Linux microPlatform changes for 0.23</h2>
+
+<p>OSF Unified Linux Kernel updated to the 4.16.18 stable release.
+Default GCC version was updated to the latest upstream 8.1 release.</p>
+
+<p></p>
+
+<h1 id="zephyr-microplatform">Zephyr microPlatform</h1>
+
+<h2 id="summary-1">Summary</h2>
+
+<p>Zephyr&rsquo;s first batch of v1.13 patches; code cleanups to the sample
+applications.</p>
+
+<h2 id="highlights">Highlights</h2>
+
+<ul>
+<li>Zephyr from the v1.13 timeline</li>
+<li>No MCUboot pull</li>
+<li>Minor cleanups to the sample applications</li>
+</ul>
+
+<h2 id="components">Components</h2>
+
+<h3 id="mcuboot">MCUboot</h3>
+
+<h4 id="features">Features</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h4 id="bugs">Bugs</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h3 id="zephyr">Zephyr</h3>
+
+<h4 id="features-1">Features</h4>
+
+<h5 id="conf-file-can-now-be-a-cmake-list">CONF_FILE can now be a CMake list:</h5>
+
+<ul>
+<li>Most Zephyr users will likely recognize the CMake
+variable CONF_FILE, which can be used to set the path
+to the top-level application Kconfig fragment.
+(Normally, this defaults to prj.conf.)</li>
+</ul>
+
+<p>A longstanding but lesser-known feature is that
+CONF_FILE can also be a whitespace-separated list of
+fragments; these will all be merged into the final
+configuration. Some samples use this feature to add
+board-specific &ldquo;mix-ins&rdquo; to the top-level prj.conf;
+see the led_ws2812 CMakeLists.txt for an example.</p>
+
+<p>The &ldquo;whitespace-separated&rdquo; part of this feature is a
+holdover from when Zephyr used the Linux kernel&rsquo;s
+Makefile build system, Kbuild. Since moving to CMake,
+the whitespace separation has been a little bit less
+convenient, as CMake uses semicolon-separated strings
+as its internal &ldquo;list&rdquo; data type.</p>
+
+<p>To make this feature cleaner in the new world order,
+CONF_FILE now also supports separation via semicolons.
+The old whitespace separation behavior is not affected
+to keep backwards compatibility. For example, setting
+the following at the CMake command line would merge
+the three fragments hello.conf, world.conf, and
+zephyr.conf into the final .config:</p>
+
+<pre><code>  -DCONF_FILE=&quot;hello.conf;world.conf zephyr.conf&quot;
+</code></pre>
+
+<h5 id="pwm-on-stm32">PWM on STM32:</h5>
+
+<ul>
+<li>Device tree bindings were added for timers and PWM
+devices on STM32 targets.  A large variety of STM32
+targets (F0, F1, F3, F4, and L4 families) now have
+such nodes added on a per-SoC basis. Many of the
+official boards produced by STMicroelectronics now
+have PWM enabled.</li>
+</ul>
+
+<p>The old Kconfig options (CONFIG_PWM_STM32_x_DEV_NAME,
+etc.) have been removed. Applications using PWM on
+STM32 may need updates to reflect this switch to
+device tree.</p>
+
+<h5 id="uart-on-nrf">UART on nRF:</h5>
+
+<ul>
+<li>The UART driver for nRF devices has been refactored to
+use the vendor HAL. This change was followed by a
+large tree-wide rename of the Kconfig options:
+CONFIG_UART_NRF5 was renamed to CONFIG_UART_NRFX, and
+CONFIG_UART_NRF5_xxx options were renamed to
+CONFIG_UART_0_NRF_xxx.</li>
+</ul>
+
+<p>Applications using this driver may need updates.</p>
+
+<h5 id="many-kconfig-warnings-are-now-errors">Many Kconfig warnings are now errors:</h5>
+
+<ul>
+<li>The tree-wide cleanups and improvements to Zephyr&rsquo;s
+usage of Kconfig continues as Kconfiglib grows more
+features. Notably, many warnings are now errors,
+improving the rate at which CI catches Kconfig issues.</li>
+</ul>
+
+<h5 id="arches">Arches:</h5>
+
+<ul>
+<li>The work to enable Arm v8-M SoCs, some of which
+include support for &ldquo;secure&rdquo; and &ldquo;non-secure&rdquo;
+execution states, continues. There is a new
+CONFIG_ARM_NONSECURE_FIRMWARE option, which signals
+that the application being built is targeting the non-
+secure execution state. This depends on a new hidden
+CONFIG_ARMV8_M_SE option, which SoCs can select to
+signal that hardware support for this feature is
+present. This was followed with infrastructure APIs
+related to address accessibility and interrupt
+management in secure and non-secure contexts.</li>
+</ul>
+
+<p>The native POSIX &ldquo;architecture&rdquo; now supports -rt and
+-no-rt command line options, which allow deferring the
+decision for whether execution should be slowed down
+to real time to runtime. (The option
+CONFIG_NATIVE_POSIX_SLOWDOWN_TO_REAL_TIME now
+determines the default value.)</p>
+
+<h5 id="bluetooth">Bluetooth:</h5>
+
+<ul>
+<li>There is a new choice option for controlling the
+transmit power.</li>
+</ul>
+
+<p>On Linux hosts, the native POSIX target can now access
+the kernel Bluetooth stack via a new HCI driver, which
+can be enabled with CONFIG_BT_USERCHAN.</p>
+
+<p>The Bluetooth mesh sample application
+samples/boards/nrf52/mesh/onoff-app now supports the
+persistent storage API introduced in v1.12. This
+allows the application to rejoin the same network if
+the board is reset.</p>
+
+<p>The host stack now supports more flexible choices for
+how to pass attributes to bt_gatt_notify().</p>
+
+<h5 id="boards">Boards:</h5>
+
+<ul>
+<li>The frdm_kl25z board now supports USB.</li>
+</ul>
+
+<p>Nordic board Kconfig files can now select
+CONFIG_BOARD_HAS_DCDC, which will enable the DC/DC
+converter.</p>
+
+<h5 id="build">Build:</h5>
+
+<ul>
+<li>There is a new CONFIG_SPEED_OPTIMIZATIONS flag, which
+requests the build system to optimize for speed. (The
+default is to optimize for binary size.)</li>
+</ul>
+
+<p>The warning output for when the value a user sets for
+a Kconfig option differs from the actual value has
+been improved.</p>
+
+<h5 id="documentation">Documentation:</h5>
+
+<ul>
+<li>Zephyr&rsquo;s Kconfig documentation now includes output for
+choices.</li>
+</ul>
+
+<h5 id="device-tree">Device Tree:</h5>
+
+<ul>
+<li>The RISCV32 QEMU target now has DT support for flash,
+SRAM, and UART.</li>
+</ul>
+
+<p>nRF52 SoCs now have device tree support for GPIO.</p>
+
+<h5 id="drivers">Drivers:</h5>
+
+<ul>
+<li>A variety of nRF peripheral accesses throughout the
+tree were replaced with calls to inline accessors in
+the vendor HAL. The stated reason given is to enable
+easier testing.</li>
+</ul>
+
+<p>The nRF PWM driver now has prescaler support.</p>
+
+<p>The mcux Ethernet driver now uses the carrier
+detection API calls described below in the new
+networking features.</p>
+
+<p>A new driver for the TI SimpleLink WiFi offload chip
+was merged; so far, this only supports the network
+management commands related to WiFi which were
+introduced for v1.12 (see include/net/wifi_mgmt.h for
+details).</p>
+
+<p>A variety of USB-related changes were merged.</p>
+
+<p>The USB subsystem now sports new USBD_DESCR_xxx_DEFINE
+macros for declaring descriptors of various types;
+behind the scenes, these use linker magic to ensure
+that the defined descriptors end up in contiguous
+memory. This allowed migrating descriptors formerly
+defined in an increasingly large
+subsys/usb/usb_descriptor.c into the files for the
+individual USB classes, etc. that defined them.</p>
+
+<p>As all Zephyr USB controllers support USB v2.0, the
+USB protocol version reported in the device descriptor
+has been updated to that value, increasing it from its
+former setting of v1.1.</p>
+
+<p>The HID interrupt endpoint size configuration option
+CONFIG_HID_INTERRUPT_EP_MPS is now visible and thus
+configurable by applications.</p>
+
+<p>Interface descriptors are now configurable at runtime.</p>
+
+<h5 id="networking">Networking:</h5>
+
+<ul>
+<li>Ethernet drivers can now signal detection and loss of
+a carrier via new net_eth_carrier_on() and
+net_eth_carrier_off() routines. This is used by the
+network management APIs to generate interface &ldquo;up&rdquo; and
+&ldquo;down&rdquo; events.</li>
+</ul>
+
+<p>The DHCP implementation uses these events to obtain
+new addresses when a network interface reappears after
+going down.</p>
+
+<p>The network shell&rsquo;s conn command now unconditionally
+prints the state of each TCP connection.</p>
+
+<p>A variety of performance improvements were merged into
+the networking layer; these speed things up by
+avoiding unnecessary work, like duplicated filling in
+of packet headers and checksums. Better management of
+some internal caches when multiple networking
+interfaces are running on board was also merged.</p>
+
+<h5 id="samples">Samples:</h5>
+
+<ul>
+<li>The BBC micro:bit now supports servomotors; see
+samples/basic/servo_motor.</li>
+</ul>
+
+<h5 id="scripts">Scripts:</h5>
+
+<ul>
+<li>A variety of updates were merged to the Kconfiglib
+dependency vendored into Zephyr, along with its users;
+these are mostly related to hardening warnings into
+errors and improving error and warning output.</li>
+</ul>
+
+<h5 id="testing">Testing:</h5>
+
+<ul>
+<li>The long-ranging work on issue 6991 continues with
+several samples being refactored, moved or otherwise
+cleaned up to better fit in a test management system.</li>
+</ul>
+
+<h4 id="bugs-1">Bugs</h4>
+
+<h5 id="arches-1">Arches:</h5>
+
+<ul>
+<li>The PendSV interrupt handler on ARM now prevents other
+operating system interrupts from running before
+accessing kernel state, preventing races.</li>
+</ul>
+
+<h5 id="bluetooth-1">Bluetooth:</h5>
+
+<ul>
+<li>The USB Bluetooth device class implementation saw a
+few fixes. Notably, it now has a transmit thread as
+well as a receive thread, fixing an issue where
+bt_send() was incorrectly called from interrupt
+context, and properly reserves some headroom needed in
+its net_buf structures.</li>
+</ul>
+
+<h5 id="build-1">Build:</h5>
+
+<ul>
+<li>The CONFIG_COMPILER_OPT option now allows setting
+multiple compiler options, separated by whitespace.</li>
+</ul>
+
+<p>Numerous fixes and updates were merged affecting usage
+of Kconfig options throughout the tree.</p>
+
+<p>The &ldquo;minimal&rdquo; C library that ships with Zephyr is no
+longer built as part of the &ldquo;app&rdquo; target, which is
+reserved as much as possible for user applications.
+Any applications that may have been relying on this
+behavior may need updates, as the C library is now
+part of its own Zephyr library.</p>
+
+<h5 id="drivers-1">Drivers:</h5>
+
+<ul>
+<li>Bluetooth drivers now have access to bt_hci_cmd_send()
+and bt_hci_cmd_send_sync() routines via <hci.h>;
+allowing them to, well, send HCI commands. HCI drivers
+can now also declare &ldquo;quirks&rdquo;, or deviations from
+standard behavior, with BT_QUIRK_NO_RESET being the
+first user.</li>
+</ul>
+
+<p>The Nordic RTC timer driver saw a fix for the number
+of hardware cycles per tick; the PWM driver also has
+improved accuracy after a clock frequency fix.</p>
+
+<p>A build issue in the Bluetooth HCI implementation
+using SPI as a transport was fixed.</p>
+
+<p>The lis2dh accelerometer driver seems to be working
+again, after seeing build breakage and I2C protocol
+usage fixes.</p>
+
+<h5 id="kernel">Kernel:</h5>
+
+<ul>
+<li>A fix was merged partially restoring the behavior of
+CONFIG_MULTITHREADING=n following the scheduler
+rewrite. (Some former behavior related to semaphores
+was not restored, forcing flash drivers elsewhere in
+the tree to behave differently depending on whether
+this option is enabled.)</li>
+</ul>
+
+<p>A race condition which could cause k_poll() to return
+NULL when a timeout is set has been fixed.</p>
+
+<h5 id="networking-1">Networking:</h5>
+
+<ul>
+<li>The TCP stack now properly responds to Zero Window
+Probe segments.</li>
+</ul>
+
+<p>Some use-after free bugs in network statistics
+calculations were fixed.</p>
+
+<p>IPv4 and UDP checksums are now calculated only when
+needed in the DHCPv4 core.</p>
+
+<h5 id="samples-1">Samples:</h5>
+
+<ul>
+<li>The mbedtls_sslclient networking sample now uses a
+hardware entropy source at system startup to seed the
+random number generator when one is available, rather
+than relying on sys_rand32_get(), which doesn&rsquo;t
+guarantee cryptographically strong output.</li>
+</ul>
+
+<h3 id="hawkbit-and-mqtt-sample-application">hawkBit and MQTT sample application</h3>
+
+<h4 id="features-2">Features</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h4 id="bugs-2">Bugs</h4>
+
+<h5 id="kconfig-fixes">Kconfig fixes:</h5>
+
+<ul>
+<li>A variety of Kconfig warnings generated by Zephyr&rsquo;s
+build system have been addressed. Zephyr is growing
+increasingly strict about turning these warnings into
+errors, so this may avoid future problems.</li>
+</ul>
+
+<h5 id="removal-of-old-include-path">Removal of old include path:</h5>
+
+<ul>
+<li>A long-deleted Zephyr include path has been removed.
+Its presence didn&rsquo;t cause any issues, but its removal
+is a cleanup.</li>
+</ul>
+
+<h3 id="lwm2m-sample-application">LWM2M sample application</h3>
+
+<h4 id="features-3">Features</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h4 id="bugs-3">Bugs</h4>
+
+<h5 id="kconfig-fixes-1">Kconfig fixes:</h5>
+
+<ul>
+<li>A variety of Kconfig warnings generated by Zephyr&rsquo;s
+build system have been addressed. Zephyr is growing
+increasingly strict about turning these warnings into
+errors, so this may avoid future problems.</li>
+</ul>
+
+<h5 id="removal-of-old-include-path-1">Removal of old include path:</h5>
+
+<ul>
+<li>A long-deleted Zephyr include path has been removed.
+Its presence didn&rsquo;t cause any issues, but its removal
+is a cleanup.</li>
+</ul>
+
+<h1 id="linux-microplatform">Linux microPlatform</h1>
+
+<h2 id="summary-2">Summary</h2>
+
+<p>OSF Unified Linux Kernel updated to the 4.16.18 stable release.
+Default GCC version was updated to the latest upstream 8.1 release.</p>
+
+<h2 id="highlights-1">Highlights</h2>
+
+<ul>
+<li>OSF Unified Linux Kernel updated to 4.16.18.</li>
+<li>GCC updated to the latest 8.1 release.</li>
+</ul>
+
+<h2 id="components-1">Components</h2>
+
+<h3 id="openembedded-core-layer">OpenEmbedded-Core Layer</h3>
+
+<h4 id="features-4">Features</h4>
+
+<h5 id="layer-update">Layer Update:</h5>
+
+<ul>
+<li>Acpid updated to 2.0.29.
+Bluez5 updated to 5.50.
+Cronie updated to 1.5.2.
+GCC updated to 7.3.
+Gstreamer1.0 updated to 1.14.1.
+Mc updated to 4.8.21.
+Musl updated to the latest upstream master.
+Yocto-uninative updated to 2.1.</li>
+</ul>
+
+<h4 id="bugs-4">Bugs</h4>
+
+<h5 id="cpio">cpio:</h5>
+
+<ul>
+<li><p>The cpio_safer_name_suffix function in util.c in cpio 2.11
+allows remote attackers to cause a denial of service
+(out-of-bounds write) via a crafted cpio file.</p>
+
+<ul>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2037">CVE-2016-2037</a></li>
+</ul></li>
+</ul>
+
+<h5 id="glibc">glibc:</h5>
+
+<ul>
+<li><p>Multiple issues.</p>
+
+<ul>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18269">CVE-2017-18269</a></li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11236">CVE-2018-11236</a></li>
+</ul></li>
+</ul>
+
+<h3 id="meta-risc-v">Meta RISC-V</h3>
+
+<h4 id="features-5">Features</h4>
+
+<h5 id="layer-update-1">Layer Update:</h5>
+
+<ul>
+<li>PIE disable as glibc still needs work.
+Qemu-riscv updated to the master branch.</li>
+</ul>
+
+<h4 id="bugs-5">Bugs</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+
+<h3 id="meta-osf-layer">Meta OSF Layer</h3>
+
+<h4 id="features-6">Features</h4>
+
+<h5 id="layer-update-2">Layer Update:</h5>
+
+<ul>
+<li>Lmp-device-register updated to the latest git revision.
+OSF Unified Linux Kernel updated to 4.16.18.
+Uart serial only enabled on raspberrypi3 if ENABLE_UART is set.
+U-boot-toradex now uses distro boot on internal eMMC.</li>
+</ul>
+
+<h4 id="bugs-6">Bugs</h4>
+
+<ul>
+<li>Not addressed in this update</li>
+</ul>
+                        </div>
                         
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://foundries.io/blog/2018/04/11/20180411-over-the-air/">
-                                          
-                                          <img src="https://foundries.io/img/banners/ota.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://foundries.io/blog/2018/04/11/20180411-over-the-air/">Linux microPlatform, now with OTA updates (beta)</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          in <a href="https://foundries.io/categories/lmp">lmp</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://foundries.io/blog/2018/04/11/20180411-over-the-air/"><i class="fa fa-calendar-o"></i> April 11, 2018</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro"><p>Starting with Linux microPlatform update 0.13, we are including support for over-the-air (OTA) updates.</p>
-
-<p></p></p>
-                                    <p class="read-more"><a href="https://foundries.io/blog/2018/04/11/20180411-over-the-air/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "foundriesio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
                         
 
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
-                            
-                        </ul>
                     </div>
                     
 
@@ -519,6 +1040,7 @@
 
                 </div>
                 
+
             </div>
             
         </div>

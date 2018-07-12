@@ -6,10 +6,31 @@
     <description>Recent content in Bugs on Foundries.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://foundries.io/tags/bugs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>microPlatform update 0.23</title>
+      <link>https://foundries.io/blog/2018/07/07/blog-post-update-0.23/</link>
+      <pubDate>Sat, 07 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://foundries.io/blog/2018/07/07/blog-post-update-0.23/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-23&#34;&gt;Zephyr microPlatform changes for 0.23&lt;/h2&gt;
+
+&lt;p&gt;Zephyr&amp;rsquo;s first batch of v1.13 patches; code cleanups to the sample
+applications.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-23&#34;&gt;Linux microPlatform changes for 0.23&lt;/h2&gt;
+
+&lt;p&gt;OSF Unified Linux Kernel updated to the 4.16.18 stable release.
+Default GCC version was updated to the latest upstream 8.1 release.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.22</title>
