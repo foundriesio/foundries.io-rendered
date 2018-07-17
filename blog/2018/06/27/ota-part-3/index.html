@@ -332,6 +332,7 @@
 <p>OTA Community Edition requires <a href="https://github.com/advancedtelematic/aktualizr/blob/master/docs/implicit-provisioning.adoc">implicit provisioning</a>. Creating a device is fairly easy:</p>
 
 <pre><code>  # DEVICE_ID = The name of the device to appear in OTA Community Edition
+  # SERVER_NAME = Your gateway server. eg SERVER_NAME=ota-ce.example.com
   ./contrib/gke/make SERVER_NAME=&lt;SERVER_NAME&gt; DEVICE_ID=&lt;DEVICE_ID&gt; SKIP_CLIENT=true new-client
 </code></pre>
 
