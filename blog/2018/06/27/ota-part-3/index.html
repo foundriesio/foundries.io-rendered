@@ -277,7 +277,7 @@
 
 <h3 id="deploy-ota-community-edition">Deploy OTA Community Edition</h3>
 
-<p>The ota-blog-part3 branch of OTA Community Edition includes a helper script to deploy OTA Community Edition. The script isn&rsquo;t very long and is worth taking a close look at to understand the mechanics of deploying OTA Community Edition. Deploying is as simple as::</p>
+<p>The ota-blog-part3 branch of OTA Community Edition includes a helper script to deploy OTA Community Edition. The script isn&rsquo;t very long and is worth taking a close look at to understand the mechanics of deploying OTA Community Edition. Deploying is as simple as:</p>
 
 <pre><code>  ./create-cluster.sh example.com
 </code></pre>
@@ -336,9 +336,92 @@
   ./contrib/gke/make SERVER_NAME=&lt;SERVER_NAME&gt; DEVICE_ID=&lt;DEVICE_ID&gt; SKIP_CLIENT=true new-client
 </code></pre>
 
-<p>You can then copy these credentials to your target device to register. Instrusctions for that can be found at:</p>
+<p>Configuring your device is fairly simple. Remote access, however, isn&rsquo;t
+always the same. Here are the files you&rsquo;ll need to copy to your device:</p>
 
-<p><a href="https://app.foundries.io/docs/0.22/reference/linux-ota.html#register-device">https://app.foundries.io/docs/0.22/reference/linux-ota.html#register-device</a></p>
+<ul>
+<li>generated/<code>&lt;SERVER_NAME&gt;</code>/server_ca.pem to /var/sota/root.crt</li>
+<li>generated/<code>&lt;SERVER_NAME&gt;</code>/devices/<code>&lt;DEVICE_ID&gt;</code>/client.pem /var/sota/client.pem</li>
+<li>generated/<code>&lt;SERVER_NAME&gt;</code>/devices/<code>&lt;DEVICE_ID&gt;</code>/pkey.pem /var/sota/pkey.pem</li>
+</ul>
+
+<p>If you haven&rsquo;t set up DNS entries, you&rsquo;ll need to add a line to
+/etc/hosts on the target device. The public IP comes from the gateway-service:</p>
+
+<pre><code>  ./contrib/gke/kubectl get svc gateway-service -o json \
+    | jq -r '.status.loadBalancer.ingress[0].ip'
+
+  # /etc/hosts on target would get something like:
+  ota-ce.example.com &lt;ip-from-comand-above&gt;
+</code></pre>
+
+<p>Finally create a /var/sota/sota.toml on your target device:</p>
+
+<pre><code># /var/sota/sota.toml
+[gateway]
+http = true
+socket = false
+
+[network]
+socket_commands_path = &quot;/tmp/sota-commands.socket&quot;
+socket_events_path = &quot;/tmp/sota-events.socket&quot;
+socket_events = &quot;DownloadComplete, DownloadFailed&quot;
+
+[p11]
+module = &quot;&quot;
+pass = &quot;&quot;
+uptane_key_id = &quot;&quot;
+tls_ca_id = &quot;&quot;
+tls_pkey_id = &quot;&quot;
+tls_clientcert_id = &quot;&quot;
+
+[tls]
+server = &quot;https://ota-ce.example.com:8443&quot;
+ca_source = &quot;file&quot;
+pkey_source = &quot;file&quot;
+cert_source = &quot;file&quot;
+
+[provision]
+server = &quot;https://ota-ce.example.com:8443&quot;
+p12_password = &quot;&quot;
+expiry_days = &quot;36000&quot;
+provision_path = &quot;&quot;
+
+[uptane]
+polling = true
+polling_sec = 10
+device_id = &quot;&quot;
+primary_ecu_serial = &quot;&quot;
+# NOTE - this might need to change depending on your CPU
+primary_ecu_hardware_id = &quot;intel-corei7-64&quot;
+director_server = &quot;https://ota-ce.example.com:8443/director&quot;
+repo_server = &quot;https://ota-ce.example.com:8443/repo&quot;
+key_source = &quot;file&quot;
+
+[pacman]
+type = &quot;ostree&quot;
+os = &quot;&quot;
+sysroot = &quot;&quot;
+ostree_server = &quot;https://ota-ce.example.com:8443/treehub&quot;
+packages_file = &quot;/usr/package.manifest&quot;
+
+[storage]
+type = &quot;filesystem&quot;
+path = &quot;/var/sota/&quot;
+uptane_metadata_path = &quot;metadata&quot;
+uptane_private_key_path = &quot;ecukey.der&quot;
+uptane_public_key_path = &quot;ecukey.pub&quot;
+tls_cacert_path = &quot;root.crt&quot;
+tls_pkey_path = &quot;pkey.pem&quot;
+tls_clientcert_path = &quot;client.pem&quot;
+
+[import]
+uptane_private_key_path = &quot;&quot;
+uptane_public_key_path = &quot;&quot;
+tls_cacert_path = &quot;/var/sota/root.crt&quot;
+tls_pkey_path = &quot;&quot;
+tls_clientcert_path = &quot;&quot;
+</code></pre>
                         </div>
                         
                         
