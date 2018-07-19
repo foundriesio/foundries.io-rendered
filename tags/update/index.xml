@@ -6,10 +6,32 @@
     <description>Recent content in Update on Foundries.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://foundries.io/tags/update/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>microPlatform update 0.24</title>
+      <link>https://foundries.io/blog/2018/07/12/blog-post-update-0.24/</link>
+      <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://foundries.io/blog/2018/07/12/blog-post-update-0.24/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;h2 id=&#34;zephyr-microplatform-changes-for-0-24&#34;&gt;Zephyr microPlatform changes for 0.24&lt;/h2&gt;
+
+&lt;p&gt;New console and logging implementations for Zephyr, and an MCUboot
+heading to v1.2.0.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-microplatform-changes-for-0-24&#34;&gt;Linux microPlatform changes for 0.24&lt;/h2&gt;
+
+&lt;p&gt;No significant changes have gone into this update. The previous update
+included updates to containers and the sources weren&amp;rsquo;t published. The
+URL used for authentication in lmp-device-register was updated.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>microPlatform update 0.23</title>
