@@ -1006,7 +1006,7 @@ providing firmware update and device communication via LWM2M.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://foundries.io/about/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}    {{ partial &#34;top.html&#34; . }} {{ partial &#34;nav.html&#34; . }}   Foundries.io We provide best-in-class software platforms with lifetime support for building and maintaining connected products, ranging from the smallest sensors to smart and edge devices. Our core products are Zephyr RTOS and Linux based microPlatforms, which provide product quality templates to build secure, OTA updatable connected devices for industrial and consumer markets.</description>
+      <description>{{ partial &#34;head.html&#34; . }}    {{ partial &#34;top.html&#34; . }} {{ partial &#34;nav.html&#34; . }}   Foundries.io We provide best-in-class software platforms with lifetime support for building and maintaining connected products, ranging from the smallest sensors to smart and edge devices, from gateways to autononous vehicles. Our core products are Zephyr RTOS and Linux based microPlatforms, which provide product quality templates to build secure, OTA updatable connected devices for industrial and consumer markets.</description>
     </item>
     
     <item>
@@ -1024,7 +1024,7 @@ providing firmware update and device communication via LWM2M.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://foundries.io/product/</guid>
-      <description>{{ partial &#34;head.html&#34; . }}    {{ partial &#34;top.html&#34; . }} {{ partial &#34;nav.html&#34; . }}   microPlatforms The Zephyr RTOS and Linux microPlatform products enable you to rapidly develop and maintain secure, OTA updatable connected devices. The microPlatforms are configurable, small footprint, open source software for building connected devices, based on microcontrollers, advanced multi-core SoCs, or both. Whether you&#39;re making a remote sensor, smart light, appliance, robot, drone, or self-driving car, the microPlatforms provide a proven, tested platform to build upon.</description>
+      <description>{{ partial &#34;head.html&#34; . }}    {{ partial &#34;top.html&#34; . }} {{ partial &#34;nav.html&#34; . }}   microPlatforms The Zephyr RTOS and Linux microPlatform products enable you to rapidly develop and maintain secure, OTA updatable connected devices. The microPlatforms are configurable, small footprint, open source software for building connected devices, based on microcontrollers, advanced single or multi-core SoCs, or both. Whether you&#39;re making a remote sensor, smart light, appliance, robot, drone, or self-driving car, the microPlatforms provide a proven, tested platform to build upon.</description>
     </item>
     
     <item>
@@ -1043,7 +1043,7 @@ Please feel free to contact us using the form below and we will get back to you 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://foundries.io/partners/</guid>
-      <description>Our Partners As an open source company working with partners across the ecosystem is key to our success. Partners have access to our products for internal use, and are weclome to both use and contribute to our work. If you are interested in the microPlatforms please contact us, or sign up using the form below.
+      <description>Our Partners As an open source company working with partners across the ecosystem is key to our success. Partners have access to our products for internal use, and are welcome to both use and contribute to our work. If you are interested in the microPlatforms please contact us, or sign up using the form below.
 What is a microPlatform?
 Key differentiators of microPlatforms We can support any CPU Architecture</description>
     </item>
