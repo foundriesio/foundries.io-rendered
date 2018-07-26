@@ -6,10 +6,24 @@
     <description>Recent content in Blogs on Foundries.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://foundries.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Zephyr Development News 26 July 2018</title>
+      <link>https://foundries.io/blog/2018/07/26/zephyr-news-20180726/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://foundries.io/blog/2018/07/26/zephyr-news-20180726/</guid>
+      <description>&lt;p&gt;This is the 26 July 2018 newsletter tracking the latest
+&lt;a href=&#34;https://www.zephyrproject.org/&#34;&gt;Zephyr&lt;/a&gt; development merged into the
+&lt;a href=&#34;https://github.com/zephyrproject-rtos/zephyr&#34;&gt;mainline tree on
+GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Zephyr Logging Survival Guide, Part 1: SYS_LOG</title>
