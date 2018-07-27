@@ -277,7 +277,7 @@ merged 26 July 2018</li>
 
 <h2 id="important-changes">Important Changes</h2>
 
-<p><strong>Initial Socket-based TLS support:</strong></p>
+<p><strong>Initial socket-based TLS support:</strong></p>
 
 <p>Initial support was added for network communication via TLS through
 the sockets API. Support includes:</p>
@@ -295,7 +295,7 @@ set the system&rsquo;s hostname.</li>
 <li>handshake management: cipher suite management is done via the
 <code>TLS_CIPHERSUITE_LIST</code> and <code>TLS_CIPHERSUITE_USED</code> socket options;
 the <code>TLS_PEER_VERIFY</code> option can be used to override mbedTLS&rsquo;s
-default settings for peer verification</li>
+default settings for peer verification.</li>
 <li>sample support: the <code>http_get</code> and <code>big_http_download</code> now support
 TLS sockets, including certificate validation via Let&rsquo;s Encrypt
 certificates provided with the samples. TLS support was also added
@@ -359,14 +359,14 @@ per-interface basis:</p>
 L2s. Users curious to try it out should see
 <code>samples/net/promiscuous_mode</code>.</p>
 
-<p><strong>Application Shared Memory:</strong></p>
+<p><strong>Application shared memory:</strong></p>
 
 <p>When userspace is enabled, Zephyr now supports control of shared
 memory regions between threads. <a href="http://docs.zephyrproject.org/kernel/usermode/usermode_sharedmem.html">General usage
 information</a>
 has been added to Zephyr&rsquo;s documentation.</p>
 
-<p><strong>Ethernet Driver API break:</strong></p>
+<p><strong>Ethernet driver API break:</strong></p>
 
 <p>The API in <code>&lt;net/ethernet.h&gt;</code> saw an incompatible change. The
 <code>get_stats</code> API callback now takes a <code>struct device *</code>, rather than a
@@ -379,7 +379,7 @@ need updates.</p>
 this required some changes to <code>struct net_pkt</code>, the core
 representation for network packets.</p>
 
-<p><strong>sys_clock_us_per_tick Deprecated:</strong></p>
+<p><strong>sys_clock_us_per_tick deprecated:</strong></p>
 
 <p>Usage of this variable was deprecated, as its value does not portably
 fit into an integer. Users are directed to use
@@ -431,7 +431,7 @@ nRF52840 USB Dongle and x86 UP Squared.</p>
 following the extension of driver support for those peripherals to
 STM32F7 MCUs.</p>
 
-<p>The nrf52_pca10040 MCU has the UARTE peripheral enabled; the console
+<p>The nrf52_pca10040 board has the UARTE peripheral enabled; the console
 now uses this instead of RTT.</p>
 
 <p>FRDM-K64F now supports
@@ -515,9 +515,9 @@ descriptors at runtime.</p>
 <p>PWM and I2C master drivers were added for the Cortex-M4 cores present
 on NXP i.MX7 SoCs (the <code>nxp_imx/mcimx7_m4</code> SOC variant).</p>
 
-<p>The nRF serial driver saw a lot of love. It now supports both Device
+<p>The nRF serial driver saw a lot of love. It now supports Device
 Tree, power management, and both 31250 and 56000 baud rates. The
-latter may be particularly useful for any users implementing
+last improvement may be particularly useful for any users implementing
 Zephyr-based dial-up modem support.</p>
 
 <p>The SiLabs GPIO and UART drivers now have support for EFR32 MCUs.</p>
@@ -631,6 +631,11 @@ to declare which peripheral is in use.</p>
 <p>The NXP device tree binding YAML files saw some cleanups and build
 warning resolutions.</p>
 
+<p><strong>Documentation:</strong></p>
+
+<p>The documentation covering the gPTP networking protocol saw some fixes
+and enhancements.</p>
+
 <p><strong>Drivers:</strong></p>
 
 <p>A bug causing overwritten GPIO configurations and unstable firmware on
@@ -676,9 +681,6 @@ samples and libraries with the Newlib C library.</p>
 for its results, which can be freed with <code>freeaddrinfo()</code>. Previously,
 the implementation was simply using a global variable for its results,
 which precluded concurrent usage.</p>
-
-<p>The documentation covering the gPTP networking protocol saw some fixes
-and enhancements.</p>
 
 <p>The LWM2M implementation ignores TLV options it cannot handle, rather
 than halting option processing when it receives one.</p>
