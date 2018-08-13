@@ -265,14 +265,14 @@ to test things out before deploying to production.</p>
 <p>Go to your OTA Community Edition repository that should be on the
 <code>ota-blog-part4</code> branch and checkout the <code>ota-api-1</code> branch:</p>
 
-<pre><code>  # https://github.com/OpenSourceFoundries/ota-community-edition/tree/ota-api-1
+<pre><code>  # https://github.com/foundriesio/ota-community-edition/tree/ota-api-1
   cd &lt;repo&gt;
   git fetch
   git checkout ota-api-1
 </code></pre>
 
 <p>The interesting changes to enable the API are in a
-<a href="https://github.com/OpenSourceFoundries/ota-community-edition/commit/639f8b23e082a315d1865bfe5a28f03eb2a0c5bc">single commit</a>.
+<a href="https://github.com/foundriesio/ota-community-edition/commit/639f8b23e082a315d1865bfe5a28f03eb2a0c5bc">single commit</a>.
 It creates a new &ldquo;api.example.com/devices/&rdquo; endpoint that requires the
 <code>BadT0ken5</code> used in the &ldquo;oauthful&rdquo; container. It can be deployed by running:</p>
 
@@ -289,7 +289,7 @@ It creates a new &ldquo;api.example.com/devices/&rdquo; endpoint that requires t
 <p>You&rsquo;ll probably want to customize things to match your organization&rsquo;s
 requirements. For example, limit how many devices a user can create or which
 devices a user can see. The ota-api-1 branch includes
-<a href="https://github.com/OpenSourceFoundries/ota-community-edition/commit/296bba8f3fb2050461de5d0f0ad41ab596808066">a commit</a>
+<a href="https://github.com/foundriesio/ota-community-edition/commit/296bba8f3fb2050461de5d0f0ad41ab596808066">a commit</a>
 to give you some ideas about what to change. As your complexity increases, you&rsquo;ll
 likely want to build your own OTA API container. There are different
 approaches that work. Here at Foundries.io, we extend the &ldquo;foundries/ota-api&rdquo;
