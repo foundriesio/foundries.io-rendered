@@ -13,7 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Using your own firmware signing keys with MCUBoot</title>
+  <title>Adding a REST API to OTA Community Edition</title>
   <meta name="author" content="" />
 
   
@@ -63,9 +63,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="alternate" href="https://foundries.io/index.xml" type="application/rss+xml" title="Foundries.io">
 
   
-  <meta property="og:title" content="Using your own firmware signing keys with MCUBoot" />
+  <meta property="og:title" content="Adding a REST API to OTA Community Edition" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/blog/2018/01/17/20180117-mcuboot-keys//" />
+  <meta property="og:url" content="/blog/2018/08/09/ota-api//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -87,9 +87,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://foundries.io/">
-                    <img src="https://foundries.io/img/logo.png" alt="Using your own firmware signing keys with MCUBoot logo" class="hidden-xs hidden-sm">
-                    <img src="https://foundries.io/img/logo-small.png" alt="Using your own firmware signing keys with MCUBoot logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Using your own firmware signing keys with MCUBoot - go to homepage</span>
+                    <img src="https://foundries.io/img/logo.png" alt="Adding a REST API to OTA Community Edition logo" class="hidden-xs hidden-sm">
+                    <img src="https://foundries.io/img/logo-small.png" alt="Adding a REST API to OTA Community Edition logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Adding a REST API to OTA Community Edition - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -217,7 +217,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Using your own firmware signing keys with MCUBoot</h1>
+                <h1>Adding a REST API to OTA Community Edition</h1>
             </div>
         </div>
     </div>
@@ -233,123 +233,71 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">January 17, 2018</p>
+                        <p class="text-muted text-uppercase mb-small text-right">By <a href="#">Andy Doan</a> | August 9, 2018</p>
 
                         <div id="post-content">
-                          <p>Secure firmware over the air (FOTA) updates are a key <a href="https://foundries.io/product/#zephyr-microplatform">Zephyr microPlatform</a> feature. This post explains how to use your own firmware signing key pair to secure the boot process on your devices.
-</p>
+                          <p>The <a href="https://foundries.io/blog/2018/07/12/ota-part-4/">OTA blog series</a> left users with a secured
+OTA Community Edition server. This article will describe how you can deploy
+an easy-to-use REST API to manage your devices.</p>
 
-<h1 id="boot-process-overview">Boot Process Overview</h1>
+<p></p>
 
-<p>When your Zephyr microPlatform device boots, <a href="https://mcuboot.com/">MCUBoot</a> checks for a cryptographically signed firmware update, then installs and runs it if one is available. Simplified, the boot process looks like this:</p>
+<h3 id="requirements">Requirements</h3>
 
-<p><img src="../../../../../img/blog/mcuboot-boot.png" alt="Zephyr microPlatform Boot Diagram" /></p>
+<p>You&rsquo;ll need an OTA Community Edition server deployed into GKE as
+documented in <a href="https://foundries.io/blog/2018/07/12/ota-part-4/">part four</a> of the blog series.</p>
 
-<p>The firmware update signature check uses a public key stored in the MCUBoot binary running on the device. MCUBoot checks that the firmware update is signed by the corresponding private key before booting it. This mitigates against attacks which try to boot untrusted firmware on your device.</p>
+<h3 id="overview">Overview</h3>
 
-<p>Think of the data being stored in your device&rsquo;s flash like this:</p>
+<p>While OTA Community Edition is built around a set of backend REST APIs,
+they don&rsquo;t include a unified front-end API designed for public facing usage.
+We created the <a href="https://github.com/foundriesio/ota-api">OTA API</a> with the
+goal of making a project that handled all the generic aspects of OTA
+device management while leaving room for people to implement their own
+management policies.</p>
 
-<p><img src="../../../../../img/blog/device-flash.png" alt="Device flash" /></p>
+<p>The OTA API is easy to try out locally. Follow along with the
+<a href="https://github.com/foundriesio/ota-api/blob/master/README.md">README</a>
+to test things out before deploying to production.</p>
 
-<p>To make getting started easy, the MCUBoot repository&rsquo;s source code contains a default public key, along with its private key in a data file. Since the private key is not secret, this is not secure to use in production. When deploying your devices, you need to use your own key pair, with a private key that you must keep secret.</p>
+<h3 id="deploying">Deploying</h3>
 
-<p>(If you&rsquo;re new to these ideas, check out the <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">Public-key cryptography</a> and <a href="https://en.wikipedia.org/wiki/Digital_signature">Digital signature</a> pages on Wikipedia.)</p>
+<p>Go to your OTA Community Edition repository that should be on the
+<code>ota-blog-part4</code> branch and checkout the <code>ota-api-1</code> branch:</p>
 
-<h1 id="requirements">Requirements</h1>
-
-<p>You must have the Zephyr microPlatform installed on your system. See the installation instructions here in the <a href="https://app.foundries.io/docs/latest/">microPlatforms documentation</a> for instructions if you haven&rsquo;t done that.</p>
-
-<p>Any board supported by the Zephyr microPlatform can be used with these instructions.</p>
-
-<h1 id="generate-keys">Generate Keys</h1>
-
-<p>Run these commands from the Zephyr microPlatform installation directory.</p>
-
-<p>MCUBoot provides tools which can create and manage your keys. This
-section describes how to use them. For more details, including details on protecting your secret key with a password, see the file <code>mcuboot/docs/imgtool.md</code> in your Zephyr microPlatform installation directory.</p>
-
-<p>The MCUBoot tools depend on the <a href="https://cryptography.io/">cryptography</a> module. Install it first; for example, using <code>pip3</code>:</p>
-
-<pre><code>pip3 install --user cryptography
+<pre><code>  # https://github.com/OpenSourceFoundries/ota-community-edition/tree/ota-api-1
+  cd &lt;repo&gt;
+  git fetch
+  git checkout ota-api-1
 </code></pre>
 
-<p>Now generate an RSA 2048 key pair (this is the default key type used by MCUBoot; if you configured MCUBoot differently, you need to adjust <code>-t</code> accordingly):</p>
+<p>The interesting changes to enable the API are in a
+<a href="https://github.com/OpenSourceFoundries/ota-community-edition/commit/639f8b23e082a315d1865bfe5a28f03eb2a0c5bc">single commit</a>.
+It creates a new &ldquo;api.example.com/devices/&rdquo; endpoint that requires the
+<code>BadT0ken5</code> used in the &ldquo;oauthful&rdquo; container. It can be deployed by running:</p>
 
-<pre><code>./mcuboot/scripts/imgtool.py keygen -k my-secret-key.pem -t rsa-2048
+<pre><code>  ./contrib/gke/make SERVER_NAME=ota-ce.example.com DNS_NAME=example.com start-services
 </code></pre>
 
-<p><strong>The contents of the file my-secret-key.pem are a secret. Guard it closely.</strong></p>
+<p>You can then validate the API is running with:</p>
 
-<p>Next, generate some C code containing the public key as an array:</p>
-
-<pre><code>./mcuboot/scripts/imgtool.py getpub -k my-secret-key.pem
+<pre><code>  curl -H &quot;OTA-TOKEN: BadT0ken5&quot; http://api.example.com/devices/
 </code></pre>
 
-<p>The output looks like this:</p>
+<h3 id="next-steps">Next Steps</h3>
 
-<pre><code class="language-c">/* Autogenerated by imgtool.py, do not edit. */
-const unsigned char rsa_pub_key[] = {
-	0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88,
-	/* [additional lines omitted] */
-	0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee,
-};
-const unsigned int rsa_pub_key_len = 270;
-</code></pre>
+<p>You&rsquo;ll probably want to customize things to match your organization&rsquo;s
+requirements. For example, limit how many devices a user can create or which
+devices a user can see. The ota-api-1 branch includes
+<a href="https://github.com/OpenSourceFoundries/ota-community-edition/commit/296bba8f3fb2050461de5d0f0ad41ab596808066">a commit</a>
+to give you some ideas about what to change. As your complexity increases, you&rsquo;ll
+likely want to build your own OTA API container. There are different
+approaches that work. Here at Foundries.io, we extend the &ldquo;foundries/ota-api&rdquo;
+container and add our private implementation sources to produce a customized
+container.</p>
 
-<p>You will copy these values into the MCUBoot source code.</p>
-
-<h1 id="copy-the-public-key-into-the-mcuboot-source-code">Copy the Public Key Into the MCUBoot Source Code</h1>
-
-<p>Now open the file <code>mcuboot/boot/zephyr/keys.c</code> in your editor. Search for lines that look like this:</p>
-
-<pre><code class="language-c">#if defined(MCUBOOT_SIGN_RSA)
-const unsigned char root_pub_der[] = {
-    0x30, 0x82, 0x01, 0x0a, 0x02, 0x82, 0x01, 0x01, 0x00, 0xd1, 0x06, 0x08,
-    /* Additional lines omitted. */
-    0xc9, 0x02, 0x03, 0x01, 0x00, 0x01
-};
-const unsigned int root_pub_der_len = 270;
-}
-</code></pre>
-
-<p>Delete the elements of the <code>root_pub_der</code> array, and replace them with
-the <code>imgtool.py</code> output, like this:</p>
-
-<pre><code class="language-c">#if defined(MCUBOOT_SIGN_RSA)
-const unsigned char root_pub_der[] = {
-	0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88,
-	/* [additional lines omitted] */
-	0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee,
-};
-const unsigned int root_pub_der_len = 270;
-}
-</code></pre>
-
-<p><strong>Make sure to change the contents of <code>root_pub_der</code> only, not its name.</strong></p>
-
-<p><strong>Make sure that the value of <code>root_pub_der_len</code> matches the <code>rsa_pub_key_len</code> generated by <code>imgtool</code>.</strong></p>
-
-<p>Commit this change and ensure you preserve it.</p>
-
-<h1 id="build-app-with-custom-mcuboot-image">Build App With Custom MCUBoot image</h1>
-
-<p>You can now rebuild your Zephyr microPlatform application binary, along with a customized MCUBoot binary which trusts your public key. Here is an example building the <code>zephyr-fota-samples/dm-lwm2m</code> application for the <code>nrf52_blenano2</code> board using the <code>zmp</code> tool:</p>
-
-<pre><code>./zmp build -K my-secret-key.pem -b nrf52_blenano2 zephyr-fota-samples/dm-lwm2m
-</code></pre>
-
-<p>The important files this generates are:</p>
-
-<ul>
-<li><p>A custom MCUBoot binary which trusts your public key in <code>outdir/zephyr-fota-samples/dm-lwm2m/nrf52_blenano2/mcuboot/zephyr/zephyr.bin</code>. Use this binary when flashing devices you are going to deploy to the field.</p></li>
-
-<li><p>A Zephyr binary which is signed with your private key in <code>outdir/zephyr-fota-samples/dm-lwm2m/nrf52_blenano2/app/zephyr/dm-lwm2m-nrf52_blenano2-signed.bin</code>. You can distribute this binary in FOTA updates.</p></li>
-</ul>
-
-<p>To verify your setup, flash the custom MCUBoot to your board, along with the signed binary into the main firmware image area. For example, using the <code>zmp</code> tool:</p>
-
-<pre><code>./zmp flash -b nrf52_blenano2 zephyr-fota-samples/dm-lwm2m
-</code></pre>
+<p>Lastly, I&rsquo;ll be creating a follow-up blog to this to demonstrate how
+to streamline device registration by extending this API.</p>
                         </div>
                         
                         

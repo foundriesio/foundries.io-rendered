@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://foundries.io/blog/2018/08/09/ota-api/</loc>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://foundries.io/blog/2018/07/27/blog-post-update-0.25/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
   </url>
@@ -329,20 +334,20 @@
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/blockchain/</loc>
-    <lastmod>2018-02-23T13:07:31+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://foundries.io/categories/blockchain/</loc>
     <lastmod>2018-02-23T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://foundries.io/tags/blockchain/</loc>
+    <lastmod>2018-02-23T13:07:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://foundries.io/blog/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -411,14 +416,14 @@
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/docker/</loc>
-    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
+    <loc>https://foundries.io/categories/docker/</loc>
+    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://foundries.io/categories/docker/</loc>
-    <lastmod>2018-01-17T13:07:31+02:00</lastmod>
+    <loc>https://foundries.io/tags/docker/</loc>
+    <lastmod>2018-05-08T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -436,13 +441,13 @@
   
   <url>
     <loc>https://foundries.io/categories/fota/</loc>
-    <lastmod>2018-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://foundries.io/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -463,14 +468,14 @@
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/iot/</loc>
-    <lastmod>2018-02-23T13:07:31+02:00</lastmod>
+    <loc>https://foundries.io/categories/iot/</loc>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://foundries.io/categories/iot/</loc>
-    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
+    <loc>https://foundries.io/tags/iot/</loc>
+    <lastmod>2018-02-23T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -493,20 +498,14 @@
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/linux/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://foundries.io/categories/linux/</loc>
     <lastmod>2018-01-17T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/lmp/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <loc>https://foundries.io/tags/linux/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -517,13 +516,13 @@
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/lte/</loc>
+    <loc>https://foundries.io/tags/lmp/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/lwm2m/</loc>
+    <loc>https://foundries.io/tags/lte/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -535,14 +534,14 @@
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/management/</loc>
-    <lastmod>2018-05-07T06:00:00+00:00</lastmod>
+    <loc>https://foundries.io/tags/lwm2m/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/mcuboot/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
+    <loc>https://foundries.io/tags/management/</loc>
+    <lastmod>2018-05-07T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -553,14 +552,20 @@
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/microplatform/</loc>
-    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
+    <loc>https://foundries.io/tags/mcuboot/</loc>
+    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://foundries.io/categories/microplatform/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://foundries.io/tags/microplatform/</loc>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -578,13 +583,13 @@
   
   <url>
     <loc>https://foundries.io/tags/open-source/</loc>
-    <lastmod>2018-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://foundries.io/tags/ota/</loc>
-    <lastmod>2018-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -601,13 +606,13 @@
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/radio/</loc>
+    <loc>https://foundries.io/categories/radio/</loc>
     <lastmod>2018-01-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://foundries.io/categories/radio/</loc>
+    <loc>https://foundries.io/tags/radio/</loc>
     <lastmod>2018-01-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -649,14 +654,14 @@
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/zephyr/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <loc>https://foundries.io/categories/zephyr/</loc>
+    <lastmod>2018-07-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://foundries.io/categories/zephyr/</loc>
-    <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+    <loc>https://foundries.io/tags/zephyr/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -667,14 +672,14 @@
   </url>
   
   <url>
-    <loc>https://foundries.io/tags/zmp/</loc>
-    <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+    <loc>https://foundries.io/categories/zmp/</loc>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://foundries.io/categories/zmp/</loc>
-    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
+    <loc>https://foundries.io/tags/zmp/</loc>
+    <lastmod>2018-07-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

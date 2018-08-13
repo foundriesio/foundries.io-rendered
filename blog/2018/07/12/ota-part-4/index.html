@@ -316,7 +316,7 @@ in your deployment. Deploying this is easy:</p>
   # https://github.com/OpenSourceFoundries/ota-community-edition/compare/ota-blog-part3...ota-blog-part4
 
   # Deploy changes with:
-  ./contrib/gke/make start-services
+  ./contrib/gke/make SERVER_NAME=ota-ce.example.com DNS_NAME=example.com start-services
 
   # At this point the new configuration is ready, but you'll have to restart
   # the reverse-proxy to enable it:
@@ -465,7 +465,7 @@ replace the &ldquo;oauthful&rdquo; service with your own OAuth2 implementation.<
             <li><a href="https://foundries.io/categories/embedded">embedded (1)</a>
             </li>
             
-            <li><a href="https://foundries.io/categories/fota">fota (8)</a>
+            <li><a href="https://foundries.io/categories/fota">fota (9)</a>
             </li>
             
             <li><a href="https://foundries.io/categories/iot">iot (2)</a>
